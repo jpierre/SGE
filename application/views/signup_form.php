@@ -102,7 +102,9 @@
     <label>Cargo</label>
     <input type="text" name="cargo" value="<?php echo set_value('cargo'); ?>"/><br><br>
     <label>Sector Industrial</label>
-    <input type="text" name="sector_ind" value="<?php echo set_value('sector_ind'); ?>"/>
+    <input type="text" name="sector_ind" value="<?php echo set_value('sector_ind'); ?>"/><br><br>
+    <!-- Todavia no se define nada acerca de "tipo_usuario" solo esta en la vista-->
+    <input type="checkbox" name="tipo_usuario" value="1"> Seleccione SOLO si ud. es representante de su empresa y puede inscribir a otros empleados.  
   </p>
   <br>
   <p>

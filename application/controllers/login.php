@@ -4,7 +4,7 @@ class Login extends CI_Controller{
 	function index(){
 		//$data['main_content']= 'login_form';
 		//$this->load->view('includes/template', $data);
-		/*$this->load->view('simplestyle_6/index');*/
+		//$this->load->view('simplestyle_6/index');
 		$this->load->view('login_form');
 	}
 	
@@ -109,26 +109,30 @@ class Login extends CI_Controller{
 	function create_member(){
 		$this->load->library('form_validation');
 		
-		$this->form_validation->set_rules('dni','DNI', 'trim|required|min_length(8)|max_length(8)');
+		$this->form_validation->set_rules('dni','DNI', 'trim|required|exact_length[8]');
 		$this->form_validation->set_rules('nombres','Nombres', 'trim|required');
 		$this->form_validation->set_rules('ape_pat','Apellido Paterno', 'trim|required');
 		$this->form_validation->set_rules('ape_mat','Apellido Materno', 'trim|required');
-		$this->form_validation->set_rules('fijo',' Tel. Fijo', 'trim|required|min_length(7)|max_length(9)');
-		$this->form_validation->set_rules('celular','Celular', 'trim|required|min_length(7)|max_length(9)');
+		$this->form_validation->set_rules('fijo',' Tel. Fijo', 'trim|required|min_length[7]|max_length[9]');
+		$this->form_validation->set_rules('celular','Celular', 'trim|required|min_length[7]|max_length[9]');
 		$this->form_validation->set_rules('email_adress','Correo electronico', 'trim|required|valid_email');
 		$this->form_validation->set_rules('direccion','Direccion', 'trim|required');
 		
-		
-		$this->form_validation->set_rules('username','Username', 'trim|required|min_length(4)');
-		$this->form_validation->set_rules('password','Password', 'trim|required|min_length(4)|max_length(32)');
+		$this->form_validation->set_rules('username','Username', 'trim|required|min_length[4]|callback_username_check');
+		$this->form_validation->set_rules('password','Password', 'trim|required|min_length[4]|max_length[32]');
 		$this->form_validation->set_rules('password2','Confirmar password', 'trim|required|matches[password]');
 		
-		$this->form_validation->set_rules('captcha','Caracteres', 'trim|required');
+		//$this->form_validation->set_rules('captcha','Caracteres', 'trim|required');
 		
-		$this->form_validation->set_message('required', 'El campo %s es obligatorio.');
+		$this->form_validation->set_message('min_length', 'El campo %s debe contener como mínimo %s caracteres.');
+		$this->form_validation->set_message('max_length', 'El campo %s debe contener como máximo %s caracteres.');
+ 		$this->form_validation->set_message('required', 'El campo %s es obligatorio.');
  		$this->form_validation->set_message('valid_email', 'El campo correo electr&oacute;nico no es una direcci&oacute;n de e mail valida.');
- 		//$this->form_validation->set_message('username_check,','El nombre de usuario ya está siendo utilizado.');
  		$this->form_validation->set_message('captcha', 'Error al introducir los caracteres de la imagen');
+ 		$this->form_validation->set_message('exact_length', 'El campo %s debe contener %s dígitos obligatorios.');
+ 		//$this->form_validation->set_message('username_check,','El nombre de usuario ya está siendo utilizado.');
+ 		
+ 		
  			
 				
 		if($this->form_validation->run()==FALSE){
@@ -168,8 +172,7 @@ class Login extends CI_Controller{
 	}
 	//FUNCION QUE DEVUELVE EL CAPTCHA
 	
-	function captcha($verificar = false)
-	    {
+	function captcha($verificar = false){
 	        if ($verificar === false) {
 	            $this->load->library('captcha');
 	            $captcha = new Captcha();
