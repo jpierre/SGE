@@ -129,7 +129,7 @@ class Login extends CI_Controller{
  		$this->form_validation->set_message('valid_email', 'El campo correo electr&oacute;nico no es una direcci&oacute;n de e mail valida.');
  		//$this->form_validation->set_message('username_check,','El nombre de usuario ya está siendo utilizado.');
  		$this->form_validation->set_message('captcha', 'Error al introducir los caracteres de la imagen');
-		
+ 			
 				
 		if($this->form_validation->run()==FALSE){
 			$data['main_content'] = 'signup_form';

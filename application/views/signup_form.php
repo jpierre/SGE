@@ -45,9 +45,6 @@
       </div>
       <div id="content">
         <!-- insert the page content here -->
-       
-
-
 
 <div id="signup_form">
   <h1>Registrate</h1>
@@ -56,20 +53,38 @@
 
 <fieldset><legend>--------- Informacion Personal --------</legend><br><br>
 
- <label>DNI*</label> <input name="dni" type="text" value="<?php echo set_value('dni'); ?>"></input>
-  
-  <label>Nombres*</label> <input type="text" name="nombres" value="<?php echo set_value('nombres'); ?>" class="input1"></input>
-  <label>Apellido Paterno*</label> <input type="text" name="ape_pat" value="<?php echo set_value('ape_pat'); ?>" class="input1"></input><br />
-  <label>Apellido Materno*</label> <input type="text" name="ape_mat" value="<?php echo set_value('ape_mat'); ?>" class="input1"></input><br />
-  <label>Telefono Fijo*</label> <input type="text" name="fijo" value="<?php echo set_value('fijo'); ?>" class="input1"></input>
-  <label>Celular*</label> <input type="text" name="celular" value="<?php echo set_value('celular'); ?>" class="input1"></input>
-  
-<label>Correo*</label> <input type="text" name="email_adress" value="<?php echo set_value('email_adress'); ?>" class="input1"></input>
-  <label>Direccion*</label> <input type="text" name="direccion" value="<?php echo set_value('direccion'); ?>" class="input1"></input>
+ 	<label>DNI*</label> <input name="dni" type="text" value="<?php echo set_value('dni'); ?>"></input><br><br>
+	<a style="text-decoration: none; font-size: 8pt; color:red"><?php echo form_error('dni'); ?></a>
+	
+	<label>Nombres*</label> <input type="text" name="nombres" value="<?php echo set_value('nombres'); ?>" class="input1"></input><br><br>
+	<a style="text-decoration: none; font-size: 8pt; color:red"><?php echo form_error('nombres'); ?></a>
+	
+	<label>Apellido Paterno*</label> <input type="text" name="ape_pat" value="<?php echo set_value('ape_pat'); ?>" class="input1"></input><br><br>
+	<a style="text-decoration: none; font-size: 8pt; color:red"><?php echo form_error('ape_pat'); ?></a>
+	
+	<label>Apellido Materno*</label> <input type="text" name="ape_mat" value="<?php echo set_value('ape_mat'); ?>" class="input1"></input><br><br>
+	<a style="text-decoration: none; font-size: 8pt; color:red"><?php echo form_error('ape_mat'); ?></a>
+	
+	<label>Telefono Fijo*</label> <input type="text" name="fijo" value="<?php echo set_value('fijo'); ?>" class="input1"></input><br><br>
+	<a style="text-decoration: none; font-size: 8pt; color:red"><?php echo form_error('fijo'); ?></a>
+	
+	<label>Celular*</label> <input type="text" name="celular" value="<?php echo set_value('celular'); ?>" class="input1"></input><br><br>
+	<a style="text-decoration: none; font-size: 8pt; color:red"><?php echo form_error('celular'); ?></a>
+	
+	<label>Correo*</label> <input type="text" name="email_adress" value="<?php echo set_value('email_adress'); ?>" class="input1"></input><br><br>
+	<a style="text-decoration: none; font-size: 8pt; color:red"><?php echo form_error('email_adress'); ?></a>
+	
+	<label>Direccion*</label> <input type="text" name="direccion" value="<?php echo set_value('direccion'); ?>" class="input1"></input><br><br>
+	<a style="text-decoration: none; font-size: 8pt; color:red"><?php echo form_error('direccion'); ?></a>
 
-<div class="field"><label>Usuario*</label> <input type="text" name="username" value="<?php echo set_value('username'); ?>" class="input1"></input></div>
-<label>Password*</label> <input type="password" name="password" class="input1"></input>
-<label>Confirmar Password*</label> <input type="password" name="password2" class="input1"></input>
+	<label>Usuario*</label> <input type="text" name="username" value="<?php echo set_value('username'); ?>" class="input1"></input><br><br>
+	<a style="text-decoration: none; font-size: 8pt; color:red"><?php echo form_error('username'); ?></a>
+	
+	<label>Password*</label> <input type="password" name="password" class="input1"></input><br><br>
+	<a style="text-decoration: none; font-size: 8pt; color:red"><?php echo form_error('password'); ?></a>
+	
+	<label>Confirmar Password*</label> <input type="password" name="password2" class="input1"></input><br><br>
+	<a style="text-decoration: none; font-size: 8pt; color:red"><?php echo form_error('password2'); ?></a>
 
 
 
@@ -79,13 +94,13 @@
 <fieldset><legend>---- Información sobre su empresa ----</legend><br><br>
   <p>
     <label>Empresa</label>
-    <input type="text" name="empresa" value="<?php echo set_value('empresa'); ?>"/>
+    <input type="text" name="empresa" value="<?php echo set_value('empresa'); ?>"/><br><br>
     <label>RUC</label>
-    <input type="text" name="ruc" value="<?php echo set_value('ruc'); ?>"/>
+    <input type="text" name="ruc" value="<?php echo set_value('ruc'); ?>"/><br><br>
     <label>Razon Social</label>
-    <input type="text" name="razon_social" value="<?php echo set_value('razon_social'); ?>"/>
+    <input type="text" name="razon_social" value="<?php echo set_value('razon_social'); ?>"/><br><br>
     <label>Cargo</label>
-    <input type="text" name="cargo" value="<?php echo set_value('cargo'); ?>"/>
+    <input type="text" name="cargo" value="<?php echo set_value('cargo'); ?>"/><br><br>
     <label>Sector Industrial</label>
     <input type="text" name="sector_ind" value="<?php echo set_value('sector_ind'); ?>"/>
   </p>
@@ -98,15 +113,13 @@
 	  <option >Medios de Prensa</option>
 	</select>
    </p> 
-    <br><br>
   <p>
     <img src="<?php echo base_url();?>index.php/login/captcha" alt="captcha" /><br>
     <label>Ingrese caracteres </label><input type="text" name="captcha" class="input1"/>
+    <a style="text-decoration: none; font-size: 8pt; color:red"><?php echo form_error('captcha'); ?></a>
     <br>
-  </p>
-  <h3 style="font-size: 8pt; color:red"><?php echo validation_errors(); ?></h3></p>
-  <p>
-  <input type="submit" name="submit" value="Registrarse"  />
+    <!-- <h3 style="font-size: 8pt; color:red"><?php echo validation_errors(); ?></h3> -->
+    <input type="submit" name="submit" value="Registrarse"  />
   </p>
 
 </fieldset>
