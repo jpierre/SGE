@@ -53,46 +53,43 @@
 
 <fieldset><legend>--------- Informacion Personal --------</legend><br><br>
 
- 	<label>DNI*</label> <input name="dni" type="text" value="<?php echo set_value('dni'); ?>"></input><br><br>
-	<a style="text-decoration: none; font-size: 8pt; color:red"><?php echo form_error('dni'); ?></a>
+ 	<label>DNI*</label><input name="dni" type="text" value="<?php echo set_value('dni'); ?>"/><br><br>
+	<span style="text-decoration: none; font-size: 8pt; color:red"><?php echo form_error('dni'); ?></span>
 	
-	<label>Nombres*</label> <input type="text" name="nombres" value="<?php echo set_value('nombres'); ?>" class="input1"></input><br><br>
+	<label>Nombres*</label><input type="text" name="nombres" value="<?php echo set_value('nombres'); ?>"/><br><br>
 	<a style="text-decoration: none; font-size: 8pt; color:red"><?php echo form_error('nombres'); ?></a>
 	
-	<label>Apellido Paterno*</label> <input type="text" name="ape_pat" value="<?php echo set_value('ape_pat'); ?>" class="input1"></input><br><br>
+	<label>Apellido Paterno*</label><input type="text" name="ape_pat" value="<?php echo set_value('ape_pat'); ?>"/><br><br>
 	<a style="text-decoration: none; font-size: 8pt; color:red"><?php echo form_error('ape_pat'); ?></a>
 	
-	<label>Apellido Materno*</label> <input type="text" name="ape_mat" value="<?php echo set_value('ape_mat'); ?>" class="input1"></input><br><br>
+	<label>Apellido Materno*</label><input type="text" name="ape_mat" value="<?php echo set_value('ape_mat'); ?>"/><br><br>
 	<a style="text-decoration: none; font-size: 8pt; color:red"><?php echo form_error('ape_mat'); ?></a>
 	
-	<label>Telefono Fijo*</label> <input type="text" name="fijo" value="<?php echo set_value('fijo'); ?>" class="input1"></input><br><br>
+	<label>Telefono Fijo*</label><input type="text" name="fijo" value="<?php echo set_value('fijo'); ?>"/><br><br>
 	<a style="text-decoration: none; font-size: 8pt; color:red"><?php echo form_error('fijo'); ?></a>
 	
-	<label>Celular*</label> <input type="text" name="celular" value="<?php echo set_value('celular'); ?>" class="input1"></input><br><br>
+	<label>Celular*</label><input type="text" name="celular" value="<?php echo set_value('celular'); ?>"/><br><br>
 	<a style="text-decoration: none; font-size: 8pt; color:red"><?php echo form_error('celular'); ?></a>
 	
-	<label>Correo*</label> <input type="text" name="email_adress" value="<?php echo set_value('email_adress'); ?>" class="input1"></input><br><br>
+	<label>Correo*</label><input type="text" name="email_adress" value="<?php echo set_value('email_adress'); ?>"/><br><br>
 	<a style="text-decoration: none; font-size: 8pt; color:red"><?php echo form_error('email_adress'); ?></a>
 	
-	<label>Direccion*</label> <input type="text" name="direccion" value="<?php echo set_value('direccion'); ?>" class="input1"></input><br><br>
+	<label>Direccion*</label><input type="text" name="direccion" value="<?php echo set_value('direccion'); ?>"/><br><br>
 	<a style="text-decoration: none; font-size: 8pt; color:red"><?php echo form_error('direccion'); ?></a>
 
-	<label>Usuario*</label> <input type="text" name="username" value="<?php echo set_value('username'); ?>" class="input1"></input><br><br>
+	<label>Usuario*</label><input type="text" name="username" value="<?php echo set_value('username'); ?>"/><br><br>
 	<a style="text-decoration: none; font-size: 8pt; color:red"><?php echo form_error('username'); ?></a>
 	
-	<label>Password*</label> <input type="password" name="password" class="input1"></input><br><br>
+	<label>Password*</label><input type="password" name="password"/><br><br>
 	<a style="text-decoration: none; font-size: 8pt; color:red"><?php echo form_error('password'); ?></a>
 	
-	<label>Confirmar Password*</label> <input type="password" name="password2" class="input1"></input><br><br>
+	<label>Confirmar Password*</label><input type="password" name="password2"><br><br>
 	<a style="text-decoration: none; font-size: 8pt; color:red"><?php echo form_error('password2'); ?></a>
-
-
-
 
 </fieldset>
 
 <fieldset><legend>---- Información sobre su empresa ----</legend><br><br>
-  <p>
+  
     <label>Empresa</label>
     <input type="text" name="empresa" value="<?php echo set_value('empresa'); ?>"/><br><br>
     <label>RUC</label>
@@ -104,26 +101,22 @@
     <label>Sector Industrial</label>
     <input type="text" name="sector_ind" value="<?php echo set_value('sector_ind'); ?>"/><br><br>
     <!-- Todavia no se define nada acerca de "tipo_usuario" solo esta en la vista-->
-    <input type="checkbox" name="tipo_usuario" value="1"> Seleccione SOLO si ud. es representante de su empresa y puede inscribir a otros empleados.  
-  </p>
-  <br>
-  <p>
+    <input type="checkbox" name="tipo_usuario" value="1"> Seleccione SOLO si ud. es representante de su empresa y puede inscribir a otros empleados.<br><br>  
+   
     <label>Como se entero del evento?</label>
 	<select>
 	  <option >Facebook</option>
 	  <option >Pagina USMP</option>
 	  <option >Medios de Prensa</option>
-	</select>
-   </p> 
-  <p>
+	</select><br><br>
+      
     <img src="<?php echo base_url();?>index.php/login/captcha" alt="captcha" /><br>
     <label>Ingrese caracteres </label><input type="text" name="captcha" class="input1"/>
-    <a style="text-decoration: none; font-size: 8pt; color:red"><?php echo form_error('captcha'); ?></a>
+   	<a style="text-decoration: none; font-size: 8pt; color:red"><?php echo form_error('captcha'); ?></a>
     <br>
     <!-- <h3 style="font-size: 8pt; color:red"><?php echo validation_errors(); ?></h3> -->
     <input type="submit" name="submit" value="Registrarse"  />
-  </p>
-
+  
 </fieldset>
   </form>
 

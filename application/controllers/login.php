@@ -82,28 +82,19 @@ class Login extends CI_Controller{
 			
 			
 				redirect('site/members_area');
-			
 			}
-
 		}
-		
-
-		
-		
 	}
-	/*Te lleva al formulario de registro*/
 	
+	/*Te lleva al formulario de registro*/
 	function signup(){
 		$data['main_content'] = 'signup_form';
 		$this->load->view('includes/template', $data);
 	}
+	
 	/*Te lleva a la pagina eventos*/
 	function eventos(){
-
 		$this->load->view('simplestyle_6/eventos');
-
-
-
 	}
 
 	function create_member(){
@@ -122,7 +113,7 @@ class Login extends CI_Controller{
 		$this->form_validation->set_rules('password','Password', 'trim|required|min_length[4]|max_length[32]');
 		$this->form_validation->set_rules('password2','Confirmar password', 'trim|required|matches[password]');
 		
-		//$this->form_validation->set_rules('captcha','Caracteres', 'trim|required');
+		$this->form_validation->set_rules('captcha','Caracteres', 'trim|required|callback_captcha');
 		
 		$this->form_validation->set_message('min_length', 'El campo %s debe contener como mínimo %s caracteres.');
 		$this->form_validation->set_message('max_length', 'El campo %s debe contener como máximo %s caracteres.');
@@ -170,8 +161,8 @@ class Login extends CI_Controller{
 			
 		}
 	}
-	//FUNCION QUE DEVUELVE EL CAPTCHA
 	
+	//FUNCION QUE DEVUELVE EL CAPTCHA
 	function captcha($verificar = false){
 	        if ($verificar === false) {
 	            $this->load->library('captcha');
