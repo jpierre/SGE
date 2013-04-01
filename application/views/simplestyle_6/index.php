@@ -57,32 +57,31 @@ $(function() {
           <li><a href="<?php echo base_url(); ?>index.php/login/eventos">Eventos</a></li>
           <li><a href="<?php echo base_url(); ?>index.php/login/signup">Registrate</a></li>
           <li><a href="#">Contactanos</a></li>
+          
           <li>
-		  
 		  <!-- Login-->
         <div id="loginContainer"> <a href="#" id="loginButton"><span>Login</span><em></em></a>
-      <div style="clear:both"></div>
-      <div id="loginBox">
-        <form id="loginForm" action="<?php echo base_url();?>index.php/login/validate_credentials" method="post" accept-charset="utf-8">
-          <fieldset id="body">
-            <fieldset>
-              <label for="email">Usuario</label>
-              <input type="text" name="username" id="email" />
-            </fieldset>
-            <fieldset>
-              <label for="password">Password</label>
-              <input type="password" name="password" id="password" />
-            </fieldset>
-            <input type="submit" id="login" value="Sign in" />
-          </fieldset>
-          <span ><a href="#" >Olvidaste tu password?</a></span>
-        </form>
+      		<div style="clear:both"></div>
+      		<div id="loginBox">
+        		<form id="loginForm" action="<?php echo base_url();?>index.php/login/validate_credentials" method="post" accept-charset="utf-8">
+		          	<fieldset id="body">
+			            <fieldset>
+				            <label for="email">Usuario</label>
+				            <input type="text" name="username" id="email" />
+			            </fieldset>
+		            	<fieldset>
+			              <label for="password">Password</label>
+			              <input type="password" name="password" id="password" />
+		            	</fieldset>
+		            <input type="submit" id="login" value="Sign in" />
+	          		</fieldset>
+	          		<span ><a href="#" >Olvidaste tu password?</a></span>
+        		</form>
          <h3 style="font-size: 8pt; color:red"><?php echo validation_errors(); ?></h3>
       </div>
     </div>
         
-        
-          
+                 
           
           </li>
          

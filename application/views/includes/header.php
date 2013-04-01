@@ -11,8 +11,9 @@
   <link rel="stylesheet" href="<?php echo base_url(); ?>css/login.css" type="text/css" media="screen" charset="utf-8" />
 <script type="text/javascript" src="<?php echo base_url(); ?>js/login.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js?ver=1.4.2"></script>
-<script type="text/javascript">
 
+
+<script type="text/javascript">
 // Login Form
 
 $(function() {
