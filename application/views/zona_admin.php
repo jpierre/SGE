@@ -191,7 +191,7 @@ body {
       <li class='active'><a href='#'>Ver Asistencia</a>  </li>
       <li class='has-sub'><?php echo anchor('administrador/administrador/mostrarlo2', 'Mantener Ponencia'); ?> </li>
       <li class='has-sub'><?php echo anchor('administrador/administrador/mostrarlo', 'Asignar Expositor a Ponencia'); ?></li>
-      <li class='last'><?php echo anchor('login/logout', 'Cerrar Sesion'); ?></span></a></li>
+      <li class='last'><?php echo anchor('login/logout', 'Cerrar Sesion'); ?></li>
     </ul>
   </div>
   <div id="tusdatos"></div>
