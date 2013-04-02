@@ -165,8 +165,8 @@ body {
 }
 #informacion {
 	position: absolute;
-	left: 874px;
-	top: 38px;
+	left: 80%;
+	top: 7%;
 	margin-left: 10px;
 }
 </style>

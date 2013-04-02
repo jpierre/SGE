@@ -1,4 +1,4 @@
-<div id="inscribir" align="center" style="position:absolute; left:50%; top:150px;">
+<div id="inscribir" align="center">
   <h1>Mis Datos</h1>
   <form action="<?php echo base_url();?>index.php/login/create_member" method="post" accept-charset="utf-8">
     <fieldset>

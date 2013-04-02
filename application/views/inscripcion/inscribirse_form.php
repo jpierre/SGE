@@ -1,4 +1,4 @@
-<div id="inscribir" align="center" style="position:absolute; left:50%; top:150px;">
+<div id="inscribir" align="center" >
 
   <h1>Inscripcion</h1>
   <p>(*)Campos obligatorios</p>

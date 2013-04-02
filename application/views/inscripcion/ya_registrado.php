@@ -1,6 +1,12 @@
-<div id="inscribir" align="center" style="position:absolute; left:50%; top:150px;">
-
-  <h1>Usted ya se encuentra degistrado en vision <?php echo date('Y');?></h1>
+<div id="inscribir" align="center">
+	<?php if($id_evento==1):?>
+  <h3>Usted ya se encuentra registrado en vision <?php echo date('Y');?></h3>
+  	<?php endif?>
+    
+    
+    
+    
+    
  
 
   

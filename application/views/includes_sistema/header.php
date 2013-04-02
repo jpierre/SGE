@@ -5,14 +5,23 @@
 <title>Eventos</title>
 <link rel="stylesheet" href="<?php echo base_url(); ?>css/style2.css" type="text/css" media="screen" charset="utf-8" />
 <link rel="stylesheet" href="<?php echo base_url(); ?>css/sistema.css" type="text/css" media="screen" charset="utf-8" />
-<style></style>
+<style>
+#informacion {
+	position: absolute;
+	left: 80%;
+	top: 7%;
+	margin-left: 10px;
+}
+
+
+</style>
 
 </head>
 
 <body>
 <div id="sistema">
 <div id='informacion'>
-  <h3>Bienvenido <?php echo $this->session->userdata('nombres')." ".$this->session->userdata('apellido_paterno'); ?></h3>
+  <h4>Bienvenido <?php echo $this->session->userdata('nombres')." ".$this->session->userdata('apePat')." ".$this->session->userdata('apeMat'); ?></h4>
   <p>Solo los registrados pueden acceder aca</p>
 </div>
 <div id="logo">
