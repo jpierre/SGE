@@ -26,6 +26,7 @@ ul.nav a { zoom: 1; }  /* the zoom property gives IE the hasLayout trigger it ne
   <div class="content">
      <?php $this->load->view('contenido');?>
     <!-- end .content --></div>
+    
 	<div class="sidebar2">
     	<img src="<?php echo base_url(); ?>images/buho.jpg" border="0"/> 
 	</div>

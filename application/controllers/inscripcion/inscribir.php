@@ -28,7 +28,7 @@ class Inscribir extends CI_Controller{
 	
 	function mostrarlo(){
 		$data['main_content'] = 'inscripcion/mostrardatos_form';
-		$this->load->view('includes_sistema/template', $data);
+		$this->load->view('home/home', $data);
 	}
 	
 	function registar_inscrip(){
@@ -52,7 +52,7 @@ class Inscribir extends CI_Controller{
 		
 		if($result==true){
 			$data['main_content']='inscripcion/inscripcion_succesful';
-			$this->load->view('includes_sistema/template', $data);
+			$this->load->view('home/home', $data);
 		}
 	}
 
@@ -61,12 +61,12 @@ class Inscribir extends CI_Controller{
 		if($eleccion==1){
 			$data['id_evento'] = $id_evento;
 			$data['main_content']='inscripcion/inscribirse_form';
-			$this->load->view('includes_sistema/template', $data);
+			$this->load->view('home/home', $data);
 		
 		}else{
 			$data['id_evento'] = $id_evento;
 			$data['main_content']='inscripcion/inscribirParticipantes_form';
-			$this->load->view('includes_sistema/template', $data);
+			$this->load->view('home/home', $data);
 		}
 
 	}
