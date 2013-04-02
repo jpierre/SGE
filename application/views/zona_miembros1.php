@@ -14,7 +14,7 @@
 <table  width="1000" height="750" border="0"  cellspacing="0" cellpadding="0">
   <tr>
     <td height="145" colspan="2" style="position:relative;">
-    <div class="header"><a href="iframes/bienvenido.html" target="contenido_sistema"><img src="<?php echo base_url(); ?>images/cabecera.png" width="1000" height="144" border="0"/></a></div>
+    <div class="header"><img src="<?php echo base_url(); ?>images/cabecera.png" width="1000" height="144" border="0"/></div>
     </td>
   </tr>
   <tr>
@@ -66,7 +66,9 @@
                     </ul>
       </div></td>
     
-    <td width="821" style="position:relative;"><iframe src="iframes/bienvenido.html" name="contenido_sistema" width="821" height="538" scrolling="Auto" frameborder="0" style="position:absolute;" ></iframe>
+    <td width="821" style="position:relative;">
+    <iframe src="iframes/bienvenido.html" name="contenido_sistema" width="821" height="538" scrolling="Auto" frameborder="0" style="position:absolute;" >
+    </iframe>
     </td>
   </tr>
   

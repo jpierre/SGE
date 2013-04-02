@@ -1,5 +1,3 @@
-</div><!-- end login_form-->
-
 <div class="content">
      <link href="<?php echo base_url(); ?>css/wufo/structure.css" rel="stylesheet">
 <link href="<?php echo base_url(); ?>css/wufo/form.css" rel="stylesheet">
@@ -19,16 +17,10 @@ action="">
 <li id="foli112" class="notranslate first section      ">
 <section>
 <h3 id="title112">
-<?php
-  if($id_evento==1){
-   	echo anchor('inscripcion/inscribir/registro_externo/1/1', 'Inscripbirte tu mismo').'<br />';
-  	echo anchor('inscripcion/inscribir/registro_externo/1/2', 'Inscribir personas');
-  }else{
-  	echo anchor('inscripcion/inscribir/registro_externo/2/1', 'Inscripbirte tu mismo').'<br />';
-  	echo anchor('inscripcion/inscribir/registro_externo/2/2', 'Inscribir personas');
-  }
-?> 
-
+Bienvenido! Te has logueado como:<br />
+<br />
+<?php echo $this->session->userdata('nombres')." ".$this->session->userdata('apePat')." ".$this->session->userdata('apeMat'); ?><br />
+con DNI: <?php echo $this->session->userdata('idDNI'); ?>
 </h3>
 </section>
 </li>

@@ -12,7 +12,7 @@
 	
 		function members_area(){
 		
-			$this->load->view('zona_miembros1');	
+			$this->load->view('zona_miembros2');	
 		}
 		
 		function is_logged_in(){
