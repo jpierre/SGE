@@ -7,7 +7,7 @@ html
 
 body
 { font: normal .80em 'trebuchet ms', arial, sans-serif;
-  background: #EEE;
+  background:#EEE;
   color: #5D5D5D;}
 
 p
@@ -214,6 +214,7 @@ ul#menu li a:hover
 
 .sidebar_item li a.selected
 { color: #444;
+
   text-decoration: none;} 
 
 #content
@@ -323,7 +324,8 @@ table tr td
 { background: #E5E5DB;
   color: #47433F;
   border-top: 1px solid #FFF;}
-  
+/*
+
 #inscribir{
  
 	    width: 500px;
@@ -338,12 +340,13 @@ table tr td
 	    border-radius: 7px; 
 	 
 	    /* Border Shadow */
-	    -moz-box-shadow: 2px 2px 2px #cccccc;
+	/*    -moz-box-shadow: 2px 2px 2px #cccccc;
 	    -webkit-box-shadow: 2px 2px 2px #cccccc;
 	    box-shadow: 2px 2px 2px #cccccc;
 	 
 	  margin-left: -200px;
-    }
+    }*/
+
 
 .error{
 	font-size: 8pt; 
@@ -351,3 +354,10 @@ table tr td
 }
 
 
+#buo{
+	background-image:url(../images/buo3.png);
+	border:none;
+	
+
+	
+}

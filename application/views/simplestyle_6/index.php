@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="<?php echo base_url(); ?>css/style.css" type="text/css" media="screen" charset="utf-8" />
  
  <link rel="stylesheet" href="<?php echo base_url(); ?>css/login.css" type="text/css" media="screen" charset="utf-8" />
+ 
 <script type="text/javascript" src="<?php echo base_url(); ?>js/login.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js?ver=1.4.2"></script>
 <script type="text/javascript">
@@ -47,6 +48,7 @@ $(function() {
           <!-- class="logo_colour", allows you to change the colour of the text -->
           <h1><a href="#">Event<span class="logo_colour">system</span></a></h1>
           <h2>Sistema de gestion de eventos FIA.</h2>
+          <img width="207" height="196" style="position: absolute; left: 277px; top: -5px; width: 109px; height: 97px;" id="buo" />
         </div>
       </div>
       <div id="menubar">
@@ -60,7 +62,7 @@ $(function() {
           
           <li>
 		  <!-- Login-->
-        <div id="loginContainer"> <a href="#" id="loginButton"><span>Login</span><em></em></a>
+        <div id="loginContainer"> <a href="#" id="loginButton"><span>Login</span></a>
       		<div style="clear:both"></div>
       		<div id="loginBox">
         		<form id="loginForm" action="<?php echo base_url();?>index.php/login/validate_credentials" method="post" accept-charset="utf-8">
@@ -73,11 +75,13 @@ $(function() {
 			              <label for="password">Password</label>
 			              <input type="password" name="password" id="password" />
 		            	</fieldset>
-		            <input type="submit" id="login" value="Sign in" />
+		            <input type="submit" id="login" value="Sign in" /><a href="#" >Olvidaste tu password?</a>
 	          		</fieldset>
-	          		<span ><a href="#" >Olvidaste tu password?</a></span>
+	          		
+              </br>
+                 <h3 style="font-size: 8pt; color:blue"><?php echo validation_errors(); ?></h3>
         		</form>
-         <h3 style="font-size: 8pt; color:red"><?php echo validation_errors(); ?></h3>
+         
       </div>
     </div>
         

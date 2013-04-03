@@ -60,7 +60,7 @@ $(function() {
           <li>
 		  
 		 
-          <div id="loginContainer"> <a href="#" id="loginButton"><span>Login</span><em></em></a>
+          <div id="loginContainer"> <a href="#" id="loginButton"><span>Login</span></a>
       <div style="clear:both"></div>
       <div id="loginBox">
         <form id="loginForm" action="<?php echo base_url();?>index.php/login/validate_credentials" method="post" accept-charset="utf-8">
