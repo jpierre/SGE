@@ -3,7 +3,7 @@
                         <ul id="menu" >
                            <li><a href="#" class="categoria" >Informacion Personal</a>
                                 <ul>
-                                	<li><span><?php echo anchor('','&raquo; Ver Perfil'); ?></span></li>
+                                	<li><span><a href="<?php echo base_url();?>index.php/login/ver_perfil">&raquo; Ver Perfil</a></li>
                                     <li><span><?php echo anchor('','&raquo; Modificar Perfil'); ?></span></li>
                                 </ul>
                           </li>
@@ -32,7 +32,7 @@
                            </li>
                            <li><a href="" class="categoria">Acerca De</a></li>
                            </li>
-                           <li><a href="index.html" class="categoria">Salir</a></li>
+                           <li><a href="<?php echo base_url();?>index.php/login/logout" class="categoria" >Cerrar Sesion</a></li>
                            
                     </ul>
       </div>

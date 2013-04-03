@@ -1,6 +1,9 @@
 <?php
 
 class Miembros_model extends CI_Model{
+	
+	
+	
 	function validate(){
 		$this->db->where('user', $this->input->post('username'));
 		$this->db->where('password', md5($this->input->post('password')));
@@ -11,11 +14,6 @@ class Miembros_model extends CI_Model{
 		}else{
 			return false;	
 		}
-		
-		
-		
-		
-		
 	}
 
 	function validate_sicat(){
@@ -28,25 +26,21 @@ class Miembros_model extends CI_Model{
 		}else{
 			return false;	
 		}
-
 	}
 	
 	function create_member($data=NULL){
 		$new_member_insert_data= array(
-		
-		
-		
-			'idDni' =>$this->input->post('dni'),
-			'nombres' =>$this->input->post('nombres'),
-			'apePat' =>$this->input->post('ape_pat'),
-			'apeMat' =>$this->input->post('ape_mat'),
-			'telefono' =>$this->input->post('fijo'),
-			'celular' =>$this->input->post('celular'),
-			'correo' =>$this->input->post('email_adress'),
-			'direccion' =>$this->input->post('direccion'),
-			'tipo' =>"externo",
-			'user' =>$this->input->post('username'),
-			'password' =>md5($this->input->post('password'))	
+						'idDni' =>$this->input->post('dni'),
+						'nombres' =>$this->input->post('nombres'),
+						'apePat' =>$this->input->post('ape_pat'),
+						'apeMat' =>$this->input->post('ape_mat'),
+						'telefono' =>$this->input->post('fijo'),
+						'celular' =>$this->input->post('celular'),
+						'correo' =>$this->input->post('email_adress'),
+						'direccion' =>$this->input->post('direccion'),
+						'tipo' =>"externo",
+						'user' =>$this->input->post('username'),
+						'password' =>md5($this->input->post('password'))	
 		);
 		
 		$insert= $this->db->insert('usuario',$new_member_insert_data);
