@@ -13,25 +13,24 @@ class Inscribir extends CI_Controller{
 			$result=$this->registro->get_estado_user($this->session->userdata('idDNI'));			
 			if(strcasecmp($result->tipo, "estudiante")==0 || strcasecmp($result->tipo, "egresado")==0){
 				$data['main_content'] = 'inscripcion/inscribirse_form';
-				$this->load->view('includes_sistema/template', $data);
+				$this->load->view('home/home', $data);
 			}else{
 				$data['main_content'] = 'inscripcion/elegir';
-				$this->load->view('includes_sistema/template', $data);
+				$this->load->view('home/home', $data);
 			}
 		}else{
 				$data['main_content'] = 'inscripcion/ya_registrado';
-				$this->load->view('includes_sistema/template', $data);
+				$this->load->view('home/home	', $data);
 		}
 		
 	}
 	
 	
 	function mostrarlo(){
-
-$data['main_content'] = 'inscripcion/mostrardatos_form';
-		$this->load->view('includes_sistema/template', $data);
-
+		$data['main_content'] = 'inscripcion/mostrardatos_form';
+		$this->load->view('home/home', $data);
 	}
+	
 	function registar_inscrip(){
 		//recogemos los datos obtenidos por POST
 		$data['id_participante'] = $this->session->userdata('idDNI');
@@ -53,7 +52,7 @@ $data['main_content'] = 'inscripcion/mostrardatos_form';
 		
 		if($result==true){
 			$data['main_content']='inscripcion/inscripcion_succesful';
-			$this->load->view('includes_sistema/template', $data);
+			$this->load->view('home/home', $data);
 		}
 	}
 
@@ -62,12 +61,12 @@ $data['main_content'] = 'inscripcion/mostrardatos_form';
 		if($eleccion==1){
 			$data['id_evento'] = $id_evento;
 			$data['main_content']='inscripcion/inscribirse_form';
-			$this->load->view('includes_sistema/template', $data);
+			$this->load->view('home/home', $data);
 		
 		}else{
 			$data['id_evento'] = $id_evento;
 			$data['main_content']='inscripcion/inscribirParticipantes_form';
-			$this->load->view('includes_sistema/template', $data);
+			$this->load->view('home/home', $data);
 		}
 
 	}

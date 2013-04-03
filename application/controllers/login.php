@@ -4,8 +4,8 @@ class Login extends CI_Controller{
 	function index(){
 		//$data['main_content']= 'login_form';
 		//$this->load->view('includes/template', $data);
-		//$this->load->view('simplestyle_6/index');
-		$this->load->view('login_form');
+		$this->load->view('simplestyle_6/index');
+		//$this->load->view('login_form');
 	}
 	
 	function validate_credentials(){
@@ -40,6 +40,10 @@ class Login extends CI_Controller{
 						'idDNI' => $query->idDNI,
 						'estado' => $query->tipo,
 						'escuela' => $query->escuela,
+						'celular' => $query->celular,
+						'fijo' => $query->telefono,
+						'correo' => $query->correo,
+						'direccion' => $query->direccion,
 						'is_logged_in' => true
 		
 					);	
@@ -114,7 +118,7 @@ class Login extends CI_Controller{
 		$this->form_validation->set_rules('password','Password', 'trim|required|min_length[4]|max_length[32]');
 		$this->form_validation->set_rules('password2','Confirmar password', 'trim|required|matches[password]');
 		
-		$this->form_validation->set_rules('captcha','Caracteres', 'trim|required|callback_captcha');
+		//$this->form_validation->set_rules('captcha','Caracteres', 'trim|required|callback_captcha');
 		
 		$this->form_validation->set_message('min_length', 'El campo %s debe contener como mínimo %s caracteres.');
 		$this->form_validation->set_message('max_length', 'El campo %s debe contener como máximo %s caracteres.');
@@ -176,6 +180,11 @@ class Login extends CI_Controller{
 	        }
     	}
 	
+    function ver_perfil(){
+    	redirect('site/ver_perfil');
+    }
+    	
+    	
 	
 	
 	

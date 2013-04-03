@@ -12,7 +12,12 @@
 	
 		function members_area(){
 		
-			$this->load->view('zona_miembros');	
+			$this->load->view('home/inicio');	
+		}
+		
+		function ver_perfil(){
+		
+			$this->load->view('home/ver_perfil');	
 		}
 		
 		function is_logged_in(){

@@ -196,7 +196,7 @@ body {
       </li>
       <li class='has-sub'><a href='#'><span>Generar tu codigo QR!</span></a> </li>
       <li><a href='#'><span>Horario</span></a></li>
-      <li class='last'><?php echo anchor('login/logout', 'Cerrar Sesion'); ?></span></a></li>
+      <li class='last'><?php echo anchor('login/logout', 'Cerrar Sesion'); ?></li>
     </ul>
   </div>
 
@@ -204,3 +204,12 @@ body {
 </div>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
