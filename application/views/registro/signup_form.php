@@ -42,6 +42,17 @@
   <p>(*)Campos obligatorios</p>
   <form action="<?php echo base_url();?>index.php/login/create_member" method="post" accept-charset="utf-8" class="box">
     <div id="personal">
+<<<<<<< HEAD
+      <fieldset>
+        <legend> Informacion Personal</legend>
+        <br>
+        <br>
+        <label>Tipo de documento</label>
+        <select name="tipo_doc">
+          <option value="1">DNI</option>
+          <option value="2">VISA</option>
+          <option value="3">Pasaporte</option>
+=======
     <fieldset><legend>Informacion Personal</legend>
     <br>
       <label>Tipo de documento</label>
@@ -51,6 +62,7 @@
           <option>Pasaporte</option>
           <option>VISA</option>
           <option>Carnet de extranjeria</option>
+>>>>>>> 3c828bb9e529ee5b46adea2de7c2e4aa653849c7
         </select>
         <br>
         <br>
@@ -130,19 +142,23 @@
         <input type="text" name="cargo" value="<?php echo set_value('cargo'); ?>"/>
         <br>
         <br>
+        <label>Departamento</label>
+        <input type="text" name="dpto" value="<?php echo set_value('dpto'); ?>"/>
+        <br>
+        <br>
         <label>Sector Industrial</label>
         <input type="text" name="sector_ind" value="<?php echo set_value('sector_ind'); ?>"/>
         <br>
         <br>
         <!-- Todavia no se define nada acerca de "tipo_usuario" solo esta en la vista-->
-        <input type="checkbox" name="tipo_usuario" value="1">
+        <input type="checkbox" name="tipo_usuario" value="4">
         Seleccione SOLO si ud. es representante de su empresa y puede inscribir a otros empleados.<br>
         <br>
         <label>Como se entero del evento?</label>
-        <select>
-          <option >Facebook</option>
-          <option >Pagina USMP</option>
-          <option >Medios de Prensa</option>
+        <select name="como">
+          <option value="1" >Facebook</option>
+          <option value="2" >Pagina USMP</option>
+          <option value="3" >Medios de Prensa</option>
         </select>
         <br>
         <br>

@@ -30,8 +30,12 @@ class Miembros_model extends CI_Model{
 	
 	// Cambiando el crear nuevo miembro con la nueva BD
 	function create_member($data=NULL){
+		// tip_usu=3 externo independiente
+		// tip_usu=4 externo corporativo representante
+		//tip_usu=5 externo corporativo empleado
+		
 		$new_member_insert_data= array(
-						'tip_doc_user' =>$this->input->post(''),
+						'tip_doc_user' =>$this->input->post('tipo_doc'),
 						'num_doc_user' =>$this->input->post('dni'),
 						'nom_user' =>$this->input->post('nombres'),
 						'ape_pat_user' =>$this->input->post('ape_pat'),
@@ -40,12 +44,21 @@ class Miembros_model extends CI_Model{
 						'telf_cel' =>$this->input->post('celular'),
 						'email_user' =>$this->input->post('email_adress'),
 						'dir_user' =>$this->input->post('direccion'),
-						'tip_usu' =>$this->input->post(''),
+						'tip_usu' =>'3',
 						'usuario_user' =>$this->input->post('username'),
 						'pas_user' =>md5($this->input->post('password')),
-						'cargo_emp_user' =>md5($this->input->post('')),
-						'dpto_emp_user' =>md5($this->input->post(''))
+						'info_acerca_evento' =>$this->input->post('como')
+						
 		);
+		if($data!=NULL){
+			if($this->input->post('tipo_usuario')!=""){
+				$new_member_insert_data['tip_usu']=$this->input->post('tipo_usuario');//Externo corporativo representante
+			}else{
+				$new_member_insert_data['tip_usu']='5';//Externo corporativo empleado
+			}
+			$new_member_insert_data['cargo_emp_user']=$this->input->post('cargo');
+			$new_member_insert_data['dpto_emp_user']=$this->input->post('dpto');	
+		}
 		
 		$insert= $this->db->insert('usuario',$new_member_insert_data);
 		

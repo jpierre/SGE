@@ -104,6 +104,7 @@ class Login extends CI_Controller{
 	}
 
 	function create_member(){
+		
 		$this->load->library('form_validation');
 		
 		$this->form_validation->set_rules('dni','DNI', 'trim|required|exact_length[8]');
@@ -143,9 +144,8 @@ class Login extends CI_Controller{
 				'nom_empresa' => $this->input->post('empresa'),
 				'ruc' => $this->input->post('ruc'),
 				'rs' => $this->input->post('razon_social'),
-				'cargo' => $this->input->post('cargo'),
-				'sector_industrial' => $this->input->post('sector_ind'),
-				'dni' => $this->input->post('dni')
+				'sector_industrial' => $this->input->post('sector_ind')
+				
 		
 			);
 				
