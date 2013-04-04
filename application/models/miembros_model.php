@@ -5,8 +5,8 @@ class Miembros_model extends CI_Model{
 	
 	
 	function validate(){
-		$this->db->where('user', $this->input->post('username'));
-		$this->db->where('password', md5($this->input->post('password')));
+		$this->db->where('usuario_user', $this->input->post('username'));
+		$this->db->where('pas_user', md5($this->input->post('password')));
 		$query = $this->db->get('usuario');
 		
 		if($query->num_rows == 1){
