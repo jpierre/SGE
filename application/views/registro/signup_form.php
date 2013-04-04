@@ -42,7 +42,7 @@
   <p>(*)Campos obligatorios</p>
   <form action="<?php echo base_url();?>index.php/login/create_member" method="post" accept-charset="utf-8" class="box">
     <div id="personal">
-<<<<<<< HEAD
+
       <fieldset>
         <legend> Informacion Personal</legend>
         <br>
@@ -52,17 +52,6 @@
           <option value="1">DNI</option>
           <option value="2">VISA</option>
           <option value="3">Pasaporte</option>
-=======
-    <fieldset><legend>Informacion Personal</legend>
-    <br>
-      <label>Tipo de documento</label>
-      *
-        <select>
-          <option>DNI</option>
-          <option>Pasaporte</option>
-          <option>VISA</option>
-          <option>Carnet de extranjeria</option>
->>>>>>> 3c828bb9e529ee5b46adea2de7c2e4aa653849c7
         </select>
         <br>
         <br>
