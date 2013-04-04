@@ -3,27 +3,22 @@
 <link href="<?php echo base_url(); ?>css/wufo/theme.css" rel="stylesheet">
 
 <div class="content">
-	<div id="container" class="ltr">
+<div id="container" class="ltr">
 			
-			<form id="form6" name="form6" class="wufoo topLabel page" autocomplete="off" enctype="multipart/form-data" method="post" novalidate
-			action="">
+	<form id="form6" name="form6" class="wufoo topLabel page" autocomplete="off" enctype="multipart/form-data" method="post" novalidate action="">
+		<header id="header" class="info">
+		<h2>Bienvenidos! Eventos FIA ! </h2>
+		<div>SGE es un proyecto para el curso de DIS enfocado a las necesitades de nuestra facultad.</div>
+		</header>
 			
-			<header id="header" class="info">
-			<h2>Bienvenidos! Eventos FIA ! </h2>
-			<div>SGE es un proyecto para el curso de DIS enfocado a las necesitades de nuestra facultad.</div>
-			</header>
-			
-			<ul>
-			<li id="foli112" class="notranslate first section      ">
-			<section>
-			<h3 id="title112">
-			Bienvenido! Te has logueado como:<br />
-			<br />
-			<?php echo $this->session->userdata('nombres')." ".$this->session->userdata('apePat')." ".$this->session->userdata('apeMat'); ?><br />
-			con DNI: <?php echo $this->session->userdata('idDNI'); ?>
-			</h3>
-			</section>
-			</li>
+		<ul>
+		<li id="foli112" class="notranslate first section      ">
+		<section>
+		<h3 id="title112">
+		Bienvenido de nuevo <b><?php echo $this->session->userdata('nombres')." ".$this->session->userdata('apePat')." ".$this->session->userdata('apeMat'); ?></b><br />
+		</h3>
+		</section>
+		</li>
 			
 			<li id="foli457" class="notranslate section      ">
 			<section>

@@ -3,15 +3,15 @@
                         <ul id="menu" >
                            <li><a href="#" class="categoria" >Informacion Personal</a>
                                 <ul>
-                                	<li><span><a href="<?php echo base_url();?>index.php/login/ver_perfil">&raquo; Ver Perfil</a></li>
-                                    <li><span><?php echo anchor('','&raquo; Modificar Perfil'); ?></span></li>
+                                	<li><a href="<?php echo base_url();?>index.php/login/ver_perfil">&raquo; Ver Perfil</a></li>
+                                	<li><span><?php echo anchor('','&raquo; Modificar Perfil'); ?></span></li>
                                 </ul>
                           </li>
                           <li><a href="#" class="categoria">Eventos</a>
                                 <ul>
                                 <li><span><?php echo anchor('inscripcion/inscribir/index/1', '&raquo; VISION 2013'); ?></span></li>
                                 <li><span><?php echo anchor('inscripcion/inscribir/index/2', '&raquo; Cloud Google'); ?></span></li>
-                                <li><a href="#">&raquo; Android Lima Day</a>
+                                <li><span><?php echo anchor('', '&raquo; Android Lima Day'); ?></span>
                                         <ul>
                                         <li><a href="#">Ponencia 1</a></li>
                                         <li><a href="#">Ponencia 2</a></li>

@@ -12,7 +12,7 @@ class Administrador extends CI_Controller{
 
 	function mostrarlo2(){
 
-	$data['main_content'] = 'home_admin/manterPonencia';
+	$data['main_content'] = 'home_admin/mantenerPonencia';
 		$this->load->view('home_admin/home', $data);
 
 	}

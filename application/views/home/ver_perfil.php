@@ -34,7 +34,6 @@
 			Correo				: <?php echo $this->session->userdata('correo'); ?><br>
 			Direccion			: <?php echo $this->session->userdata('direccion'); ?><br>
 			Usuario				: <?php echo $this->session->userdata('user'); ?>
-			
 			</h3>
 			</section>
 			</li>

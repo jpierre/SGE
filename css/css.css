@@ -149,10 +149,15 @@ ul.nav a:hover, ul.nav a:active, ul.nav a:focus { /* this changes the background
 	display:block;
 	color:#FFF;
 	text-decoration:none;
+	text-align:left;
 	font-family:Verdana,Tahoma,'Times New Roman';
 	font-size:12px;
 	padding:6px 8px;
 	text-shadow:1px 1px 1px #325179;
+}
+
+#nav span{
+	text-align:left;
 }
 
 #nav #menu a:hover{
@@ -191,5 +196,10 @@ ul.nav a:hover, ul.nav a:active, ul.nav a:focus { /* this changes the background
 .error span{
 	font-color:#126FAA;
 }
+
+.alinear_izq{
+	text-align:left;
+}	
+
 
 

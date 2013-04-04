@@ -1,3 +1,4 @@
+<!-- ESTE PHP VA DENTRO DE HOME/HOME ES EL MAIN_CONTENT  -->
 <div id="inscribir" align="center">
   <h1>Mis Datos</h1>
   <form action="<?php echo base_url();?>index.php/login/create_member" method="post" accept-charset="utf-8">

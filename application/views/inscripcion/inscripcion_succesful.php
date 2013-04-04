@@ -1,3 +1,4 @@
+<!-- ESTE PHP VA DENTRO DE HOME/HOME ES EL MAIN_CONTENT  -->
 <link href="<?php echo base_url(); ?>css/wufo/structure.css" rel="stylesheet">
 <link href="<?php echo base_url(); ?>css/wufo/form.css" rel="stylesheet">
 <link href="<?php echo base_url(); ?>css/wufo/theme.css" rel="stylesheet">
@@ -17,7 +18,7 @@
 			<li id="foli112" class="notranslate first section      ">
 			<section>
 			<h3 id="title112">
-			<span clas="desc">Felicitaciones! Su registro ha sido satisfactorio.</span><br />
+			<span class="desc">Felicitaciones! Su registro ha sido satisfactorio.</span><br />
 			</h3>
 			</section>
 			</li>
