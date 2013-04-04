@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<div id="inscribir" align="center" >
-=======
 </div><!-- end login_form-->
 
 <div class="content">
@@ -70,7 +67,6 @@
 		<input type="hidden" id="idstamp" name="idstamp" value="UMNzPMBJAKJDRS+yIF9KnTpg/3fM+9os4GLiBNShDgc=" />
 		</li>
 		</ul>
->>>>>>> origin/Cambio-de-Diseño
 
 	
 </div><!--container-->
