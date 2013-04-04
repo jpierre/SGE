@@ -153,7 +153,7 @@
         <!-- <h3 style="font-size: 8pt; color:red"><?php echo validation_errors(); ?></h3> -->
         <br>
         <br>
-        <input  class="button blue" type="submit" name="submit" value="Registrarse" ></input>
+        <input  class="button orange" type="submit" name="submit" value="Registrarse" ></input>
        
         </fieldset>
     </div>

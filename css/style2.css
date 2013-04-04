@@ -88,6 +88,7 @@ input{
 		
 	}
 .button {
+	
 	font-size: 12px;
 	font-weight:bold;
 	padding: 7px 12px;
@@ -109,7 +110,7 @@ input{
 	behavior:url(PIE.htc);				
 }
    
-   .blue {
+   .orange {
 	text-shadow: 1px 1px 0px #ffe8b2;
 	color: #7c5d1b;
 	border: 1px solid #d6a437;	
@@ -123,4 +124,13 @@ input{
     -pie-background: linear-gradient(#fed970, #febd4b); /*PIE*/
 	
 }
-
+.orange:hover {
+    background: #febd4b; /*fallback for non-CSS3 browsers*/
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#febd4b) to(#fed970)); /*old webkit*/
+    background: -webkit-linear-gradient(#febd4b, #fed970); /*new webkit*/
+    background: -moz-linear-gradient(#febd4b, #fed970); /*gecko*/
+    background: -ms-linear-gradient(#febd4b, #fed970); /*IE10*/
+    background: -o-linear-gradient(#febd4b, #fed970); /*opera 11.10+*/
+    background: linear-gradient(#febd4b, #fed970); /*future CSS3 browsers*/
+    -pie-background: linear-gradient(#febd4b, #fed970); /*PIE*/	
+}
