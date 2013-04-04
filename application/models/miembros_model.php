@@ -28,19 +28,23 @@ class Miembros_model extends CI_Model{
 		}
 	}
 	
+	// Cambiando el crear nuevo miembro con la nueva BD
 	function create_member($data=NULL){
 		$new_member_insert_data= array(
-						'idDni' =>$this->input->post('dni'),
-						'nombres' =>$this->input->post('nombres'),
-						'apePat' =>$this->input->post('ape_pat'),
-						'apeMat' =>$this->input->post('ape_mat'),
-						'telefono' =>$this->input->post('fijo'),
-						'celular' =>$this->input->post('celular'),
-						'correo' =>$this->input->post('email_adress'),
-						'direccion' =>$this->input->post('direccion'),
-						'tipo' =>"externo",
-						'user' =>$this->input->post('username'),
-						'password' =>md5($this->input->post('password'))	
+						'tip_doc_user' =>$this->input->post(''),
+						'num_doc_user' =>$this->input->post('dni'),
+						'nom_user' =>$this->input->post('nombres'),
+						'ape_pat_user' =>$this->input->post('ape_pat'),
+						'ape_mat_user' =>$this->input->post('ape_mat'),
+						'telf_fijo' =>$this->input->post('fijo'),
+						'telf_cel' =>$this->input->post('celular'),
+						'email_user' =>$this->input->post('email_adress'),
+						'dir_user' =>$this->input->post('direccion'),
+						'tip_usu' =>$this->input->post(''),
+						'usuario_user' =>$this->input->post('username'),
+						'pas_user' =>md5($this->input->post('password')),
+						'cargo_emp_user' =>md5($this->input->post('')),
+						'dpto_emp_user' =>md5($this->input->post(''))
 		);
 		
 		$insert= $this->db->insert('usuario',$new_member_insert_data);
