@@ -16,10 +16,7 @@ fieldset {
   margin:0px 30px 0px 0px;
 }
 
-#izquierda{
-	margin:left;
-	
-}
+
 legend{
 
 
@@ -35,7 +32,9 @@ h1 {
 	text-shadow: 0 1px 0 white;
 }
 
+#stylized{
 
+}
 
     /*Para el incribir dentro del sistema*/
 
