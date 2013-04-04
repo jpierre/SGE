@@ -33,7 +33,20 @@ h1 {
 }
 
 #stylized{
+	margin:0 auto;
 
+}
+#personal{
+	float:left;
+	
+	
+}
+
+#empresa{
+	float:right;
+	margin-left:350px;
+	margin-top:-450px;
+	
 }
 
     /*Para el incribir dentro del sistema*/

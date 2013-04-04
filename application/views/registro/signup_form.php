@@ -49,18 +49,15 @@
   <p>(*)Campos obligatorios</p>
   <form action="<?php echo base_url();?>index.php/login/create_member" method="post" accept-charset="utf-8" id="form">
     <div id="personal">
-      <fieldset>
-        <legend> Informacion Personal</legend>
-        <br>
-        <br>
-        <label>Tipo de documento</label>
+      <label>Tipo de documento</label>
         <select>
           <option>DNI</option>
           <option>Pasaporte</option>
           <option>VISA</option>
           <option>Carnet de extranjeria</option>
         </select>
-        <br />
+        <br>
+        <br>
         <label>Numero de documento</label>
         <input name="dni" type="text" value="<?php echo set_value('dni'); ?>"/>
         <br>
@@ -117,15 +114,9 @@
         <br>
         <a style="text-decoration: none; font-size: 8pt; color:red"><?php echo form_error('password2'); ?></a>
         </p>
-      </fieldset>
     </div>
     <div id="empresa">
-      <fieldset >
-        <legend>Información sobre su empresa</legend>
-        <br>
-        <br>
-        <label>Empresa</label>
-        <input type="text" name="empresa" value="<?php echo set_value('empresa'); ?>"/>
+      <label>Empresa</label><input type="text" name="empresa" value="<?php echo set_value('empresa'); ?>"/>
         <br>
         <br>
         <label>RUC</label>
@@ -162,7 +153,6 @@
         <a style="text-decoration: none; font-size: 8pt; color:red"><?php echo form_error('captcha'); ?></a> <br>
         <!-- <h3 style="font-size: 8pt; color:red"><?php echo validation_errors(); ?></h3> -->
         <input s type="submit" name="submit" value="Registrarse"  />
-      </fieldset>
     </div>
   </form>
 </div>
