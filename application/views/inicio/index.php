@@ -111,10 +111,10 @@ $(function() {
           <div class="sidebar_item">
             <h3>Eventos</h3>
             <ul>
-              <li><a href="#">link 1</a></li>
-              <li><a href="#">link 2</a></li>
-              <li><a href="#">link 3</a></li>
-              <li><a href="#">link 4</a></li>
+              <li><a href="#">Vision 2013</a></li>
+              <li><a href="#">Cloud Google</a></li>
+              <li><a href="#">Android Developers</a></li>
+              <li><a href="#">Desarrolo de juegos</a></li>
             </ul>
           </div>
           <div class="sidebar_base"></div>
@@ -126,7 +126,7 @@ $(function() {
             <form method="post" action="#" id="search_form">
               <p>
                 <input class="search" type="text" name="search_field" value="Enter keywords....." />
-                <input name="search" type="image" style="border: 0; margin: 0 0 -9px 5px;" src="style/search.png" alt="Search" title="Search" />
+                <input name="search" type="image" style="border: 0; margin: 0 0 -9px 5px;" src="../../../css/search.png" alt="Search" title="Search" />
               </p>
             </form>
           </div>
@@ -137,7 +137,7 @@ $(function() {
         <h1>Sistema de gestion de eventos</h1>
         <p>&nbsp;</p>
         <h2>Introduccion</h2>
-        <p>&nbsp;</p>
+        <article>EventSystem nos ofrece un nuevo sistema de gestión de eventos vía web. Con él podremos inscribirnos a diferentes eventos realizados en la Facultad de Ingenieria y arquitectura de la USMP, ver horarios, consultar detalles de los eventos y mucho mas.</article>
       </div>
     </div>
     <div id="content_footer"></div>

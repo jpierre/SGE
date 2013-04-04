@@ -46,49 +46,71 @@
       <div id="content">
         <!-- insert the page content here -->
 
-<div id="signup_form">
+<div id="stylized" class="myform">
   <h1>Registrate</h1>
   <p>(*)Campos obligatorios</p>
-  <form action="<?php echo base_url();?>index.php/login/create_member" method="post" accept-charset="utf-8">
+  <form action="<?php echo base_url();?>index.php/login/create_member" method="post" accept-charset="utf-8" id="form">
 
-<fieldset><legend>--------- Informacion Personal --------</legend><br><br>
-
- 	<label>DNI*</label><input name="dni" type="text" value="<?php echo set_value('dni'); ?>"/><br><br>
-	<span style="text-decoration: none; font-size: 8pt; color:red"><?php echo form_error('dni'); ?></span>
-	
-	<label>Nombres*</label><input type="text" name="nombres" value="<?php echo set_value('nombres'); ?>"/><br><br>
-	<a style="text-decoration: none; font-size: 8pt; color:red"><?php echo form_error('nombres'); ?></a>
-	
-	<label>Apellido Paterno*</label><input type="text" name="ape_pat" value="<?php echo set_value('ape_pat'); ?>"/><br><br>
-	<a style="text-decoration: none; font-size: 8pt; color:red"><?php echo form_error('ape_pat'); ?></a>
-	
-	<label>Apellido Materno*</label><input type="text" name="ape_mat" value="<?php echo set_value('ape_mat'); ?>"/><br><br>
-	<a style="text-decoration: none; font-size: 8pt; color:red"><?php echo form_error('ape_mat'); ?></a>
-	
-	<label>Telefono Fijo*</label><input type="text" name="fijo" value="<?php echo set_value('fijo'); ?>"/><br><br>
-	<a style="text-decoration: none; font-size: 8pt; color:red"><?php echo form_error('fijo'); ?></a>
-	
-	<label>Celular*</label><input type="text" name="celular" value="<?php echo set_value('celular'); ?>"/><br><br>
-	<a style="text-decoration: none; font-size: 8pt; color:red"><?php echo form_error('celular'); ?></a>
-	
-	<label>Correo*</label><input type="text" name="email_adress" value="<?php echo set_value('email_adress'); ?>"/><br><br>
-	<a style="text-decoration: none; font-size: 8pt; color:red"><?php echo form_error('email_adress'); ?></a>
-	
-	<label>Direccion*</label><input type="text" name="direccion" value="<?php echo set_value('direccion'); ?>"/><br><br>
-	<a style="text-decoration: none; font-size: 8pt; color:red"><?php echo form_error('direccion'); ?></a>
-
-	<label>Usuario*</label><input type="text" name="username" value="<?php echo set_value('username'); ?>"/><br><br>
-	<a style="text-decoration: none; font-size: 8pt; color:red"><?php echo form_error('username'); ?></a>
-	
-	<label>Password*</label><input type="password" name="password"/><br><br>
-	<a style="text-decoration: none; font-size: 8pt; color:red"><?php echo form_error('password'); ?></a>
-	
-	<label>Confirmar Password*</label><input type="password" name="password2"><br><br>
-	<a style="text-decoration: none; font-size: 8pt; color:red"><?php echo form_error('password2'); ?></a>
+<fieldset><legend> Informacion Personal</legend>
+  <br>
+    <br>
+    <label>Tipo de documento</label>
+    <select>
+      <option>DNI</option>
+      <option>Pasaporte</option>
+      <option>VISA</option>
+       <option>Carnet de extranjeria</option>
+    </select>
+ 
+    
+    <label>Numero de documento</label>
+    <input name="dni" type="text" value="<?php echo set_value('dni'); ?>"/><br><br>
+    <span style="text-decoration: none; font-size: 8pt; color:red"><?php echo form_error('dni'); ?></span>
+    
+    <label>Nombres*</label>
+    <input type="text" name="nombres" value="<?php echo set_value('nombres'); ?>"/><br><br>
+    <a style="text-decoration: none; font-size: 8pt; color:red"><?php echo form_error('nombres'); ?></a>
+    
+    <label>Apellido Paterno*</label>
+    <input type="text" name="ape_pat" value="<?php echo set_value('ape_pat'); ?>"/><br><br>
+    <a style="text-decoration: none; font-size: 8pt; color:red"><?php echo form_error('ape_pat'); ?></a>
+    
+    <label>Apellido Materno*</label>
+    <input type="text" name="ape_mat" value="<?php echo set_value('ape_mat'); ?>"/><br><br>
+    <a style="text-decoration: none; font-size: 8pt; color:red"><?php echo form_error('ape_mat'); ?></a>
+    
+    <label>Telefono Fijo*</label>
+    <input type="text" name="fijo" value="<?php echo set_value('fijo'); ?>"/><br><br>
+    <a style="text-decoration: none; font-size: 8pt; color:red"><?php echo form_error('fijo'); ?></a>
+    
+    <label>Celular*</label>
+    <input type="text" name="celular" value="<?php echo set_value('celular'); ?>"/><br><br>
+    <a style="text-decoration: none; font-size: 8pt; color:red"><?php echo form_error('celular'); ?></a>
+    
+    <label>Correo*</label>
+    <input type="text" name="email_adress" value="<?php echo set_value('email_adress'); ?>"/><br><br>
+    <a style="text-decoration: none; font-size: 8pt; color:red"><?php echo form_error('email_adress'); ?></a>
+    
+    <label>Direccion*</label>
+    <input type="text" name="direccion" value="<?php echo set_value('direccion'); ?>"/><br><br>
+    <a style="text-decoration: none; font-size: 8pt; color:red"><?php echo form_error('direccion'); ?></a>
+    
+    <label>Usuario*</label>
+    <input type="text" name="username" value="<?php echo set_value('username'); ?>"/><br><br>
+    <a style="text-decoration: none; font-size: 8pt; color:red"><?php echo form_error('username'); ?></a>
+    
+    <label>Password*</label>
+    <input type="password" name="password"/><br><br>
+    <a style="text-decoration: none; font-size: 8pt; color:red"><?php echo form_error('password'); ?></a>
+    
+    <label>Confirmar Password*</label>
+    <input type="password" name="password2"><br><br>
+    <a style="text-decoration: none; font-size: 8pt; color:red"><?php echo form_error('password2'); ?></a></p>
 
 </fieldset>
 
-<fieldset><legend>---- Información sobre su empresa ----</legend><br><br>
+<fieldset id="izquierda">
+  <legend>Información sobre su empresa</legend><br><br>
   
     <label>Empresa</label>
     <input type="text" name="empresa" value="<?php echo set_value('empresa'); ?>"/><br><br>
@@ -115,7 +137,7 @@
    	<a style="text-decoration: none; font-size: 8pt; color:red"><?php echo form_error('captcha'); ?></a>
     <br>
     <!-- <h3 style="font-size: 8pt; color:red"><?php echo validation_errors(); ?></h3> -->
-    <input type="submit" name="submit" value="Registrarse"  />
+    <input s type="submit" name="submit" value="Registrarse"  />
   
 </fieldset>
   </form>
