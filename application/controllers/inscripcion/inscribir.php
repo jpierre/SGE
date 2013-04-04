@@ -20,7 +20,7 @@ class Inscribir extends CI_Controller{
 			}
 		}else{
 				$data['main_content'] = 'inscripcion/ya_registrado';
-				$this->load->view('home/home	', $data);
+				$this->load->view('home/home', $data);
 		}
 		
 	}

@@ -55,7 +55,7 @@ $(function() {
           <li ><a href="<?php echo base_url(); ?>index.php/welcome">Inicio</a></li>
           <li><a href="#">Quienes Somos?</a></li>
           <li><a href="<?php echo base_url(); ?>index.php/login/eventos">Eventos</a></li>
-          <li><a href="<?php echo base_url(); ?>index.php/login/signup">Registrate</a></li>
+          <li class="selected"><a href="<?php echo base_url(); ?>index.php/login/signup">Registrate</a></li>
 		  <li><a>Contactenos</a></li>
           <li>
 		  

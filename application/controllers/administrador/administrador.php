@@ -5,21 +5,21 @@ class Administrador extends CI_Controller{
 	
 	function mostrarlo(){
 
-	$data['main_content'] = 'administrador/asignarexpoeven_form';
-		$this->load->view('includes_sistema_admin/template', $data);
+	$data['main_content'] = 'home_admin/asignarexpoeven_form';
+		$this->load->view('home_admin/home', $data);
 
 	}
 
 	function mostrarlo2(){
 
-	$data['main_content'] = 'administrador/manterPonencia';
-		$this->load->view('includes_sistema_admin/template', $data);
+	$data['main_content'] = 'home_admin/manterPonencia';
+		$this->load->view('home_admin/home', $data);
 
 	}
 	
 	function mostrarlo3(){
-	$data['main_content'] = 'administrador/datos_admin';
-		$this->load->view('includes_sistema_admin/template', $data);
+	$data['main_content'] = 'home_admin/datos_admin';
+		$this->load->view('home_admin/home', $data);
 	}
 
 
@@ -42,8 +42,8 @@ class Administrador extends CI_Controller{
 				
 			);
 			$this->session->set_userdata($data);
-			$info['main_content']="administrador/asignarexpoeven_form";
-			$this->load->view('includes_sistema_admin/template', $info);
+			$info['main_content']="home_admin/asignarexpoeven_form";
+			$this->load->view('home_admin/home', $info);
 		}else{
 			$data= array(
 				'codi' =>$this->input->post('codigo'),
@@ -56,8 +56,8 @@ class Administrador extends CI_Controller{
 				
 			);
 			$this->session->set_userdata($data);
-			$info['main_content']="administrador/asignarexpoeven_form";
-			$this->load->view('includes_sistema_admin/template', $info);
+			$info['main_content']="home_admin/asignarexpoeven_form";
+			$this->load->view('home_admin/home', $info);
 		}
 	}
 	
@@ -77,8 +77,8 @@ class Administrador extends CI_Controller{
 				
 			);
 			$this->session->set_userdata($dato);
-			$info['main_content']="administrador/asignarexpoeven_form";
-			$this->load->view('includes_sistema_admin/template', $info);
+			$info['main_content']="home_admin/asignarexpoeven_form";
+			$this->load->view('home_admin/home', $info);
 		}else{
 			$dato= array(
 				'codi2' =>$this->input->post('codigo2'),
@@ -92,8 +92,8 @@ class Administrador extends CI_Controller{
 				
 			);
 			$this->session->set_userdata($dato);
-			$info['main_content']="administrador/asignarexpoeven_form";
-			$this->load->view('includes_sistema_admin/template', $info);
+			$info['main_content']="home_admin/asignarexpoeven_form";
+			$this->load->view('home_admin/home', $info);
 		}
 	}
 	
@@ -115,8 +115,8 @@ class Administrador extends CI_Controller{
 		$this->load->model('administrador/admin_model', 'admin');
 		$result=$this->admin->asignar_expositor_evento($dato);
 		if($result){
-			$info['main_content']="administrador/asignacion_succesful";
-			$this->load->view('includes_sistema_admin/template', $info);
+			$info['main_content']="home_admin/asignacion_succesful";
+			$this->load->view('home_admin/home', $info);
 		}
 				
 	}

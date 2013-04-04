@@ -4,7 +4,7 @@ class Login extends CI_Controller{
 	function index(){
 		//$data['main_content']= 'login_form';
 		//$this->load->view('includes/template', $data);
-		$this->load->view('simplestyle_6/index');
+		$this->load->view('inicio/index');
 		//$this->load->view('login_form');
 	}
 	
@@ -18,7 +18,7 @@ class Login extends CI_Controller{
 		
 		if($this->form_validation->run()==FALSE){
 			$data['main_content'] = 'index';
-			$this->load->view('simplestyle_6/index', $data);
+			$this->load->view('inicio/index', $data);
 			//$this->load->view('login_form');
 		}else{
 
@@ -51,7 +51,8 @@ class Login extends CI_Controller{
 					$this->session->set_userdata($data);
 
 					if($query->tipo=="administrador"){
-						$this->load->view('zona_admin');
+						$data['main_content'] = 'home_admin/content';
+						$this->load->view('home_admin/home', $data);
 
 					}else{
 						redirect('site/members_area');
@@ -85,7 +86,7 @@ class Login extends CI_Controller{
 					$this->miembros_model->registrar_interno();
 				}			
 			
-			
+				
 				redirect('site/members_area');
 			}
 		}
@@ -93,13 +94,13 @@ class Login extends CI_Controller{
 	
 	/*Te lleva al formulario de registro*/
 	function signup(){
-		$data['main_content'] = 'signup_form';
-		$this->load->view('includes/template', $data);
+		$data['main_content'] = 'registro/signup_form';
+		$this->load->view('inicio/inicio', $data);
 	}
 	
 	/*Te lleva a la pagina eventos*/
 	function eventos(){
-		$this->load->view('simplestyle_6/eventos');
+		$this->load->view('inicio/eventos');
 	}
 
 	function create_member(){
@@ -132,8 +133,8 @@ class Login extends CI_Controller{
  			
 				
 		if($this->form_validation->run()==FALSE){
-			$data['main_content'] = 'signup_form';
-			$this->load->view('includes/template', $data);
+			$data['main_content'] = 'registro/signup_form';
+			$this->load->view('inicio/inicio', $data);
 		}else{
 			$this->load->model('miembros_model');
 			
@@ -156,12 +157,12 @@ class Login extends CI_Controller{
 			}
 				
 			if($query){
-				$data['main_content']='signup_succesful';
-				$this->load->view('includes/template', $data);
+				$data['main_content']='registro/signup_succesful';
+				$this->load->view('inicio/inicio', $data);
 				
 			}else{
-				$data['main_content'] = 'signup_form';
-				$this->load->view('includes/template', $data);
+				$data['main_content'] = 'registro/signup_form';
+				$this->load->view('inicio/inicio', $data);
 			}
 			
 		}

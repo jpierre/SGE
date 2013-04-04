@@ -12,7 +12,8 @@
 	
 		function members_area(){
 		
-			$this->load->view('home/inicio');	
+			$data['main_content'] = 'home/content';
+			$this->load->view('home/home', $data);
 		}
 		
 		function ver_perfil(){
