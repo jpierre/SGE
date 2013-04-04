@@ -2,11 +2,13 @@
 
 <div id="content_header"></div>
 <div id="site_content">
+
+
 <div id="sidebar_container">
   <div class="sidebar">
     <div class="sidebar_top"></div>
     <div class="sidebar_item"> 
-      <!-- insert your sidebar items here -->
+      
       <h3>Noticias</h3>
       <h4>Vision 2013</h4>
       <h5>Octubre 2013</h5>
@@ -29,27 +31,21 @@
   </div>
   <div class="sidebar">
     <div class="sidebar_top"></div>
-    <div class="sidebar_item">
-      <h3>Buscar</h3>
-      <form method="post" action="#" id="search_form">
-        <p>
-          <input class="search" type="text" name="search_field" value="Enter keywords....." />
-          <input name="search" type="image" style="border: 0; margin: 0 0 -9px 5px;" src="style/search.png" alt="Search" title="Search" />
-        </p>
-      </form>
-    </div>
     <div class="sidebar_base"></div>
   </div>
 </div>
 <div id="content">
 <!-- insert the page content here -->
 
-<div id="stylized" class="myform">
+<div id="stylized" >
   <h1>Registrate</h1>
   <p>(*)Campos obligatorios</p>
   <form action="<?php echo base_url();?>index.php/login/create_member" method="post" accept-charset="utf-8" id="form">
     <div id="personal">
+    <fieldset><legend>Informacion Personal</legend>
+    <br>
       <label>Tipo de documento</label>
+      *
         <select>
           <option>DNI</option>
           <option>Pasaporte</option>
@@ -58,7 +54,7 @@
         </select>
         <br>
         <br>
-        <label>Numero de documento</label>
+        <label>Numero de documento*</label>
         <input name="dni" type="text" value="<?php echo set_value('dni'); ?>"/>
         <br>
         <br>
@@ -78,7 +74,7 @@
         <br>
         <br>
         <a style="text-decoration: none; font-size: 8pt; color:red"><?php echo form_error('ape_mat'); ?></a>
-        <label>Telefono Fijo*</label>
+        <label>Telefono Fijo</label>
         <input type="text" name="fijo" value="<?php echo set_value('fijo'); ?>"/>
         <br>
         <br>
@@ -93,7 +89,7 @@
         <br>
         <br>
         <a style="text-decoration: none; font-size: 8pt; color:red"><?php echo form_error('email_adress'); ?></a>
-        <label>Direccion*</label>
+        <label>Direccion</label>
         <input type="text" name="direccion" value="<?php echo set_value('direccion'); ?>"/>
         <br>
         <br>
@@ -114,8 +110,11 @@
         <br>
         <a style="text-decoration: none; font-size: 8pt; color:red"><?php echo form_error('password2'); ?></a>
         </p>
+      </fieldset>
     </div>
     <div id="empresa">
+    <fieldset><legend>Informacion sobre su empresa</legend>
+    <br>
       <label>Empresa</label><input type="text" name="empresa" value="<?php echo set_value('empresa'); ?>"/>
         <br>
         <br>
@@ -152,7 +151,11 @@
         <input type="text" name="captcha" class="input1"/>
         <a style="text-decoration: none; font-size: 8pt; color:red"><?php echo form_error('captcha'); ?></a> <br>
         <!-- <h3 style="font-size: 8pt; color:red"><?php echo validation_errors(); ?></h3> -->
-        <input s type="submit" name="submit" value="Registrarse"  />
+        <br>
+        <br>
+        <input  class="button blue" type="submit" name="submit" value="Registrarse" ></input>
+       
+        </fieldset>
     </div>
   </form>
 </div>

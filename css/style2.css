@@ -14,13 +14,14 @@ fieldset {
   border-right:0;
   padding:6px;
   margin:0px 30px 0px 0px;
+
 }
 
 
 legend{
 
 
-	text-align:left;
+	text-align:center;
   color:#ccc;
   font-size:15px;
   padding:0px 4px 0px 4px;
@@ -37,17 +38,89 @@ h1 {
 
 }
 #personal{
-	float:left;
-	
+	float:rigth;
+	width:500px;
 	
 }
 
 #empresa{
-	float:right;
-	margin-left:350px;
-	margin-top:-450px;
+	
+	
+	
+	width:500px;
 	
 }
-
-    /*Para el incribir dentro del sistema*/
+label {
+    font-family: Arial, Verdana;
+    text-shadow: 2px 2px 2px #ccc;
+    display: block;
+    float: left;
+    font-weight: bold;
+    margin-right:10px;
+    text-align: right;
+    width: 120px;
+    line-height: 10px;
+    font-size: 13px;
+    }
+input{
+    font-family: Arial, Verdana;
+    font-size: 15px;
+    padding: 5px;
+    border: 1px solid #b9bdc1;
+    width: 300px;
+    color: #797979;
+    }
+	
+	#form{
+		background: #f0f0f0;
+    overflow:auto;
+ 
+    /* Border style */
+    border: 1px solid #cccccc;
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+    border-radius: 7px; 
+ 
+    /* Border Shadow */
+    -moz-box-shadow: 2px 2px 2px #cccccc;
+    -webkit-box-shadow: 2px 2px 2px #cccccc;
+    box-shadow: 2px 2px 2px #cccccc;
+		
+	}
+.button {
+	font-size: 12px;
+	font-weight:bold;
+	padding: 7px 12px;
+	cursor:pointer;	
+	line-height:16px;
+	display:inline-block;
+	margin:0 15px 30px 15px;	
+	border-radius: 2px;
+	-moz-border-radius: 2px;/*gecko - mozilla*/ 
+	-webkit-border-radius: 2px; /*new webkit - Chrome and Safari*/	
+	box-shadow: #e3e3e3 0 1px 1px;	
+	-moz-box-shadow:
+		0px 1px 1px rgba(000,000,000,0.1),
+		inset 0px 1px 1px rgba(255,255,255,0.7);/*gecko - mozilla*/ 
+	-webkit-box-shadow:
+		0px 1
+		px 1px rgba(000,000,000,0.1),
+		inset 0px 1px 1px rgba(255,255,255,0.7);/*new webkit - Chrome and Safari*/		
+	behavior:url(PIE.htc);				
+}
+   
+   .blue {
+	text-shadow: 1px 1px 0px #ffe8b2;
+	color: #7c5d1b;
+	border: 1px solid #d6a437;	
+    background: #febd4b; /*fallback for non-CSS3 browsers*/
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#fed970) to(#febd4b)); /*old webkit*/
+    background: -webkit-linear-gradient(#fed970, #febd4b); /*new webkit*/
+    background: -moz-linear-gradient(#fed970, #febd4b); /*gecko*/
+    background: -ms-linear-gradient(#fed970, #febd4b); /*IE10*/
+    background: -o-linear-gradient(#fed970, #febd4b); /*opera 11.10+*/
+    background: linear-gradient(#fed970, #febd4b); /*future CSS3 browsers*/
+    -pie-background: linear-gradient(#fed970, #febd4b); /*PIE*/
+	
+}
 
