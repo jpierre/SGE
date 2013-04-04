@@ -33,17 +33,17 @@ class Login extends CI_Controller{
 				if($query != false){
 					
 					$data=array(
-						'user' => $query->user,
+						'user' => $query->usuario_user,
 						'nombres' => $query->nombres,
-						'apePat' => $query->apePat,
-						'apeMat' => $query->apeMat,
-						'idDNI' => $query->idDNI,
-						'estado' => $query->tipo,
-						'escuela' => $query->escuela,
-						'celular' => $query->celular,
-						'fijo' => $query->telefono,
-						'correo' => $query->correo,
-						'direccion' => $query->direccion,
+						'apePat' => $query->ape_pat_user,
+						'apeMat' => $query->ape_mat_user,
+						'idDNI' => $query->num_doc_user,
+						'estado' => $query->tip_usu,
+						'escuela' => $query->esc_estud,
+						'celular' => $query->telf_cel,
+						'fijo' => $query->telf_fijo,
+						'correo' => $query->email_user,
+						'direccion' => $query->dir_user,
 						'is_logged_in' => true
 		
 					);	
@@ -67,13 +67,14 @@ class Login extends CI_Controller{
 					'apePat' => $query1->apePat,
 					'apeMat' => $query1->apeMat,
 					'idDNI' => $query1->dni,
-					'estado' => $query1->tipo,
-					'telefono' => $query1->fijo,
-					'celular' => $query1->celular,
+					'estado' => $query1->estado,
+					'telefono' => $query1->telf_fijo,
+					'celular' => $query1->telf_celular,
 					'user' => $query1->usuario,
-					'password' => $query1->escuela,
+					'password' => $query1->password,
 					'correo' => $query1->correo,
 					'escuela' => $query1->escuela,
+					'codigo' => $query1->codigo_interno,
 					'is_logged_in' => true
 		
 				);	

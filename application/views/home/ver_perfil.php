@@ -29,7 +29,7 @@
 			Nombre 				: <?php echo $this->session->userdata('nombres'); ?><br>
 			Apellido Paterno	: <?php echo $this->session->userdata('apePat'); ?><br>
 			Apellido Materno 	: <?php echo $this->session->userdata('apeMat'); ?><br>
-			Telefono Fijo		: <?php echo $this->session->userdata('fijo'); ?><br>
+			Telefono Fijo		: <?php echo $this->session->userdata('telefono'); ?><br>
 			Celular				: <?php echo $this->session->userdata('celular'); ?><br>
 			Correo				: <?php echo $this->session->userdata('correo'); ?><br>
 			Direccion			: <?php echo $this->session->userdata('direccion'); ?><br>

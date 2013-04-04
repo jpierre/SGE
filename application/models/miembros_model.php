@@ -3,7 +3,7 @@
 class Miembros_model extends CI_Model{
 	
 	
-	
+	//CAMBIADO
 	function validate(){
 		$this->db->where('usuario_user', $this->input->post('username'));
 		$this->db->where('pas_user', md5($this->input->post('password')));
@@ -15,20 +15,20 @@ class Miembros_model extends CI_Model{
 			return false;	
 		}
 	}
-
+	// CAMBIADO
 	function validate_sicat(){
 		$this->db->where('usuario', $this->input->post('username'));
 		$this->db->where('password', md5($this->input->post('password')));
 		$query = $this->db->get('sicat');
 		
 		if($query->num_rows == 1){
-		return $query->row();
+			return $query->row();
 		}else{
 			return false;	
 		}
 	}
 	
-	// Cambiando el crear nuevo miembro con la nueva BD
+	// Cambiando el crear nuevo miembro con la nueva BD---------LISTO
 	function create_member($data=NULL){
 		// tip_usu=3 externo independiente
 		// tip_usu=4 externo corporativo representante
@@ -70,20 +70,24 @@ class Miembros_model extends CI_Model{
 	
 	}
 	
+	//CAMBIADO
 	function registrar_interno(){
 		$new_member_insert_data= array(
 				
-			'idDNI' => $this->session->userdata('idDNI'),
-			'nombres' =>$this->session->userdata('nombres'),
-			'apePat' =>$this->session->userdata('apePat'),
-			'apeMat' =>$this->session->userdata('apeMat'),
-			'telefono' =>$this->session->userdata('telefono'),
-			'celular' =>$this->session->userdata('celular'),
-			'correo' =>$this->session->userdata('correo'),
-			'direccion' =>$this->session->userdata('direccion'),
-			'tipo' =>$this->session->userdata('estado'),
-			'user' =>$this->session->userdata('user'),
-			'password' =>md5($this->input->post('password'))	
+			'num_doc_user' => $this->session->userdata('idDNI'),
+			'nom_user' =>$this->session->userdata('nombres'),
+			'ape_pat_user' =>$this->session->userdata('apePat'),
+			'ape_mat_user' =>$this->session->userdata('apeMat'),
+			'telf_fijo' =>$this->session->userdata('telefono'),
+			'telf_cel' =>$this->session->userdata('celular'),
+			'email_user' =>$this->session->userdata('correo'),
+			'dir_user' =>$this->session->userdata('direccion'),
+			'tip_usu' =>$this->session->userdata('estado'),
+			'usuario_user' =>$this->session->userdata('user'),
+			'pas_user' =>md5($this->input->post('password')),
+			'esc_estud' =>$this->session->userdata('escuela'),
+			'cod_user' =>$this->session->userdata('user'),
+			'tip_doc_user' =>1
 		);
 		
 		$insert= $this->db->insert('usuario',$new_member_insert_data);
@@ -91,8 +95,9 @@ class Miembros_model extends CI_Model{
 		return $insert;
 	}
 	
+	//CAMBIADO
 	function get_usuario(){
-		$query="select idDNI from usuario where idDNI='".$this->session->userdata('idDNI')."'";
+		$query="select num_doc_user from usuario where num_doc_user='".$this->session->userdata('idDNI')."'";
 		$resultado=$this->db->query($query);	
 		
 		if($resultado->num_rows == 1){
