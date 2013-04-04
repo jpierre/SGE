@@ -187,3 +187,9 @@ ul.nav a:hover, ul.nav a:active, ul.nav a:focus { /* this changes the background
 
 /*FIN MENU PRINCIPAL*/
 
+
+.error span{
+	font-color:#126FAA;
+}
+
+
