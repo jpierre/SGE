@@ -40,7 +40,7 @@
 <div id="stylized" >
   <h1>Registrate</h1>
   <p>(*)Campos obligatorios</p>
-  <form action="<?php echo base_url();?>index.php/login/create_member" method="post" accept-charset="utf-8" id="form">
+  <form action="<?php echo base_url();?>index.php/login/create_member" method="post" accept-charset="utf-8" class="box">
     <div id="personal">
     <fieldset><legend>Informacion Personal</legend>
     <br>
