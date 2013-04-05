@@ -44,6 +44,7 @@
 		      <input name="<?php echo 'apeMat'.$i;?>" type="text" value="" />
 		      </br>
               <input name="id_evento" type="hidden" value="<?php echo $id_evento; ?>" />
+              
 		    </fieldset>
 		    <p>
 		    <p>&nbsp;</p>
@@ -51,6 +52,8 @@
 		
 		    </fieldset>
 		  <?php endfor ?>
+          <p><input name="tipo_pago" value="1" type="radio" checked />
+              Contado</p><br />
 		  <p>
 		      <input type="submit" name="submit" value="inscribir"  />
 		    </p>

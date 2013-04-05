@@ -1,6 +1,8 @@
 <?php
 
 class Inscribir extends CI_Controller{
+	//var $contador=0;
+	
 	function index($idEvento=""){
 		
 		$data['id_evento'] = $idEvento;
@@ -79,7 +81,7 @@ class Inscribir extends CI_Controller{
 	function inscrip_n_part_externos(){
 		for($i=1;$i<3;$i++){
 			//datos del participante
-			
+				
 				$data['tipo_doc'.$i]= $this->input->post('tipo_doc'.$i);
 				$data['num_doc'.$i]= $this->input->post('num_doc'.$i);
 				$data['nom'.$i]= $this->input->post('nom'.$i);
@@ -92,7 +94,21 @@ class Inscribir extends CI_Controller{
 		$this->load->model('inscripcion/Inscripcion_model', 'registro');
  		$result=$this->registro->reg_n_participantes($data);
 		
-		if($result){
+		$datos= array(
+				
+				'id_evento' =>$this->input->post('id_evento'),
+				'nro_inscrip' =>rand(1000000,99999999),
+				'estado_recibo' =>'pendiente',
+				'tipo_pago' =>$this->input->post('tipo_pago'),
+				'nro_cuotas' =>'1',
+				'monto' =>$result * 250
+				
+			);
+			
+		$resultado=$this->registro->registrar_inscripcion_participante($datos);
+		
+		
+		if($result!=false){
 			$data['main_content']='inscripcion/inscripcion_succesful_varios';
 			$this->load->view('home/home', $data);
 		}else{

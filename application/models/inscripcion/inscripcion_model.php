@@ -79,7 +79,7 @@ class Inscripcion_model extends CI_Model{
 			}
 		}
 		if($count>0){
-			return true;
+			return $count;
 		}else{
 			return false;
 		}
