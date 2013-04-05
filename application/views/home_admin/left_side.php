@@ -17,14 +17,14 @@
                                 </li>
                                 <li><a href="#">&raquo; Cloud Google</a>
                                         <ul>
-                                        <li><span><?php echo anchor('', 'Mantener Ponencia'); ?></span></li>
-                                        <li><span><?php echo anchor('', 'Asignar Expositor a Ponencia'); ?></span></li>
+                                        <li><span><?php echo anchor('administrador/administrador/mostrarlo2', 'Mantener Ponencia'); ?></span></li>
+                                        <li><span><?php echo anchor('administrador/administrador/mostrarlo', 'Asignar Expositor a Ponencia'); ?></span></li>
                                         </ul>
                                 </li>
                                 <li><a href="#">&raquo; Android Lima Day</a>
                                         <ul>
-                                        <li><span><?php echo anchor('', 'Mantener Ponencia'); ?></span></li>
-                                        <li><span><?php echo anchor('', 'Asignar Expositor a Ponencia'); ?></span></li>
+                                        <li><span><?php echo anchor('administrador/administrador/mostrarlo2', 'Mantener Ponencia'); ?></span></li>
+                                        <li><span><?php echo anchor('administrador/administrador/mostrarlo', 'Asignar Expositor a Ponencia'); ?></span></li>
                                         </ul>
                                 </li>
                                 </ul>

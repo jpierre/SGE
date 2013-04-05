@@ -28,7 +28,7 @@ class Inscribir extends CI_Controller{
 	
 	function mostrarlo(){
 		$data['main_content'] = 'inscripcion/mostrardatos_form';
-		$this->load->view('home/home', $data);
+		$this->load->view('home_admin/home', $data);
 	}
 	
 	function registar_inscrip(){
