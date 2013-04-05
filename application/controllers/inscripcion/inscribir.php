@@ -33,18 +33,18 @@ class Inscribir extends CI_Controller{
 	
 	function registar_inscrip(){
 		//recogemos los datos obtenidos por POST
-		$data['id_participante'] = $this->session->userdata('idDNI');
-		$data['nombre'] = $this->session->userdata('nombres');
-		$data['apePat'] = $this->session->userdata('apePat');
-		$data['apeMat'] = $this->session->userdata('apeMat');
+		
+		//$data['nombre'] = $this->session->userdata('nombres');
+		//$data['apePat'] = $this->session->userdata('apePat');
+		//$data['apeMat'] = $this->session->userdata('apeMat');
 		$data['id_evento'] = $this->input->post('id_evento');
 		$data['nro_inscrip'] = rand(1000000,9999999);
-		$data['estado'] = $this->session->userdata('estado');
-		$data['fecha_inscrip'] =  date("Y-m-d");
+		$data['estado_recibo'] = 'pendiente';
+		//$data['fecha_inscrip'] =  date("Y-m-d");
 		$data['tipo_pago'] = $this->input->post('tipo_pago');
 		$data['monto'] =$this->input->post('monto');
-		$data['cant_cuotas'] =$this->input->post('cant_cuotas');
-		$data['banco'] ="Interbank/credito";
+		$data['nro_cuotas'] =$this->input->post('cant_cuotas');
+		 
 		
  		//llamamos al model, a la función registrar_inscripcion_participante() para que nos haga el insert en la base de datos.
  		$this->load->model('inscripcion/Inscripcion_model', 'registro');

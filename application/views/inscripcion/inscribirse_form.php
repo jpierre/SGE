@@ -31,15 +31,14 @@
 		  		<b>Escuela:</b> <?php echo $this->session->userdata('escuela');?></p>	
 		 	</fieldset>
 			<fieldset><legend>Modalidad de Pago</legend>
-		  <p><label><input name="tipo_pago" value="contado" type="radio"/>Contado</label></p><br />
+		  <p><label><input name="tipo_pago" value="1" type="radio"/>Contado</label></p><br />
 			
-		  <?php if(strcasecmp($this->session->userdata('estado'), "estudiante")==0): ?>
-		    <p><label><input name="tipo_pago" value="cuotas" type="radio"/>Cuotas</label> &nbsp; &nbsp;
+		  <?php if(strcasecmp($this->session->userdata('estado'), '1')==0): ?>
+		    <p><label><input name="tipo_pago" value="2" type="radio"/>Cuotas</label> &nbsp; &nbsp;
 			<select name="cant_cuotas">
-		  		<option value"contado" >Seleccione</option>
-		  		<option value="una cuota" >1</option>
-		  		<option value="dos cuotas">2</option>
-		  		<option value="tres cuotas" >3</option>
+		  		<option value"1" >Seleccione</option>
+		  		<option value="2">2</option>
+		  		<option value="3" >3</option>
 		    </select>
 			</p>
 		<?php endif ?>

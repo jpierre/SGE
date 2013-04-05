@@ -44,6 +44,7 @@ class Login extends CI_Controller{
 						'telefono' => $query->telf_fijo,
 						'correo' => $query->email_user,
 						'direccion' => $query->dir_user,
+						'cod_user' => $query->cod_user,
 						'is_logged_in' => true
 		
 					);	

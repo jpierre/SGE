@@ -4,33 +4,18 @@ class Inscripcion_model extends CI_Model{
 	function registrar_inscripcion_participante($data=NULL){
 		
 		
-		$this->db->set('nombre', $data['nombre']);
- 		$this->db->set('apePat', $data['apePat']);
- 		$this->db->set('apeMat', $data['apeMat']);
-		$this->db->set('dni', $data['id_participante']);
- 		$this->db->insert('participante');
-	
-		$sql="select max(idParticipante) as ID from participante";
+		$sql="select cod_user as ID from usuario where num_doc_user='".$this->session->userdata('idDNI')."'";
 		$a=$this->db->query($sql)->row();
 		
-		$this->db->set('pkParticipante', $a->ID);
-		$this->db->set('pkEvento', $data['id_evento']);
+		$this->db->set('cod_user_rec', $a->ID);
+		$this->db->set('id_eve_rec', $data['id_evento']);
  		$this->db->set('nro_inscripcion', $data['nro_inscrip']);
- 		$this->db->set('estado', $data['estado']);
-		$this->db->set('fecha_inscripcion', $data['fecha_inscrip']);
- 		$this->db->insert('participantexevento');
-		
-		
-		$this->db->set('idRecibo',$data['nro_inscrip']);
-		$this->db->set('banco', $data['banco']);
- 		$this->db->set('tipo_pago', $data['tipo_pago']);
- 		$this->db->set('fecha_emision', $data['fecha_inscrip']);
-		$this->db->set('monto',$data['monto']);
-		$this->db->set('fkParticipante', $a->ID);
-		$this->db->set('fkEvento', $data['id_evento']);
-		$this->db->set('observacion', $data['cant_cuotas']);
-		$this->db->insert('recibo');
-		
+ 		$this->db->set('voucher', $data['estado_recibo']);
+		$this->db->set('mod_pago', $data['tipo_pago']);
+		$this->db->set('nro_cuotas', $data['nro_cuotas']);
+		$this->db->set('monto', $data['monto']);
+ 		$this->db->insert('recibo');
+				
 		return true;
 	
 	}
