@@ -39,6 +39,7 @@ class Inscripcion_model extends CI_Model{
 
 	}
 	
+	//CAMBIADO
 	function get_cod_user($num_doc=0){
 		
 		
@@ -53,6 +54,7 @@ class Inscripcion_model extends CI_Model{
 
 	}
 	
+	//CAMBIADO---faltan detalles
 	function reg_n_participantes($data=NULL){
 		
 		// el documento del representante esta en la sesion
