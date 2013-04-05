@@ -7,7 +7,7 @@
 
 
 
-<script >
+<script>
 
 function validar(){
 
@@ -27,10 +27,30 @@ return false;
 
 }
 
-function prueba(){
-alert("eie");	
+
+function validarTotal(){
+if(document.form6.tipo_pago[0].checked){
+
+//alert("lo toque");
+document.form6.submit();
+
+
+}else{
+
+var selec=document.form6.cant_cuotas.selectedIndex;
+ 
+if(document.form6.cant_cuotas.options[selec].value=="Seleccione"){
+  alert("Selecciona cuota");
+  return false;
+
+
 }
 
+
+
+}
+	
+}
 </script>
 <div class="content">
   <div id="container" class="ltr">
@@ -77,7 +97,7 @@ alert("eie");
           <input name="monto" type="text" value="250" readonly="readonly" />
           </p>
           <p>
-            <input type="submit" name="submit" value="Registrarse" onclick="return validar();" />
+            <input type="submit" name="submit" value="Registrarsee" onclick="return validarTotal();" />
           </p>
         </fieldset>
     </form>
