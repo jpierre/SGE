@@ -144,10 +144,9 @@ class Login extends CI_Controller{
 			
 			if($this->input->post('empresa')!=""||$this->input->post('ruc')!=""|| $this->input->post('cargo')!=""){
 				$data=array(
-				'nom_empresa' => $this->input->post('empresa'),
+				'nom_emp' => $this->input->post('empresa'),
 				'ruc' => $this->input->post('ruc'),
-				'rs' => $this->input->post('razon_social'),
-				'sector_industrial' => $this->input->post('sector_ind')
+				'sec_ind_emp' => $this->input->post('sector_ind')
 				
 		
 			);

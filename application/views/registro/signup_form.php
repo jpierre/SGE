@@ -123,20 +123,39 @@
         <input type="text" name="ruc" value="<?php echo set_value('ruc'); ?>"/>
         <br>
         <br>
-        <label>Razon Social</label>
-        <input type="text" name="razon_social" value="<?php echo set_value('razon_social'); ?>"/>
-        <br>
-        <br>
         <label>Cargo</label>
         <input type="text" name="cargo" value="<?php echo set_value('cargo'); ?>"/>
         <br>
         <br>
         <label>Departamento</label>
-        <input type="text" name="dpto" value="<?php echo set_value('dpto'); ?>"/>
+        <select name="dpto">
+          <option value="1" >Administracion</option>
+          <option value="2" >Area Tecnica</option>
+          <option value="3" >Asesoria</option>
+          <option value="4" >Comercio Electronico</option>
+          <option value="5" >Compras</option>
+          <option value="6" >Controlling</option>
+          <option value="7" >Derecho</option>
+          <option value="8" >Finanzas y Contabilidad</option>
+          <option value="9" >Capacitacion</option>
+          <option value="10" >Gerencia</option>
+          <option value="11" >Gestion de Riesgos</option>
+          <option value="12" >Ingenieria</option>
+          <option value="13" >Diseño</option>
+        </select>
         <br>
         <br>
-        <label>Sector Industrial</label>
-        <input type="text" name="sector_ind" value="<?php echo set_value('sector_ind'); ?>"/>
+        <label>Sector</label>
+        
+         <select name="sector_ind">
+          <option value="1" >Banca y Seguros</option>
+          <option value="2" >Construccion e Inmobiliaria</option>
+          <option value="3" >Energia</option>
+          <option value="4" >Industria</option>
+          <option value="5" >Mineria</option>
+          <option value="6" >Tecnologia de Informacion</option>
+          <option value="7" >Telecomunicaciones</option>
+        </select>
         <br>
         <br>
         <!-- Todavia no se define nada acerca de "tipo_usuario" solo esta en la vista-->
