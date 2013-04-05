@@ -11,7 +11,7 @@ class Inscribir extends CI_Controller{
 		if(!$resultConsulta){
 		
 			$result=$this->registro->get_estado_user($this->session->userdata('idDNI'));			
-			if(strcasecmp($result->tipo, "estudiante")==0 || strcasecmp($result->tipo, "egresado")==0){
+			if(strcasecmp($result->tip_usu, '1')==0 || strcasecmp($result->tip_usu, '2')==0){
 				$data['main_content'] = 'inscripcion/inscribirse_form';
 				$this->load->view('home/home', $data);
 			}else{

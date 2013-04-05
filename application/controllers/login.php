@@ -31,17 +31,17 @@ class Login extends CI_Controller{
 				$query = $this->miembros_model->validate();
 		
 				if($query != false){
-					
+					//Datos sacados de la tabla usuario y cargados a la sesion
 					$data=array(
 						'user' => $query->usuario_user,
-						'nombres' => $query->nombres,
+						'nombres' => $query->nom_user,
 						'apePat' => $query->ape_pat_user,
 						'apeMat' => $query->ape_mat_user,
 						'idDNI' => $query->num_doc_user,
 						'estado' => $query->tip_usu,
 						'escuela' => $query->esc_estud,
 						'celular' => $query->telf_cel,
-						'fijo' => $query->telf_fijo,
+						'telefono' => $query->telf_fijo,
 						'correo' => $query->email_user,
 						'direccion' => $query->dir_user,
 						'is_logged_in' => true
@@ -50,7 +50,7 @@ class Login extends CI_Controller{
 		
 					$this->session->set_userdata($data);
 
-					if($query->tipo=="administrador"){
+					if($query->tip_usu=='0'){
 						$data['main_content'] = 'home_admin/content';
 						$this->load->view('home_admin/home', $data);
 
@@ -61,8 +61,9 @@ class Login extends CI_Controller{
 				$this->index();
 				}
 			}else{
+				//datos sacados de la tabla sicat y cargados a la sesion para luego grabarlos en la tabla sicat
 				$data=array(
-					'dreccion' => $query1->direccion,
+					'direccion' => $query1->direccion,
 					'nombres' => $query1->nombres,
 					'apePat' => $query1->apePat,
 					'apeMat' => $query1->apeMat,

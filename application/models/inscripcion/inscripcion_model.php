@@ -38,14 +38,14 @@ class Inscripcion_model extends CI_Model{
 	function get_estado_user($idDNI=0){
 		
 		
-		$query="select tipo from usuario where idDNI='".$idDNI."'";
+		$query="select tip_usu from usuario where num_doc_user='".$idDNI."'";
 
 		return $this->db->query($query)->row();
 
 	}
 
 	function get_consulta_registro($idDNI=0, $idEvento=0){
-		$query="select pe.pkParticipante from participante p, participantexevento pe where p.idparticipante=pe.pkParticipante and p.dni='".$idDNI."'"."and pe.pkEvento='".$idEvento."'";
+		$query="select pe.cod_user_rec from usuario p, recibo pe where p.cod_user=pe.cod_user_rec and p.num_doc_user='".$idDNI."'"."and pe.id_eve_rec='".$idEvento."'";
 
 		return $this->db->query($query)->row();
 
