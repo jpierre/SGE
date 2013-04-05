@@ -93,9 +93,11 @@ class Inscribir extends CI_Controller{
  		$result=$this->registro->reg_n_participantes($data);
 		
 		if($result){
-			echo "refistro bacan";	
+			$data['main_content']='inscripcion/inscripcion_succesful_varios';
+			$this->load->view('home/home', $data);
 		}else{
-			echo "tas cagao";	
+			$data['main_content']='inscripcion/inscripcion_succesful_varios_error';
+			$this->load->view('home/home', $data);
 		}
 		
 	}
