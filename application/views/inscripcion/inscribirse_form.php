@@ -36,7 +36,7 @@
 		  <?php if(strcasecmp($this->session->userdata('estado'), '1')==0): ?>
 		    <p><label><input name="tipo_pago" value="2" type="radio"/>Cuotas</label> &nbsp; &nbsp;
 			<select name="cant_cuotas">
-		  		<option value"1" >Seleccione</option>
+		  		<option selected="selected" value"1" >Seleccione</option>
 		  		<option value="2">2</option>
 		  		<option value="3" >3</option>
 		    </select>

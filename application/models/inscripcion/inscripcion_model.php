@@ -1,6 +1,7 @@
 <?php
 class Inscripcion_model extends CI_Model{
-
+	
+	//CAMBIADO
 	function registrar_inscripcion_participante($data=NULL){
 		
 		
@@ -20,6 +21,7 @@ class Inscripcion_model extends CI_Model{
 	
 	}
 
+	//CAMBIADO
 	function get_estado_user($idDNI=0){
 		
 		
@@ -28,7 +30,8 @@ class Inscripcion_model extends CI_Model{
 		return $this->db->query($query)->row();
 
 	}
-
+	
+	//CAMBIADO
 	function get_consulta_registro($idDNI=0, $idEvento=0){
 		$query="select pe.cod_user_rec from usuario p, recibo pe where p.cod_user=pe.cod_user_rec and p.num_doc_user='".$idDNI."'"."and pe.id_eve_rec='".$idEvento."'";
 
