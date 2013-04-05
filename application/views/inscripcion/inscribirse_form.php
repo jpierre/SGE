@@ -37,7 +37,7 @@
 		    <p><label><input name="tipo_pago" value="2" type="radio" onclick="extranjero(this)"/>Cuotas</label> &nbsp; &nbsp;
 			
             <select name="cant_cuotas" id="cant_cuotas">
-		  		<option selected="selected" value"0" >Seleccione</option>
+		  		<option selected="selected" value"" >Seleccione</option>
 		  		<option value="2">2</option>
 		  		<option value="3" >3</option>
 		    </select>

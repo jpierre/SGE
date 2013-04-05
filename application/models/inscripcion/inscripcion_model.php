@@ -39,16 +39,41 @@ class Inscripcion_model extends CI_Model{
 
 	}
 	
+	function get_cod_user($num_doc=0){
+		
+		
+		$query="select cod_user from usuario where num_doc_user='".$num_doc."'";
+		$resultado = $this->db->query($query);
+		
+		if($resultado->num_rows == 1){
+			return $resultado->row();
+		}else{
+			return false;	
+		}
+
+	}
+	
 	function reg_n_participantes($data=NULL){
+		
+		// el documento del representante esta en la sesion
+		$num_doc="";
+		$resultado = $this->get_cod_user($this->session->userdata('idDNI'));
+		if($resultado != false){
+				$num_doc = $resultado->cod_user;
+		}
+		
 		$count=0;
-		for($i=1;$i<11;$i++){
-			if( $data['nombre'.$i]!="" ||$data['ape_pat'.$i]!="" || $data['ape_mat'.$i]!=""){
+		for($i=1;$i<3;$i++){
+			if( $data['num_doc'.$i]!="" ||$data['nom'.$i]!="" || $data['apePat'.$i]!="" || $data['apeMat'.$i]!=""){
 				$count++;
-				$this->db->set('nombre', $data['nombre'.$i]);
- 				$this->db->set('apePat', $data['ape_pat'.$i]);
- 				$this->db->set('apeMat', $data['ape_mat'.$i]);
-				$this->db->set('dni', $this->session->userdata('idDNI'));
-				$this->db->insert('participante');
+				$this->db->set('tip_doc_user', $data['tipo_doc'.$i]);
+				$this->db->set('num_doc_user', $data['num_doc'.$i]);
+				$this->db->set('nom_user', $data['nom'.$i]);
+ 				$this->db->set('ape_pat_user', $data['apePat'.$i]);
+ 				$this->db->set('ape_mat_user', $data['apeMat'.$i]);
+				$this->db->set('USUARIO_cod_user', $num_doc);
+				$this->db->set('tip_usu', '5');
+				$this->db->insert('usuario');
 			}
 		}
 		if($count>0){

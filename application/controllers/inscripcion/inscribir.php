@@ -38,13 +38,17 @@ class Inscribir extends CI_Controller{
 		//$data['apePat'] = $this->session->userdata('apePat');
 		//$data['apeMat'] = $this->session->userdata('apeMat');
 		$data['id_evento'] = $this->input->post('id_evento');
-		$data['nro_inscrip'] = rand(1000000,9999999);
+		$data['nro_inscrip'] = rand(1000000,99999999);
 		$data['estado_recibo'] = 'pendiente';
 		//$data['fecha_inscrip'] =  date("Y-m-d");
 		$data['tipo_pago'] = $this->input->post('tipo_pago');
 		$data['monto'] =$this->input->post('monto');
-		$data['nro_cuotas'] =$this->input->post('cant_cuotas');
-		 
+		
+		if($this->input->post('cant_cuotas')!=""){
+			$data['nro_cuotas'] = $this->input->post('cant_cuotas');
+		}else{
+			$data['nro_cuotas'] = '1';
+		}
 		
  		//llamamos al model, a la función registrar_inscripcion_participante() para que nos haga el insert en la base de datos.
  		$this->load->model('inscripcion/Inscripcion_model', 'registro');
@@ -70,6 +74,32 @@ class Inscribir extends CI_Controller{
 		}
 
 	}
+	
+	//funcion para que el representante pueda inscribir varios participantes externos
+	function inscrip_n_part_externos(){
+		for($i=1;$i<3;$i++){
+			//datos del participante
+			
+				$data['tipo_doc'.$i]= $this->input->post('tipo_doc'.$i);
+				$data['num_doc'.$i]= $this->input->post('num_doc'.$i);
+				$data['nom'.$i]= $this->input->post('nom'.$i);
+				$data['apePat'.$i]= $this->input->post('apePat'.$i);
+				$data['apeMat'.$i]= $this->input->post('apeMat'.$i);
+				
+		}
+		
+		
+		$this->load->model('inscripcion/Inscripcion_model', 'registro');
+ 		$result=$this->registro->reg_n_participantes($data);
+		
+		if($result){
+			echo "refistro bacan";	
+		}else{
+			echo "tas cagao";	
+		}
+		
+	}
+			
 
 }
 

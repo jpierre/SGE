@@ -7,7 +7,7 @@
 <div class="content">
 <div id="container" class="ltr">
 
-<form id="form6" name="form6" action="<?php echo base_url();?>index.php/inscripcion/inscribir/registar_inscrip/" class="wufoo topLabel page" autocomplete="off" enctype="multipart/form-data" method="post" accept-charset="utf-8">
+<form id="form6" name="form6" action="<?php echo base_url();?>index.php/inscripcion/inscribir/inscrip_n_part_externos/" class="wufoo topLabel page" autocomplete="off" enctype="multipart/form-data" method="post" accept-charset="utf-8">
 <form  method="post" >
 <header id="header" class="info">
 <h2>Bienvenidos! Eventos FIA ! </h2>
@@ -19,20 +19,31 @@
 <section>
 <div align="center">
 		  <h1>Mis Datos</h1>
-		  <form action="<?php echo base_url();?>index.php/login/create_member" method="post" accept-charset="utf-8">
+		 
 		  <h3 style="color:#F00">Atencion: Solo puedes inscribir un maximo de 2 personas</h3>
 		  <?php for($i=1; $i<3; $i++): ?>
 		    <fieldset>
 		      <legend>Datos del Participante <?php echo $i;?></legend>
+              <label>Tipo de documento</label>
+       		 	<select name="<?php echo 'tipo_doc'.$i;?>">
+         		 <option value="1">DNI</option>
+         		 <option value="2">VISA</option>
+          		 <option value="3">Pasaporte</option>
+       		 	</select>
+             <br>
+        	 <label>Numero de documento*</label>
+       		 <input name="<?php echo 'num_doc'.$i;?>" type="text" value="<?php echo set_value('dni'); ?>"/>
+             <br>
 		      <label>Nombre </label>
-		      <input type="text" value="" />
+		      <input name="<?php echo 'nom'.$i;?>" type="text" value="<?php echo set_value('nom'); ?>" />
 		      </br>
 		      <label>Apellido Paterno </label>
-		      <input type="text" value="" />
+		      <input name="<?php echo 'apePat'.$i;?>" type="text" value="" />
 		      </br>
 		      <label>Apellido Materno</label>
-		      <input type="text" value="" />
+		      <input name="<?php echo 'apeMat'.$i;?>" type="text" value="" />
 		      </br>
+              <input name="id_evento" type="hidden" value="<?php echo $id_evento; ?>" />
 		    </fieldset>
 		    <p>
 		    <p>&nbsp;</p>
