@@ -1,6 +1,7 @@
 <!-- ESTE PHP VA DENTRO DE HOME/HOME ES EL MAIN_CONTENT  -->
 
 
+
 <link href="<?php echo base_url(); ?>css/wufo/structure.css" rel="stylesheet">
 <link href="<?php echo base_url(); ?>css/wufo/form.css" rel="stylesheet">
 <link href="<?php echo base_url(); ?>css/wufo/theme.css" rel="stylesheet">
@@ -30,12 +31,13 @@
 		  		<b>Escuela:</b> <?php echo $this->session->userdata('escuela');?></p>	
 		 	</fieldset>
 			<fieldset><legend>Modalidad de Pago</legend>
-		  <p><label><input name="tipo_pago" value="1" type="radio"/>Contado</label></p><br />
+		  <p><label><input name="tipo_pago" value="1" type="radio" checked onclick="extranjero(this)"/>Contado</label></p><br />
 			
 		  <?php if(strcasecmp($this->session->userdata('estado'), '1')==0): ?>
-		    <p><label><input name="tipo_pago" value="2" type="radio"/>Cuotas</label> &nbsp; &nbsp;
-			<select name="cant_cuotas">
-		  		<option selected="selected" value"1" >Seleccione</option>
+		    <p><label><input name="tipo_pago" value="2" type="radio" onclick="extranjero(this)"/>Cuotas</label> &nbsp; &nbsp;
+			
+            <select name="cant_cuotas" id="cant_cuotas">
+		  		<option selected="selected" value"0" >Seleccione</option>
 		  		<option value="2">2</option>
 		  		<option value="3" >3</option>
 		    </select>
@@ -45,7 +47,7 @@
 		    
 			<input name="id_evento" type="hidden" value="<?php echo $id_evento; ?>"/>
 		    <label>Monto</label>
-		    <input name="monto" type="text" value="250" />
+		    <input name="monto" type="text" value="250" readonly="readonly" />
 		 
 		    
 		    </p>
