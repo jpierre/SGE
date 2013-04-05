@@ -1,11 +1,10 @@
 <!-- ESTE PHP VA DENTRO DE HOME/HOME ES EL MAIN_CONTENT  -->
-</div><!-- end login_form-->
 
-<div class="content">
+
 <link href="<?php echo base_url(); ?>css/wufo/structure.css" rel="stylesheet">
 <link href="<?php echo base_url(); ?>css/wufo/form.css" rel="stylesheet">
 <link href="<?php echo base_url(); ?>css/wufo/theme.css" rel="stylesheet">
-
+<div class="content">
 <div id="container" class="ltr">
 
 <form id="form6" name="form6" class="wufoo topLabel page" autocomplete="off" enctype="multipart/form-data" method="post" novalidate
