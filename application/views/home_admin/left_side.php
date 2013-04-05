@@ -39,7 +39,7 @@
                                 <li><a href="#">&raquo; Etc, Etc. </a></li>
                                 </ul>
                            </li>
-                           <li><a href="" class="categoria">Acerca De</a></li>
+                           <li><a href="" class="categoria">Acerca De </a></li>
                            </li>
                            <li><a href="<?php echo base_url();?>index.php/login/logout" class="categoria" >Cerrar Sesion</a></li>
                            
