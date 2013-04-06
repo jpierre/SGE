@@ -48,10 +48,10 @@ class Administrador extends CI_Controller{
 			$data= array(
 				'codi' =>$this->input->post('codigo'),
 				'mensaje' =>"",
-				'nom' =>$query->nombre,
-				'ape_Pat' =>$query->apePat,
-				'ape_Mat' =>$query->apeMat,
-				'pais' =>$query->pais,
+				'nom' =>$query->nom_exp,
+				'ape_Pat' =>$query->ape_pat_exp,
+				'ape_Mat' =>$query->ape_mat_exp,
+				'pais' =>$query->pais_exp,
 				'especialidad' =>$query->especialidad
 				
 			);
@@ -62,9 +62,14 @@ class Administrador extends CI_Controller{
 	}
 	
 	function obtenerDatosPonencia(){
+		$a="";
 		$this->load->model('administrador/admin_model', 'admin');
 		$query=$this->admin->get_ponencia($this->input->post('codigo2'));
-		
+		if($query->tipo_pon==1){
+			$a="Conferencia";
+		}else{
+			$a="Taller";
+		}
 		if(!$query){
 			$dato= array(
 				'codi2' =>$this->input->post('codigo2'),
@@ -83,11 +88,11 @@ class Administrador extends CI_Controller{
 			$dato= array(
 				'codi2' =>$this->input->post('codigo2'),
 				'mensaje2' =>"",
-				'titulo' =>$query->titulo,
-				'aula' =>$query->aula,
-				'ambiente' =>$query->ambiente,
-				'tipo1' =>$query->tipo,
-				'duracion' =>$query->duracion
+				'titulo' =>$query->nom_pon,
+				'aula' =>$query->cod_fia_amb,
+				'ambiente' =>$query->tip_amb,
+				'tipo1' =>$a,
+				'duracion' =>$query->resultado
 				
 				
 			);

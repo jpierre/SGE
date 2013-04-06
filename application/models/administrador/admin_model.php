@@ -7,12 +7,12 @@ class Admin_model extends CI_Model{
 		
 		//return $query = $this->db->get('miembros')->row();
 		
-		$sql="select nom_exp, ape_pat_exp, ape_mat_exp, pais_exp from expositor where idExpositor='".$codigo."'";
+		$sql="select nom_exp, ape_pat_exp, ape_mat_exp, pais_exp, especialidad from expositor where cod_exp='".$codigo."'";
 		return $this->db->query($sql)->row();
 		
 	}
 	function get_ponencia($codigo=NULL){
-		$sql="select nom_pon, tip_amb, cod_fia_amb, tipo_pon,  TRUNCATE(TIMESTAMPDIFF(SECOND , fech_ini_pon,	fech_fin_pon)/60, 0) AS Resultado from ponencia p, ambiente a where id_amb_pon=id_amb and id_pon='".$codigo."'";
+		$sql="select nom_pon, tip_amb, cod_fia_amb, tipo_pon,  TRUNCATE(TIMESTAMPDIFF(SECOND , fech_ini_pon,	fech_fin_pon)/60, 0) AS resultado from ponencia p, ambiente a where id_amb_pon=id_amb and id_pon='".$codigo."'";
 		return $this->db->query($sql)->row();
 	}
 	

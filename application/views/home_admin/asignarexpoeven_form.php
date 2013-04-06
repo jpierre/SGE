@@ -99,17 +99,17 @@
 					
 					<table width="274" border="0">
 					  <tr>
-					    <td><input name="req1" value="Pizarra Acrilica" type="checkbox"/>
+					    <td><input name="req1" value="1" type="checkbox"/>
 					    Pizarra Acrilica</td>
-					    <td><input name="req2" value="Personal de Apoyo" type="checkbox"/>
+					    <td><input name="req2" value="1" type="checkbox"/>
 					    Personal de Apoyo</td>
-					    <td><input name="req3" value="Parlantes" type="checkbox"/>
+					    <td><input name="req3" value="1" type="checkbox"/>
 					      Parlantes</td>
 					  </tr>
 					  <tr>
-					    <td><input name="req4" value="Laptops" type="checkbox"/>
+					    <td><input name="req4" value="1" type="checkbox"/>
 					      Laptops</td>
-					    <td><input name="req5" value="Microfono Inalambrico" type="checkbox"/>
+					    <td><input name="req5" value="1" type="checkbox"/>
 					      Microfono Inalambrico</td>
 					    <td>&nbsp;</td>
 					  </tr>
