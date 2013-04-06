@@ -17,9 +17,9 @@ class Login extends CI_Controller{
 		$this->form_validation->set_message('required', 'El campo %s es obligatorio.');
 		
 		if($this->form_validation->run()==FALSE){
-			$data['main_content'] = 'index';
-			$this->load->view('inicio/index', $data);
-			//$this->load->view('login_form');
+			$data['main_content'] = 'login_form';
+			//$this->load->view('inicio/index', $data);
+			$this->load->view('inicio/inicio', $data);
 		}else{
 
 			$this->load->model('miembros_model');
