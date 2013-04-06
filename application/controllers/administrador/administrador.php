@@ -98,18 +98,17 @@ class Administrador extends CI_Controller{
 	}
 	
 	function asignarExpPon(){
-		$a=$this->input->post('req1');
-		$b=$this->input->post('req2');
-		$c=$this->input->post('req3');
-		$d=$this->input->post('req4');
-		$e=$this->input->post('req5');
-		$f=$this->input->post('reqAdic');
-		
+				
 			$dato= array(
 				'codEvento' =>$this->input->post('evento'),
-				'codPonencia' =>$this->input->post('cod2'),
+				//'codPonencia' =>$this->input->post('cod2'),
 				'keyExpositor' =>$this->input->post('cod'),
-				'requerimientos' =>trim(str_replace(",,",",",$a.",".$b.",".$c.",".$d.",".$e.", ".$f), ', ')
+				'piz_acr_req' =>$this->input->post('req1'),
+				'pers_apoyo_req' =>$this->input->post('req2'),
+				'parlant_req' =>$this->input->post('req3'),
+				'lap_req' =>$this->input->post('req4'),
+				'micro_req' =>$this->input->post('req5'),
+				'software_req'=>$this->input->post('reqAdic')
 				
 			);
 		$this->load->model('administrador/admin_model', 'admin');

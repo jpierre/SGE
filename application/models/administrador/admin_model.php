@@ -7,26 +7,43 @@ class Admin_model extends CI_Model{
 		
 		//return $query = $this->db->get('miembros')->row();
 		
-		$sql="select nombre, apePat, apeMat, pais, especialidad from expositor where idExpositor='".$codigo."'";
+		$sql="select nom_exp, ape_pat_exp, ape_mat_exp, pais_exp from expositor where idExpositor='".$codigo."'";
 		return $this->db->query($sql)->row();
 		
 	}
 	function get_ponencia($codigo=NULL){
-		$sql="select titulo, aula, ambiente, tipo, duracion from ponencia where idPonencia='".$codigo."'";
+		$sql="select nom_pon, tip_amb, cod_fia_amb, tipo_pon,  TRUNCATE(TIMESTAMPDIFF(SECOND , fech_ini_pon,	fech_fin_pon)/60, 0) AS Resultado from ponencia p, ambiente a where id_amb_pon=id_amb and id_pon='".$codigo."'";
 		return $this->db->query($sql)->row();
 	}
 	
 	function asignar_expositor_evento($dato=NULL){
 	
+		$asignacion= array(
+					
+			'piz_acr_req' =>$this->input->post('req1'),
+			'pers_apoyo_req' =>$this->input->post('req2'),
+			'parlant_req' =>$this->input->post('req3'),
+			'lap_req' =>$this->input->post('req4'),
+			'micro_req' =>$this->input->post('req5'),
+			'software_req'=>$this->input->post('reqAdic')
+			
+		);
+		$insert2= $this->db->insert('requerimientos',$asignacion);
+		
+		$sql="select max(id_req) AS id_req from requerimientos";
+		$query=$this->db->query($sql)->row();
+		
 		$asignar= array(
 					
-			'codEvento' =>$dato['codEvento'],
-			'codPonencia' =>$dato['codPonencia'],
-			'keyExpositor' =>$dato['keyExpositor'],
-			'requerimientos' =>$dato['requerimientos']
+			'cod_eve_pon' =>$dato['codEvento'],
+			//'id_pon' =>$dato['codPonencia'],
+			'cod_exp_pon' =>$dato['keyExpositor'],
+			'id_req_pon' =>$query->id_req
+			
 		);
-	
-		$insert= $this->db->insert('ponenciaxevento',$asignar);
+		$this->db->where('id_pon', $this->session->userdata('codi2'));
+		$insert= $this->db->update('ponencia', $asignar);
+		
 		return $insert;
 	}
 	
