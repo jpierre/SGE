@@ -1,11 +1,16 @@
 <?php
+error_reporting(E_ALL ^ E_NOTICE);
 
 class Administrador extends CI_Controller{
 	
 	
-	function mostrarlo(){
-
-	$data['main_content'] = 'home_admin/asignarexpoeven_form';
+	function mostrarlo($id_evento=0){
+		$dato= array(
+				'id_eventoo' =>$id_evento
+		);
+		$this->session->set_userdata($dato);
+		$data['id_evento']=$id_evento;
+		$data['main_content'] = 'home_admin/asignarexpoeven_form';
 		$this->load->view('home_admin/home', $data);
 
 	}
@@ -105,7 +110,7 @@ class Administrador extends CI_Controller{
 	function asignarExpPon(){
 				
 			$dato= array(
-				'codEvento' =>$this->input->post('evento'),
+				'codEvento' =>$this->session->userdata('id_eventoo'),
 				//'codPonencia' =>$this->input->post('cod2'),
 				'keyExpositor' =>$this->input->post('cod'),
 				'piz_acr_req' =>$this->input->post('req1'),
@@ -116,6 +121,7 @@ class Administrador extends CI_Controller{
 				'software_req'=>$this->input->post('reqAdic')
 				
 			);
+			
 		$this->load->model('administrador/admin_model', 'admin');
 		$result=$this->admin->asignar_expositor_evento($dato);
 		if($result){

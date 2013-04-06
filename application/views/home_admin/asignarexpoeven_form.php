@@ -19,7 +19,7 @@
 					  <h1>Asignar Expositor a ponencia</h1>
 										
 					<fieldset><legend>Datos del expositor</legend>
-					<h4><?php echo $this->session->userdata('mensaje'); ?></h4>
+					<h4 style="color:#FF0000"><?php echo $this->session->userdata('mensaje'); ?></h4>
 					<form action="<?php echo base_url();?>index.php/administrador/administrador/obteneterDatosExpositor/" method="post" accept-charset="utf-8">
 					<table >
 					  <tr>
@@ -88,7 +88,7 @@
 					</fieldset>
 					</form>
 					
-					<form action="<?php echo base_url();?>index.php/administrador/administrador/asignarExpPon/" method="post" accept-charset="utf-8">
+					<form action="<?php echo base_url();?>index.php/administrador/administrador/asignarExpPon/" method="post" accept-charset="utf-8">				<input type="hidden" name="evento" value="<?php echo $id_evento; ?>"/>
 						
 						<input type="hidden" name="cod" value="<?php echo $this->session->userdata('codi');?>"/>
 							
@@ -123,10 +123,8 @@
 						</td>
 						</tr>
 					</table>
-					<div style="top:150px;">Evento: <select name="evento">
-							<option value="1">Vision 2013</option>
-							<option value="2">Cloud Google</option>
-						</select></div><br />
+					
+					
 					<input type="submit" value="Asignar" />
 					</fieldset>
 					</form>

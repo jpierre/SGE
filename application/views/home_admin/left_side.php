@@ -12,13 +12,13 @@
                                 <li><a href="#">&raquo; VISION 2013</a>
                                         <ul>
                                         <li><span><?php echo anchor('administrador/administrador/mostrarlo2', 'Mantener Ponencia'); ?></span></li>
-                                        <li><span><?php echo anchor('administrador/administrador/mostrarlo', 'Asignar Expositor a Ponencia'); ?></span></li>
+                                        <li><span><?php echo anchor('administrador/administrador/mostrarlo/1', 'Asignar Expositor a Ponencia'); ?></span></li>
                                         </ul>
                                 </li>
                                 <li><a href="#">&raquo; Cloud Google</a>
                                         <ul>
                                         <li><span><?php echo anchor('administrador/administrador/mostrarlo2', 'Mantener Ponencia'); ?></span></li>
-                                        <li><span><?php echo anchor('administrador/administrador/mostrarlo', 'Asignar Expositor a Ponencia'); ?></span></li>
+                                        <li><span><?php echo anchor('administrador/administrador/mostrarlo/2', 'Asignar Expositor a Ponencia'); ?></span></li>
                                         </ul>
                                 </li>
                                 <li><a href="#">&raquo; Android Lima Day</a>
