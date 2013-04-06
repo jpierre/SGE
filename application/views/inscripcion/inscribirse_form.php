@@ -64,12 +64,14 @@ if(document.form6.cant_cuotas.options[selec].value=="Seleccione"){
       <li id="foli112" class="notranslate first section      ">
         <section>
         <div align="center">
-        <h1>Inscripcion</h1>
+        <h1>Inscripcion a <?php if ($id_evento=='1'){ echo "Vision 2013";}else{echo "Cloud Google";} ?></h1>
         <p>(*)Campos obligatorios</p>
         <fieldset>
           <legend>Datos del Participante</legend>
-          <p><b>Codigo:</b> <?php echo $this->session->userdata('idDNI'); ?> &nbsp; &nbsp; &nbsp; <b>Participante:</b> <?php echo $this->session->userdata('apePat')." ".$this->session->userdata('apeMat').", ".$this->session->userdata('nombres'); ?></p>
-          <p><b>Estado:</b> <?php echo $this->session->userdata('estado');?>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; <b>Escuela:</b> <?php echo $this->session->userdata('escuela');?></p>
+          <p><b>Numero Doc:</b> <?php echo $this->session->userdata('idDNI'); ?> &nbsp; &nbsp; &nbsp; <b>Participante:</b> <?php echo $this->session->userdata('apePat')." ".$this->session->userdata('apeMat').", ".$this->session->userdata('nombres'); ?></p>
+          <p><b>Estado:</b> <?php echo $this->session->userdata('estado');?>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; 
+		   <?php if($this->session->userdata('estado')=='1' || $this->session->userdata('estado')=='2'){
+		   		 echo '<b>Escuela:</b>'.$this->session->userdata('escuela');}?></p>
         </fieldset>
         <fieldset>
           <legend>Modalidad de Pago</legend>
