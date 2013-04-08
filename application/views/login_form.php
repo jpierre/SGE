@@ -10,10 +10,12 @@
 </head>
 
 <body>
+
 <form action="<?php echo base_url();?>index.php/login/validate_credentials" method="post" accept-charset="utf-8" class="box login">
+<p style="color:#FF0000;"><?php echo $mensaje; ?></p>
   <fieldset class="boxBody">
     <label>Usuario</label>
-    <input type="text" name="username" placeholder="PremiumPixel"  tabindex="1" required />
+    <input type="text" name="username" placeholder=""  tabindex="1" required />
     <label>Password</label>
     <input type="password" name="password" value="" tabindex="2" required />
   </fieldset>

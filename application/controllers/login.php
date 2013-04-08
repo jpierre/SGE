@@ -59,7 +59,10 @@ class Login extends CI_Controller{
 						redirect('site/members_area');
 					}
 				}else{
-				$this->index();
+				$data['mensaje']='Usuario o password incorrectos';
+				$data['main_content'] = 'login_form';
+				$this->load->view('inicio/inicio2', $data);
+				//$this->index();
 				}
 			}else{
 				//datos sacados de la tabla sicat y cargados a la sesion para luego grabarlos en la tabla sicat
