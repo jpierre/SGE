@@ -35,13 +35,13 @@ return false;
   if(document.getElementById('tipodoc').options[posicion].text=="VISA"){
 
 
-      if(document.getElementById('numerodoc').value.length==14){
+      if(document.getElementById('numerodoc').value.length==10 || document.getElementById('numerodoc').value.length==9){
 
           return true;
 
       }else{
 
-        alert("Ingrese correctamente el numero de VISA, contiene 14 digitos");
+        alert("Ingrese correctamente el numero de VISA, contiene 10 o 9 digitos");
 
        document.getElementById('numerodoc').value="";
 	   document.getElementById('numerodoc').focus();
