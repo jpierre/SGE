@@ -159,8 +159,9 @@
         <br>
         <br>
         <!-- Todavia no se define nada acerca de "tipo_usuario" solo esta en la vista-->
+		<label>Representante de su empresa?</label>
         <input type="checkbox" name="tipo_usuario" value="4">
-        Seleccione SOLO si ud. es representante de su empresa y puede inscribir a otros empleados.<br>
+       	<br>
         <br>
         <label>Como se entero del evento?</label>
         <select name="como">

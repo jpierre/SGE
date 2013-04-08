@@ -1,4 +1,5 @@
 <?php
+error_reporting(E_ALL ^ E_NOTICE);
 
 class Login extends CI_Controller{
 	function index(){
