@@ -106,7 +106,7 @@ if(document.form6.cant_cuotas.options[selec].value=="Seleccione"){
           <input name="monto" type="text" value="250" readonly="readonly" />
           </p>
           <p>
-            <input type="submit" name="submit" value="Registrarsee" onclick="return validarTotal();" />
+            <input type="submit" name="submit" value="Inscribirse" onclick="return validarTotal();" />
           </p>
         </fieldset>
     </form>
