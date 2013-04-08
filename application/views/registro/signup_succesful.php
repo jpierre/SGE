@@ -42,6 +42,6 @@
       <div id="content">
         <!-- insert the page content here -->
        
-<h3>Felicidades Se registro con Exito!!!, Ingrese a nuestro sistema para completar su inscripcion</h3>
+<h3 style="color:#FF0000;">Felicidades Se registro con Exito!!!, Ingrese a nuestro sistema para completar su inscripcion</h3>
 
 <p> cuenta creada<?php echo anchor('login', 'Login Now'); ?></p>
