@@ -41,7 +41,7 @@ return false;
 
       }else{
 
-        alert("Ingrese correctamente el numero de VISA, contiene 11 digitos");
+        alert("Ingrese correctamente el numero de VISA, contiene 14 digitos");
 
        document.getElementById('numerodoc').value="";
 	   document.getElementById('numerodoc').focus();
