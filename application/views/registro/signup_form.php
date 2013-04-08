@@ -2,38 +2,6 @@
 
 <div id="content_header"></div>
 <div id="site_content">
-
-
-<div id="sidebar_container">
-  <div class="sidebar">
-    <div class="sidebar_top"></div>
-    <div class="sidebar_item"> 
-      
-      <h3>Noticias</h3>
-      <h4>Vision 2013</h4>
-      <h5>Octubre 2013</h5>
-      <p>.....&nbsp;<a href="#">leer mas</a></p>
-    </div>
-    <div class="sidebar_base"></div>
-  </div>
-  <div class="sidebar">
-    <div class="sidebar_top"></div>
-    <div class="sidebar_item">
-      <h3>Eventos</h3>
-      <ul>
-        <li><a href="#">link 1</a></li>
-        <li><a href="#">link 2</a></li>
-        <li><a href="#">link 3</a></li>
-        <li><a href="#">link 4</a></li>
-      </ul>
-    </div>
-    <div class="sidebar_base"></div>
-  </div>
-  <div class="sidebar">
-    <div class="sidebar_top"></div>
-    <div class="sidebar_base"></div>
-  </div>
-</div>
 <div id="content">
 <!-- insert the page content here -->
 
@@ -51,27 +19,27 @@
         <select name="tipo_doc">
           <option value="1">DNI</option>
           <option value="2">VISA</option>
-          <option value="3">Pasaporte</option>
+          <option value="3">Carnet de extranjeria</option>
         </select>
         <br>
         <br>
         <label>Numero de documento*</label>
-        <input name="dni" type="text" value="<?php echo set_value('dni'); ?>"/>
+        <input name="dni" type="text" required="required" value="<?php echo set_value('dni'); ?>"/>
         <br>
         <br>
         <span style="text-decoration: none; font-size: 8pt; color:red"><?php echo form_error('dni'); ?></span>
         <label>Nombres*</label>
-        <input type="text" name="nombres" value="<?php echo set_value('nombres'); ?>"/>
+        <input type="text" name="nombres" required="required" value="<?php echo set_value('nombres'); ?>"/>
         <br>
         <br>
         <a style="text-decoration: none; font-size: 8pt; color:red"><?php echo form_error('nombres'); ?></a>
         <label>Apellido Paterno*</label>
-        <input type="text" name="ape_pat" value="<?php echo set_value('ape_pat'); ?>"/>
+        <input type="text" name="ape_pat" required="required" value="<?php echo set_value('ape_pat'); ?>"/>
         <br>
         <br>
         <a style="text-decoration: none; font-size: 8pt; color:red"><?php echo form_error('ape_pat'); ?></a>
         <label>Apellido Materno*</label>
-        <input type="text" name="ape_mat" value="<?php echo set_value('ape_mat'); ?>"/>
+        <input type="text" name="ape_mat" required="required" value="<?php echo set_value('ape_mat'); ?>"/>
         <br>
         <br>
         <a style="text-decoration: none; font-size: 8pt; color:red"><?php echo form_error('ape_mat'); ?></a>
@@ -81,32 +49,32 @@
         <br>
         <a style="text-decoration: none; font-size: 8pt; color:red"><?php echo form_error('fijo'); ?></a>
         <label>Celular*</label>
-        <input type="text" name="celular" value="<?php echo set_value('celular'); ?>"/>
+        <input type="text" name="celular" required="required" value="<?php echo set_value('celular'); ?>"/>
         <br>
         <br>
         <a style="text-decoration: none; font-size: 8pt; color:red"><?php echo form_error('celular'); ?></a>
         <label>Correo*</label>
-        <input type="text" name="email_adress" value="<?php echo set_value('email_adress'); ?>"/>
+        <input type="text" name="email_adress" required="required" value="<?php echo set_value('email_adress'); ?>"/>
         <br>
         <br>
         <a style="text-decoration: none; font-size: 8pt; color:red"><?php echo form_error('email_adress'); ?></a>
         <label>Direccion</label>
-        <input type="text" name="direccion" value="<?php echo set_value('direccion'); ?>"/>
+        <input type="text" name="direccion" required="required" value="<?php echo set_value('direccion'); ?>"/>
         <br>
         <br>
         <a style="text-decoration: none; font-size: 8pt; color:red"><?php echo form_error('direccion'); ?></a>
         <label>Usuario*</label>
-        <input type="text" name="username" value="<?php echo set_value('username'); ?>"/>
+        <input type="text" name="username" required="required" value="<?php echo set_value('username'); ?>"/>
         <br>
         <br>
         <a style="text-decoration: none; font-size: 8pt; color:red"><?php echo form_error('username'); ?></a>
         <label>Password*</label>
-        <input type="password" name="password"/>
+        <input type="password" required="required" name="password"/>
         <br>
         <br>
         <a style="text-decoration: none; font-size: 8pt; color:red"><?php echo form_error('password'); ?></a>
         <label>Confirmar Password*</label>
-        <input type="password" name="password2">
+        <input type="password" required="required" name="password2">
         <br>
         <br>
         <a style="text-decoration: none; font-size: 8pt; color:red"><?php echo form_error('password2'); ?></a>
@@ -160,6 +128,7 @@
         <br>
         <!-- Todavia no se define nada acerca de "tipo_usuario" solo esta en la vista-->
 		<label>Representante de su empresa?</label>
+        <br />
         <input type="checkbox" name="tipo_usuario" value="4">
        	<br>
         <br>
@@ -171,7 +140,7 @@
         </select>
         <br>
         <br>
-        <img src="<?php echo base_url();?>index.php/login/captcha" alt="captcha" /><br>
+        <img style="margin-left:150px;" src="<?php echo base_url();?>index.php/login/captcha" alt="captcha" /><br><br />
         <label>Ingrese caracteres </label>
         <input type="text" name="captcha" class="input1"/>
         <a style="text-decoration: none; font-size: 8pt; color:red"><?php echo form_error('captcha'); ?></a> <br>

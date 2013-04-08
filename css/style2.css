@@ -44,9 +44,7 @@ h1 {
 }
 
 #empresa{
-	
-	
-	
+
 	width:500px;
 	
 }
@@ -149,6 +147,7 @@ input{
     font:normal 12px/14px Arial, Helvetica, Sans-serif;
     margin:0 auto 30px;
 	overflow:hidden;
+	width:800px;
 }
 
 
