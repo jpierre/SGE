@@ -19,7 +19,7 @@ class Login extends CI_Controller{
 		if($this->form_validation->run()==FALSE){
 			$data['main_content'] = 'login_form';
 			//$this->load->view('inicio/index', $data);
-			$this->load->view('inicio/inicio', $data);
+			$this->load->view('inicio/inicio2', $data);
 		}else{
 
 			$this->load->model('miembros_model');
