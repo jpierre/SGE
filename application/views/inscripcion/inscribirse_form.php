@@ -65,7 +65,7 @@ if(document.form6.cant_cuotas.options[selec].value=="Seleccione"){
         <section>
         <div align="center">
         <h1>Inscripcion a <?php if ($id_evento=='1'){ echo "Vision 2013";}else{echo "Cloud Google";} ?></h1>
-        <p>(*)Campos obligatorios</p>
+        
         <fieldset>
           <legend>Datos del Participante</legend>
           <p><?php if($this->session->userdata('estado')=='1' || $this->session->userdata('estado')=='2'){echo '<b>Codigo: </b>'.$this->session->userdata('codigo');}else{ echo '<b>Numero Doc: </b>'.$this->session->userdata('idDNI');}
@@ -94,7 +94,7 @@ if(document.form6.cant_cuotas.options[selec].value=="Seleccione"){
               <input name="tipo_pago" value="2" type="radio" onclick="extranjero(this)"/>
               Cuotas</label>
             &nbsp; &nbsp;
-            <select name="cant_cuotas" id="cant_cuotas">
+            Nro de cuotas<select name="cant_cuotas" id="cant_cuotas">
               <option selected="selected" value"" >Seleccione</option>
               <option value="2">2</option>
               <option value="3" >3</option>
