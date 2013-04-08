@@ -1,4 +1,82 @@
 <!-- ARRIBA VA INCLUDES/HEADER.PHP -->
+<script type="text/javascript">
+
+function validar(){
+
+
+var posicion=document.getElementById('tipodoc').options.selectedIndex; //posicion
+//var letra=document.getElementById('numerodoc').value;
+
+//alert(letra.length);
+//alert(document.getElementById('tipodoc').options[posicion].text); //valor
+
+
+
+if(document.getElementById('tipodoc').options[posicion].text=="DNI"){
+
+
+      if(document.getElementById('numerodoc').value.length==8){
+
+          return true;
+
+      }else{
+
+        alert("Ingrese correctamente el numero de DNI, contiene 8 digitos");
+        document.registrar.numerodoc.value="";
+        document.registrar.numerodoc.focus();
+      }
+
+
+
+  }
+
+
+  if(document.getElementById('tipodoc').options[posicion].text=="VISA"){
+
+
+      if(document.getElementById('numerodoc').value.length==14){
+
+          return true;
+
+      }else{
+
+        alert("Ingrese correctamente el numero de VISA, contiene 11 digitos");
+
+        document.registrar.numerodoc.value="";
+        document.registrar.numerodoc.focus();
+      }
+
+
+
+  }
+
+
+
+  if(document.getElementById('tipodoc').options[posicion].text=="Carnet de extranjeria"){
+
+
+      if(document.getElementById('numerodoc').value.length==8){
+
+          return true;
+
+      }else{
+
+        alert("Ingrese correctamente el Carnet de extranjeria, contiene 11 digitos");
+
+        document.registrar.numerodoc.value="";
+        document.registrar.numerodoc.focus();
+      }
+
+
+
+  }
+
+}
+
+
+
+
+</script>
 
 <div id="content_header"></div>
 <div id="site_content">
@@ -8,15 +86,14 @@
 <div id="stylized" >
   <h1>Registrate</h1>
   <p>(*)Campos obligatorios</p>
-  <form action="<?php echo base_url();?>index.php/login/create_member" method="post" accept-charset="utf-8" class="box">
+  <form action="<?php echo base_url();?>index.php/login/create_member" method="post" accept-charset="utf-8" class="box" name="registrar">
     <div id="personal">
-
       <fieldset>
         <legend> Informacion Personal</legend>
         <br>
         <br>
         <label>Tipo de documento</label>
-        <select name="tipo_doc">
+        <select name="tipo_doc" id="tipodoc">
           <option value="1">DNI</option>
           <option value="2">VISA</option>
           <option value="3">Carnet de extranjeria</option>
@@ -24,12 +101,12 @@
         <br>
         <br>
         <label>Numero de documento*</label>
-        <input name="dni" type="text" required="required" value="<?php echo set_value('dni'); ?>"/>
+        <input id="numerodoc" name="documento" type="text" onblur="validar();" required="required" value="<?php echo set_value('dni'); ?>"/>
         <br>
         <br>
         <span style="text-decoration: none; font-size: 8pt; color:red"><?php echo form_error('dni'); ?></span>
         <label>Nombres*</label>
-        <input type="text" name="nombres" required="required" value="<?php echo set_value('nombres'); ?>"/>
+        <input type="text" name="nombres"  required="required"  value="<?php echo set_value('nombres'); ?>"/>
         <br>
         <br>
         <a style="text-decoration: none; font-size: 8pt; color:red"><?php echo form_error('nombres'); ?></a>
@@ -82,9 +159,11 @@
       </fieldset>
     </div>
     <div id="empresa">
-    <fieldset><legend>Informacion sobre su empresa</legend>
-    <br>
-      <label>Empresa</label><input type="text" name="empresa" value="<?php echo set_value('empresa'); ?>"/>
+      <fieldset>
+        <legend>Informacion sobre su empresa</legend>
+        <br>
+        <label>Empresa</label>
+        <input type="text" name="empresa" value="<?php echo set_value('empresa'); ?>"/>
         <br>
         <br>
         <label>RUC</label>
@@ -114,8 +193,7 @@
         <br>
         <br>
         <label>Sector</label>
-        
-         <select name="sector_ind">
+        <select name="sector_ind">
           <option value="1" >Banca y Seguros</option>
           <option value="2" >Construccion e Inmobiliaria</option>
           <option value="3" >Energia</option>
@@ -127,10 +205,10 @@
         <br>
         <br>
         <!-- Todavia no se define nada acerca de "tipo_usuario" solo esta en la vista-->
-		<label>Representante de su empresa?</label>
+        <label>Representante de su empresa?</label>
         <br />
         <input type="checkbox" name="tipo_usuario" value="4">
-       	<br>
+        <br>
         <br>
         <label>Como se entero del evento?</label>
         <select name="como">
@@ -140,16 +218,17 @@
         </select>
         <br>
         <br>
-        <img style="margin-left:150px;" src="<?php echo base_url();?>index.php/login/captcha" alt="captcha" /><br><br />
+        <img style="margin-left:150px;" src="<?php echo base_url();?>index.php/login/captcha" alt="captcha" /><br>
+        <br />
         <label>Ingrese caracteres </label>
         <input type="text" name="captcha" class="input1"/>
         <a style="text-decoration: none; font-size: 8pt; color:red"><?php echo form_error('captcha'); ?></a> <br>
-        <!-- <h3 style="font-size: 8pt; color:red"><?php echo validation_errors(); ?></h3> -->
+        <!-- <h3 style="font-size: 8pt; color:red"><?php echo validation_errors(); ?></h3> --> 
         <br>
         <br>
-        <input  class="button orange" type="submit" name="submit" value="Registrarse" ></input>
-       
-        </fieldset>
+        <input  class="button orange" type="submit" name="submit" value="Registrarse" >
+        </input>
+      </fieldset>
     </div>
   </form>
 </div>
