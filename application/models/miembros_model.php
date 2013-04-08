@@ -87,7 +87,8 @@ class Miembros_model extends CI_Model{
 			'pas_user' =>md5($this->input->post('password')),
 			'esc_estud' =>$this->session->userdata('escuela'),
 			'cod_user' =>$this->session->userdata('user'),
-			'tip_doc_user' =>1
+			'tip_doc_user' =>1,
+			'cod_estud'=>$this->session->userdata('codigo')
 		);
 		
 		$insert= $this->db->insert('usuario',$new_member_insert_data);
