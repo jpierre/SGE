@@ -22,7 +22,7 @@ if(document.getElementById('tipodoc').options[posicion].text=="DNI"){
       }else{
 
         alert("Ingrese correctamente el numero de DNI, contiene 8 digitos");
-        document.registrar.numerodoc.value="";
+        
         document.registrar.numerodoc.focus();
       }
 
@@ -42,10 +42,10 @@ if(document.getElementById('tipodoc').options[posicion].text=="DNI"){
 
         alert("Ingrese correctamente el numero de VISA, contiene 11 digitos");
 
-        document.registrar.numerodoc.value="";
+       
         document.registrar.numerodoc.focus();
       }
-
+return false;
 
 
   }
@@ -67,7 +67,7 @@ if(document.getElementById('tipodoc').options[posicion].text=="DNI"){
         document.registrar.numerodoc.focus();
       }
 
-
+return false;
 
   }
 
@@ -101,10 +101,10 @@ if(document.getElementById('tipodoc').options[posicion].text=="DNI"){
         <br>
         <br>
         <label>Numero de documento*</label>
-        <input id="numerodoc" name="documento" type="text" onblur="validar();" required="required" value="<?php echo set_value('dni'); ?>"/>
+        <input id="numerodoc" name="documento" type="text" onblur="return validar();" required="required" value="<?php echo set_value('dni'); ?>"/>
         <br>
         <br>
-        <span style="text-decoration: none; font-size: 8pt; color:red"><?php echo form_error('dni'); ?></span>
+       
         <label>Nombres*</label>
         <input type="text" name="nombres"  required="required"  value="<?php echo set_value('nombres'); ?>"/>
         <br>
