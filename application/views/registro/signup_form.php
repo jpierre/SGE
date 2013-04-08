@@ -101,10 +101,10 @@ return false;
         <br>
         <br>
         <label>Numero de documento*</label>
-        <input id="numerodoc" name="documento" type="text" onblur="return validar();" required="required" value="<?php echo set_value('dni'); ?>"/>
+        <input id="numerodoc" name="documento" type="text"  required="required" value="<?php echo set_value('dni'); ?>"/>
         <br>
         <br>
-       
+        <span style="text-decoration: none; font-size: 8pt; color:red"><?php echo form_error('dni'); ?></span>
         <label>Nombres*</label>
         <input type="text" name="nombres"  required="required"  value="<?php echo set_value('nombres'); ?>"/>
         <br>
