@@ -22,11 +22,12 @@ if(document.getElementById('tipodoc').options[posicion].text=="DNI"){
       }else{
 
         alert("Ingrese correctamente el numero de DNI, contiene 8 digitos");
-        
-        document.registrar.numerodoc.focus();
+		
+       document.getElementById('numerodoc').value="";
+	   document.getElementById('numerodoc').focus();
       }
 
-
+return false;
 
   }
 
@@ -42,10 +43,10 @@ if(document.getElementById('tipodoc').options[posicion].text=="DNI"){
 
         alert("Ingrese correctamente el numero de VISA, contiene 11 digitos");
 
-       
-        document.registrar.numerodoc.focus();
+       document.getElementById('numerodoc').value="";
+	   document.getElementById('numerodoc').focus();
       }
-return false;
+
 
 
   }
@@ -63,11 +64,11 @@ return false;
 
         alert("Ingrese correctamente el Carnet de extranjeria, contiene 11 digitos");
 
-        document.registrar.numerodoc.value="";
-        document.registrar.numerodoc.focus();
+        document.getElementById('numerodoc').value="";
+	   document.getElementById('numerodoc').focus();
       }
 
-return false;
+
 
   }
 
@@ -86,7 +87,7 @@ return false;
 <div id="stylized" >
   <h1>Registrate</h1>
   <p>(*)Campos obligatorios</p>
-  <form action="<?php echo base_url();?>index.php/login/create_member" method="post" accept-charset="utf-8" class="box" name="registrar">
+  <form action="<?php echo base_url();?>index.php/login/create_member" method="post" accept-charset="utf-8" class="box" >
     <div id="personal">
       <fieldset>
         <legend> Informacion Personal</legend>
@@ -101,7 +102,7 @@ return false;
         <br>
         <br>
         <label>Numero de documento*</label>
-        <input id="numerodoc" name="documento" type="text"  required="required" value="<?php echo set_value('dni'); ?>"/>
+        <input  name="dni" id="numerodoc" onblur="return validar();" type="text"  required="required" value="<?php echo set_value('dni'); ?>"/>
         <br>
         <br>
         <span style="text-decoration: none; font-size: 8pt; color:red"><?php echo form_error('dni'); ?></span>
