@@ -69,7 +69,11 @@ if(document.form6.cant_cuotas.options[selec].value=="Seleccione"){
         <fieldset>
           <legend>Datos del Participante</legend>
           <p><b>Numero Doc:</b> <?php echo $this->session->userdata('idDNI'); ?> &nbsp; &nbsp; &nbsp; <b>Participante:</b> <?php echo $this->session->userdata('apePat')." ".$this->session->userdata('apeMat').", ".$this->session->userdata('nombres'); ?></p>
-          <p><b>Estado:</b> <?php echo $this->session->userdata('estado');?>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; 
+          <p><b>Estado:</b> <?php if($this->session->userdata('estado')=='1'){
+		  							echo "Estudiante";
+								  }else if($this->session->userdata('estado')=='2'){
+								  	echo "Egresado";
+								  }else{echo "Externo";}?>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; 
 		   <?php if($this->session->userdata('estado')=='1' || $this->session->userdata('estado')=='2'){
 		   		 echo '<b>Escuela:</b>'.$this->session->userdata('escuela');}?></p>
         </fieldset>
