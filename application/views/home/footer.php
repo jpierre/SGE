@@ -1,5 +1,5 @@
 	 <div class="footer">
-	   <img src="<?php echo base_url(); ?>images/pie.png" style="position:absolute; left:0px;" width="1000" height="72"/>
+	   <img src="<?php echo base_url(); ?>images/pie.png"/>
 	 </div>
 <!-- end .container --></div>
 

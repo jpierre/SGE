@@ -25,15 +25,15 @@
 			<h3 id="title112">
 			Tus datos registrados son:<br />
 			<br />
-			DNI					: <?php echo $this->session->userdata('idDNI'); ?><br>
-			Nombre 				: <?php echo $this->session->userdata('nombres'); ?><br>
-			Apellido Paterno	: <?php echo $this->session->userdata('apePat'); ?><br>
-			Apellido Materno 	: <?php echo $this->session->userdata('apeMat'); ?><br>
-			Telefono Fijo		: <?php echo $this->session->userdata('telefono'); ?><br>
-			Celular				: <?php echo $this->session->userdata('celular'); ?><br>
-			Correo				: <?php echo $this->session->userdata('correo'); ?><br>
-			Direccion			: <?php echo $this->session->userdata('direccion'); ?><br>
-			Usuario				: <?php echo $this->session->userdata('user'); ?>
+			<b>DNI</b>: <?php echo $this->session->userdata('idDNI'); ?><br>
+			<b>Nombre</b>: <?php echo $this->session->userdata('nombres'); ?><br>
+			<b>Apellido Paterno</b>: <?php echo $this->session->userdata('apePat'); ?><br>
+			<b>Apellido Materno</b>: <?php echo $this->session->userdata('apeMat'); ?><br>
+			<b>Telefono Fijo</b>: <?php echo $this->session->userdata('telefono'); ?><br>
+			<b>Celular</b>: <?php echo $this->session->userdata('celular'); ?><br>
+			<b>Correo</b>: <?php echo $this->session->userdata('correo'); ?><br>
+			<b>Direccion</b>: <?php echo $this->session->userdata('direccion'); ?><br>
+			<b>Usuario</b>: <?php echo $this->session->userdata('user'); ?>
 			</h3>
 			</section>
 			</li>

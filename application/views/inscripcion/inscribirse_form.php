@@ -1,11 +1,8 @@
 <!-- ESTE PHP VA DENTRO DE HOME/HOME ES EL MAIN_CONTENT  -->
 
-
 <link href="<?php echo base_url(); ?>css/wufo/structure.css" rel="stylesheet">
 <link href="<?php echo base_url(); ?>css/wufo/form.css" rel="stylesheet">
 <link href="<?php echo base_url(); ?>css/wufo/theme.css" rel="stylesheet">
-
-
 
 <script>
 
