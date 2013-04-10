@@ -33,10 +33,8 @@ a:hover, a:active, a:focus { /* this group of selectors will give a keyboard nav
 
 /* ~~ this container surrounds all other divs giving them their percentage-based width ~~ */
 .container {
-	width: 80%;
-	max-width: 1260px;/* a max-width may be desirable to keep this layout from getting too wide on a large monitor. This keeps line length more readable. IE6 does not respect this declaration. */
-	min-width: 780px;/* a min-width may be desirable to keep this layout from getting too narrow. This keeps line length more readable in the side columns. IE6 does not respect this declaration. */
-	background: #FFF;
+	width: 1024px;
+    background: #FFF;
 	margin: 0 auto; /* the auto value on the sides, coupled with the width, centers the layout. It is not needed if you set the .container's width to 100%. */
 }
 
@@ -59,19 +57,17 @@ a:hover, a:active, a:focus { /* this group of selectors will give a keyboard nav
 .sidebar1 {
 	float: left;
 	width: 20%;
-	background: #93A5C4;
 	padding-bottom: 10px;
 }
 .content {
 	padding: 10px 0;
-	min-width: 60%;
+	width: 60%;
 	float: left;
-}
+ }
 .sidebar2 {
 	float: left;
 	width: 20%;
-	background: #93A5C4;
-	padding: 10px 0;
+    padding: 10px 0;
 }
 
 /* ~~ This grouped selector gives the lists in the .content area space ~~ */
@@ -103,7 +99,6 @@ ul.nav a:hover, ul.nav a:active, ul.nav a:focus { /* this changes the background
 /* ~~The footer ~~ */
 .footer {
 	padding: 10px 0;
-	background: #6F7D94;
 	position: relative;/* this gives IE6 hasLayout to properly clear */
 	clear: both; /* this clear property forces the .container to understand where the columns end and contain them */
 }
