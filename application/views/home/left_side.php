@@ -25,10 +25,8 @@
                                 <li><a href="#">&raquo; Etc, Etc.</a></li>
                                 </ul>
                            </li>
-                           <li><a href="#" class="categoria">Generar Codigo QR</a>
-                                <ul>
-                                <li><a href="#">&raquo; Etc, Etc. </a></li>
-                                </ul>
+                           <li><a href="<?php echo base_url();?>index.php/login/generar_QR">Generar Codigo QR</a></a>
+                               
                            </li>
                            <li><a href="" class="categoria">Acerca De</a></li>
                            </li>

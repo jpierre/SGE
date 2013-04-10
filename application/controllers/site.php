@@ -20,7 +20,9 @@
 		
 			$this->load->view('home/ver_perfil');	
 		}
-		
+		function generar_QR(){
+			$this->load->view('home/generar_QR');	
+		}
 		function is_logged_in(){
 			$is_logged_in=$this->session->userdata('is_logged_in');
 			

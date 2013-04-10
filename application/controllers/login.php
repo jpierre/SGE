@@ -192,7 +192,11 @@ class Login extends CI_Controller{
     }
     	
     	
-	
+	function generar_QR(){
+		//$data['main_content'] = 'inscripcion/generar_QR';
+		//$this->load->view('home/home', $data);
+		redirect('site/generar_QR');
+	}
 	
 	
 	function logout()
