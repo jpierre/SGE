@@ -9,10 +9,10 @@
                           </li>
                           <li><a href="#" class="categoria">Eventos</a>
                                 <ul>
-                                <li><a href="#">&raquo; VISION 2013</a>
+                                <li><a href="#">&raquo; Mantener</a>
                                         <ul>
-                                        <li><span><?php echo anchor('administrador/administrador/mostrarlo2', 'Mantener Ponencia'); ?></span></li>
-                                        <li><span><?php echo anchor('administrador/administrador/mostrarlo/1', 'Asignar Expositor a Ponencia'); ?></span></li>
+                                        <li><span><?php echo anchor('administrador/administrador/vistaListarPonencias', 'Mantener Ponencias'); ?></span></li>
+                                        <li><span><?php echo anchor('', 'Mantener Expositor'); ?></span></li>
                                         </ul>
                                 </li>
                                 <li><a href="#">&raquo; Cloud Google</a>

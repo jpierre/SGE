@@ -16,11 +16,17 @@ class Administrador extends CI_Controller{
 	}
 
 	function mostrarlo2(){
-
 	$data['main_content'] = 'home_admin/mantenerPonencia';
 		$this->load->view('home_admin/home', $data);
 
 	}
+
+    function vistaListarPonencias(){
+	$data['main_content'] = 'home_admin/listaPonencias';
+		$this->load->view('home_admin/home', $data);
+
+	}    
+    
 	
 	function mostrarlo3(){
 	$data['main_content'] = 'home_admin/datos_admin';
