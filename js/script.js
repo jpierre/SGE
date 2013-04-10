@@ -35,6 +35,7 @@ $(function(){
 /*Fin Menu Acordeon*/
 
 /*Script Clic Derecho*/
+/*
 var message="Clic Derecho... INHABILITADO  : )";
 
 
@@ -62,7 +63,7 @@ else if (document.all&&!document.getElementById){
 document.onmousedown=clickIE4;
 }
 
-document.oncontextmenu=new Function("alert(message);return false")
+document.oncontextmenu=new Function("alert(message);return false")*/
 
 
 $(document).ready(function() {
