@@ -2,16 +2,75 @@
 
 class C_mantenerPonencia extends CI_Controller {
 
-	
+	function __construct(){
+		parent::__construct();
+		$this->load->library('grocery_crud');
+	}
     
 	public function index(){
-		
+		/*
+     * Mandamos todo lo que llegue a la funcion
+     * administracion().
+     **/
+		redirect('administrador/c_mantenerPonencia/administracion');
 	}
 	
-	function vistaListarPonencias(){
+	function administracion()
+  	{
+	    try{
+	
+	    /* Creamos el objeto */
+	    $crud = new grocery_CRUD();
+	
+	    /* Seleccionamos el tema */
+	    $crud->set_theme('flexigrid');
+	
+	    /* Seleccionmos el nombre de la tabla de nuestra base de datos*/
+	    $crud->set_table('ponencia');
+	
+	    /* Le asignamos un nombre */
+	    $crud->set_subject('Ponencias');
+	
+	    /* Asignamos el idioma español */
+	    $crud->set_language('spanish');
+	
+	    /* Aqui le decimos a grocery que estos campos son obligatorios */
+	    $crud->required_fields(
+	      'nom_pon',
+	      'tipo_pon',
+	      'est_pon',
+	      'id_amb_pon'
+	     );
+	
+	    /* Aqui le indicamos que campos deseamos mostrar */
+	    $crud->columns(
+	      'nom_pon',
+	      'tipo_pon',
+	      'est_pon',
+	      'id_amb_pon'
+	     );
+	
+	    /* Generamos la tabla */
+	    $output = $crud->render();
+	
+	    /* La cargamos en la vista situada en
+	    /applications/views/productos/administracion.php */
+	    //$output['main_content'] = 'home_admin/mantenerPonencia';
+	    $this->load->view('home_admin/mantenerPonencia', $output);
+	    
+	    /*$data['main_content'] = 'home_admin/mantenerPonencia';
+		$this->load->view('home_admin/home', $data);*/
+	
+	    }catch(Exception $e){
+	      /* Si algo sale mal cachamos el error y lo mostramos */
+	      show_error($e->getMessage().' --- '.$e->getTraceAsString());
+	    }
+  }
+	
+	/*function vistaListarPonencias(){
 		
 		$this->load->model('mantener/m_Ponencia','ponencia');
-		
+	
 		$query = $this->ponencia->cargarPonencias();
 		
 		
@@ -27,12 +86,12 @@ class C_mantenerPonencia extends CI_Controller {
 		$info['main_content'] = 'home_admin/listaPonencias';
 		$this->load->view('home_admin/home', $info);
 		
-	}  
+	} */ 
     
 	
 	
 	
-    public function mantenerPonencia() { 
+    /*public function mantenerPonencia() { 
     
     	$accion = $this->input->post('accion');
        
@@ -56,7 +115,7 @@ class C_mantenerPonencia extends CI_Controller {
             
         }
         
-    }
+    }*/
     
     
     
