@@ -4,7 +4,7 @@
 <div class="content">
 <div id="container" class="ltr">
 <ul>
-<form name="formMantener" action="<?php echo base_url();?>index.php/administrador/c_mantener/mantenerPonencia/" method="post">
+<form name="formMantener" action="<?php echo base_url();?>index.php/administrador/c_mantenerPonencia/mantenerPonencia/" method="post">
 <li id="foli284" class="likert notranslatec col5">
     <table><br />
     <h1 style="text-align: left;">Listado de Eventos</h1>
@@ -33,7 +33,9 @@
         <td >Victor Sifuentes</td>
         <td >Auditorio Fia Data</td>
         <td >Sin Contratiempos</td>
-        <td ><input type="checkbox"/></td>
+        <td ><span>Modificar</span></td>
+        
+        
     </tr>
     <tr class="statement288">
         <td >164</td>
@@ -47,7 +49,7 @@
     </table>
 </li>
 <li > 
-<input type="submit" value="Agregar" name="accion" />
+<input type="submit" value="Agregar" name="accion">agregame</input>
 <input type="submit" value="Modificar" name="accion"/>
 <input type="submit" value="Eliminar" name="accion"/>
 </li>
