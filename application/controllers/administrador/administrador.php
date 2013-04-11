@@ -21,11 +21,7 @@ class Administrador extends CI_Controller{
 
 	}
 
-    function vistaListarPonencias(){
-	$data['main_content'] = 'home_admin/listaPonencias';
-		$this->load->view('home_admin/home', $data);
-
-	}    
+      
     
 	
 	function mostrarlo3(){

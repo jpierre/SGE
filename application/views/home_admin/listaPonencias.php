@@ -4,6 +4,7 @@
 <div class="content">
 <div id="container" class="ltr">
 <ul>
+<form name="formMantener" action="<?php echo base_url();?>index.php/administrador/c_mantener/mantenerPonencia/" method="post">
 <li id="foli284" class="likert notranslatec col5">
     <table><br />
     <h1 style="text-align: left;">Listado de Eventos</h1>
@@ -19,11 +20,11 @@
     </thead>
     <tbody>
     <tr class="statement284">
-        <td >10</td>
-        <td >Presentacion Vision 2013</td>
-        <td >Auditorio Fia Data</td>
-        <td >Aula 101</td>
-        <td >Sin Contratiempos</td>
+        <td ><?php echo $this->session->userdata('codPonencia'); ?></td>
+        <td ><?php echo $this->session->userdata('nomPonencia'); ?></td>
+        <td ><?php echo $this->session->userdata('expositor'); ?></td>
+        <td ><?php echo $this->session->userdata('ambiente'); ?></td>
+        <td ><?php echo $this->session->userdata('estado'); ?></td>
         <td ><input type="checkbox"/></td>
     </tr>
     <tr class="alt statement285">
@@ -46,8 +47,11 @@
     </table>
 </li>
 <li > 
-<input type="button" value="Modificar Ponencia" onclick="" class="btTxt submit"   />
+<input type="submit" value="Agregar" name="accion" />
+<input type="submit" value="Modificar" name="accion"/>
+<input type="submit" value="Eliminar" name="accion"/>
 </li>
+</form>
 </ul>
 			
 			</div><!--container-->

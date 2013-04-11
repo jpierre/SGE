@@ -11,20 +11,10 @@
                                 <ul>
                                 <li><a href="#">&raquo; Mantener</a>
                                         <ul>
-                                        <li><span><?php echo anchor('administrador/administrador/vistaListarPonencias', 'Mantener Ponencias'); ?></span></li>
+                                        <li><span><?php echo anchor('administrador/c_mantener/vistaListarPonencias', 'Mantener Ponencias'); ?></span></li>
                                         <li><span><?php echo anchor('', 'Mantener Expositor'); ?></span></li>
-                                        </ul>
-                                </li>
-                                <li><a href="#">&raquo; Cloud Google</a>
-                                        <ul>
-                                        <li><span><?php echo anchor('administrador/administrador/mostrarlo2', 'Mantener Ponencia'); ?></span></li>
-                                        <li><span><?php echo anchor('administrador/administrador/mostrarlo/2', 'Asignar Expositor a Ponencia'); ?></span></li>
-                                        </ul>
-                                </li>
-                                <li><a href="#">&raquo; Android Lima Day</a>
-                                        <ul>
-                                        <li><span><?php echo anchor('administrador/administrador/mostrarlo2', 'Mantener Ponencia'); ?></span></li>
-                                        <li><span><?php echo anchor('administrador/administrador/mostrarlo', 'Asignar Expositor a Ponencia'); ?></span></li>
+                                        <li><span><?php echo anchor('', 'Mantener Aula'); ?></span></li>
+                                        <li><span><?php echo anchor('', 'Mantener Ambiente'); ?></span></li>
                                         </ul>
                                 </li>
                                 </ul>
