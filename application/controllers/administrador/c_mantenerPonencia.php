@@ -9,13 +9,34 @@ class C_mantenerPonencia extends CI_Controller {
 	public function index(){
 
 		$this->load->model('mantener/m_ponencia','m_ponencia');
-		//Obtener datos de la tabla 'contacto'
-		 $ponencias = $this->m_ponencia->getData(); //llamamos a la función getData() del modelo creado anteriormente.
+		$ponencias = $this->m_ponencia->getData();
 		 
-		 $data['ponencias'] = $ponencias;
-		 
-		 $data['main_content'] = 'home_admin/listaPonencias';
-		 $this->load->view('home_admin/home', $data); //llamada a la vista, que crearemos posteriormente
+		$data['ponencias'] = $ponencias;
+				  
+		//SETEA LOS VALORES NUMERICOS A TEXTOS DE LA BD PARA LAS VISTAS  
+		for($i=0; $i<count($ponencias); $i++){
+			//PARA EL AMBIENTE
+			$ambiente[$i] = $ponencias[$i]->id_amb_pon;
+			switch ($ambiente[$i]){
+		 		case 1: $ambiente[$i] = "Aula"; break;
+		 		case 2: $ambiente[$i] = "Laboratorio"; break;
+		 		case 3: $ambiente[$i] = "Coliseo"; break;
+		 		default: $ambiente[$i] = "-";
+		 	}
+		 	
+		 	//PARA EL ESTADO
+			$estado[$i] = $ponencias[$i]->est_pon;
+			switch ($estado[$i]){
+		 		case 1: $estado[$i] = "OK"; break;
+		 		case 2: $estado[$i] = "Cancelada"; break;
+		 		default: $estado[$i] = "Ninguno";
+		 	}
+		}
+		
+		$data['estado'] = $estado;
+		$data['ambiente'] = $ambiente;
+		$data['main_content'] = 'home_admin/listaPonencias';
+		$this->load->view('home_admin/home', $data);
 		 	
 	}
 	

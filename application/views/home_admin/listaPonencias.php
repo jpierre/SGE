@@ -21,6 +21,7 @@
     </thead>
     <tbody>
      
+     <!--NO BORRAR PODRIA SERVIR PARA FUTURAS MODIFICACIONES
      <?php foreach ($ponencias as $p){?>
  	 <tr class="statement284">
 		 <td><?=$p->id_pon?></td>
@@ -31,7 +32,22 @@
 		 <td ><a href="<?php base_url()?>/index.php/administrador/c_mantenerPonencia/mantenerPonencia/Modificar/<?=$p->id_pon?>">Modificar</a>
 		 <td ><a href="<?php base_url()?>/index.php/administrador/c_mantenerPonencia/mantenerPonencia/Eliminar/<?=$p->id_pon?>">Eliminar</a>
 	 </tr>
+	 <?php }?>-->
+
+	<?php for($i=0; $i<count($ponencias); $i++){?>
+ 	 <tr class="statement284">
+		 <td><?=$ponencias[$i]->id_pon?></td>
+		 <td><?=$ponencias[$i]->nom_pon?></td>
+		 <td><?=$ponencias[$i]->cod_exp_pon?></td>
+		 <td><?=$ambiente[$i]?></td>
+		 <td><?=$estado[$i]?></td>
+		 <td ><a href="<?php base_url()?>/index.php/administrador/c_mantenerPonencia/mantenerPonencia/Modificar/<?=$ponencias[$i]->id_pon?>">Modificar</a>
+		 <td ><a href="<?php base_url()?>/index.php/administrador/c_mantenerPonencia/mantenerPonencia/Eliminar/<?=$ponencias[$i]->id_pon?>">Eliminar</a>
+	 </tr>
 	 <?php }?>
+	
+
+
 	    
     </tbody>
     </table>
