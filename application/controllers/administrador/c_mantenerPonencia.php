@@ -2,37 +2,25 @@
 
 class C_mantenerPonencia extends CI_Controller {
 
-	
-    
+	function __construct(){
+		parent::__construct();
+	}
+	    
 	public function index(){
-		
+
+		$this->load->model('mantener/m_ponencia','m_ponencia');
+		//Obtener datos de la tabla 'contacto'
+		 $ponencias = $this->m_ponencia->getData(); //llamamos a la función getData() del modelo creado anteriormente.
+		 
+		 $data['ponencias'] = $ponencias;
+		 
+		 $data['main_content'] = 'home_admin/listaPonencias';
+		 $this->load->view('home_admin/home', $data); //llamada a la vista, que crearemos posteriormente
+		 	
 	}
 	
-	function vistaListarPonencias(){
-		
-		$this->load->model('mantener/m_Ponencia','ponencia');
-		
-		$query = $this->ponencia->cargarPonencias();
-		
-		
-			$data = array(
-			'codPonencia' => $query->id_pon,
-			'nomPonencia' => $query->nom_pon,
-			'expositor' => $query->cod_exp_pon,
-			'ambiente' => $query->id_amb_pon,
-			'estado' => $query->est_pon,
-			);
-		$this->session->set_userdata($data);
-		
-		$info['main_content'] = 'home_admin/listaPonencias';
-		$this->load->view('home_admin/home', $info);
-		
-	}  
-    
 	
-	
-	
-    public function mantenerPonencia() { 
+	public function mantenerPonencia() { 
     
     	$accion = $this->input->post('accion');
        

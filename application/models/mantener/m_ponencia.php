@@ -23,7 +23,11 @@ class m_Ponencia extends CI_Model{
 		}*/
 	}
 	
-	
+	//obtenemos la tabla 'ponencia'. db->get('nombre_tabla') equivale a SELECT * FROM nombre_tabla.
+	function getData() {
+ 		$ponencias = $this->db->get('ponencia');
+ 		return $ponencias->result();
+	}
 	
 	
 	//CAMBIADO

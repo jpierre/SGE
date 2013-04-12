@@ -15,41 +15,29 @@
         <td ><strong>Asignado a</strong></td>
         <td ><strong>Ambiente</strong></td>
         <td ><strong>Estado</strong></td>
-        <td ><strong>Seleccion</strong></td>
+        <td ><strong>Modificar</strong></td>
+        <td ><strong>Eliminar</strong></td>
     </tr>
     </thead>
     <tbody>
-    <tr class="statement284">
-        <td ><?php echo $this->session->userdata('codPonencia'); ?></td>
-        <td ><?php echo $this->session->userdata('nomPonencia'); ?></td>
-        <td ><?php echo $this->session->userdata('expositor'); ?></td>
-        <td ><?php echo $this->session->userdata('ambiente'); ?></td>
-        <td ><?php echo $this->session->userdata('estado'); ?></td>
-        <td ><input type="checkbox"/></td>
-    </tr>
-    <tr class="alt statement285">
-        <td >115</td>
-        <td >Presentacion Google Cloude</td>
-        <td >Victor Sifuentes</td>
-        <td >Auditorio Fia Data</td>
-        <td >Sin Contratiempos</td>
-        <td ><span>Modificar</span></td>
-        
-        
-    </tr>
-    <tr class="statement288">
-        <td >164</td>
-        <td >Tecnologias Moviles</td>
-        <td >Carolina Zapata</td>
-        <td >Aula 204</td>
-        <td >Sin Contratiempos</td>
-        <td ><input type="checkbox"/></td>
-    </tr>
+     
+     <?php foreach ($ponencias as $p){?>
+ 	 <tr class="statement284">
+		 <td><?=$p->id_pon?></td>
+		 <td><?=$p->nom_pon?></td>
+		 <td><?=$p->cod_exp_pon?></td>
+		 <td><?=$p->id_amb_pon?></td>
+		 <td><?=$p->est_pon?></td>
+		 <td ><a href="<?php base_url()?>/index.php/administrador/c_mantenerPonencia/mantenerPonencia/Modificar/<?=$p->id_pon?>">Modificar</a>
+		 <td ><a href="<?php base_url()?>/index.php/administrador/c_mantenerPonencia/mantenerPonencia/Eliminar/<?=$p->id_pon?>">Eliminar</a>
+	 </tr>
+	 <?php }?>
+	    
     </tbody>
     </table>
 </li>
 <li > 
-<input type="submit" value="Agregar" name="accion">agregame</input>
+<input type="submit" value="Agregar" name="accion"/>
 <input type="submit" value="Modificar" name="accion"/>
 <input type="submit" value="Eliminar" name="accion"/>
 </li>
