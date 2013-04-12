@@ -6,10 +6,6 @@ foreach($css_files as $file): ?>
 <script src="<?php echo $file; ?>"></script>
 <?php endforeach; ?>
 
-<link href="<?php echo base_url(); ?>css/wufo/structure.css" rel="stylesheet">
-<link href="<?php echo base_url(); ?>css/wufo/form.css" rel="stylesheet">
-<link href="<?php echo base_url(); ?>css/wufo/theme.css" rel="stylesheet">
-
 <div class="content">
 
 

@@ -52,11 +52,12 @@ class C_mantenerPonencia extends CI_Controller {
 	
 	    /* Generamos la tabla */
 	    $output = $crud->render();
+	    $output = (array)$output;
 	
 	    /* La cargamos en la vista situada en
 	    /applications/views/productos/administracion.php */
-	    //$output['main_content'] = 'home_admin/mantenerPonencia';
-	    $this->load->view('home_admin/mantenerPonencia', $output);
+	    $output['main_content'] = 'home_admin/mantenerPonencia';
+	    $this->load->view('home_admin/home', $output);
 	    
 	    /*$data['main_content'] = 'home_admin/mantenerPonencia';
 		$this->load->view('home_admin/home', $data);*/
