@@ -9,8 +9,12 @@ class C_mantenerPonencia extends CI_Controller {
 	public function index(){
 
 		$this->load->model('mantener/m_ponencia','m_ponencia');
+		$this->load->model('mantener/m_expositor','m_expositor');
+				
 		$ponencias = $this->m_ponencia->getData();
-		 
+
+		$expositores = $this->m_expositor->getData();
+				
 		$data['ponencias'] = $ponencias;
 				  
 		//SETEA LOS VALORES NUMERICOS A TEXTOS DE LA BD PARA LAS VISTAS  
