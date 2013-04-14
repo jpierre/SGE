@@ -6,6 +6,7 @@ class m_Ponencia extends CI_Model{
 		parent::__construct();
 	}
 	
+	//VERIFICAR SI EL SIGUIENTE METODO ESTA SOBRANTE
 	function cargarPonencias(){
 		
 		$query = $this->db->get('ponencia', 1);

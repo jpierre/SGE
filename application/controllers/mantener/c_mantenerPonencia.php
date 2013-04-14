@@ -37,7 +37,24 @@ class C_mantenerPonencia extends CI_Controller {
 		$data['ambiente'] = $ambiente;
 		$data['main_content'] = 'mantener/v_mantenerPonencia';
 		$this->load->view('home_admin/home', $data);
+		
+		
+		//OBTENER EXPOSITOR DE CADA PONENCIA
+	
+		
 		 	
+	}
+	
+	
+	function getExpositor($codigo=NULL){
+		//$this->db->where('username', $this->input->post('username'));
+		//$this->db->where('password', md5($this->input->post('password')));
+		
+		//return $query = $this->db->get('miembros')->row();
+		
+		$sql="select nom_exp, ape_pat_exp, ape_mat_exp, pais_exp, especialidad from expositor where cod_exp='".$codigo."'";
+		return $this->db->query($sql)->row();
+		
 	}
 	
 	
