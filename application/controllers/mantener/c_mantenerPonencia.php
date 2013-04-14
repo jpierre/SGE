@@ -35,7 +35,7 @@ class C_mantenerPonencia extends CI_Controller {
 		
 		$data['estado'] = $estado;
 		$data['ambiente'] = $ambiente;
-		$data['main_content'] = 'home_admin/listaPonencias';
+		$data['main_content'] = 'mantener/v_mantenerPonencia';
 		$this->load->view('home_admin/home', $data);
 		 	
 	}

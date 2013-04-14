@@ -4,7 +4,7 @@
 <div class="content">
 <div id="container" class="ltr">
 <ul>
-<form name="formMantener" action="<?php echo base_url();?>index.php/administrador/c_mantenerPonencia/mantenerPonencia/" method="post">
+<form name="formMantener" action="<?php echo base_url();?>index.php/mantener/c_mantenerPonencia/mantenerPonencia/" method="post">
 <li id="foli284" class="likert notranslatec col5">
     <table><br />
     <h1 style="text-align: left;">Listado de Eventos</h1>
@@ -16,7 +16,6 @@
         <td ><strong>Ambiente</strong></td>
         <td ><strong>Estado</strong></td>
         <td ><strong>Modificar</strong></td>
-        <td ><strong>Eliminar</strong></td>
     </tr>
     </thead>
     <tbody>
@@ -41,9 +40,8 @@
 		 <td><?=$ponencias[$i]->cod_exp_pon?></td>
 		 <td><?=$ambiente[$i]?></td>
 		 <td><?=$estado[$i]?></td>
-		 <td ><a href="<?php base_url()?>/index.php/administrador/c_mantenerPonencia/mantenerPonencia/Modificar/<?=$ponencias[$i]->id_pon?>">Modificar</a>
-		 <td ><a href="<?php base_url()?>/index.php/administrador/c_mantenerPonencia/mantenerPonencia/Eliminar/<?=$ponencias[$i]->id_pon?>">Eliminar</a>
-	 </tr>
+		 <td ><a href="<?php base_url()?>/index.php/administrador/c_mantenerPonencia/mantenerPonencia/Modificar/<?=$ponencias[$i]->id_pon?>"><img alt="Modificar" src="<?php echo base_url(); ?>images/edit.png"></a> <a href="<?php base_url()?>/index.php/administrador/c_mantenerPonencia/mantenerPonencia/Eliminar/<?=$ponencias[$i]->id_pon?>"><img alt="Eliminar" src="<?php echo base_url(); ?>images/delete.png"></a></a></td>
+	</tr>
 	 <?php }?>
 	
 

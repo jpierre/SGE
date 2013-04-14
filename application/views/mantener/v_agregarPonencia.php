@@ -1,23 +1,23 @@
-
-
 <link href="<?php echo base_url(); ?>css/wufo/structure.css" rel="stylesheet">
 <link href="<?php echo base_url(); ?>css/wufo/form.css" rel="stylesheet">
 <link href="<?php echo base_url(); ?>css/wufo/theme.css" rel="stylesheet">
-<script src="<?php echo base_url(); ?>js/wufoo.js"></script>
-<div class="content">
+<script	type='text/javascript' src="<?php echo base_url(); ?>js/wufoo.js" ></script>
+<script	type='text/javascript' src="<?php echo base_url(); ?>js/dynamic.829.js" ></script>
 
+<div class="content">
 
 <div id="container" class="ltr">
 
-<form id="form6" name="form6" action="<?php echo base_url();?>index.php/inscripcion/inscribir/registar_inscrip/" class="wufoo topLabel page" autocomplete="off" enctype="multipart/form-data" method="post" accept-charset="utf-8">
+<form id="form5" name="form5" class="wufoo leftLabel page" autocomplete="off" enctype="multipart/form-data" method="post" novalidate
+action="https://swii20122.wufoo.com.mx/forms/s7x1x7/#public">
+
 <header id="header" class="info">
-<h2>Bienvenidos! Eventos FIA ! </h2>
-<div>SGE es un proyecto para el curso de DIS enfocado a las necesitades de nuestra facultad.</div>
+<h2>Agregar Ponencia</h2>
+<div>Formulario para agregar una nueva ponencia.</div>
 </header>
 
 <ul>
-	
-	<li id="foli321" class="notranslate first section      ">
+<li id="foli321" class="notranslate first section      ">
 <section>
 <h3 id="title321">
 Datos de Ponencia
@@ -68,7 +68,7 @@ Fecha de Inicio
 <label for="Field317">AAAA</label>
 </span>
 <span id="cal317">
-<img id="pick317" class="datepicker" src="<?php echo base_url();?>images/calendar.png" alt="Pick a date." />
+<img id="pick317" class="datepicker" src="<?php echo base_url(); ?>images/calendar.png" alt="Pick a date." />
 </span>
 </li>
 <li id="foli318" class="time notranslate      ">
@@ -85,11 +85,11 @@ Hora de Inicio
 <input id="Field318-1" name="Field318-1" type="text" class="field text" value="" size="2" maxlength="2" tabindex="7" required />
 <label for="Field318-1">MM</label>
 </span>
-<span class="symbol seconds">:</span>
+<!-- <span class="symbol seconds">:</span>
 <span class="seconds">
  <input id="Field318-2" name="Field318-2" type="text" class="field text" value="" size="2" maxlength="2" tabindex="8" />
 <label for="Field318-2">SS</label>
-</span>
+</span> -->
 <span class="ampm">
 <select id="Field318-3" name="Field318-3" class="field select" style="width:4em" tabindex="9" >
 <option value="AM" selected="selected">AM</option>
@@ -97,7 +97,35 @@ Hora de Inicio
 </select>
 <label for="Field318-3">AM/PM</label>
 </span>
-</li><li id="foli319" class="notranslate      ">
+</li>
+<li id="foli318" class="time notranslate      ">
+<label class="desc" id="title318" for="Field318">
+Hora de Fin
+<span id="req_318" class="req">*</span>
+</label>
+<span class="hours">
+<input id="Field318" name="Field318" type="text" class="field text" value="" size="2" maxlength="2" tabindex="6" required />
+<label for="Field318">HH</label>
+</span>
+<span class="symbol minutes">:</span>
+<span class="minutes">
+<input id="Field318-1" name="Field318-1" type="text" class="field text" value="" size="2" maxlength="2" tabindex="7" required />
+<label for="Field318-1">MM</label>
+</span>
+<!-- <span class="symbol seconds">:</span>
+<span class="seconds">
+ <input id="Field318-2" name="Field318-2" type="text" class="field text" value="" size="2" maxlength="2" tabindex="8" />
+<label for="Field318-2">SS</label>
+</span> -->
+<span class="ampm">
+<select id="Field318-3" name="Field318-3" class="field select" style="width:4em" tabindex="9" >
+<option value="AM" selected="selected">AM</option>
+<option value="PM" >PM</option>
+</select>
+<label for="Field318-3">AM/PM</label>
+</span>
+</li>
+<li id="foli319" class="notranslate      ">
 <fieldset>
 <![if !IE | (gte IE 8)]>
 <legend id="title319" class="desc">
@@ -131,7 +159,7 @@ Dirigido a
 <div>
 <select id="Field320" name="Field320" class="field select medium" tabindex="12" > 
 <option value="Seleccione opcion.." selected="selected">
-Seleccione opcion..
+Seleccione..
 </option>
 <option value="Arquitectura" >
 Arquitectura
@@ -208,19 +236,13 @@ Seleccione..
 <div>
 
                     <input id="saveForm" name="saveForm" class="btTxt submit" 
-    type="submit" value="Agregar Ponencia"
+    type="submit" value="Enviar"
  /></div>
 </li>
 
-<li class="hide">
-<label for="comment">Do Not Fill This Out</label>
-<textarea name="comment" id="comment" rows="1" cols="1"></textarea>
-<input type="hidden" id="idstamp" name="idstamp" value="A4DQU3fnirU09pk5LMVa00aRuFejHz/hHMa+RLUZH+A=" />
-</li>
-	
-	
+
 </ul>
 </form> 
-			
-			</div><!--container-->
-<!-- end .content --></div>
+
+</div>
+<!--container--> <!-- end .content --></div>

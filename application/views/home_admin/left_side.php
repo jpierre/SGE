@@ -11,7 +11,7 @@
                                 <ul>
                                 <li><a href="#">&raquo; Mantener</a>
                                         <ul>
-                                        <li><span><?php echo anchor('administrador/c_mantenerPonencia', 'Mantener Ponencias'); ?></span></li>
+                                        <li><span><?php echo anchor('mantener/c_mantenerPonencia', 'Mantener Ponencias'); ?></span></li>
                                         <li><span><?php echo anchor('', 'Mantener Expositor'); ?></span></li>
                                         <li><span><?php echo anchor('', 'Mantener Aula'); ?></span></li>
                                         <li><span><?php echo anchor('', 'Mantener Ambiente'); ?></span></li>
