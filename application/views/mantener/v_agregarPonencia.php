@@ -25,20 +25,18 @@ Datos de Ponencia
 </section>
 </li><li id="foli4" class="notranslate      ">
 <label class="desc" id="title4" for="Field4">
-Nombre de Ponencia
-<span id="req_4" class="req">*</span>
+Titulo <span id="req_4" class="req">*</span>
 </label>
 <div>
-<input id="Field4" name="Field4" type="text" class="field text medium" value="" maxlength="255" tabindex="1" onkeyup="" required />
+<input id="Field4" name="titulo" type="text" class="field text medium" value="" maxlength="255" tabindex="1" onkeyup="" required />
 </div>
 </li><li id="foli328" 
 class="notranslate      "><label class="desc" id="title328" for="Field328">
 Descripcion
 </label>
-
 <div>
 <textarea id="Field328" 
-name="Field328" 
+name="descrip" 
 class="field textarea medium" 
 spellcheck="true" 
 rows="10" cols="50" 
@@ -54,17 +52,17 @@ Fecha de Inicio
 <span id="req_317" class="req">*</span>
 </label>
 <span>
-<input id="Field317-1" name="Field317-1" type="text" class="field text" value="" size="2" maxlength="2" tabindex="3" required />
+<input id="Field317-1" name="fec_mm" type="text" class="field text" value="" size="2" maxlength="2" tabindex="3" required />
 <label for="Field317-1">MM</label>
 </span> 
 <span class="symbol">/</span>
 <span>
-<input id="Field317-2" name="Field317-2" type="text" class="field text" value="" size="2" maxlength="2" tabindex="4" required />
+<input id="Field317-2" name="fec_dd" type="text" class="field text" value="" size="2" maxlength="2" tabindex="4" required />
 <label for="Field317-2">DD</label>
 </span>
 <span class="symbol">/</span>
 <span>
- <input id="Field317" name="Field317" type="text" class="field text" value="" size="4" maxlength="4" tabindex="5" required />
+ <input id="Field317" name="fec_aa" type="text" class="field text" value="" size="4" maxlength="4" tabindex="5" required />
 <label for="Field317">AAAA</label>
 </span>
 <span id="cal317">
@@ -77,19 +75,14 @@ Hora de Inicio
 <span id="req_318" class="req">*</span>
 </label>
 <span class="hours">
-<input id="Field318" name="Field318" type="text" class="field text" value="" size="2" maxlength="2" tabindex="6" required />
+<input id="Field318" name="hora_ini_hor" type="text" class="field text" value="" size="2" maxlength="2" tabindex="6" required />
 <label for="Field318">HH</label>
 </span>
 <span class="symbol minutes">:</span>
 <span class="minutes">
-<input id="Field318-1" name="Field318-1" type="text" class="field text" value="" size="2" maxlength="2" tabindex="7" required />
+<input id="Field318-1" name="hora_ini_fin" type="text" class="field text" value="" size="2" maxlength="2" tabindex="7" required />
 <label for="Field318-1">MM</label>
 </span>
-<!-- <span class="symbol seconds">:</span>
-<span class="seconds">
- <input id="Field318-2" name="Field318-2" type="text" class="field text" value="" size="2" maxlength="2" tabindex="8" />
-<label for="Field318-2">SS</label>
-</span> -->
 <span class="ampm">
 <select id="Field318-3" name="Field318-3" class="field select" style="width:4em" tabindex="9" >
 <option value="AM" selected="selected">AM</option>
@@ -112,11 +105,6 @@ Hora de Fin
 <input id="Field318-1" name="Field318-1" type="text" class="field text" value="" size="2" maxlength="2" tabindex="7" required />
 <label for="Field318-1">MM</label>
 </span>
-<!-- <span class="symbol seconds">:</span>
-<span class="seconds">
- <input id="Field318-2" name="Field318-2" type="text" class="field text" value="" size="2" maxlength="2" tabindex="8" />
-<label for="Field318-2">SS</label>
-</span> -->
 <span class="ampm">
 <select id="Field318-3" name="Field318-3" class="field select" style="width:4em" tabindex="9" >
 <option value="AM" selected="selected">AM</option>
@@ -151,37 +139,46 @@ Taller</label>
 </span>
 </div>
 </fieldset>
-</li><li id="foli320" class="notranslate       ">
-<label class="desc" id="title320" for="Field320">
+</li>
+
+<li id="foli330" class="notranslate      ">
+<fieldset>
+<![if !IE | (gte IE 8)]>
+<legend id="title330" class="desc">
 Dirigido a 
-<span id="req_320" class="req">*</span>
-</label>
+<span id="req_330" class="req">*</span>
+</legend>
+<![endif]>
 <div>
-<select id="Field320" name="Field320" class="field select medium" tabindex="12" > 
-<option value="Seleccione opcion.." selected="selected">
-Seleccione..
-</option>
-<option value="Arquitectura" >
-Arquitectura
-</option>
-<option value="Ingenieria de Sistemas" >
-Ingenieria de Sistemas
-</option>
-<option value="Ingenieria Industrial" >
-Ingenieria Industrial
-</option>
-<option value="Ingenieria Electronica" >
-Ingenieria Electronica
-</option>
-<option value="Ingenieria Civil" >
-Ingenieria Civil
-</option>
-<option value="Ingenieria en Industrias Alimentarias" >
-Ingenieria en Industrias Alimentarias
-</option>
-</select>
+<span>
+<input id="Field330" name="Field330" type="checkbox" class="field checkbox" value="Arquitectura" tabindex="14" />
+<label class="choice" for="Field330">Arquitectura</label>
+</span>
+<span>
+<input id="Field331" name="Field331" type="checkbox" class="field checkbox" value="Ingenieria de Sistemas" tabindex="15" />
+<label class="choice" for="Field331">Ingenieria de Sistemas</label>
+</span>
+<span>
+<input id="Field332" name="Field332" type="checkbox" class="field checkbox" value="Ingenieria Industrial" tabindex="16" />
+<label class="choice" for="Field332">Ingenieria Industrial</label>
+</span>
+<span>
+<input id="Field333" name="Field333" type="checkbox" class="field checkbox" value="Ingenieria Electronica" tabindex="17" />
+<label class="choice" for="Field333">Ingenieria Electronica</label>
+</span>
+<span>
+<input id="Field334" name="Field334" type="checkbox" class="field checkbox" value="Ingenieria Civil" tabindex="18" />
+<label class="choice" for="Field334">Ingenieria Civil</label>
+</span>
+<span>
+<input id="Field335" name="Field335" type="checkbox" class="field checkbox" value="Ingenieria en Industrias Alimentarias" tabindex="19" />
+<label class="choice" for="Field335">Ingenieria en Industrias Alimentarias</label>
+</span>
 </div>
-</li><li id="foli325" class="notranslate section      ">
+</fieldset>
+<p class="instruct" id="instruct330"><small>Puede seleccionar 1 o mas carreras.</small></p>
+</li>
+<li id="foli325" class="notranslate section      ">
 <section>
 <h3 id="title325">
 Ambiente de Ponencia

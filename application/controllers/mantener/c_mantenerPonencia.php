@@ -88,6 +88,24 @@ class C_mantenerPonencia extends CI_Controller {
         
     }
     
+	function crearPonencia() {
+		
+		$data = array{
+			''
+		}
+		 //recogemos los datos obtenidos por POST
+		 $data['nombre'] = $_POST['txtNombre'];
+		 $data['email'] = $_POST['txtEmail'];
+		 $data['telefono'] = $_POST['txtTelefono'];
+		 $data['direccion'] = $_POST['txtDireccion'];
+		 //llamamos al modelo, concretamente a la función insert() para que nos haga el insert en la base de datos.
+		 $this->load->model('mantenimiento_model');
+		 $this->mantenimiento_model->insert($data);
+		 //volvemos a visualizar la tabla
+		 $this->index();
+	 }
+    
+    
     
     
  }
