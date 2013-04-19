@@ -219,7 +219,17 @@ return false;
         </select>
         <br>
         <br>
-        <img style="margin-left:150px;" src="<?php echo base_url();?>index.php/login/captcha" alt="captcha" /><br>
+        
+        
+        
+    <?php echo $captcha['image'] ?>
+    <input type="text" name="captcha" />
+    <input type="hidden" value="<?php echo $captcha['word']?>" name="string_captcha" />
+    <a style="text-decoration: none; font-size: 8pt; color:red"><?php echo form_error('captcha'); ?></a>
+ 
+        
+        
+        <!-- ><img style="margin-left:150px;" src="<?php echo base_url();?>index.php/login/captcha" alt="captcha" /><br>
         <br />
         <label>Ingrese caracteres </label>
         <input type="text" name="captcha" class="input1"/>
