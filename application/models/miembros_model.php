@@ -2,6 +2,9 @@
 
 class Miembros_model extends CI_Model{
 	
+	public function __construct() {
+        parent::__construct();
+    }
 	
 	//CAMBIADO
 	function validate(){
@@ -108,7 +111,17 @@ class Miembros_model extends CI_Model{
 		}
 	}
 	
-
+	//ESTE METODO SIRVE PARA VALIDAR EMAIL POR AJAX
+	public function verifica_email($email) {
+        $this->db->where('email_user',$email);
+        $consulta = $this->db->get('usuario');
+        if($consulta->num_rows() == 1)
+        {
+            $row = $consulta->row();
+            return $row->email_user;
+        }
+    }
+	
 	
 }
 

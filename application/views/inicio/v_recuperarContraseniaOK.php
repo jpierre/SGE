@@ -36,6 +36,33 @@ $(function() {
     });
 });
 
+/*funcion ajax para comprobar si el email existe en la base de datos*/
+$(document).ready(function(){
+    var emailreg = /^[a-zA-Z0-9_\.\-]+@[a-zA-Z0-9\-]+\.[a-zA-Z0-9\-\.]+$/;
+    $('#email').focusout( function(){
+        if( $("#email").val() == "" || !emailreg.test($("#email").val()) )
+        {
+            $('#msgEmail').html("<span style='color:#f00'>Ingrese un email correcto</span>");
+        }else{
+            $.ajax({
+                type: "POST",
+                url: "http://localhost/validaciones_ajax/index.php/register/comprobar_email_ajax",
+                data: "email="+$('#email').val(),
+                beforeSend: function(){
+                    $('#msgEmail').html('Verificando...');
+                },
+                success: function( respuesta ){
+                    if(respuesta == '<div style="display:none">1</div>')
+                        $('#msgEmail').html("<span style='color:#0f0'>Email disponible</span>");
+                    else
+                        $('#msgEmail').html("<span style='color:#f00'>Email no disponible</span>");
+                }
+            });
+            return false;
+        }
+    });
+});
+
 </script>
  
 </head>
@@ -75,7 +102,7 @@ $(function() {
 			              <label for="password">Password</label>
 			              <input type="password" name="password" id="password" />
 		            	</fieldset>
-		            <input type="submit" id="login" value="Sign in" /><a href="<?php echo base_url(); ?>index.php/login/recuperarContrasenia" >Olvidaste tu password?</a>
+		            <input type="submit" id="login" value="Sign in" /><a href="#" >Olvidaste tu password?</a>
 	          		</fieldset>
 	          		
               </br>
@@ -134,10 +161,9 @@ $(function() {
         </div>
       </div>
       <div id="content">
-        <h1>Sistema de gestion de eventos</h1>
-        <p>&nbsp;</p>
-        <h2>Introduccion</h2>
-        <article>EventSystem nos ofrece un nuevo sistema de gestión de eventos vía web. Con él podremos inscribirnos a diferentes eventos realizados en la Facultad de Ingenieria y arquitectura de la USMP, ver horarios, consultar detalles de los eventos y mucho mas.</article>
+      
+        <h1>Su contraseña fue enviada a su email!</h1>
+         
       </div>
     </div>
     <div id="content_footer"></div>

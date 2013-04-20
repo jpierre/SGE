@@ -12,6 +12,8 @@
  
 <script type="text/javascript" src="<?php echo base_url(); ?>js/login.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js?ver=1.4.2"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+
 <script type="text/javascript">
 
 // Login Form
@@ -36,6 +38,35 @@ $(function() {
     });
 });
 
+
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+    var emailreg = /^[a-zA-Z0-9_\.\-]+@[a-zA-Z0-9\-]+\.[a-zA-Z0-9\-\.]+$/;
+    $('#vemail').focusout( function(){
+        if( $("#vemail").val() == "" || !emailreg.test($("#vemail").val()) )
+        {
+            $('#msgEmail').html("<span style='color:#f00'>Ingrese un email correcto</span>");
+        }else{
+            $.ajax({
+                type: "POST",
+                url: "http://localhost/sge/index.php/login/comprobar_email_ajax",
+                data: "vemail="+$('#vemail').val(),
+                beforeSend: function(){
+                    $('#msgEmail').html('Verificando...');
+                },
+                success: function( respuesta ){
+                    if(respuesta == '<div style="display:none">1</div>')
+                        $('#msgEmail').html("<span style='color:#f00'>El Email no se encuentra en la BD</span>");
+                    else
+                        $('#msgEmail').html("<span style='color:#0f0'>OK</span>");
+                }
+            });
+            return false;
+        }
+    });
+});
 </script>
  
 </head>
@@ -75,7 +106,7 @@ $(function() {
 			              <label for="password">Password</label>
 			              <input type="password" name="password" id="password" />
 		            	</fieldset>
-		            <input type="submit" id="login" value="Sign in" /><a href="<?php echo base_url(); ?>index.php/login/recuperarContrasenia" >Olvidaste tu password?</a>
+		            <input type="submit" id="login" value="Sign in" /><a href="#" >Olvidaste tu password?</a>
 	          		</fieldset>
 	          		
               </br>
@@ -134,10 +165,19 @@ $(function() {
         </div>
       </div>
       <div id="content">
-        <h1>Sistema de gestion de eventos</h1>
+      
+      
+      <form action="<?php echo base_url();?>index.php/login/validarEmail" method="post" accept-charset="utf-8">
+        <h1>Recuperar Contraseña</h1>
         <p>&nbsp;</p>
-        <h2>Introduccion</h2>
-        <article>EventSystem nos ofrece un nuevo sistema de gestión de eventos vía web. Con él podremos inscribirnos a diferentes eventos realizados en la Facultad de Ingenieria y arquitectura de la USMP, ver horarios, consultar detalles de los eventos y mucho mas.</article>
+        <h2>Ingrese un email valido</h2>
+        
+        <input type="text" name="vemail" value="" id="vemail"/>
+        <input type="submit" name="envio" value="Recuperar" id="envio"/>
+        <span id="msgEmail"></span>
+      </form>
+      <?php echo form_error('email'); ?> 
+        
       </div>
     </div>
     <div id="content_footer"></div>

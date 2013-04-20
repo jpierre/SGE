@@ -9,6 +9,7 @@ class Login extends CI_Controller{
         //para nuestro captcha y sesión captcha
         $this->rand = random_string('alnum', 6);
         $this->load->model('m_captcha');
+        $this->load->model('miembros_model');
      }
     
 	function index(){
@@ -270,6 +271,48 @@ class Login extends CI_Controller{
         }
  
     }
+    
+    //RECUPERAR CONTRASEÑA
+    function recuperarContrasenia(){
+		$this->load->view('inicio/v_recuperarContrasenia');
+	}
+    
+	//VALIDAR EL EMAIL CON AJAX
+    public function comprobar_email_ajax() {
+        $email = $this->input->post('vemail');
+        $comprobar_email = $this->miembros_model->verifica_email($email);
+        if ($comprobar_email) {
+            $this->form_validation->set_message('comprobar_email_ajax', '%s: ya existe en la base de datos');
+            return FALSE;
+        } else {
+            echo '<div style="display:none">1</div>';
+            return TRUE;
+        }
+    }
+    
+    public function validarEmail(){
+    	if($this->input->post('envio')) {
+    	$this->load->library('form_validation');
+	            
+	    $this->form_validation->set_rules('email', 'Email', 'required|min_length[6]|max_length[100]|valid_email|callback_comprobar_email_ajax|xss_clean');
+	           
+	    $this->form_validation->set_message('required', '%s: es requerido');
+	    $this->form_validation->set_message('min_length', '%s: debe tener al menos %s carácteres');
+	    $this->form_validation->set_message('max_length', '%s: debe tener al menos %s carácteres');
+	    $this->form_validation->set_message('valid_email', '%s: debe escribir un email válido');
+	 
+	    if ($this->form_validation->run() == FALSE) {
+	    	$this->load->view('inicio/v_recuperarContrasenia');
+	    } else {
+	    	//AQUI DBO INDICAR EL CONTROLADOR A USAR PARA EL ENVIO DEL CORREO
+	    	$this->load->view('inicio/v_recuperarContraseniaOK');
+	    }
+
+    	}
+    }
+    
+    
+    
 }
 
 ?>
