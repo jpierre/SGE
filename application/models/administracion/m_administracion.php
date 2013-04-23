@@ -1,6 +1,6 @@
 <?php
 
-class Admin_model extends CI_Model{
+class M_administracion extends CI_Model{
 	function get_expositor($codigo=NULL){
 		//$this->db->where('username', $this->input->post('username'));
 		//$this->db->where('password', md5($this->input->post('password')));

@@ -1,5 +1,5 @@
 <?php
-class Inscripcion_model extends CI_Model{
+class M_inscripcion extends CI_Model{
 	
 	//CAMBIADO
 	function registrar_inscripcion_participante($data=NULL){

@@ -20,7 +20,7 @@
 										
 					<fieldset><legend>Datos del expositor</legend>
 					<h4 style="color:#FF0000"><?php echo $this->session->userdata('mensaje'); ?></h4>
-					<form action="<?php echo base_url();?>index.php/administrador/administrador/obteneterDatosExpositor/" method="post" accept-charset="utf-8">
+					<form action="<?php echo base_url();?>index.php/administracion/c_administracion/obteneterDatosExpositor/" method="post" accept-charset="utf-8">
 					<table >
 					  <tr>
 					    <td>Codigo: </td>
@@ -51,7 +51,7 @@
 					<fieldset>
 					<legend>Datos de Ponencia</legend>
 					<h4 style="color:#FF0000"><?php echo  $this->session->userdata('mensaje2'); ?></h4>
-					<form action="<?php echo base_url();?>index.php/administrador/administrador/obtenerDatosPonencia/" method="post" accept-charset="utf-8">
+					<form action="<?php echo base_url();?>index.php/administracion/c_administracion/obtenerDatosPonencia/" method="post" accept-charset="utf-8">
 					<table width="200" border="0">
 					  <tr>
 					    <td>Codigo: </td>
@@ -88,7 +88,7 @@
 					</fieldset>
 					</form>
 					
-					<form action="<?php echo base_url();?>index.php/administrador/administrador/asignarExpPon/" method="post" accept-charset="utf-8">				<input type="hidden" name="evento" value="<?php echo $id_evento; ?>"/>
+					<form action="<?php echo base_url();?>index.php/administracion/c_administracion/asignarExpPon/" method="post" accept-charset="utf-8">				<input type="hidden" name="evento" value="<?php echo $id_evento; ?>"/>
 						
 						<input type="hidden" name="cod" value="<?php echo $this->session->userdata('codi');?>"/>
 							

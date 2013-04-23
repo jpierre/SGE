@@ -2,7 +2,7 @@
 
   <h1>Agregar Ponencia</h1>
 
-  <form action="<?php echo base_url();?>index.php/inscripcion/inscribir/registar_inscrip/" method="post" accept-charset="utf-8">
+  <form action="<?php echo base_url();?>index.php/inscripcion/c_inscripcion/registar_inscrip/" method="post" accept-charset="utf-8">
 <fieldset><legend>Datos de Ponencia</legend>
 <table width="328" border="0">
   <tr>

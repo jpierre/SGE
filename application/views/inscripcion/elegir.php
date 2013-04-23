@@ -21,11 +21,11 @@ action="">
 <h3 id="title112">
 <?php
   if($id_evento==1){
-   	echo anchor('inscripcion/inscribir/registro_externo/1/1', 'Inscribirme').'<br />';
-  	echo anchor('inscripcion/inscribir/registro_externo/1/2', 'Inscribir personas');
+   	echo anchor('inscripcion/c_inscripcion/registro_externo/1/1', 'Inscribirme').'<br />';
+  	echo anchor('inscripcion/c_inscripcion/registro_externo/1/2', 'Inscribir personas');
   }else{
-  	echo anchor('inscripcion/inscribir/registro_externo/2/1', 'Inscribirme').'<br />';
-  	echo anchor('inscripcion/inscribir/registro_externo/2/2', 'Inscribir personas');
+  	echo anchor('inscripcion/c_inscripcion/registro_externo/2/1', 'Inscribirme').'<br />';
+  	echo anchor('inscripcion/c_inscripcion/registro_externo/2/2', 'Inscribir personas');
   }
 ?> 
 

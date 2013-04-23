@@ -1,12 +1,12 @@
 <?php
 
-class Inscribir extends CI_Controller{
+class C_inscripcion extends CI_Controller{
 	//var $contador=0;
 	
 	function index($idEvento=""){
 		
 		$data['id_evento'] = $idEvento;
-		$this->load->model('inscripcion/Inscripcion_model', 'registro');
+		$this->load->model('inscripcion/m_inscripcion', 'registro');
 		
 		$resultConsulta=$this->registro->get_consulta_registro($this->session->userdata('idDNI'),$idEvento);
 		
@@ -53,7 +53,7 @@ class Inscribir extends CI_Controller{
 		}
 		
  		//llamamos al model, a la función registrar_inscripcion_participante() para que nos haga el insert en la base de datos.
- 		$this->load->model('inscripcion/Inscripcion_model', 'registro');
+ 		$this->load->model('inscripcion/m_inscripcion', 'registro');
  		$result=$this->registro->registrar_inscripcion_participante($data);
 		
 		if($result==true){
@@ -91,7 +91,7 @@ class Inscribir extends CI_Controller{
 		}
 		
 		
-		$this->load->model('inscripcion/Inscripcion_model', 'registro');
+		$this->load->model('inscripcion/m_inscripcion', 'registro');
  		$result=$this->registro->reg_n_participantes($data);
 		
 		$datos= array(

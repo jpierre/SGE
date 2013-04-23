@@ -9,8 +9,8 @@
                           </li>
                           <li><a href="#" class="categoria">Eventos</a>
                                 <ul>
-                                <li><span><?php echo anchor('inscripcion/inscribir/index/1', '&raquo; VISION 2013'); ?></span></li>
-                                <li><span><?php echo anchor('inscripcion/inscribir/index/2', '&raquo; Cloud Google'); ?></span></li>
+                                <li><span><?php echo anchor('inscripcion/c_inscripcion/index/1', '&raquo; VISION 2013'); ?></span></li>
+                                <li><span><?php echo anchor('inscripcion/c_inscripcion/index/2', '&raquo; Cloud Google'); ?></span></li>
                                 <li><span><?php echo anchor('', '&raquo; Android Lima Day'); ?></span>
                                         <ul>
                                         <li><a href="#">Ponencia 1</a></li>

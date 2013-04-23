@@ -1,7 +1,7 @@
 <?php
 error_reporting(E_ALL ^ E_NOTICE);
 
-class Administrador extends CI_Controller{
+class C_administracion extends CI_Controller{
 	
 	
 	function mostrarlo($id_evento=0){
@@ -32,7 +32,7 @@ class Administrador extends CI_Controller{
 
 	function obteneterDatosExpositor(){
 		
-		$this->load->model('administrador/admin_model', 'admin');
+		$this->load->model('administracion/m_administracion', 'admin');
 		$query=$this->admin->get_expositor($this->input->post('codigo'));
 		
 		if(!$query){
@@ -68,7 +68,7 @@ class Administrador extends CI_Controller{
 	
 	function obtenerDatosPonencia(){
 		$a="";
-		$this->load->model('administrador/admin_model', 'admin');
+		$this->load->model('administracion/m_administracion', 'admin');
 		$query=$this->admin->get_ponencia($this->input->post('codigo2'));
 		if($query->tipo_pon==1){
 			$a="Conferencia";
@@ -122,7 +122,7 @@ class Administrador extends CI_Controller{
 				
 			);
 			
-		$this->load->model('administrador/admin_model', 'admin');
+		$this->load->model('administracion/m_administracion', 'admin');
 		$result=$this->admin->asignar_expositor_evento($dato);
 		if($result){
 			$info['main_content']="home_admin/asignacion_succesful";
