@@ -111,7 +111,7 @@ class Miembros_model extends CI_Model{
 		}
 	}
 	
-	//ESTE METODO SIRVE PARA VALIDAR EMAIL POR AJAX
+	//ESTE METODO SIRVE PARA VALIDAR EMAIL SI EL USUARIO DESACTIVA AJAX
 	public function verifica_email($email) {
         $this->db->where('email_user',$email);
         $consulta = $this->db->get('usuario');

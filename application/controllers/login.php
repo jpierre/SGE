@@ -282,19 +282,19 @@ class Login extends CI_Controller{
         $email = $this->input->post('vemail');
         $comprobar_email = $this->miembros_model->verifica_email($email);
         if ($comprobar_email) {
-            $this->form_validation->set_message('comprobar_email_ajax', '%s: ya existe en la base de datos');
-            return FALSE;
-        } else {
-            echo '<div style="display:none">1</div>';
+        	echo '<div style="display:none">1</div>';
             return TRUE;
+            } else {
+            $this->form_validation->set_message('comprobar_email_ajax', 'El %s: ingresado no existe en la base de datos');
+            return FALSE;
         }
     }
     
     public function validarEmail(){
-    	if($this->input->post('envio')) {
+    	
     	$this->load->library('form_validation');
 	            
-	    $this->form_validation->set_rules('email', 'Email', 'required|min_length[6]|max_length[100]|valid_email|callback_comprobar_email_ajax|xss_clean');
+	    $this->form_validation->set_rules('vemail', 'email', 'required|min_length[6]|max_length[100]|valid_email|callback_comprobar_email_ajax|xss_clean');
 	           
 	    $this->form_validation->set_message('required', '%s: es requerido');
 	    $this->form_validation->set_message('min_length', '%s: debe tener al menos %s carácteres');
@@ -302,13 +302,30 @@ class Login extends CI_Controller{
 	    $this->form_validation->set_message('valid_email', '%s: debe escribir un email válido');
 	 
 	    if ($this->form_validation->run() == FALSE) {
-	    	$this->load->view('inicio/v_recuperarContrasenia');
+	    	$this->load->view('inicio/v_recuperarContrasenia', $data);
 	    } else {
-	    	//AQUI DBO INDICAR EL CONTROLADOR A USAR PARA EL ENVIO DEL CORREO
+	    	/*$this->load->library('email');
+
+			$this->email->from('administracion@eventosfia.indumelab.com', 'Jean Pierre Perez Tang');
+			$this->email->to('yampier123@hotmail.com'); 
+			$this->email->cc('quimic7@hotmail.com'); 
+			//$this->email->bcc('ellos@su-ejemplo.com'); 
+			
+			$this->email->subject('Correo de Prueba');
+			$this->email->message('Probando la clase email');	
+			
+			$this->email->send();*/
+			$this->load->library('email');  
+			$this->email->from('yampier123@gmail.com','Team OnePage');  
+			$this->email->to("yampier123@hotmail.com");  
+			$this->email->subject('A test email from CodeIgniter using Gmail');  
+			$this->email->message("I can now email from CodeIgniter using Gmail as my server!");  
+			$this->email->send();   
+			//echo $this->email->print_debugger();
 	    	$this->load->view('inicio/v_recuperarContraseniaOK');
 	    }
 
-    	}
+    	
     }
     
     

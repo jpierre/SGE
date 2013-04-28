@@ -58,9 +58,9 @@ $(document).ready(function(){
                 },
                 success: function( respuesta ){
                     if(respuesta == '<div style="display:none">1</div>')
-                        $('#msgEmail').html("<span style='color:#f00'>El Email no se encuentra en la BD</span>");
-                    else
                         $('#msgEmail').html("<span style='color:#0f0'>OK</span>");
+                    else
+                        $('#msgEmail').html("<span style='color:#f00'>El Email no se encuentra en la BD</span>");
                 }
             });
             return false;
@@ -173,10 +173,10 @@ $(document).ready(function(){
         <h2>Ingrese un email valido</h2>
         
         <input type="text" name="vemail" value="" id="vemail"/>
-        <input type="submit" name="envio" value="Recuperar" id="envio"/>
+        <input type="submit" name="envio" value="Recuperar" />
         <span id="msgEmail"></span>
       </form>
-      <?php echo form_error('email'); ?> 
+      <?php echo form_error('vemail'); ?> 
         
       </div>
     </div>
