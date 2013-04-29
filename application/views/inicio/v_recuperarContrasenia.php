@@ -167,7 +167,7 @@ $(document).ready(function(){
       <div id="content">
       
       
-      <form action="<?php echo base_url();?>index.php/login/validarEmail" method="post" accept-charset="utf-8">
+      <form action="<?php echo base_url();?>index.php/c_recuperarContrasenia/validarEmail" method="post" accept-charset="utf-8">
         <h1>Recuperar Contraseña</h1>
         <p>&nbsp;</p>
         <h2>Ingrese un email valido</h2>

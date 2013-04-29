@@ -75,7 +75,7 @@ $(function() {
 			              <label for="password">Password</label>
 			              <input type="password" name="password" id="password" />
 		            	</fieldset>
-		            <input type="submit" id="login" value="Sign in" /><a href="<?php echo base_url(); ?>index.php/login/recuperarContrasenia" >Olvidaste tu password?</a>
+		            <input type="submit" id="login" value="Sign in" /><a href="<?php echo base_url(); ?>index.php/c_recuperarContrasenia/recuperarContrasenia" >Olvidaste tu password?</a>
 	          		</fieldset>
 	          		
               </br>
