@@ -304,22 +304,22 @@ class Login extends CI_Controller{
 	    if ($this->form_validation->run() == FALSE) {
 	    	$this->load->view('inicio/v_recuperarContrasenia', $data);
 	    } else {
-	    	/*$this->load->library('email');
-
-			$this->email->from('administracion@eventosfia.indumelab.com', 'Jean Pierre Perez Tang');
-			$this->email->to('yampier123@hotmail.com'); 
-			$this->email->cc('quimic7@hotmail.com'); 
-			//$this->email->bcc('ellos@su-ejemplo.com'); 
+	    	$email = $this->input->post('vemail');
+	    	$query = $this->miembros_model->verifica_email($email);
+	    	
+	    	$data=array(
+					'email' => $query->email_user,
+					'password' => $query->pas_user,
+					);
+	    	
+			$data['prueba'] = "contraseñaprueba";
 			
-			$this->email->subject('Correo de Prueba');
-			$this->email->message('Probando la clase email');	
-			
-			$this->email->send();*/
-			$this->load->library('email');  
-			$this->email->from('yampier123@gmail.com','Team OnePage');  
-			$this->email->to("yampier123@hotmail.com");  
-			$this->email->subject('A test email from CodeIgniter using Gmail');  
-			$this->email->message("I can now email from CodeIgniter using Gmail as my server!");  
+	    	$this->load->library('email');
+			$this->email->from('adm.eventosfia@gmail.com','Team Event System');  
+			$this->email->to($data['email']);    
+			$this->email->subject('Eventos Fia - USMP - Recuperacion de Contrasenia');  
+			$this->email->message("Gracias por utilizar el servicio de recuperacion de contrasenia!
+								   Su contrasenia actual es: ".$data['password']);  
 			$this->email->send();   
 			//echo $this->email->print_debugger();
 	    	$this->load->view('inicio/v_recuperarContraseniaOK');

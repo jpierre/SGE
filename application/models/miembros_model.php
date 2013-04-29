@@ -117,8 +117,7 @@ class Miembros_model extends CI_Model{
         $consulta = $this->db->get('usuario');
         if($consulta->num_rows() == 1)
         {
-            $row = $consulta->row();
-            return $row->email_user;
+           return $consulta->row();
         }
     }
 	

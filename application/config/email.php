@@ -6,11 +6,11 @@
 | Configuration of outgoing mail server. 
 | */   
 $config['protocol']='smtp';  
-$config['smtp_host']='smtp.googlemail.com';  
+$config['smtp_host']='ssl://smtp.googlemail.com';  
 $config['smtp_port']='465';  
-$config['smtp_timeout']='30';  
-$config['smtp_user']='yampier123@gmail.com';  
-$config['smtp_pass']='bout769hilt045';  
+$config['smtp_timeout']='10';  
+$config['smtp_user']='adm.eventosfia@gmail.com';  
+$config['smtp_pass']='eventosfia2013';  
 $config['charset']='utf-8';  
 $config['newline']="\r\n";  
   
