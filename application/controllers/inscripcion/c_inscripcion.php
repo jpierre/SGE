@@ -75,7 +75,7 @@ class C_inscripcion extends CI_Controller{
 			$this->load->view('home/home', $data);
 		}
 
-	}
+	} 
 	
 	//funcion para que el representante pueda inscribir varios participantes externos
 	function inscrip_n_part_externos(){
