@@ -7,7 +7,7 @@
 
 <div id="container" class="ltr">
 
-<form id="form6" name="form6" action="<?php echo base_url();?>index.php/inscripcion/c_inscripcion/registar_inscrip/" class="wufoo topLabel page" autocomplete="off" enctype="multipart/form-data" method="post" accept-charset="utf-8">
+<form id="form6" name="form6" action="<?php echo base_url();?>inscripcion/c_inscripcion/registar_inscrip/" class="wufoo topLabel page" autocomplete="off" enctype="multipart/form-data" method="post" accept-charset="utf-8">
 <header id="header" class="info">
 <h2>Bienvenidos! Eventos FIA ! </h2>
 <div>SGE es un proyecto para el curso de DIS enfocado a las necesitades de nuestra facultad.</div>
@@ -18,7 +18,7 @@
 	<section>
 	
 	  <h1>Inscribir un nuevo participante</h1>
-  <form action="<?php echo base_url();?>index.php/login/create_member" method="post" accept-charset="utf-8">
+  <form action="<?php echo base_url();?>login/create_member" method="post" accept-charset="utf-8">
     <fieldset>
       <legend>Datos del Participante</legend>
       <label>Nombre </label>

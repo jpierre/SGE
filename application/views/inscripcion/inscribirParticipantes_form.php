@@ -7,7 +7,7 @@
 <div class="content">
 <div id="container" class="ltr">
 
-<form id="form6" name="form6" action="<?php echo base_url();?>index.php/inscripcion/c_inscripcion/inscrip_n_part_externos/" class="wufoo topLabel page" autocomplete="off" enctype="multipart/form-data" method="post" accept-charset="utf-8">
+<form id="form6" name="form6" action="<?php echo base_url();?>inscripcion/c_inscripcion/inscrip_n_part_externos/" class="wufoo topLabel page" autocomplete="off" enctype="multipart/form-data" method="post" accept-charset="utf-8">
 <form  method="post" >
 <header id="header" class="info">
 <h2>Bienvenidos! Eventos FIA ! </h2>

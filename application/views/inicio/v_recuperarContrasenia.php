@@ -51,7 +51,7 @@ $(document).ready(function(){
         }else{
             $.ajax({
                 type: "POST",
-                url: "http://localhost/sge/index.php/login/comprobar_email_ajax",
+                url: "http://localhost/sge/seguridad/c_recuperarContrasenia/comprobar_email_ajax",
                 data: "vemail="+$('#vemail').val(),
                 beforeSend: function(){
                     $('#msgEmail').html('Verificando...');
@@ -87,8 +87,8 @@ $(document).ready(function(){
           <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
           <li class="selected"><a href="index.html">Inicio</a></li>
           <li><a href="#">Quienes somos?</a></li>
-          <li><a href="<?php echo base_url(); ?>index.php/login/eventos">Eventos</a></li>
-          <li><a href="<?php echo base_url(); ?>index.php/login/signup">Registrate</a></li>
+          <li><a href="<?php echo base_url(); ?>login/eventos">Eventos</a></li>
+          <li><a href="<?php echo base_url(); ?>login/signup">Registrate</a></li>
           <li><a href="#">Contactanos</a></li>
           
           <li>
@@ -96,7 +96,7 @@ $(document).ready(function(){
         <div id="loginContainer"> <a href="#" id="loginButton"><span>Login</span></a>
       		<div style="clear:both"></div>
       		<div id="loginBox">
-        		<form id="loginForm" action="<?php echo base_url();?>index.php/login/validate_credentials" method="post" accept-charset="utf-8">
+        		<form id="loginForm" action="<?php echo base_url();?>login/validate_credentials" method="post" accept-charset="utf-8">
 		          	<fieldset id="body">
 			            <fieldset>
 				            <label for="email">Usuario</label>
@@ -167,7 +167,7 @@ $(document).ready(function(){
       <div id="content">
       
       
-      <form action="<?php echo base_url();?>index.php/c_recuperarContrasenia/validarEmail" method="post" accept-charset="utf-8">
+      <form action="<?php echo base_url();?>seguridad/c_recuperarContrasenia/validarEmail" method="post" accept-charset="utf-8">
         <h1>Recuperar Contraseña</h1>
         <p>&nbsp;</p>
         <h2>Ingrese un email valido</h2>

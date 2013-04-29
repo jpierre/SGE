@@ -51,16 +51,16 @@ $(function() {
   <div id="menubar">
     <ul id="menu">
       <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
-      <li ><a href="<?php echo base_url(); ?>index.php/welcome">Inicio</a></li>
+      <li ><a href="<?php echo base_url(); ?>welcome">Inicio</a></li>
       <li><a href="#">Quienes Somos?</a></li>
-      <li><a href="<?php echo base_url(); ?>index.php/login/eventos">Eventos</a></li>
-      <li class="selected"><a href="<?php echo base_url(); ?>index.php/login/signup">Registrate</a></li>
+      <li><a href="<?php echo base_url(); ?>login/eventos">Eventos</a></li>
+      <li class="selected"><a href="<?php echo base_url(); ?>login/signup">Registrate</a></li>
       <li><a>Contactenos</a></li>
       <li>
         <div id="loginContainer"> <a href="#" id="loginButton"><span>Login</span></a>
           <div style="clear:both"></div>
           <div id="loginBox">
-            <form id="loginForm" action="<?php echo base_url();?>index.php/login/validate_credentials" method="post" accept-charset="utf-8">
+            <form id="loginForm" action="<?php echo base_url();?>login/validate_credentials" method="post" accept-charset="utf-8">
               <fieldset id="body">
                 <fieldset>
                   <label for="email">Usuario</label>

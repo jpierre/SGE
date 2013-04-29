@@ -87,7 +87,7 @@ return false;
 <div id="stylized" >
   <h1>Registrate</h1>
   <p>(*)Campos obligatorios</p>
-  <form action="<?php echo base_url();?>index.php/login/create_member" method="post" accept-charset="utf-8" class="box" >
+  <form action="<?php echo base_url();?>login/create_member" method="post" accept-charset="utf-8" class="box" >
     <div id="personal">
       <fieldset>
         <legend> Informacion Personal</legend>
@@ -229,7 +229,7 @@ return false;
  
         
         
-        <!-- ><img style="margin-left:150px;" src="<?php echo base_url();?>index.php/login/captcha" alt="captcha" /><br>
+        <!-- ><img style="margin-left:150px;" src="<?php echo base_url();?>login/captcha" alt="captcha" /><br>
         <br />
         <label>Ingrese caracteres </label>
         <input type="text" name="captcha" class="input1"/>
