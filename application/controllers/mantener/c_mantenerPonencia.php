@@ -90,9 +90,9 @@ class C_mantenerPonencia extends CI_Controller {
     
 	function crearPonencia() {
 		
-		$data = array{
+		$data = array(
 			''
-		}
+		);
 		 //recogemos los datos obtenidos por POST
 		 $data['nombre'] = $_POST['txtNombre'];
 		 $data['email'] = $_POST['txtEmail'];
