@@ -21,6 +21,11 @@ class Seccion extends CI_Controller{
 		$this->load->view('inicio/contactanos');
 	}
 	
+	function test(){
+		$this->load->view('estructura_php_fixed');
+	}
+
+		
 }
 	
 ?>
