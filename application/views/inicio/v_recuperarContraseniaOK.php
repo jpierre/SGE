@@ -12,58 +12,7 @@
  
 <script type="text/javascript" src="<?php echo base_url(); ?>js/login.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js?ver=1.4.2"></script>
-<script type="text/javascript">
-
-// Login Form
-
-$(function() {
-    var button = $('#loginButton');
-    var box = $('#loginBox');
-    var form = $('#loginForm');
-    button.removeAttr('href');
-    button.mouseup(function(login) {
-        box.toggle();
-        button.toggleClass('active');
-    });
-    form.mouseup(function() { 
-        return false;
-    });
-    $(this).mouseup(function(login) {
-        if(!($(login.target).parent('#loginButton').length > 0)) {
-            button.removeClass('active');
-            box.hide();
-        }
-    });
-});
-
-/*funcion ajax para comprobar si el email existe en la base de datos*/
-$(document).ready(function(){
-    var emailreg = /^[a-zA-Z0-9_\.\-]+@[a-zA-Z0-9\-]+\.[a-zA-Z0-9\-\.]+$/;
-    $('#email').focusout( function(){
-        if( $("#email").val() == "" || !emailreg.test($("#email").val()) )
-        {
-            $('#msgEmail').html("<span style='color:#f00'>Ingrese un email correcto</span>");
-        }else{
-            $.ajax({
-                type: "POST",
-                url: "http://localhost/validaciones_ajax/register/comprobar_email_ajax",
-                data: "email="+$('#email').val(),
-                beforeSend: function(){
-                    $('#msgEmail').html('Verificando...');
-                },
-                success: function( respuesta ){
-                    if(respuesta == '<div style="display:none">1</div>')
-                        $('#msgEmail').html("<span style='color:#0f0'>Email disponible</span>");
-                    else
-                        $('#msgEmail').html("<span style='color:#f00'>Email no disponible</span>");
-                }
-            });
-            return false;
-        }
-    });
-});
-
-</script>
+<script type='text/javascript' src="<?php echo base_url(); ?>js/funciones.js" ></script>
  
 </head>
 
@@ -81,9 +30,9 @@ $(document).ready(function(){
       <div id="menubar">
         <ul id="menu">
           <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
-          <li class="selected"><a href="index.html">Inicio</a></li>
-          <li><a href="#">Quienes somos?</a></li>
-          <li><a href="<?php echo base_url(); ?>login/eventos">Eventos</a></li>
+          <li class="selected"><a href="<?php echo base_url(); ?>seccion/inicio">Inicio</a></li>
+          <li><a href="<?php echo base_url(); ?>seccion/nuestraFacultad">Nuestra Facultad</a></li>
+          <li><a href="<?php echo base_url(); ?>seccion/eventos">Eventos</a></li>
           <li><a href="<?php echo base_url(); ?>login/signup">Registrate</a></li>
           <li><a href="#">Contactanos</a></li>
           
@@ -102,7 +51,7 @@ $(document).ready(function(){
 			              <label for="password">Password</label>
 			              <input type="password" name="password" id="password" />
 		            	</fieldset>
-		            <input type="submit" id="login" value="Sign in" /><a href="#" >Olvidaste tu password?</a>
+		            <input type="submit" id="login" value="Sign in" /><a href="<?php echo base_url(); ?>seguridad/c_recuperarContrasenia/recuperarContrasenia" >Olvidaste tu password?</a>
 	          		</fieldset>
 	          		
               </br>

@@ -4,15 +4,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link rel="stylesheet" href="<?php echo base_url(); ?>css/reset.css" type="text/css" media="screen" charset="utf-8" />
 <link rel="stylesheet" href="<?php echo base_url(); ?>css/css.css" type="text/css" media="screen" charset="utf-8" />
+<script type='text/javascript' src="<?php echo base_url(); ?>js/funciones.js" ></script>
+
 <title>Untitled Document</title>
 
 <script type="text/javascript">
-function init() {
-    document.getElementById("cant_cuotas").disabled = true;
-}
-function extranjero(radio){
-    document.getElementById("cant_cuotas").disabled=(radio.value == 1)?true: false;
-}
+
 </script>
 <style>
 .content { margin-right: -1px; } /* this 1px negative margin can be placed on any of the columns in this layout with the same corrective effect. */

@@ -12,6 +12,7 @@ class Login extends CI_Controller{
         $this->load->model('miembros_model');
      }
     
+     //VERIFICAR SI FUNCIONA INDEX
 	function index(){
 		//$data['main_content']= 'login_form';
 		//$this->load->view('includes/template', $data);
@@ -109,13 +110,6 @@ class Login extends CI_Controller{
 		}
 	}
 	
-	
-	
-	/*Te lleva a la pagina eventos*/
-	function eventos(){
-		$this->load->view('inicio/eventos');
-	}
-
 	function create_member(){
 		
 		$this->load->library('form_validation');

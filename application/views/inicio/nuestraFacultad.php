@@ -7,9 +7,7 @@
   <meta name="keywords" content="website keywords, website keywords" />
   <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
   <link rel="stylesheet" href="<?php echo base_url(); ?>css/style.css" type="text/css" media="screen" charset="utf-8" />
- 
- <link rel="stylesheet" href="<?php echo base_url(); ?>css/login.css" type="text/css" media="screen" charset="utf-8" />
- 
+  <link rel="stylesheet" href="<?php echo base_url(); ?>css/login.css" type="text/css" media="screen" charset="utf-8" />
 <script type="text/javascript" src="<?php echo base_url(); ?>js/login.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js?ver=1.4.2"></script>
 <script type='text/javascript' src="<?php echo base_url(); ?>js/funciones.js" ></script>
@@ -30,40 +28,34 @@
       <div id="menubar">
         <ul id="menu">
           <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
-          <li class="selected"><a href="<?php echo base_url(); ?>seccion/inicio">Inicio</a></li>
-          <li><a href="<?php echo base_url(); ?>seccion/nuestraFacultad">Nuestra Facultad</a></li>
+          <li><a href="<?php echo base_url(); ?>seccion/inicio">Inicio</a></li>
+          <li class="selected"><a href="<?php echo base_url(); ?>seccion/nuestraFacultad">Nuestra Facultad</a></li>
           <li><a href="<?php echo base_url(); ?>seccion/eventos">Eventos</a></li>
           <li><a href="<?php echo base_url(); ?>login/signup">Registrate</a></li>
-          <li><a href="#">Contactanos</a></li>
-          
+          <li><a href="<?php echo base_url(); ?>seccion/contactanos">Contactanos</a></li>
           <li>
-		  <!-- Login-->
-        <div id="loginContainer"> <a href="#" id="loginButton"><span>Login</span></a>
-      		<div style="clear:both"></div>
-      		<div id="loginBox">
-        		<form id="loginForm" action="<?php echo base_url();?>login/validate_credentials" method="post" accept-charset="utf-8">
-		          	<fieldset id="body">
-			            <fieldset>
-				            <label for="email">Usuario</label>
-				            <input type="text" name="username" id="email" />
-			            </fieldset>
-		            	<fieldset>
-			              <label for="password">Password</label>
-			              <input type="password" name="password" id="password" />
-		            	</fieldset>
-		            <input type="submit" id="login" value="Sign in" /><a href="<?php echo base_url(); ?>seguridad/c_recuperarContrasenia/recuperarContrasenia" >Olvidaste tu password?</a>
-	          		</fieldset>
-	          		
-              </br>
-                 <h3 style="font-size: 8pt; color:blue"><?php echo validation_errors(); ?></h3>
-        		</form>
-         
+		    
+         <div id="loginContainer"> <a href="#" id="loginButton"><span>Login</span><em></em></a>
+      <div style="clear:both"></div>
+      <div id="loginBox">
+        <form id="loginForm" action="<?php echo base_url();?>login/validate_credentials" method="post" accept-charset="utf-8">
+          <fieldset id="body">
+            <fieldset>
+              <label for="email">Usuario</label>
+              <input type="text" name="username" id="email" />
+            </fieldset>
+            <fieldset>
+              <label for="password">Password</label>
+              <input type="password" name="password" id="password" />
+            </fieldset>
+            <input type="submit" id="login" value="Sign in" />
+          </fieldset>
+          <span ><a href="<?php echo base_url(); ?>seguridad/c_recuperarContrasenia/recuperarContrasenia" >Olvidaste tu password?</a></span>
+        </form>
       </div>
     </div>
-        
-                 
-          
-          </li>
+		  
+		  </li>
          
         </ul>
       </div>
@@ -87,10 +79,10 @@
           <div class="sidebar_item">
             <h3>Eventos</h3>
             <ul>
-              <li><a href="#">Vision 2013</a></li>
-              <li><a href="#">Cloud Google</a></li>
-              <li><a href="#">Android Developers</a></li>
-              <li><a href="#">Desarrolo de juegos</a></li>
+              <li><a href="#">link 1</a></li>
+              <li><a href="#">link 2</a></li>
+              <li><a href="#">link 3</a></li>
+              <li><a href="#">link 4</a></li>
             </ul>
           </div>
           <div class="sidebar_base"></div>
@@ -102,7 +94,7 @@
             <form method="post" action="#" id="search_form">
               <p>
                 <input class="search" type="text" name="search_field" value="Enter keywords....." />
-                <input name="search" type="image" style="border: 0; margin: 0 0 -9px 5px;" src="../../../css/search.png" alt="Search" title="Search" />
+                <input name="search" type="image" style="border: 0; margin: 0 0 -9px 5px;" src="style/search.png" alt="Search" title="Search" />
               </p>
             </form>
           </div>
@@ -110,10 +102,16 @@
         </div>
       </div>
       <div id="content">
-        <h1>Sistema de gestion de eventos</h1>
-        <p>&nbsp;</p>
-        <h2>Introduccion</h2>
-        <article>EventSystem nos ofrece un nuevo sistema de gestión de eventos vía web. Con él podremos inscribirnos a diferentes eventos realizados en la Facultad de Ingenieria y arquitectura de la USMP, ver horarios, consultar detalles de los eventos y mucho mas.</article>
+        <h1>Facultad de Ingeniería y Arquitectura</h1>
+       
+       <article>
+       <h2>Nuestra Facultad</h2>
+       La Universidad de San Martín de Porres y especialmente la Facultad de Ingeniería y Arquitectura le expresa su más cordial bienvenida a este site.<br><br>
+La filosofía que inspiró la fundación de la USMP se orienta a la búsqueda de la verdad (VERITAS LIBERABIT VOS) y a la preparación de profesionales altamente capacitados, con cultura humanística y criterios de permanente actualización y superación. Formar a los estudiantes dentro de normas éticas y principios democráticos constituye uno de sus objetivos prioritarios.<br><br>
+El avance de la ciencia y la tecnología, que se produce de manera cada vez más intensa, representa un constante desafío para toda institución universitaria, a la cual es preciso dar respuestas adecuadas, destinando importantes recursos a la docencia y a la investigación. Una y otra deben estar respaldadas por los más modernos laboratorios y equipos.<br><br>
+La vocación de servicio de la Universidad de San Martín de Porres impulsa a la Institución a forjar líderes con una visión integradora, comprometidos con el país y dispuestos a contribuir decisivamente con el progreso y el desarrollo de la sociedad peruana.<br><br>
+Nuestro deseo es invitarlo a que integre la gran familia FIA. ¡Bienvenido a nuestro claustro académico!
+       </article>
       </div>
     </div>
     <div id="content_footer"></div>

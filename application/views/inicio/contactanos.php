@@ -2,15 +2,16 @@
 <html>
 
 <head>
-<title>EventSystem</title>
-<meta name="description" content="website description" />
-<meta name="keywords" content="website keywords, website keywords" />
-<meta http-equiv="content-type" content="text/html; charset=windows-1252" />
-<link rel="stylesheet" href="<?php echo base_url(); ?>css/style.css" type="text/css" media="screen" charset="utf-8" />
-<link rel="stylesheet" href="<?php echo base_url(); ?>css/login.css" type="text/css" media="screen" charset="utf-8" />
-<script type='text/javascript' src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <title>EventSystem</title>
+  <meta name="description" content="website description" />
+  <meta name="keywords" content="website keywords, website keywords" />
+  <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
+  <link rel="stylesheet" href="<?php echo base_url(); ?>css/style.css" type="text/css" media="screen" charset="utf-8" />
+  <link rel="stylesheet" href="<?php echo base_url(); ?>css/login.css" type="text/css" media="screen" charset="utf-8" />
+<script type="text/javascript" src="<?php echo base_url(); ?>js/login.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js?ver=1.4.2"></script>
 <script type='text/javascript' src="<?php echo base_url(); ?>js/funciones.js" ></script>
- 
+
 </head>
 
 <body>
@@ -27,40 +28,34 @@
       <div id="menubar">
         <ul id="menu">
           <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
-          <li class="selected"><a href="<?php echo base_url(); ?>seccion/inicio">Inicio</a></li>
+          <li><a href="<?php echo base_url(); ?>seccion/inicio">Inicio</a></li>
           <li><a href="<?php echo base_url(); ?>seccion/nuestraFacultad">Nuestra Facultad</a></li>
           <li><a href="<?php echo base_url(); ?>seccion/eventos">Eventos</a></li>
           <li><a href="<?php echo base_url(); ?>login/signup">Registrate</a></li>
-          <li><a href="<?php echo base_url(); ?>seccion/contactanos">Contactanos</a></li>
-          
+          <li class="selected"><a href="<?php echo base_url(); ?>seccion/contactanos">Contactanos</a></li>
           <li>
-		  <!-- Login-->
-        <div id="loginContainer"> <a href="#" id="loginButton"><span>Login</span></a>
-      		<div style="clear:both"></div>
-      		<div id="loginBox">
-        		<form id="loginForm" action="<?php echo base_url();?>login/validate_credentials" method="post" accept-charset="utf-8">
-		          	<fieldset id="body">
-			            <fieldset>
-				            <label for="email">Usuario</label>
-				            <input type="text" name="username" id="email" />
-			            </fieldset>
-		            	<fieldset>
-			              <label for="password">Password</label>
-			              <input type="password" name="password" id="password" />
-		            	</fieldset>
-		            <input type="submit" id="login" value="Sign in" /><a href="<?php echo base_url(); ?>seguridad/c_recuperarContrasenia/recuperarContrasenia" >Olvidaste tu password?</a>
-	          		</fieldset>
-	          		
-              </br>
-                 <h3 style="font-size: 8pt; color:blue"><?php echo validation_errors(); ?></h3>
-        		</form>
-         
+		    
+         <div id="loginContainer"> <a href="#" id="loginButton"><span>Login</span><em></em></a>
+      <div style="clear:both"></div>
+      <div id="loginBox">
+        <form id="loginForm" action="<?php echo base_url();?>login/validate_credentials" method="post" accept-charset="utf-8">
+          <fieldset id="body">
+            <fieldset>
+              <label for="email">Usuario</label>
+              <input type="text" name="username" id="email" />
+            </fieldset>
+            <fieldset>
+              <label for="password">Password</label>
+              <input type="password" name="password" id="password" />
+            </fieldset>
+            <input type="submit" id="login" value="Sign in" />
+          </fieldset>
+          <span ><a href="<?php echo base_url(); ?>seguridad/c_recuperarContrasenia/recuperarContrasenia" >Olvidaste tu password?</a></span>
+        </form>
       </div>
     </div>
-        
-                 
-          
-          </li>
+		  
+		  </li>
          
         </ul>
       </div>
@@ -84,10 +79,10 @@
           <div class="sidebar_item">
             <h3>Eventos</h3>
             <ul>
-              <li><a href="#">Vision 2013</a></li>
-              <li><a href="#">Cloud Google</a></li>
-              <li><a href="#">Android Developers</a></li>
-              <li><a href="#">Desarrolo de juegos</a></li>
+              <li><a href="#">link 1</a></li>
+              <li><a href="#">link 2</a></li>
+              <li><a href="#">link 3</a></li>
+              <li><a href="#">link 4</a></li>
             </ul>
           </div>
           <div class="sidebar_base"></div>
@@ -99,7 +94,7 @@
             <form method="post" action="#" id="search_form">
               <p>
                 <input class="search" type="text" name="search_field" value="Enter keywords....." />
-                <input name="search" type="image" style="border: 0; margin: 0 0 -9px 5px;" src="../../../css/search.png" alt="Search" title="Search" />
+                <input name="search" type="image" style="border: 0; margin: 0 0 -9px 5px;" src="style/search.png" alt="Search" title="Search" />
               </p>
             </form>
           </div>
@@ -107,19 +102,40 @@
         </div>
       </div>
       <div id="content">
-      
-      
-      <form action="<?php echo base_url();?>seguridad/c_recuperarContrasenia/validarEmail" method="post" accept-charset="utf-8">
-        <h1>Recuperar Contraseña</h1>
-        <p>&nbsp;</p>
-        <h2>Ingrese un email valido</h2>
-        
-        <input type="text" name="vemail" value="" id="vemail"/>
-        <input type="submit" name="envio" value="Recuperar" />
-        <span id="msgEmail"></span>
-      </form>
-      <?php echo form_error('vemail'); ?> 
-        
+        <h1>Facultad de Ingeniería y Arquitectura</h1>
+       
+       <article>
+       <h2>Contactanos</h2>
+       
+       Central Telefonica: 2086000<br>
+       	<table width="250" border="1">
+			  <tr>
+			    <td><b>Areas</b></td>
+			    <td><b>Anexos</b></td>
+			  </tr>
+			  <tr>
+			    <td>Secretaria de Decanato</td>
+			    <td>1101</td>
+			  </tr>
+			  <tr>
+			    <td>Esc. Prof. de Ing. Civil</td>
+			    <td>1150</td>
+			  </tr>
+			  <tr>
+			    <td>Esc. Prof. de Ing. Industrial</td>
+			    <td>1162</td>
+			  </tr>
+			  <tr>
+			    <td>Esc. Prof. de Ing. de Comp. y Sist.</td>
+			    <td>1107</td>
+			  </tr>
+			  <tr>
+			    <td>Esc. Prof. de Arquitectura</td>
+			    <td>1118</td>
+			  </tr>
+		</table>
+		
+       </article>
       </div>
     </div>
     <div id="content_footer"></div>

@@ -12,30 +12,8 @@
 
 <script type="text/javascript" src="<?php echo base_url(); ?>js/login.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js?ver=1.4.2"></script>
-<script type="text/javascript">
-// Login Form
+<script type='text/javascript' src="<?php echo base_url(); ?>js/funciones.js" ></script>
 
-$(function() {
-    var button = $('#loginButton');
-    var box = $('#loginBox');
-    var form = $('#loginForm');
-    button.removeAttr('href');
-    button.mouseup(function(login) {
-        box.toggle();
-        button.toggleClass('active');
-    });
-    form.mouseup(function() { 
-        return false;
-    });
-    $(this).mouseup(function(login) {
-        if(!($(login.target).parent('#loginButton').length > 0)) {
-            button.removeClass('active');
-            box.hide();
-        }
-    });
-});
-
-</script>
 </head>
 
 <body>
@@ -46,16 +24,17 @@ $(function() {
       <!-- class="logo_colour", allows you to change the colour of the text -->
       <h1><a href="index.html">Event<span class="logo_colour">System</span></a></h1>
       <h2>Sistema de gestion de eventos FIA.</h2>
+      <img width="207" height="196" style="position: absolute; left: 277px; top: -5px; width: 109px; height: 97px;" id="buo" />
     </div>
   </div>
   <div id="menubar">
     <ul id="menu">
       <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
-      <li ><a href="<?php echo base_url(); ?>welcome">Inicio</a></li>
-      <li><a href="#">Quienes Somos?</a></li>
-      <li><a href="<?php echo base_url(); ?>login/eventos">Eventos</a></li>
+      <li ><a href="<?php echo base_url(); ?>seccion/inicio">Inicio</a></li>
+      <li><a href="<?php echo base_url(); ?>seccion/nuestraFacultad">Nuestra Facultad</a></li>
+      <li><a href="<?php echo base_url(); ?>seccion/eventos">Eventos</a></li>
       <li class="selected"><a href="<?php echo base_url(); ?>login/signup">Registrate</a></li>
-      <li><a>Contactenos</a></li>
+      <li><a href="<?php echo base_url(); ?>seccion/contactanos">Contactanos</a></li>
       <li>
         <div id="loginContainer"> <a href="#" id="loginButton"><span>Login</span></a>
           <div style="clear:both"></div>
@@ -72,7 +51,7 @@ $(function() {
                 </fieldset>
                 <input type="submit" id="login" value="Sign in" />
               </fieldset>
-              <span ><a href="#" >Olvidaste tu password?</a></span>
+              <span ><a href="<?php echo base_url(); ?>seguridad/c_recuperarContrasenia/recuperarContrasenia" >Olvidaste tu password?</a></span>
             </form>
           </div>
         </div>
