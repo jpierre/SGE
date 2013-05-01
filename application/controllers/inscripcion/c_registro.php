@@ -1,7 +1,12 @@
 <?php
 error_reporting(E_ALL ^ E_NOTICE);
 
-class Login extends CI_Controller{
+//ESTE CONTROLADOR AUN NO FUNCIONA
+//ESTE CONTROLADOR AUN NO FUNCIONA
+//ESTE CONTROLADOR AUN NO FUNCIONA, NADA LO UTILIZA AUN
+
+class C_registro extends CI_Controller{
+	
 	
 	public function __construct(){
         parent::__construct();
@@ -11,105 +16,15 @@ class Login extends CI_Controller{
         $this->load->model('m_captcha');
         $this->load->model('miembros_model');
      }
-    
-     //VERIFICAR SI FUNCIONA INDEX
-	function index(){
-		//$data['main_content']= 'login_form';
-		//$this->load->view('includes/template', $data);
-		$this->load->view('inicio/index');
-		//$this->load->view('login_form');
-	}
-	
-	function validate_credentials(){
+     
+     public function index(){
+     	$data['captcha'] = $this->captcha();
+		$this->session->set_userdata('captcha', $this->rand);
+		$data['main_content'] = 'registro/signup_form';
+		$this->load->view('inicio/inicio', $data);
+     }
+     
 
-	$this->load->library('form_validation');
-		$this->form_validation->set_rules('username','Usuario', 'trim|required');
-		$this->form_validation->set_rules('password','Clave', 'trim|required');
-
-		$this->form_validation->set_message('required', 'El campo %s es obligatorio.');
-		
-		if($this->form_validation->run()==FALSE){
-			$data['main_content'] = 'login_form';
-			//$this->load->view('inicio/index', $data);
-			$this->load->view('inicio/inicio2', $data);
-		}else{
-
-			$this->load->model('miembros_model');
-
-			$query1 = $this->miembros_model->validate_sicat();
-		
-			if($query1 == false){
-
-				$query = $this->miembros_model->validate();
-		
-				if($query != false){
-					//Datos sacados de la tabla usuario y cargados a la sesion
-					$data=array(
-						'user' => $query->usuario_user,
-						'nombres' => $query->nom_user,
-						'apePat' => $query->ape_pat_user,
-						'apeMat' => $query->ape_mat_user,
-						'idDNI' => $query->num_doc_user,
-						'estado' => $query->tip_usu,
-						'escuela' => $query->esc_estud,
-						'celular' => $query->telf_cel,
-						'telefono' => $query->telf_fijo,
-						'correo' => $query->email_user,
-						'direccion' => $query->dir_user,
-						'cod_user' => $query->cod_user,
-						'is_logged_in' => true
-		
-					);	
-		
-					$this->session->set_userdata($data);
-
-					if($query->tip_usu=='0'){
-						$data['main_content'] = 'home_admin/content';
-						$this->load->view('home_admin/home', $data);
-
-					}else{
-						redirect('site/members_area');
-					}
-				}else{
-				$data['mensaje']='Usuario o password incorrectos';
-				$data['main_content'] = 'login_form';
-				$this->load->view('inicio/inicio2', $data);
-				//$this->index();
-				}
-			}else{
-				//datos sacados de la tabla sicat y cargados a la sesion para luego grabarlos en la tabla sicat
-				$data=array(
-					'direccion' => $query1->direccion,
-					'nombres' => $query1->nombres,
-					'apePat' => $query1->apePat,
-					'apeMat' => $query1->apeMat,
-					'idDNI' => $query1->dni,
-					'estado' => $query1->estado,
-					'telefono' => $query1->telf_fijo,
-					'celular' => $query1->telf_celular,
-					'user' => $query1->usuario,
-					'password' => $query1->password,
-					'correo' => $query1->correo,
-					'escuela' => $query1->escuela,
-					'codigo' => $query1->codigo_interno,
-					'is_logged_in' => true
-		
-				);	
-				$this->session->set_userdata($data);
-			
-				$resultado=$this->miembros_model->get_usuario();
-			
-				if($resultado==false){
-				
-					$this->miembros_model->registrar_interno();
-				}			
-			
-				
-				redirect('site/members_area');
-			}
-		}
-	}
-	
 	function create_member(){
 		
 		$this->load->library('form_validation');
@@ -199,32 +114,7 @@ class Login extends CI_Controller{
 	}
 	
 	
-    function ver_perfil(){
-    	redirect('site/ver_perfil');
-    }
-    	
-    	
-	function generar_QR(){
-		//$data['main_content'] = 'inscripcion/generar_QR';
-		//$this->load->view('home/home', $data);
-		redirect('site/generar_QR');
-	}
-	
-	
-	function logout()
-	{
-		$this->session->sess_destroy();
-		$this->index();
-	}
-	
-	/*Te lleva al formulario de registro*/
-	function signup(){
 		
-		$data['captcha'] = $this->captcha();
-		$this->session->set_userdata('captcha', $this->rand);
-		$data['main_content'] = 'registro/signup_form';
-		$this->load->view('inicio/inicio', $data);
-	}
 	//CAPTCHAAAAAAAAAAAAAAAAAAAAA
 	public function captcha()
     {
@@ -252,7 +142,7 @@ class Login extends CI_Controller{
         //devolvemos el captcha para utilizarlo en la vista
         return $cap;
     }
-	
+    
 	public function validate_captcha()
     {
  
@@ -265,8 +155,5 @@ class Login extends CI_Controller{
         }
  
     }
-       
-    
+     
 }
-
-?>

@@ -30,14 +30,14 @@
           <li><a href="<?php echo base_url(); ?>seccion/inicio">Inicio</a></li>
           <li><a href="<?php echo base_url(); ?>seccion/nuestraFacultad">Nuestra Facultad</a></li>
           <li class="selected"><a href="<?php echo base_url(); ?>seccion/eventos">Eventos</a></li>
-          <li><a href="<?php echo base_url(); ?>login/signup">Registrate</a></li>
+          <li><a href="<?php echo base_url(); ?>seccion/registro">Registrate</a></li>
           <li><a href="<?php echo base_url(); ?>seccion/contactanos">Contactanos</a></li>
           <li>
 		    
          <div id="loginContainer"> <a href="#" id="loginButton"><span>Login</span><em></em></a>
       <div style="clear:both"></div>
       <div id="loginBox">
-        <form id="loginForm" action="<?php echo base_url();?>login/validate_credentials" method="post" accept-charset="utf-8">
+        <form id="loginForm" action="<?php echo base_url();?>seguridad/login/validate_credentials" method="post" accept-charset="utf-8">
           <fieldset id="body">
             <fieldset>
               <label for="email">Usuario</label>
@@ -108,7 +108,7 @@
        El XVII Congreso Internacional de Ingeniería y XI Arquiforo “Visión 2012”, es el evento anual que realiza la Facultad de Ingeniería y Arquitectura de la Universidad de San Martín de Porres, para poner al alcance de alumnos, egresados y profesionales las innovaciones tecnológicas y metodológicas de última generación para complementar la capacitación, desarrollo e integración de los mismos.
 
 Organizado por las Escuelas Profesionales de Ingeniería de Computación y Sistemas, Ingeniería Industrial, Ingeniería Electrónica, Ingeniería Civil, Ingeniería en Industrias Alimentarias, Arquitectura y Ciencias Aeronáuticas de la USMP.
-<a href="<?php echo base_url(); ?>login/signup">Registrate</a>
+<a href="<?php echo base_url(); ?>seccion/registro">Registrate</a>
        
        
        
@@ -118,7 +118,7 @@ Organizado por las Escuelas Profesionales de Ingeniería de Computación y Sistema
        <h2>Cloud Google</h2>
        <p>Con Google Cloud Connect for Microsoft Office, varios usuarios pueden modificar un mismo documento en los conocidos programas de Microsoft&reg; Office. Puedes compartir, realizar copias de seguridad y modificar simult&aacute;neamente documentos de Microsoft Word, PowerPoint&reg; y Excel&reg; con tus compa&ntilde;eros de trabajo.&nbsp;<br>
          <br>
-         En los v&iacute;deos siguientes ver&aacute;s c&oacute;mo Google Cloud Connect incorpora trucos nuevos en tus documentos de siempre    <a href="<?php echo base_url(); ?>login/signup">Registrate</a>.</p>
+         En los v&iacute;deos siguientes ver&aacute;s c&oacute;mo Google Cloud Connect incorpora trucos nuevos en tus documentos de siempre    <a href="<?php echo base_url(); ?>seccion/registro">Registrate</a>.</p>
 
        </article>
        

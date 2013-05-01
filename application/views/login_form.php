@@ -11,7 +11,7 @@
 
 <body>
 
-<form action="<?php echo base_url();?>login/validate_credentials" method="post" accept-charset="utf-8" class="box login">
+<form action="<?php echo base_url();?>seguridad/login/validate_credentials" method="post" accept-charset="utf-8" class="box login">
 <p style="color:#FF0000;"><?php echo $mensaje; ?></p>
   <fieldset class="boxBody">
     <label>Usuario</label>
@@ -21,7 +21,7 @@
   </fieldset>
   <footer>
     <input type="submit" name="submit" value="Login" class="btnLogin" tabindex="4"  />
-    <a href="<?php echo base_url();?>login/signup">Create una cuenta</a> </footer>
+    <a href="<?php echo base_url();?>seccion/registro">Create una cuenta</a> </footer>
   <h3 style="font-size: 8pt; color:red"><?php echo validation_errors(); ?></h3>
 </form>
 </body>

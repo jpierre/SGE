@@ -31,14 +31,14 @@
           <li><a href="<?php echo base_url(); ?>seccion/inicio">Inicio</a></li>
           <li class="selected"><a href="<?php echo base_url(); ?>seccion/nuestraFacultad">Nuestra Facultad</a></li>
           <li><a href="<?php echo base_url(); ?>seccion/eventos">Eventos</a></li>
-          <li><a href="<?php echo base_url(); ?>login/signup">Registrate</a></li>
+          <li><a href="<?php echo base_url(); ?>seccion/registro">Registrate</a></li>
           <li><a href="<?php echo base_url(); ?>seccion/contactanos">Contactanos</a></li>
           <li>
 		    
          <div id="loginContainer"> <a href="#" id="loginButton"><span>Login</span><em></em></a>
       <div style="clear:both"></div>
       <div id="loginBox">
-        <form id="loginForm" action="<?php echo base_url();?>login/validate_credentials" method="post" accept-charset="utf-8">
+        <form id="loginForm" action="<?php echo base_url();?>seguridad/login/validate_credentials" method="post" accept-charset="utf-8">
           <fieldset id="body">
             <fieldset>
               <label for="email">Usuario</label>

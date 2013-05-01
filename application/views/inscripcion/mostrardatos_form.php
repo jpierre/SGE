@@ -18,7 +18,7 @@
 	<section>
 	
 	  <h1>Inscribir un nuevo participante</h1>
-  <form action="<?php echo base_url();?>login/create_member" method="post" accept-charset="utf-8">
+  <form action="<?php echo base_url();?>inscripcion/c_registro/create_member" method="post" accept-charset="utf-8">
     <fieldset>
       <legend>Datos del Participante</legend>
       <label>Nombre </label>

@@ -2,7 +2,7 @@
 
 	class Site extends CI_Controller{
 	
-	//PRUEBAA
+	//ESTE CONTROLADOR VERIFICA QUE EXISTA UNA SESSION PARA ENTRAR A CIERTOS MODULOS
 	function __construct(){
 		parent::__construct();
 		$this->is_logged_in();
@@ -11,11 +11,6 @@
 	function members_area(){
 		$data['main_content'] = 'home/content';
 		$this->load->view('home/home', $data);
-	}
-		
-	/*Te lleva a la pagina eventos*/
-	function eventos(){
-		$this->load->view('inicio/eventos');
 	}
 		
 	function ver_perfil(){

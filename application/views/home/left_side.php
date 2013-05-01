@@ -3,7 +3,7 @@
                         <ul id="menu" >
                            <li><a href="#" class="categoria" >Informacion Personal</a>
                                 <ul>
-                                	<li><a href="<?php echo base_url();?>login/ver_perfil">&raquo; Ver Perfil</a></li>
+                                	<li><a href="<?php echo base_url();?>seccion/ver_perfil">&raquo; Ver Perfil</a></li>
                                 	<li><span><?php echo anchor('','&raquo; Modificar Perfil'); ?></span></li>
                                 </ul>
                           </li>
@@ -25,12 +25,12 @@
                                 <li><a href="#">&raquo; Etc, Etc.</a></li>
                                 </ul>
                            </li>
-                           <li><a href="<?php echo base_url();?>login/generar_QR">Generar Codigo QR</a></a>
+                           <li><a href="<?php echo base_url();?>seccion/generar_QR">Generar Codigo QR</a></a>
                                
                            </li>
                            <li><a href="" class="categoria">Acerca De</a></li>
                            </li>
-                           <li><a href="<?php echo base_url();?>login/logout" class="categoria" >Cerrar Sesion</a></li>
+                           <li><a href="<?php echo base_url();?>seguridad/login/logout" class="categoria" >Cerrar Sesion</a></li>
                            
                     </ul>
       </div>
