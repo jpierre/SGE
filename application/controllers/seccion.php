@@ -22,7 +22,7 @@ class Seccion extends CI_Controller{
 	}
 	
 	function test(){
-		$this->load->view('estructura_php_fixed');
+		$this->load->view('test');
 	}
 
 		

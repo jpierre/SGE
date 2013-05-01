@@ -82,6 +82,13 @@ a:hover, a:active, a:focus { /* this group of selectors will give a keyboard nav
 	padding: 0 15px 15px 40px; /* this padding mirrors the right padding in the headings and paragraph rule above. Padding was placed on the bottom for space between other elements on the lists and on the left to create the indention. These may be adjusted as you wish. */
 }
 
+ul.topNav{
+	
+}
+ul.topNav li{
+	display: inline-block;
+}
+
 /* ~~ The navigation list styles (can be removed if you choose to use a premade flyout menu like Spry) ~~ */
 ul.nav {
 	list-style: none; /* this removes the list marker */
