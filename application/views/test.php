@@ -7,7 +7,7 @@
 </head>
 
 <body>
-<img src="<?php echo base_url(); ?>images/cabecera1.png" alt="Insert Logo Here" name="Insert_logo" width="100%" height="90" id="Insert_logo" style="background: #C6D580; border:0; display:block;" />
+<img src="<?php echo base_url(); ?>images/top.png" alt="Insert Logo Here" name="Insert_logo" width="100%" height="160" id="Insert_logo" style="background: #C6D580; border:0; display:block;" />
 <div class="container">
   <div class="header">
     <ul class="topNav">
