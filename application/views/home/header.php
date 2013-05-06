@@ -5,10 +5,34 @@
 <link rel="stylesheet" href="<?php echo base_url(); ?>css/reset.css" type="text/css" media="screen" charset="utf-8" />
 <link rel="stylesheet" href="<?php echo base_url(); ?>css/css.css" type="text/css" media="screen" charset="utf-8" />
 <script type='text/javascript' src="<?php echo base_url(); ?>js/funciones.js" ></script>
+<script type="text/javascript" src="<?php echo base_url(); ?>js/libs/base64.js"></script>
+	<script type="text/javascript" src="<?php echo base_url(); ?>js/libs/sprintf.js"></script>
+	<script type="text/javascript" src="<?php echo base_url(); ?>js/jspdf.js"></script>
+	<script type="text/javascript" src="<?php echo base_url(); ?>js/jspdf.plugin.addimage.js"></script>
 
 <title>Untitled Document</title>
 
 <script type="text/javascript">
+function generarPDF() {
+	
+	var nombre=document.getElementById('nom').value;
+	var apepat=document.getElementById('apepat').value;
+	var apemat=document.getElementById('apemat').value;
+	var dni=document.getElementById('dni').value;
+	
+	var imagen=document.getElementById("laimagen");
+
+	var doc = new jsPDF();
+	doc.text(50,20, 'Universidad de San Martin de Porres')
+	doc.text(20, 40, 'Nombre :' + " "+ nombre);
+	doc.text(20, 50, 'Apellido : ' + " " + apepat + " " +apemat);
+	doc.text(20, 60, 'DNI :' + " "+ dni);
+	doc.addImage(imagen,'JPEG', 50, 70, 50, 50);
+	
+	
+	// Output as Data URI
+	doc.output('datauri');
+}
 
 </script>
 <style>

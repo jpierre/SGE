@@ -40,6 +40,8 @@
   <button id="png">Generar PNG</button>
   |
   <button id="jpeg">Generar JPEG</button>
+
+  <a href="javascript:generarPDF()">Generar PDF</a>
   <br/>
 </fieldset>
 <img src="" id="laimagen"/> 
