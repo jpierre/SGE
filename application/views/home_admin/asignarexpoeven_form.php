@@ -110,17 +110,17 @@ function comprobar(obj)
 					
 					<table width="274" border="0">
 					  <tr>
-					    <td><input name="req1" value="1" type="checkbox" onChange="comprobar(this);"/>
+					    <td><input name="req1" value="1" type="checkbox" <?php if($this->session->userdata('mensaje')!="No se encontraron Resultados" && $this->session->userdata('mensaje') != NULL){?> onChange="comprobar(this);" <?php } ?>/>
 					    Pizarra Acrilica</td>
-					    <td><input name="req2" value="1" type="checkbox" onChange="comprobar(this);"/>
+					    <td><input name="req2" value="1" type="checkbox" <?php if($this->session->userdata('mensaje')!="No se encontraron Resultados" && $this->session->userdata('mensaje') != NULL){?> onChange="comprobar(this);" <?php } ?>/>
 					    Personal de Apoyo</td>
-					    <td><input name="req3" value="1" type="checkbox" onChange="comprobar(this);"/>
+					    <td><input name="req3" value="1" type="checkbox" <?php if($this->session->userdata('mensaje')!="No se encontraron Resultados" && $this->session->userdata('mensaje') != NULL){?> onChange="comprobar(this);"  <?php } ?>/>
 					      Parlantes</td>
 					  </tr>
 					  <tr>
-					    <td><input name="req4" value="1" type="checkbox" onChange="comprobar(this);"/>
+					    <td><input name="req4" value="1" type="checkbox" <?php if($this->session->userdata('mensaje')!="No se encontraron Resultados" && $this->session->userdata('mensaje') != NULL){?> onChange="comprobar(this);"  <?php } ?>/>
 					      Laptops</td>
-					    <td><input name="req5" value="1" type="checkbox" onChange="comprobar(this);"/>
+					    <td><input name="req5" value="1" type="checkbox" <?php if($this->session->userdata('mensaje')!="No se encontraron Resultados" && $this->session->userdata('mensaje') != NULL){?> onChange="comprobar(this);"  <?php } ?>/>
 					      Microfono Inalambrico</td>
 					    <td>&nbsp;</td>
 					  </tr>
@@ -136,7 +136,7 @@ function comprobar(obj)
 					</table>
 					
 					
-					<input id="asignar" type="submit" value="Asignar" name="asignar" disabled/>
+					<input id="asignar" type="submit" value="Asignar" name="asignar"  disabled/>
 					</fieldset>
 					</form>
 
