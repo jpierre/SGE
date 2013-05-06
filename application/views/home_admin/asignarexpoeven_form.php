@@ -1,3 +1,14 @@
+<script language="javascript" type="text/javascript">
+function comprobar(obj)
+{   
+    if (obj.checked)
+        document.getElementById('asignar').disabled = false;
+    else
+        document.getElementById('asignar').disabled = true;
+}
+
+</script>
+
 <link href="<?php echo base_url(); ?>css/wufo/structure.css" rel="stylesheet">
 <link href="<?php echo base_url(); ?>css/wufo/form.css" rel="stylesheet">
 <link href="<?php echo base_url(); ?>css/wufo/theme.css" rel="stylesheet">
@@ -99,24 +110,24 @@
 					
 					<table width="274" border="0">
 					  <tr>
-					    <td><input name="req1" value="1" type="checkbox"/>
+					    <td><input name="req1" value="1" type="checkbox" onChange="comprobar(this);"/>
 					    Pizarra Acrilica</td>
-					    <td><input name="req2" value="1" type="checkbox"/>
+					    <td><input name="req2" value="1" type="checkbox" onChange="comprobar(this);"/>
 					    Personal de Apoyo</td>
-					    <td><input name="req3" value="1" type="checkbox"/>
+					    <td><input name="req3" value="1" type="checkbox" onChange="comprobar(this);"/>
 					      Parlantes</td>
 					  </tr>
 					  <tr>
-					    <td><input name="req4" value="1" type="checkbox"/>
+					    <td><input name="req4" value="1" type="checkbox" onChange="comprobar(this);"/>
 					      Laptops</td>
-					    <td><input name="req5" value="1" type="checkbox"/>
+					    <td><input name="req5" value="1" type="checkbox" onChange="comprobar(this);"/>
 					      Microfono Inalambrico</td>
 					    <td>&nbsp;</td>
 					  </tr>
 					  <tr>
 					    <td colspan="3">
 					    Requerimientos de SW
-					    <textarea name="reqAdic"></textarea>
+					    <textarea name="reqAdic" onkeyup = "asignar.disabled = this.value==''"></textarea>
 					    </td>
 						<td>
 						
@@ -125,7 +136,7 @@
 					</table>
 					
 					
-					<input type="submit" value="Asignar" />
+					<input id="asignar" type="submit" value="Asignar" name="asignar" disabled/>
 					</fieldset>
 					</form>
 
