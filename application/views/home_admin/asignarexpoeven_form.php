@@ -110,24 +110,24 @@ function comprobar(obj)
 					
 					<table width="274" border="0">
 					  <tr>
-					    <td><input name="req1" value="1" type="checkbox" <?php if($this->session->userdata('mensaje')!="No se encontraron Resultados" && $this->session->userdata('mensaje') != NULL){?> onChange="comprobar(this);" <?php } ?>/>
+					    <td><input name="req1" value="1" type="checkbox" <?php if($this->session->userdata('mensaje')!="No se encontraron Resultados" && $this->session->userdata('mensaje') != NULL){ $a=1;?> onChange="comprobar(this);" <?php } ?>/>
 					    Pizarra Acrilica</td>
-					    <td><input name="req2" value="1" type="checkbox" <?php if($this->session->userdata('mensaje')!="No se encontraron Resultados" && $this->session->userdata('mensaje') != NULL){?> onChange="comprobar(this);" <?php } ?>/>
+					    <td><input name="req2" value="1" type="checkbox" <?php if($a==1){?> onChange="comprobar(this);" <?php } ?>/>
 					    Personal de Apoyo</td>
-					    <td><input name="req3" value="1" type="checkbox" <?php if($this->session->userdata('mensaje')!="No se encontraron Resultados" && $this->session->userdata('mensaje') != NULL){?> onChange="comprobar(this);"  <?php } ?>/>
+					    <td><input name="req3" value="1" type="checkbox" <?php if($a==1){?> onChange="comprobar(this);"  <?php } ?>/>
 					      Parlantes</td>
 					  </tr>
 					  <tr>
-					    <td><input name="req4" value="1" type="checkbox" <?php if($this->session->userdata('mensaje')!="No se encontraron Resultados" && $this->session->userdata('mensaje') != NULL){?> onChange="comprobar(this);"  <?php } ?>/>
+					    <td><input name="req4" value="1" type="checkbox" <?php if($a==1){?> onChange="comprobar(this);"  <?php } ?>/>
 					      Laptops</td>
-					    <td><input name="req5" value="1" type="checkbox" <?php if($this->session->userdata('mensaje')!="No se encontraron Resultados" && $this->session->userdata('mensaje') != NULL){?> onChange="comprobar(this);"  <?php } ?>/>
+					    <td><input name="req5" value="1" type="checkbox" <?php if($a==1){?> onChange="comprobar(this);"  <?php } ?>/>
 					      Microfono Inalambrico</td>
 					    <td>&nbsp;</td>
 					  </tr>
 					  <tr>
 					    <td colspan="3">
 					    Requerimientos de SW
-					    <textarea name="reqAdic" onkeyup = "asignar.disabled = this.value==''"></textarea>
+					    <textarea name="reqAdic" <?php if($a==1){?> onkeyup = "asignar.disabled = this.value==''"<?php } ?>></textarea>
 					    </td>
 						<td>
 						
