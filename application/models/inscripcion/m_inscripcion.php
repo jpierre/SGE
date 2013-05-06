@@ -87,11 +87,16 @@ class M_inscripcion extends CI_Model{
 	}
 	
 	function get_inscripcion($cod_user){
-		$this->db->select('nro_inscripcion');
-		$this->db->where('cod_user_rec', $cod_user);
-		$resultado = $this->db->get('recibo');
 		
-		if($resultado->num_rows == 1){
+		$query="select pe.cod_user_rec from usuario p, recibo pe where p.cod_user=pe.cod_user_rec and p.num_doc_user='".$cod_user."'";
+		
+		$resultado = $this->db->query($query);
+		
+		/*$this->db->select('nro_inscripcion');
+		$this->db->where('cod_user_rec', $cod_user);
+		$resultado = $this->db->get('recibo');*/
+		
+		if($resultado->num_rows >= 1){
 			return $resultado->row();
 		}else{
 			return false;	
