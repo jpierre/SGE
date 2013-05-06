@@ -117,6 +117,20 @@ class C_inscripcion extends CI_Controller{
 		}
 		
 	}
+	
+	function generacion_qr(){
+				
+		$this->load->model('inscripcion/m_inscripcion', 'registro');
+ 		$result=$this->registro->get_inscripcion($this->session->userdata('idDNI'));
+		
+		if($result != false){
+			$this->load->view('home/generar_QR');
+		}else{
+			$this->load->view('home/no_inscrito');
+		}
+		
+		
+	}
 			
 
 }
