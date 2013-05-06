@@ -1,0 +1,44 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Aula",
+        "storeId": "MyJsonStore2",
+        "model": "Aula",
+        "data": "[{\"cod_fia_amb\":\"1\",\"value\":\"101\"},{\"cod_fia_amb\":\"2\",\"value\":\"102\"},{\"cod_fia_amb\":\"3\",\"value\":\"103\"}]"
+    },
+    "id": "ExtBox1-ext-gen18497",
+    "designerId": "42fb0317-5d6f-4573-a6c7-9c2a10afe571",
+    "cn": [
+        {
+            "type": "ajaxproxy",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyAjaxProxy7"
+            },
+            "designerId": "2a679e1e-545b-4a27-b027-2d23d2ecc42c",
+            "cn": [
+                {
+                    "type": "jsonreader",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyJsonReader2"
+                    },
+                    "designerId": "0a3aae8a-e75d-42d8-80ea-2ae15e51d4cb"
+                }
+            ]
+        }
+    ]
+}

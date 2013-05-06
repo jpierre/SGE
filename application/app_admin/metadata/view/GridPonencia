@@ -1,0 +1,443 @@
+{
+    "type": "gridpanel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "GridPonencia",
+        "designer|userAlias": "gridPonencia",
+        "height": 300,
+        "id": "gridponencia",
+        "itemId": "gridponencia",
+        "width": null,
+        "title": "Mantener Ponencia",
+        "columnLines": false,
+        "store": "Ponencia"
+    },
+    "id": "ExtBox1-ext-gen3572",
+    "designerId": "daf4bf01-0ba6-4332-9ad0-3aa532067d17",
+    "cn": [
+        {
+            "type": "rownumberer",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "RowNumberer",
+                "sealed": null
+            },
+            "designerId": "82c12ec5-5aa3-410e-a04a-76e4102b51e6"
+        },
+        {
+            "type": "gridview",
+            "reference": {
+                "name": "viewConfig",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyGridView"
+            },
+            "designerId": "7cf03ade-08f2-4be2-a34b-09123d97af6d"
+        },
+        {
+            "type": "numbercolumn",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyNumberColumn",
+                "hidden": false,
+                "width": 120,
+                "defaultWidth": 120,
+                "sealed": null,
+                "align": "center",
+                "dataIndex": "id_pon",
+                "text": "Código de Ponencia",
+                "format": "00"
+            },
+            "designerId": "b7bb8f8d-86cc-49dd-afb0-7321d087f684"
+        },
+        {
+            "type": "gridcolumn",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyColumn8",
+                "width": 220,
+                "defaultWidth": 200,
+                "dataIndex": "nom_pon",
+                "text": "Titulo"
+            },
+            "designerId": "986f2676-aba7-42bf-bbbc-695acf971ae2"
+        },
+        {
+            "type": "gridcolumn",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyColumn4",
+                "width": 200,
+                "defaultWidth": 220,
+                "dataIndex": "nom_exp",
+                "text": "Expositor"
+            },
+            "designerId": "9f300822-0e59-4c91-87b9-c209b5d8bd20"
+        },
+        {
+            "type": "datecolumn",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyDateColumn",
+                "dataIndex": "fech_ini_pon",
+                "text": "Fecha Inicio",
+                "format": "d/m/Y H:i:s"
+            },
+            "designerId": "c5738f46-450f-4738-a285-d5e20225938a"
+        },
+        {
+            "type": "datecolumn",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyDateColumn1",
+                "dataIndex": "fech_fin_pon",
+                "text": "Fecha Fin",
+                "format": "d/m/Y H:i:s"
+            },
+            "designerId": "2d11774e-326a-4497-a71e-c927f8a8e662"
+        },
+        {
+            "type": "gridcolumn",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyColumn9",
+                "dataIndex": "duracion",
+                "text": "Duracion"
+            },
+            "designerId": "9bbab2e5-2d34-4f9f-bc4c-4e76d050d8d2"
+        },
+        {
+            "type": "gridcolumn",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyColumn10",
+                "id": null,
+                "dataIndex": "tip_pon_dsc",
+                "text": "Tipo"
+            },
+            "designerId": "e104c439-18b9-4718-a538-325fb7ffcd01"
+        },
+        {
+            "type": "gridcolumn",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyColumn11",
+                "dataIndex": "dir_desc",
+                "text": "Dirigido"
+            },
+            "designerId": "5bc62764-3c34-4230-a3b8-03662ac5d622"
+        },
+        {
+            "type": "gridcolumn",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyColumn13",
+                "dataIndex": "amb_des",
+                "text": "Ambiente "
+            },
+            "designerId": "b1bc85e5-9dc9-41db-9a4b-3da4ba938c97"
+        },
+        {
+            "type": "pagingtoolbar",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dock": "bottom",
+                "designer|userClassName": "MyPagingToolbar",
+                "width": 360,
+                "afterPageText": "de {0}",
+                "beforePageText": "Pagina",
+                "displayInfo": true,
+                "displayMsg": "Ponencias {0} - {1} de {2}",
+                "emptyMsg": "No Existen Ponencias",
+                "firstText": "Primera Pagina",
+                "lastText": "Ultima Pagina",
+                "prevText": "Pagina Anterior",
+                "refreshText": "Actualizar",
+                "store": "Ponencia"
+            },
+            "designerId": "7b9c32f9-ae77-45e2-b17d-385f27db8a9f"
+        },
+        {
+            "type": "toolbar",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dock": "top",
+                "designer|userClassName": "MyToolbar2"
+            },
+            "designerId": "1a04b9c3-1c0d-4ea5-a26c-2606eb5e0625",
+            "cn": [
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "designer|userClassName": "MyButton5",
+                        "iconCls": "icon-add",
+                        "text": "Crear Ponencia"
+                    },
+                    "designerId": "dc8f94be-6d1c-4b33-8c4e-c71602e7e9a7",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "handler",
+                                "fn": "handler",
+                                "designer|params": [
+                                    "button",
+                                    "event"
+                                ],
+                                "implHandler": [
+                                    "var winp=Ext.getCmp('winPonencia');\r",
+                                    "\r",
+                                    "if(!winp){\r",
+                                    "    Ext.create('vision.view.MantenerPonencia');\r",
+                                    "winp=Ext.getCmp('winPonencia');}\r",
+                                    "\r",
+                                    "//Ext.getCmp('cod_exp_pon').setDisabled(false);\r",
+                                    "Ext.getCmp('formPon').getForm().reset(); \r",
+                                    "winp.show();"
+                                ]
+                            },
+                            "designerId": "30921c22-981c-443a-8fd0-9a93655e2719"
+                        }
+                    ]
+                },
+                {
+                    "type": "tbseparator",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "designer|userClassName": "MySeparator3"
+                    },
+                    "designerId": "67605083-8765-4cb4-8b8b-8c8859d76fdf"
+                },
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "designer|userClassName": "MyButton4",
+                        "id": "btnManPone",
+                        "iconCls": "icon-edit",
+                        "text": "Modificar Ponencia"
+                    },
+                    "designerId": "14605d94-e5e0-489a-8834-19e00fa97b09",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "handler",
+                                "fn": "handler",
+                                "designer|params": [
+                                    "button",
+                                    "event"
+                                ],
+                                "implHandler": [
+                                    "\r",
+                                    "\r",
+                                    "var winp=Ext.getCmp('winPonencia');\r",
+                                    "\r",
+                                    "if(!winp){\r",
+                                    "    Ext.create('vision.view.MantenerPonencia');\r",
+                                    "winp=Ext.getCmp('winPonencia');}\r",
+                                    "var id_pon=sessionStorage.getItem('id_pon');\r",
+                                    "if(id_pon!='-1'){\r",
+                                    "    //Ext.getCmp('cod_exp_pon').setDisabled(true);\r",
+                                    "    var record=Ext.getCmp('gridponencia').getStore().findRecord('id_pon',id_pon);\r",
+                                    "    Ext.getCmp('id_pon').setValue(record.get('id_pon'));\r",
+                                    "    Ext.getCmp('cod_eve_pon').setValue(record.get('cod_eve_pon'));\r",
+                                    "    Ext.getCmp('fech_ini_pon').setValue(Ext.Date.format(new Date(record.get('fech_ini_pon')), 'd-m-Y H:i:s'));\r",
+                                    "    Ext.getCmp('fech_fin_pon').setValue(Ext.Date.format(new Date(record.get('fech_fin_pon')), 'd-m-Y H:i:s'));\r",
+                                    "    Ext.getCmp('nom_pon').setValue(record.get('nom_pon'));\r",
+                                    "    Ext.getCmp('desc_pon').setValue(record.get('desc_pon'));\r",
+                                    "    Ext.getCmp('tipo_pon').setValue(record.get('tipo_pon'));\r",
+                                    "    Ext.getCmp('dirigido_a_pon').setValue(record.get('dirigido_a_pon'));\r",
+                                    "    Ext.getCmp('est_pon').setValue(record.get('est_pon'));\r",
+                                    "    Ext.getCmp('id_amb_pon').setValue(record.get('id_amb_pon'));\r",
+                                    "    // Ext.getCmp('id_req_pon').setValue(record.get('id_req_pon'));\r",
+                                    "    winp.show();\r",
+                                    "\r",
+                                    "\r",
+                                    "\r",
+                                    "}else Ext.Msg.alert('Precaución','Debe seleccionar una ponencia.');\r",
+                                    "\r",
+                                    "\r",
+                                    ""
+                                ]
+                            },
+                            "designerId": "34bf3ec0-2a1f-49dc-a28d-c908983946bc"
+                        }
+                    ]
+                },
+                {
+                    "type": "tbseparator",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "designer|userClassName": "MySeparator4"
+                    },
+                    "designerId": "6ba9648f-08b2-451b-abe2-9a81f389213c"
+                },
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "designer|userClassName": "MyButton6",
+                        "text": "Eliminar Ponencia"
+                    },
+                    "designerId": "9b8c9bf7-07c4-4d52-93ad-0804e67e54ae",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "handler",
+                                "fn": "handler",
+                                "designer|params": [
+                                    "button",
+                                    "event"
+                                ],
+                                "implHandler": [
+                                    "\r",
+                                    "var idpon=sessionStorage.getItem('id_pon');\r",
+                                    "if(idpon!=-1){\r",
+                                    "    var sponencia=Ext.getCmp('gridponencia').getStore();\r",
+                                    "    var record=Ext.getCmp('gridponencia').getStore().findRecord('id_pon',idpon);\r",
+                                    "    var opt=Ext.MessageBox.confirm('Comfirmar', 'Esta se guro que desea eliminar la:<br>Ponencia: <b>'+record.get('nom_pon')+'</b><br>Codigo: <b>'+idpon+'<b>',\r",
+                                    "    function(button) {\r",
+                                    "        if (button === 'yes') {\r",
+                                    "            sponencia.load({\r",
+                                    "                url:'../../administracion/ponencia/borrar_ponencia',\r",
+                                    "                method: 'POST',\r",
+                                    "                params:{'tipoSql':'delete','id_pon':idpon},\r",
+                                    "                scope: this,\r",
+                                    "                callback: function(records, operation, success,response) {\r",
+                                    "                    // the operation object\r",
+                                    "                    // contains all of the details of the load operation\r",
+                                    "                    //this.load();\r",
+                                    "\r",
+                                    "                }\r",
+                                    "\r",
+                                    "            });\r",
+                                    "        }//END if\r",
+                                    "\r",
+                                    "    });\r",
+                                    "}else Ext.Msg.alert('Precaución','Debe seleccionar una ponencia.');\r",
+                                    ""
+                                ]
+                            },
+                            "designerId": "18ba83aa-cff0-4124-bda6-5bca07544271"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onGridponenciaSelect",
+                "fn": "onGridponenciaSelect",
+                "implHandler": [
+                    "sessionStorage.setItem('id_pon',record.get('id_pon'));"
+                ],
+                "name": "select",
+                "scope": "me"
+            },
+            "designerId": "42e7027a-2b9b-49ef-a814-8837a596c5a6"
+        }
+    ]
+}

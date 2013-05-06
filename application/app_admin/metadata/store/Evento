@@ -1,0 +1,47 @@
+{
+    "type": "arraystore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Evento",
+        "autoLoad": true,
+        "storeId": "eventoStore",
+        "model": "Evento",
+        "data": null
+    },
+    "id": "ExtBox1-ext-gen86978",
+    "designerId": "bdafdf1c-cab0-4842-9f29-7b9ea8009ebf",
+    "cn": [
+        {
+            "type": "ajaxproxy",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyAjaxProxy1",
+                "url": "../../administracion/evento/vereventos"
+            },
+            "designerId": "11e976f5-2000-4279-9b60-f9189327766f",
+            "cn": [
+                {
+                    "type": "jsonreader",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyJsonReader3",
+                        "root": null
+                    },
+                    "designerId": "3a4b00b8-12fd-45f2-a7d3-713e283c912f"
+                }
+            ]
+        }
+    ]
+}

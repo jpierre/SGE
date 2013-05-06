@@ -1,0 +1,382 @@
+{
+    "type": "gridpanel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "GridExpositor",
+        "height": 300,
+        "id": "gridExpositor",
+        "itemId": "gridExpositor",
+        "width": null,
+        "title": "Mantener Expositor",
+        "columnLines": false,
+        "store": "Expositor"
+    },
+    "id": "ExtBox1-ext-gen13963",
+    "designerId": "4056eb9d-1510-4068-bbe9-034134539443",
+    "cn": [
+        {
+            "type": "rownumberer",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "RowNumberer",
+                "sealed": null
+            },
+            "designerId": "f7471d66-c067-4282-a274-74a29f58cbcf"
+        },
+        {
+            "type": "gridview",
+            "reference": {
+                "name": "viewConfig",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyGridView"
+            },
+            "designerId": "ec407fc4-600b-4244-a4f2-9553c1c9b73b"
+        },
+        {
+            "type": "gridcolumn",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyColumn14",
+                "hidden": false,
+                "width": 120,
+                "defaultWidth": 120,
+                "sealed": null,
+                "align": "center",
+                "dataIndex": "cod_exp",
+                "text": "Codigo de Expositor"
+            },
+            "designerId": "1118b290-9788-4394-96c1-e141310691d5"
+        },
+        {
+            "type": "gridcolumn",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyColumn8",
+                "width": 220,
+                "defaultWidth": 200,
+                "dataIndex": "tip_doc",
+                "text": "Tipo Documento"
+            },
+            "designerId": "5b079db7-ab82-4449-8047-fe3af6c90369"
+        },
+        {
+            "type": "gridcolumn",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyColumn4",
+                "width": 200,
+                "defaultWidth": 220,
+                "dataIndex": "num_doc",
+                "text": "Num. documento"
+            },
+            "designerId": "b7f9525c-2c69-4c67-b85c-b658d7a27a84"
+        },
+        {
+            "type": "gridcolumn",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyColumn9",
+                "dataIndex": "nom",
+                "text": "Nombre"
+            },
+            "designerId": "51dcff14-e7d5-4bc2-907b-8dfe86381cea"
+        },
+        {
+            "type": "gridcolumn",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyColumn10",
+                "id": null,
+                "dataIndex": "pais_exp",
+                "text": "Pais"
+            },
+            "designerId": "7ec2e7a9-8411-40f9-994e-2d8272654690"
+        },
+        {
+            "type": "pagingtoolbar",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dock": "bottom",
+                "designer|userClassName": "MyPagingToolbar",
+                "width": 360,
+                "afterPageText": "de {0}",
+                "beforePageText": "Pagina",
+                "displayInfo": true,
+                "displayMsg": "Expositores {0} - {1} de {2}",
+                "emptyMsg": "No Existen Expositores",
+                "firstText": "Primera Pagina",
+                "lastText": "Ultima Pagina",
+                "prevText": "Pagina Anterior",
+                "refreshText": "Actualizar",
+                "store": "Expositor"
+            },
+            "designerId": "9bccf86d-3144-465c-b23d-0382b6ddb269"
+        },
+        {
+            "type": "toolbar",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dock": "top",
+                "designer|userClassName": "MyToolbar2"
+            },
+            "designerId": "9f5e2301-d6d9-4e93-98ce-1a525fdf9d97",
+            "cn": [
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "designer|userClassName": "MyButton5",
+                        "id": "btnRegExpo",
+                        "iconCls": "icon-add",
+                        "text": "Registrar Expositor"
+                    },
+                    "designerId": "eff7f852-9b27-4948-b3f5-9ca6bfab8a4e",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "handler",
+                                "fn": "handler",
+                                "designer|params": [
+                                    "button",
+                                    "event"
+                                ],
+                                "implHandler": [
+                                    "var winp=Ext.getCmp('winExpositor');\r",
+                                    "\r",
+                                    "if(!winp){\r",
+                                    "    Ext.create('vision.view.MantenerExpositor');\r",
+                                    "winp=Ext.getCmp('winExpositor');}\r",
+                                    "\r",
+                                    "//Ext.getCmp('cod_exp_pon').setDisabled(false);\r",
+                                    "Ext.getCmp('formExpositor').getForm().reset(); \r",
+                                    "winp.show();"
+                                ]
+                            },
+                            "designerId": "05020e2f-ccec-4b7e-bf4a-a15629999f79"
+                        }
+                    ]
+                },
+                {
+                    "type": "tbseparator",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "designer|userClassName": "MySeparator3"
+                    },
+                    "designerId": "072fb15a-2229-4a96-af1a-9034c075e83f"
+                },
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "designer|userClassName": "MyButton4",
+                        "id": "btnManExpo",
+                        "iconCls": "icon-edit",
+                        "text": "Modificar Expositor"
+                    },
+                    "designerId": "db84e72a-3182-4f6f-9bd5-6b9d70a4934a",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "handler",
+                                "fn": "handler",
+                                "designer|params": [
+                                    "button",
+                                    "event"
+                                ],
+                                "implHandler": [
+                                    "\r",
+                                    "\r",
+                                    "var winp=Ext.getCmp('winExpositor');\r",
+                                    "\r",
+                                    "if(!winp){\r",
+                                    "    Ext.create('vision.view.MantenerExpositor');\r",
+                                    "winp=Ext.getCmp('winExpositor');}\r",
+                                    "var cod_exp=sessionStorage.getItem('cod_exp');\r",
+                                    "if(cod_exp!='-1'){\r",
+                                    "    //Ext.getCmp('cod_exp_pon').setDisabled(true);\r",
+                                    "    var record=Ext.getCmp('gridExpositor').getStore().findRecord('cod_exp',cod_exp);\r",
+                                    "    Ext.getCmp('cod_exp').setValue(record.get('cod_exp'));\r",
+                                    "    Ext.getCmp('tip_doc').setValue(record.get('tip_doc'));\r",
+                                    "    Ext.getCmp('num_doc').setValue(record.get('num_doc'));\r",
+                                    "    Ext.getCmp('nom_exp').setValue(record.get('nom_exp'));\r",
+                                    "    Ext.getCmp('ape_pat_exp').setValue(record.get('ape_pat_exp'));\r",
+                                    "    Ext.getCmp('ape_mat_exp').setValue(record.get('ape_mat_exp'));\r",
+                                    "    Ext.getCmp('pais_exp').setValue(record.get('pais_exp'));\r",
+                                    "\r",
+                                    "    // Ext.getCmp('id_req_pon').setValue(record.get('id_req_pon'));\r",
+                                    "    winp.show();\r",
+                                    "\r",
+                                    "\r",
+                                    "\r",
+                                    "}else Ext.Msg.alert('Precaución','Debe seleccionar una ponencia.');\r",
+                                    "\r",
+                                    "\r",
+                                    ""
+                                ]
+                            },
+                            "designerId": "49d0c05e-269d-4df5-bbfa-00af0e2fb576"
+                        }
+                    ]
+                },
+                {
+                    "type": "tbseparator",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "designer|userClassName": "MySeparator4"
+                    },
+                    "designerId": "cd34798b-b169-4b55-bf1f-140f5c2add9f"
+                },
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "designer|userClassName": "MyButton6",
+                        "text": "Eliminar Expositor"
+                    },
+                    "designerId": "4cd8496b-b94b-453d-86c2-4884ca3b8451",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "handler",
+                                "fn": "handler",
+                                "designer|params": [
+                                    "button",
+                                    "event"
+                                ],
+                                "implHandler": [
+                                    "\r",
+                                    "var cod_exp=sessionStorage.getItem('cod_exp');\r",
+                                    "if(cod_exp!=-1){\r",
+                                    "    var sexpositor=Ext.getCmp('gridExpositor').getStore();\r",
+                                    "    var record=Ext.getCmp('gridExpositor').getStore().findRecord('cod_exp',cod_exp);\r",
+                                    "    var opt=Ext.MessageBox.confirm('Comfirmar', 'Esta se guro que desea eliminar el:<br>Expositor: <b>'+record.get('nom')+'</b><br>Codigo: <b>'+cod_exp+'<b>',\r",
+                                    "    function(button) {\r",
+                                    "        if (button === 'yes') {\r",
+                                    "            sexpositor.load({\r",
+                                    "                url:'../../administracion/expositor/borrar_expositor',\r",
+                                    "                method: 'POST',\r",
+                                    "                params:{'tipoSql':'delete','cod_exp':cod_exp},\r",
+                                    "                scope: this,\r",
+                                    "                callback: function(records, operation, success,response) {\r",
+                                    "                    // the operation object\r",
+                                    "                    // contains all of the details of the load operation\r",
+                                    "                    //this.load();\r",
+                                    "\r",
+                                    "                }\r",
+                                    "\r",
+                                    "            });\r",
+                                    "        }//END if\r",
+                                    "\r",
+                                    "    });\r",
+                                    "}else Ext.Msg.alert('Precaución','Debe seleccionar una ponencia.');\r",
+                                    ""
+                                ]
+                            },
+                            "designerId": "a39b3b6d-eec7-4805-87ca-27d64aba98e6"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onGridponenciaSelect",
+                "fn": "onGridponenciaSelect",
+                "implHandler": [
+                    "sessionStorage.setItem('cod_exp',record.get('cod_exp'));"
+                ],
+                "name": "select",
+                "scope": "me"
+            },
+            "designerId": "7dbb8783-fb02-405f-b723-9e721d2281bb"
+        }
+    ]
+}

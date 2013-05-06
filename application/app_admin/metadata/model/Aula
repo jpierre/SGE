@@ -1,0 +1,41 @@
+{
+    "type": "datamodel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Aula"
+    },
+    "id": "ExtBox1-ext-gen26383",
+    "designerId": "8abfef18-b4ff-45aa-be16-63d37aaf1c60",
+    "cn": [
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field34",
+                "name": "cod_fia_amb"
+            },
+            "designerId": "46bef14c-0784-48dc-b586-2d7592cd3e10"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field35",
+                "name": "value"
+            },
+            "designerId": "f6d1cae3-bda0-433b-a428-083b29b8ded7"
+        }
+    ]
+}

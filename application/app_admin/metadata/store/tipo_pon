@@ -1,0 +1,70 @@
+{
+    "type": "arraystore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "tipo_pon",
+        "storeId": "MyArrayStore4",
+        "model": null,
+        "data": "[{\"tipo_pon\":\"1\",\"value\":\"Ponencia\"},{\"tipo_pon\":\"2\",\"value\":\"Conferencia\"},{\"tipo_pon\":\"3\",\"value\":\"Taller\"}]\r\n\r\n\r\n\r\n\r\n\r\n"
+    },
+    "id": "ExtBox1-ext-gen94716",
+    "designerId": "ed1fbe7a-53f2-4c02-865c-9c56bc52a6a4",
+    "cn": [
+        {
+            "type": "ajaxproxy",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyAjaxProxy1"
+            },
+            "designerId": "dc15379f-5df8-418c-a31f-ec8e6c8da0dd",
+            "cn": [
+                {
+                    "type": "arrayreader",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyArrayReader"
+                    },
+                    "designerId": "6593df64-b3aa-4fdc-834a-8e0e4364903c"
+                }
+            ]
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field17",
+                "name": "tipo_pon"
+            },
+            "designerId": "eee74ae6-cfa8-4d7f-948b-0173224a78ac"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field18",
+                "name": "value"
+            },
+            "designerId": "168f8a7c-1c9b-49c7-8d0e-1427f6f3258f"
+        }
+    ]
+}

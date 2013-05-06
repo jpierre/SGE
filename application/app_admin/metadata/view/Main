@@ -1,0 +1,27 @@
+{
+    "type": "viewport",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Main",
+        "designer|initialView": true,
+        "layout": "card"
+    },
+    "id": "ExtBox1-ext-gen3577",
+    "designerId": "c9396fbc-595b-4121-9ff4-97a5fee34a26",
+    "cn": [
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "designerId": "cb68363c-d016-4251-9ac9-05099c2b9a9d",
+            "masterInstanceId": "ExtBox1-ext-gen9585"
+        }
+    ]
+}

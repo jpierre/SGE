@@ -1,0 +1,93 @@
+{
+    "type": "datamodel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Evento"
+    },
+    "id": "ExtBox1-ext-gen26243",
+    "designerId": "ec212e19-42b6-4747-b32f-a99644298590",
+    "cn": [
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field17",
+                "name": "id_eve"
+            },
+            "designerId": "8b25efde-0d1b-409f-a915-7422f56e800c"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field18",
+                "name": "nom_eve"
+            },
+            "designerId": "8a31028a-aa05-4b7f-8faa-62c8e97c6f95"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field38",
+                "name": "fech_ini_eve"
+            },
+            "designerId": "e538b3c8-3eb4-44c5-b820-3e27d514ee8c"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field39",
+                "name": "fech_fin_eve"
+            },
+            "designerId": "b3032415-eb6e-406d-a564-75e008f3e910"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field40",
+                "name": "est_eve"
+            },
+            "designerId": "4fdc0f02-75b0-4d2c-aaa4-095a6d065eea"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field40",
+                "name": "est_eve_desc"
+            },
+            "designerId": "aba047bf-d9b3-4764-94d0-6211276bf7db"
+        }
+    ]
+}

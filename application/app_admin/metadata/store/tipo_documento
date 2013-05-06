@@ -1,0 +1,70 @@
+{
+    "type": "arraystore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "tipo_documento",
+        "storeId": "MyArrayStore7",
+        "model": null,
+        "data": "[{\"tip_doc\":\"1\",\"value\":\"DNI\"},{\"tip_doc\":\"2\",\"value\":\"Visa\"},{\"tip_doc\":\"3\",\"value\":\"Pasaporte\"}]"
+    },
+    "id": "ExtBox1-ext-gen37530",
+    "designerId": "713f7bbd-5fed-41e7-a994-0bacd4c79bf2",
+    "cn": [
+        {
+            "type": "ajaxproxy",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyAjaxProxy1"
+            },
+            "designerId": "f037295d-1b5f-46ec-b3d6-1cc06c8076bb",
+            "cn": [
+                {
+                    "type": "arrayreader",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyArrayReader"
+                    },
+                    "designerId": "53091b74-79e3-4813-8dc2-549fed3645e9"
+                }
+            ]
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field17",
+                "name": "tip_doc"
+            },
+            "designerId": "c5b7df27-45d2-4c57-a6db-e64b25c5907e"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field18",
+                "name": "value"
+            },
+            "designerId": "af87e524-da9d-454d-ae49-79fb6f3e8c08"
+        }
+    ]
+}

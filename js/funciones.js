@@ -8,7 +8,7 @@ $(document).ready(function(){
         }else{
             $.ajax({
                 type: "POST",
-                url: "http://localhost/sge/seguridad/c_recuperarContrasenia/comprobar_email_ajax",
+                url: "http://sysmov.net/sge/seguridad/c_recuperarContrasenia/comprobar_email_ajax",
                 data: "vemail="+$('#vemail').val(),
                 beforeSend: function(){
                     $('#msgEmail').html('Verificando...');

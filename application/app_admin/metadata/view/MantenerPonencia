@@ -1,0 +1,414 @@
+{
+    "type": "window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "MantenerPonencia",
+        "height": 530,
+        "id": "winPonencia",
+        "width": 455,
+        "layout": "border",
+        "title": "Mantener Ponencia",
+        "animateTarget": "btnManPone",
+        "modal": true
+    },
+    "id": "ExtBox1-ext-gen11242",
+    "designerId": "9d4572e7-6787-4c2d-8ff4-073763ea0633",
+    "cn": [
+        {
+            "type": "form",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|region": "center",
+                "designer|userClassName": "MyForm",
+                "border": 0,
+                "id": "formPon",
+                "bodyPadding": 10,
+                "title": null,
+                "url": "../../administracion/ponencia/registar_ponencia",
+                "waitTitle": "Guardando..."
+            },
+            "designerId": "8597d428-07be-4b26-bd9f-0defaaa6ec30",
+            "cn": [
+                {
+                    "type": "fieldset",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyFieldSet1",
+                        "title": "Datos de Ponencia"
+                    },
+                    "designerId": "e5d9022a-c1d5-45b1-bad1-62139be6fc31",
+                    "cn": [
+                        {
+                            "type": "textfield",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|anchor": "100%",
+                                "designer|userClassName": "MyTextField",
+                                "designer|displayName": "id_pon",
+                                "cls": "x-item-disabled",
+                                "disabled": null,
+                                "hidden": false,
+                                "hideMode": null,
+                                "id": "id_pon",
+                                "overCls": null,
+                                "style": null,
+                                "styleHtmlContent": null,
+                                "fieldCls": "x-item-disabled",
+                                "fieldStyle": "color:#808080;",
+                                "name": "id_pon",
+                                "readOnly": true,
+                                "readOnlyCls": "x-item-disabled",
+                                "fieldBodyCls": null,
+                                "fieldLabel": "Codigo",
+                                "formItemCls": null,
+                                "hideLabel": false,
+                                "labelCls": null,
+                                "labelClsExtra": null,
+                                "labelStyle": "color:#808080;"
+                            },
+                            "designerId": "db59da16-ee00-439a-960c-83961213590c"
+                        },
+                        {
+                            "type": "combobox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|anchor": "100%",
+                                "designer|userClassName": "MyComboBox",
+                                "id": "cod_eve_pon",
+                                "renderData": null,
+                                "width": 415,
+                                "name": "cod_eve_pon",
+                                "value": null,
+                                "fieldLabel": "Evento",
+                                "allowBlank": false,
+                                "blankText": "La Ponencia debe ser asignada a un evento.",
+                                "editable": false,
+                                "autoSelect": false,
+                                "displayField": "nom_eve",
+                                "forceSelection": true,
+                                "queryCaching": false,
+                                "selectOnTab": false,
+                                "store": "eventoCombo",
+                                "typeAhead": true,
+                                "valueField": "id_eve",
+                                "valueNotFoundText": "no se cargo la data"
+                            },
+                            "designerId": "313dc30f-06a3-41bf-b8be-3062792fb187"
+                        },
+                        {
+                            "type": "datefield",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|anchor": "100%",
+                                "designer|userClassName": "MyDateField",
+                                "id": "fech_ini_pon",
+                                "name": "fech_ini_pon",
+                                "fieldLabel": "Fecha Inicio",
+                                "allowBlank": false,
+                                "blankText": "Debe Ingresar una fecha de Inicio",
+                                "format": "d-m-Y H:i:s"
+                            },
+                            "designerId": "a277bb53-3304-4c6d-9d52-b94d22be691a"
+                        },
+                        {
+                            "type": "datefield",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|anchor": "100%",
+                                "designer|userClassName": "MyDateField",
+                                "id": "fech_fin_pon",
+                                "name": "fech_fin_pon",
+                                "fieldLabel": "Fecha Final",
+                                "allowBlank": false,
+                                "blankText": "Debe Ingresar una fecha de final",
+                                "format": "d-m-Y H:i:s"
+                            },
+                            "designerId": "12302385-9570-4617-94a7-4cd055076803"
+                        },
+                        {
+                            "type": "textfield",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|anchor": "100%",
+                                "designer|userClassName": "MyTextField3",
+                                "id": "nom_pon",
+                                "name": "nom_pon",
+                                "fieldLabel": "Nombre Ponencia",
+                                "allowBlank": false,
+                                "blankText": "Debe ingresar un nombre para la Ponencia"
+                            },
+                            "designerId": "b4c66283-4994-474e-998e-01e06de3084b"
+                        },
+                        {
+                            "type": "textareafield",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|anchor": "100%",
+                                "designer|userClassName": "MyTextArea",
+                                "id": "desc_pon",
+                                "name": "desc_pon",
+                                "fieldLabel": "Descripcion"
+                            },
+                            "designerId": "0f6aad78-da55-4fcc-820c-106117b42f7f"
+                        },
+                        {
+                            "type": "combobox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|anchor": "100%",
+                                "designer|userClassName": "MyComboBox4",
+                                "id": "tipo_pon",
+                                "name": "tipo_pon",
+                                "fieldLabel": "Tipo",
+                                "editable": false,
+                                "autoSelect": false,
+                                "displayField": "value",
+                                "forceSelection": true,
+                                "queryMode": "local",
+                                "selectOnTab": false,
+                                "store": "tipo_pon",
+                                "typeAhead": true,
+                                "valueField": "tipo_pon"
+                            },
+                            "designerId": "b65d313e-3d01-4ca1-bd1f-d362d51aab9a"
+                        },
+                        {
+                            "type": "combobox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|anchor": "100%",
+                                "designer|userClassName": "MyComboBox",
+                                "id": "dirigido_a_pon",
+                                "name": "dirigido_a_pon",
+                                "fieldLabel": "Dirigido a",
+                                "editable": false,
+                                "autoSelect": false,
+                                "displayField": "value",
+                                "forceSelection": true,
+                                "queryMode": "local",
+                                "selectOnTab": false,
+                                "store": "Dirigido",
+                                "typeAhead": true,
+                                "valueField": "id_dir"
+                            },
+                            "designerId": "c3fa43ca-0d95-4233-a8c0-fce501955511"
+                        },
+                        {
+                            "type": "combobox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|anchor": "100%",
+                                "designer|userClassName": "MyComboBox",
+                                "id": "est_pon",
+                                "name": "est_pon",
+                                "fieldLabel": "Estado",
+                                "allowBlank": false,
+                                "blankText": "Debe asignar un estado.",
+                                "editable": false,
+                                "autoSelect": false,
+                                "displayField": "value",
+                                "forceSelection": true,
+                                "queryMode": "local",
+                                "selectOnTab": false,
+                                "store": "estado_pon",
+                                "typeAhead": true,
+                                "valueField": "est_pon"
+                            },
+                            "designerId": "cdf03ae6-dded-4e2f-8cc9-1d8fbe0e56d8"
+                        }
+                    ]
+                },
+                {
+                    "type": "fieldset",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyFieldSet",
+                        "layout": null,
+                        "title": "Ambiente de Ponencia"
+                    },
+                    "designerId": "84ef1cdf-c5f2-4fd1-aaaf-882e9e3ecfe0",
+                    "cn": [
+                        {
+                            "type": "container",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "container|columns": 2,
+                                "designer|userClassName": "MyContainer3",
+                                "designer|displayName": "conatiner_amb",
+                                "margin": "1 1 1 1",
+                                "padding": null,
+                                "layout": "table"
+                            },
+                            "designerId": "02915f46-576d-4993-8bb6-c26ecede221a",
+                            "cn": [
+                                {
+                                    "type": "combobox",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|userClassName": "MyComboBox",
+                                        "id": "id_amb_pon",
+                                        "width": 220,
+                                        "name": "id_amb_pon",
+                                        "fieldLabel": "Ambiente",
+                                        "labelWidth": 70,
+                                        "allowBlank": false,
+                                        "editable": false,
+                                        "autoSelect": false,
+                                        "displayField": "value",
+                                        "queryMode": "local",
+                                        "selectOnTab": false,
+                                        "store": "ambiente",
+                                        "typeAhead": true,
+                                        "valueField": "id_amb"
+                                    },
+                                    "designerId": "3c3c15cc-45a1-4e40-aeb6-03cc73aabea2"
+                                },
+                                {
+                                    "type": "numberfield",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|userClassName": "MyNumberField",
+                                        "margin": "0 0 0 20",
+                                        "width": 160,
+                                        "name": "capac_amb",
+                                        "fieldLabel": "Capacidad",
+                                        "labelWidth": 70
+                                    },
+                                    "designerId": "fdd50558-8393-42e8-b861-752afe710b41"
+                                },
+                                {
+                                    "type": "combobox",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|userClassName": "MyComboBox1",
+                                        "margin": null,
+                                        "width": 220,
+                                        "name": "cod_fia_amb",
+                                        "fieldLabel": "Aula",
+                                        "labelWidth": 70,
+                                        "allowBlank": false,
+                                        "autoSelect": false,
+                                        "displayField": "value",
+                                        "queryMode": "local",
+                                        "selectOnTab": false,
+                                        "store": "Aula",
+                                        "typeAhead": true,
+                                        "valueField": "cod_fia_amb"
+                                    },
+                                    "designerId": "4fc685ae-b104-4aca-9855-3be430cc029d"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "onFormPonActioncomplete",
+                        "fn": "onFormPonActioncomplete",
+                        "implHandler": [
+                            "\r",
+                            "Ext.getCmp('winPonencia').close(); \r",
+                            "Ext.getCmp('gridponencia').getStore().load();\r",
+                            "Ext.getCmp('gridponencia').getView().refresh();"
+                        ],
+                        "name": "actioncomplete",
+                        "scope": "me"
+                    },
+                    "designerId": "67acccd5-2a42-4903-a8da-bb42373486bc"
+                },
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "onFormPonActionfailed",
+                        "fn": "onFormPonActionfailed",
+                        "implHandler": [
+                            ""
+                        ],
+                        "name": "actionfailed",
+                        "scope": "me"
+                    },
+                    "designerId": "447c7e30-1d1b-4f8d-871b-312b64acf5a7"
+                }
+            ]
+        }
+    ]
+}

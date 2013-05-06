@@ -1,0 +1,70 @@
+{
+    "type": "arraystore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "estado_eve",
+        "storeId": "estado_eve",
+        "model": null,
+        "data": "[{\"est_eve\":\"1\",\"value\":\"Sin Contratiempos\"},{\"est_eve\":\"2\",\"value\":\"Cancelada\"}]"
+    },
+    "id": "ExtBox1-ext-gen17297",
+    "designerId": "42998522-0ba8-4c06-9d99-4f71269cbe51",
+    "cn": [
+        {
+            "type": "ajaxproxy",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyAjaxProxy1"
+            },
+            "designerId": "694affd5-c674-4b7b-8bfe-bfa3c1204c7f",
+            "cn": [
+                {
+                    "type": "arrayreader",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyArrayReader"
+                    },
+                    "designerId": "3c2ae18a-bedc-47d5-92e4-a1f641903d3f"
+                }
+            ]
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field17",
+                "name": "est_eve"
+            },
+            "designerId": "3dc1bf4c-0393-4b67-8b87-47894a2c6b3b"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field18",
+                "name": "value"
+            },
+            "designerId": "f4ac904c-be75-4e95-9488-22928cb8231f"
+        }
+    ]
+}
