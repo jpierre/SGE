@@ -25,10 +25,12 @@
                   <td>DNI</td>
                   <td><input id="dni" type="text" value="<?php echo $this->session->userdata('idDNI'); ?>" readonly/></td>
                 </tr>
+                <?php if($this->session->userdata('estado')=='1' || $this->session->userdata('estado')=='2'):?>
                 <tr>
                   <td>Codigo de alumno</td>
                   <td><input id="cod" type="text"  value="<?php echo $this->session->userdata('codigo'); ?>" readonly/></td>
                 </tr>
+                <?php endif ?>
               </table>
   
   <div style="display:none" id="output"></div>
