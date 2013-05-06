@@ -31,7 +31,7 @@
                 </tr>
               </table>
   
-  <div id="output"></div>
+  <div style="display:none" id="output"></div>
 <canvas id="micanvas"> </canvas>
 <fieldset>
   <legend>Pulsa sobre el tipo de imagen y el resultado se generar&aacute; abajo</legend>
