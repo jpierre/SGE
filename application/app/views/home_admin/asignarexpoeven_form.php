@@ -1,3 +1,14 @@
+<script language="javascript" type="text/javascript">
+function comprobar(obj)
+{   
+    if (obj.checked)
+        document.getElementById('asignar').disabled = false;
+    else
+        document.getElementById('asignar').disabled = true;
+}
+
+</script>
+
 <link href="<?php echo base_url(); ?>css/wufo/structure.css" rel="stylesheet">
 <link href="<?php echo base_url(); ?>css/wufo/form.css" rel="stylesheet">
 <link href="<?php echo base_url(); ?>css/wufo/theme.css" rel="stylesheet">
@@ -99,24 +110,24 @@
 					
 					<table width="274" border="0">
 					  <tr>
-					    <td><input name="req1" value="1" type="checkbox"/>
+					    <td><input name="req1" value="1" type="checkbox" <?php if($this->session->userdata('mensaje')!="No se encontraron Resultados" && $this->session->userdata('mensaje') != NULL){ $a=1;?> onChange="comprobar(this);" <?php } ?>/>
 					    Pizarra Acrilica</td>
-					    <td><input name="req2" value="1" type="checkbox"/>
+					    <td><input name="req2" value="1" type="checkbox" <?php if($a==1){?> onChange="comprobar(this);" <?php } ?>/>
 					    Personal de Apoyo</td>
-					    <td><input name="req3" value="1" type="checkbox"/>
+					    <td><input name="req3" value="1" type="checkbox" <?php if($a==1){?> onChange="comprobar(this);"  <?php } ?>/>
 					      Parlantes</td>
 					  </tr>
 					  <tr>
-					    <td><input name="req4" value="1" type="checkbox"/>
+					    <td><input name="req4" value="1" type="checkbox" <?php if($a==1){?> onChange="comprobar(this);"  <?php } ?>/>
 					      Laptops</td>
-					    <td><input name="req5" value="1" type="checkbox"/>
+					    <td><input name="req5" value="1" type="checkbox" <?php if($a==1){?> onChange="comprobar(this);"  <?php } ?>/>
 					      Microfono Inalambrico</td>
 					    <td>&nbsp;</td>
 					  </tr>
 					  <tr>
 					    <td colspan="3">
 					    Requerimientos de SW
-					    <textarea name="reqAdic"></textarea>
+					    <textarea name="reqAdic" <?php if($a==1){?> onkeyup = "asignar.disabled = this.value==''"<?php } ?>></textarea>
 					    </td>
 						<td>
 						
@@ -125,7 +136,7 @@
 					</table>
 					
 					
-					<input type="submit" value="Asignar" />
+					<input id="asignar" type="submit" value="Asignar" name="asignar"  disabled/>
 					</fieldset>
 					</form>
 
