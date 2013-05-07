@@ -42,7 +42,7 @@
       <button id="png">Generar PNG</button>
       |
       <button id="jpeg">Generar JPEG</button>
-      <a href="javascript:generarPDF()">Generar PDF</a>Debes generar primero la imagen <br/>
+      <a href="javascript:generarPDF()">Generar PDF</a> <b>Debes generar primero la imagen</b> <br/>
     </fieldset>
     <img src="" id="laimagen"/> </div>
   <!--container--> 
