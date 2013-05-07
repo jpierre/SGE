@@ -43,7 +43,9 @@
     
     <canvas id="micanvas"> </canvas>
     <fieldset>
-      <legend>SELECCIONA EL TIPO DE IMAGEN Y EL RESULTADO SE GENERARA ABAJO</legend>
+      <legend><b>SELECCIONA EL TIPO DE IMAGEN Y EL RESULTADO SE GENERARA ABAJO<br />
+      (Puede guardar la imagen o generar un pdf)</b>
+      </legend>
       <p>&nbsp;</p>
       <p>&nbsp;</p>
       <button class="css3button2" id="png">Generar QR PNG</button>
