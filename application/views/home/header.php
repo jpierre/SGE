@@ -19,19 +19,28 @@ function generarPDF() {
 	var apepat=document.getElementById('apepat').value;
 	var apemat=document.getElementById('apemat').value;
 	var dni=document.getElementById('dni').value;
+	var cod=document.getElementById('cod').value;
 	
 	var imagen=document.getElementById("laimagen");
 
 	var doc = new jsPDF();
-	doc.text(50,20, 'Universidad de San Martin de Porres')
+	doc.setFontSize(15);
+	doc.setFont("times");
+	
+	doc.setLineWidth(0.5);
+	doc.line(20, 25, 190, 25);
+	
+	doc.text(70,20, 'Universidad de San Martin de Porres')
+	
 	doc.text(20, 40, 'Nombre :' + " "+ nombre);
 	doc.text(20, 50, 'Apellido : ' + " " + apepat + " " +apemat);
 	doc.text(20, 60, 'DNI :' + " "+ dni);
-	doc.addImage(imagen,'JPEG', 50, 70, 50, 50);
+	doc.addImage(imagen,'JPEG', 80, 70, 50, 50);
 	
 	
 	// Output as Data URI
 	doc.output('datauri');
+	
 }
 
 </script>
