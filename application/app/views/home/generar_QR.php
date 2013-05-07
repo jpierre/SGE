@@ -21,12 +21,12 @@
         <td>Apellido Materno</td>
         <td><input id="apemat" type="text" value="<?php echo $this->session->userdata('apeMat'); ?>" readonly /></td>
       </tr>
-      <?php if($this->session->userdata('estado')!='1' && $this->session->userdata('estado')!='2'){?>
+    
       <tr>
         <td>DNI</td>
         <td><input id="dni" type="text" value="<?php echo $this->session->userdata('idDNI'); ?>" readonly/></td>
       </tr>
-      <?php }else{ ?>
+      <?php if($this->session->userdata('estado')=='1' || $this->session->userdata('estado')=='2'){?> ?>
       
       <tr>
         <td>Codigo de alumno</td>
