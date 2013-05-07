@@ -21,17 +21,18 @@
         <td>Apellido Materno</td>
         <td><input id="apemat" type="text" value="<?php echo $this->session->userdata('apeMat'); ?>" readonly /></td>
       </tr>
+      <?php if($this->session->userdata('estado')!='1' && $this->session->userdata('estado')!='2'):?>
       <tr>
         <td>DNI</td>
         <td><input id="dni" type="text" value="<?php echo $this->session->userdata('idDNI'); ?>" readonly/></td>
       </tr>
-      
-      <?php // if($this->session->userdata('estado')=='1' || $this->session->userdata('estado')=='2'):?>
+      <?php endif ?>
+      <?php if($this->session->userdata('estado')=='1' || $this->session->userdata('estado')=='2'):?>
       <tr>
         <td>Codigo de alumno</td>
         <td><input id="cod" type="text"  value="<?php echo $this->session->userdata('codigo'); ?>" readonly/></td>
       </tr>
-      <?php //endif ?>
+      <?php endif ?>
     </table>
     <div style="display:none" id="output"></div>
     
@@ -42,7 +43,12 @@
       <button id="png">Generar PNG</button>
       |
       <button id="jpeg">Generar JPEG</button>
-      <a href="javascript:generarPDF()">Generar PDF</a> <a href="javascript:generarPDF2()">Generar PDF</a> <b>Debes generar primero la imagen</b> <br/>
+      <?php if($this->session->userdata('estado')=='1' || $this->session->userdata('estado')=='2'):?>
+      <a href="javascript:generarPDF()">Generar PDF</a>
+      <?php endif ?>
+      <?php if($this->session->userdata('estado')!='1' && $this->session->userdata('estado')!='2'):?>
+      <a href="javascript:generarPDF2()">Generar PDF</a> <b>Debes generar primero la imagen</b> <br/>
+      <?php endif ?>
     </fieldset>
     <img src="" id="laimagen"/> </div>
   <!--container--> 
