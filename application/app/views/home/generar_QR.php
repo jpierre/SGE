@@ -8,7 +8,7 @@
   <div id="container" class="ltr">
     <h1>Estos datos han generado tu codigo QR!!</h1>
     <h3>Es necesario que guardes este codigo QR para poder registrar tu asistencia en las ponencias que asistas</h3>
-    <table width="336" border="1">
+    <table width="336" border="0">
       <tr>
         <td>Nombre</td>
         <td><input id="nom" type="text" value="<?php echo $this->session->userdata('nombres'); ?>" readonly></td>
@@ -45,6 +45,7 @@
       <button id="jpeg">Generar JPEG</button>
       <?php if($this->session->userdata('estado')=='1' || $this->session->userdata('estado')=='2'){?>
       <a href="javascript:generarPDF()">Generar PDF</a>
+     
       <?php }else{ ?>
       <a href="javascript:generarPDF2()">Generar PDF</a> <b>Debes generar primero la imagen</b> <br/>
       <?php } ?>
