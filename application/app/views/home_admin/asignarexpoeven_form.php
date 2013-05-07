@@ -1,6 +1,6 @@
 <script language="javascript" type="text/javascript">
 function comprobar(obj)
-{   
+{
     if (obj.checked)
         document.getElementById('asignar').disabled = false;
     else
