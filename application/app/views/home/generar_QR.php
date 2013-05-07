@@ -25,21 +25,23 @@
                   <td>DNI</td>
                   <td><input id="dni" type="text" value="<?php echo $this->session->userdata('idDNI'); ?>" readonly/></td>
                 </tr>
+                <?php if($this->session->userdata('estado')=='1' || $this->session->userdata('estado')=='2'):?>
                 <tr>
                   <td>Codigo de alumno</td>
                   <td><input id="cod" type="text"  value="<?php echo $this->session->userdata('codigo'); ?>" readonly/></td>
                 </tr>
+                <?php endif ?>
               </table>
   
-  <div id="output"></div>
+  <div style="display:none" id="output"></div>
 <canvas id="micanvas"> </canvas>
 <fieldset>
   <legend>Pulsa sobre el tipo de imagen y el resultado se generar&aacute; abajo</legend>
   <button id="png">Generar PNG</button>
   |
   <button id="jpeg">Generar JPEG</button>
-  
-  <a href="javascript:demo1()">Run Code</a>
+
+  <a href="javascript:generarPDF()">Generar PDF</a>
   <br/>
 </fieldset>
 <img src="" id="laimagen"/> 
@@ -53,4 +55,5 @@
   
 <?php $this->load->view('home/right_side');?>
 <?php $this->load->view('home/footer');?>
+
 
