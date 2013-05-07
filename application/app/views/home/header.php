@@ -64,27 +64,27 @@ function generarPDF2(){
 		var i=document.getElementById("laimagen");
 		var j=i.getAttribute("src");
 	
-	if(j==""){
-		alert("Genere primero el codigo QR");
+		if(j==""){
+			alert("Genere primero el codigo QR");
 		}
 
-	else{
-		var doc = new jsPDF();
-   		 doc.setFontSize(15);
-		doc.setFont("times");
+		else{
+			var doc = new jsPDF();
+   			 doc.setFontSize(15);
+			doc.setFont("times");
 	
-		doc.rect(10, 10, 190, 200); 
-		doc.addImage(logo,'JPEG',10,5,60,20)
-		doc.text(50,50, 'FACULTA DE INGENIERIA Y ARQUITECTURA');
-		doc.rect(18, 65, 100, 40); 
-		doc.text(20, 70, 'Nombre (S) :' + "  "+ nombre);
-		doc.text(20, 80, 'Apellido (S) : ' + "  " + apepat + "  " +apemat);
-		doc.text(20, 90, 'DNI :' + " "+ dni);
-		//doc.text(20,100, 'Codigo :' + " "+ cod);
-		doc.addImage(imagen,'JPEG', 80, 120, 60, 60);
+			doc.rect(10, 10, 190, 200); 
+			doc.addImage(logo,'JPEG',10,5,60,20)
+			doc.text(50,50, 'FACULTA DE INGENIERIA Y ARQUITECTURA');
+			doc.rect(18, 65, 100, 40); 
+			doc.text(20, 70, 'Nombre (S) :' + "  "+ nombre);
+			doc.text(20, 80, 'Apellido (S) : ' + "  " + apepat + "  " +apemat);
+			doc.text(20, 90, 'DNI :' + " "+ dni);
+			//doc.text(20,100, 'Codigo :' + " "+ cod);
+			doc.addImage(imagen,'JPEG', 80, 120, 60, 60);
 	
-		// Output as Data URI
-		doc.output('datauri');
+			// Output as Data URI
+			doc.output('datauri');
 		}
 }
 
