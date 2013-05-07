@@ -12,7 +12,8 @@
     <h3>Es necesario que guardes este codigo QR para poder registrar tu asistencia en las ponencias que asistas</h3>
     <br />
     <br />
-    <table width="409" height="208" border="0">
+    <table width="409" height="208" border="0" class="table1">
+    <tbody>
       <tr>
         <td width="154"><label>Nombre :</label></td>
         <td width="245"><input id="nom" type="text" value="<?php echo $this->session->userdata('nombres'); ?>" readonly></td>
@@ -36,6 +37,7 @@
         <td><label>Codigo de alumno :</label></td>
         <td><input id="cod" type="text"  value="<?php echo $this->session->userdata('codigo'); ?>" readonly/></td>
       </tr>
+      </tbody>
       <?php } ?>
     </table>
     <div style="display:none" id="output"></div>

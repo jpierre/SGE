@@ -381,3 +381,26 @@ text-align:right;
 width:140px;
 float:left;
 }
+
+
+/*Tabla*/
+
+table.table1{
+    font-family: "Trebuchet MS", sans-serif;
+    font-size: 16px;
+    
+    line-height: 1.4em;
+    font-style: normal;
+    border-collapse:separate;
+}
+.table1 tbody td{
+    padding:10px;
+    text-align:center;
+    background-color:#B5DAFF;
+    border: 2px solid #E7EFE0;
+    -moz-border-radius:2px;
+    -webkit-border-radius:2px;
+    border-radius:2px;
+    color:#666;
+    text-shadow:1px 1px 1px #fff;
+}
