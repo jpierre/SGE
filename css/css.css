@@ -363,3 +363,21 @@ button.css3button {
 		0px -1px 0px rgba(000,000,000,0.2),
 		0px 1px 0px rgba(255,255,255,0.3);
 }
+
+/*Inputs text*/
+
+input{
+float:left;
+font-size:12px;
+padding:4px 2px;
+border:solid 1px #aacfe4;
+width:200px;
+margin:2px 0 0px 10px;
+}
+label{
+display:block;
+
+text-align:right;
+width:140px;
+float:left;
+}

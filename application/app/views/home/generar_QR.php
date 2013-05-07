@@ -12,28 +12,28 @@
     <h3>Es necesario que guardes este codigo QR para poder registrar tu asistencia en las ponencias que asistas</h3>
     <br />
     <br />
-    <table width="364" height="166" border="0">
+    <table width="409" height="208" border="0">
       <tr>
-        <td width="144">Nombre :</td>
-        <td width="210"><input id="nom" type="text" value="<?php echo $this->session->userdata('nombres'); ?>" readonly></td>
+        <td width="154"><label>Nombre :</label></td>
+        <td width="245"><input id="nom" type="text" value="<?php echo $this->session->userdata('nombres'); ?>" readonly></td>
       </tr>
       <tr>
-        <td>Apellido Paterno :</td>
+        <td><label>Apellido Paterno :</label></td>
         <td><input id="apepat" type="text" value="<?php echo $this->session->userdata('apePat'); ?>" readonly/></td>
       </tr>
       <tr>
-        <td>Apellido Materno :</td>
+        <td><label>Apellido Materno :</label></td>
         <td><input id="apemat" type="text" value="<?php echo $this->session->userdata('apeMat'); ?>" readonly /></td>
       </tr>
     
       <tr>
-        <td>DNI :</td>
+        <td><label>DNI :</label></td>
         <td><input id="dni" type="text" value="<?php echo $this->session->userdata('idDNI'); ?>" readonly/></td>
       </tr>
       <?php if($this->session->userdata('estado')=='1' || $this->session->userdata('estado')=='2'){?> ?>
       
       <tr>
-        <td>Codigo de alumno :</td>
+        <td><label>Codigo de alumno :</label></td>
         <td><input id="cod" type="text"  value="<?php echo $this->session->userdata('codigo'); ?>" readonly/></td>
       </tr>
       <?php } ?>
@@ -60,7 +60,7 @@
     </fieldset>
     <br />
     <br />
-    <img src="" id="laimagen"/> </div>
+  <img src="" id="laimagen"/> </div>
   <!--container--> 
   <!-- end .content --></div>
 <?php $this->load->view('home/right_side');?>
