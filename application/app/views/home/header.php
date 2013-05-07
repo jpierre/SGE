@@ -14,7 +14,7 @@
 
 <script type="text/javascript">
 
-function demo1() {
+function generarPDF() {
 	
 	var nombre=document.getElementById('nom').value;
 	var apepat=document.getElementById('apepat').value;

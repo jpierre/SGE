@@ -41,7 +41,7 @@
   |
   <button id="jpeg">Generar JPEG</button>
 	
-  <a href="javascript:demo1()">Run Code</a>
+  
   <a href="javascript:generarPDF()">Generar PDF</a>
   <br/>
 </fieldset>
