@@ -31,7 +31,7 @@
         <td><label>DNI :</label></td>
         <td><input id="dni" type="text" value="<?php echo $this->session->userdata('idDNI'); ?>" readonly/></td>
       </tr>
-      <?php if($this->session->userdata('estado')=='1' || $this->session->userdata('estado')=='2'){?> ?>
+      <?php if($this->session->userdata('estado')=='1' || $this->session->userdata('estado')=='2'){?>
       
       <tr>
         <td><label>Codigo de alumno :</label></td>
