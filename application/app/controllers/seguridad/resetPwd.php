@@ -1,7 +1,9 @@
 <?php
 error_reporting(E_ALL ^ E_NOTICE);
 
-class c_recuperarContrasenia extends CI_Controller{
+//LE PUSE ESTE NOMBRE AL CONTROLADOR PARA NO SER MUY EXPLICITO ACERCA DE LOS NOMBRES
+//DE NUESTROS CONTROLADORES, YA QUE AL USUARIO LE LLEGA UN LINK CON LA RUTA EXPLICITA HASTA EL METODO.
+class resetPwd extends CI_Controller{
 	
 	public function __construct(){
         parent::__construct();
@@ -22,18 +24,25 @@ class c_recuperarContrasenia extends CI_Controller{
 		$this->form_validation->set_message('min_length', 'El campo %s debe contener como mínimo %s caracteres.');
 		$this->form_validation->set_message('max_length', 'El campo %s debe contener como máximo %s caracteres.');
  		$this->form_validation->set_message('required', 'El campo %s es obligatorio.');
+ 		$this->form_validation->set_message('matches', 'El campo %s debe coincidir con el campo %s');
  		
 		if($this->form_validation->run()==FALSE){
 			$this->load->view('seguridad/v_recuperarContraseniaOK', $data);
 		}else{
-			$this->load->model('miembros_model');
-			$result=$this->miembros_model->updatePassword($data);
 			
-			if($result){
-				echo "sin errores";
+			$keyJ = $this->input->post('keyJ');
+			$keyP = $this->input->post('keyP');
+			$newPwd = $this->input->post('password');
+				
+			
+			$this->load->model('miembros_model');
+			$check = $this->miembros_model->updatePassword($keyJ,$keyP,$newPwd);
+			
+			if($check){
+				$this->load->view('seguridad/v_recuperarPwdSucces', $data);
 			}else{
-				echo "error";
-			}	
+				$this->load->view('seguridad/v_recuperarContrasenia', $data);
+			}
 			
 		}
 		
@@ -90,7 +99,7 @@ class c_recuperarContrasenia extends CI_Controller{
 			------------------------------------------------------
 			*Porfavor copie y pegue este enlace en su navegador para reestablecer su contrasenia:
 			
-			http://localhost/sge/seguridad/c_recuperarContrasenia/validKey/'.$data['keyJ'].'/'.$data['keyP'];
+			http://localhost/sge/seguridad/resetPwd/validKey/'.$data['keyJ'].'/'.$data['keyP'];
 					
 	    	$this->load->library('email');
 			$this->email->from('adm.eventosfia@gmail.com','Equipo de FIA Eventos');  

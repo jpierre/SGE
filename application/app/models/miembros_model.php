@@ -49,30 +49,24 @@ class Miembros_model extends CI_Model{
         
     }
     
-    //UPDATE PASSWORD
-    public function updatePassword($data=NULL){
-    	//$this->db->where('keyJ',$key['keyJ']);
-        //$this->db->where('keyP',$key['keyP']);
-        
-        $query = $this->db->get_where('t_seguridad',array('keyJ' => $key['keyJ'],'keyP' => $key['keyP']));
-        $email = $query->emadil;
-        
-        /*$data = array(
-               'email' => $email,
-              	);*/
-        //$query2 = $this->db->get_where('usuario',array('email' => $email));
+	//UPDATE PASSWORD
+    public function updatePassword($keyJ,$keyP,$newPwd){
+    	
+       	$this->db->where('keyJ',$keyJ);
+        $this->db->where('keyP',$keyP);
+            	
+        $result = $this->db->get('t_seguridad');
+        $fila = $result->row(); 
+        $email = $fila->email;
 
         $data = array(
-               'pas_user' => md5($this->input->post('password')),
-              );
+            'pas_user' => md5($newPwd),
+        		);
         
-        $this->db->where('email_user',$email);
-        $update = $this->db->update('usuario', $data); 
-        return $update;
-        
-        
-        
-        
+        $this->db->where('email_user', $email);
+        $update = $this->db->update('usuario', $data);
+        return $fila;
+           
     }
     
 	

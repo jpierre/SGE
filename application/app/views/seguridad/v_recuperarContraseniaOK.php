@@ -51,7 +51,7 @@
 			              <label for="password">Password</label>
 			              <input type="password" name="password" id="password" />
 		            	</fieldset>
-		            <input type="submit" id="login" value="Sign in" /><a href="<?php echo base_url(); ?>seguridad/c_recuperarContrasenia/recuperarContrasenia" >Olvidaste tu password?</a>
+		            <input type="submit" id="login" value="Sign in" /><a href="<?php echo base_url(); ?>seguridad/resetPwd/recuperarContrasenia" >Olvidaste tu password?</a>
 	          		</fieldset>
 	          		
               </br>
@@ -113,13 +113,13 @@
       
         <h1>Ingrese su nueva contraseña!</h1>
         
-        <form action="<?php echo base_url();?>seguridad/c_recuperarContrasenia/update_pwd" method="post" accept-charset="utf-8" class="box" >
-        <a style="text-decoration: none; font-size: 8pt; color:red"><?php echo form_error('username'); ?></a>
+        <form action="<?php echo base_url();?>seguridad/resetPwd/update_pwd" method="post" accept-charset="utf-8" class="box" >
+        <a style="text-decoration: none; font-size: 8pt; color:red"><?php echo form_error('password'); ?></a>
         <label>Password*</label>
         <input type="password" required="required" name="password"/>
         <br>
         <br>
-        <a style="text-decoration: none; font-size: 8pt; color:red"><?php echo form_error('password'); ?></a>
+        <a style="text-decoration: none; font-size: 8pt; color:red"><?php echo form_error('password2'); ?></a>
         <label>Confirmar Password*</label>
         <input type="password" required="required" name="password2"><br><br>
         <input type="hidden" required="required" name="keyJ" value="<?php echo $keyJ ?>">

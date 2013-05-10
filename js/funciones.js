@@ -8,14 +8,14 @@ $(document).ready(function(){
         }else{
             $.ajax({
                 type: "POST",
-                url: "http://sysmov.net/sge/seguridad/c_recuperarContrasenia/comprobar_email_ajax",
+                url: "http://localhost/sge/seguridad/resetPwd/comprobar_email_ajax",
                 data: "vemail="+$('#vemail').val(),
                 beforeSend: function(){
-                    $('#msgEmail').html('Verificando...');
+                    $('#msgEmail').html('<span>Verificando...</span>');
                 },
                 success: function( respuesta ){
                     if(respuesta == '<div style="display:none">1</div>')
-                        $('#msgEmail').html("<span style='color:#0f0'>OK</span>");
+                        $('#msgEmail').html("<span style='color:#0f0'>Se encontro el email en la BD</span>");
                     else
                         $('#msgEmail').html("<span style='color:#f00'>El Email no se encuentra en la BD</span>");
                 }

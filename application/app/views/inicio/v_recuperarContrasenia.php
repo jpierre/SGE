@@ -48,7 +48,7 @@
 			              <label for="password">Password</label>
 			              <input type="password" name="password" id="password" />
 		            	</fieldset>
-		            <input type="submit" id="login" value="Sign in" /><a href="<?php echo base_url(); ?>seguridad/c_recuperarContrasenia/recuperarContrasenia" >Olvidaste tu password?</a>
+		            <input type="submit" id="login" value="Sign in" /><a href="<?php echo base_url(); ?>seguridad/resetPwd/recuperarContrasenia" >Olvidaste tu password?</a>
 	          		</fieldset>
 	          		
               </br>
@@ -109,7 +109,7 @@
       <div id="content">
       
       
-      <form action="<?php echo base_url();?>seguridad/c_recuperarContrasenia/validarEmail" method="post" accept-charset="utf-8">
+      <form action="<?php echo base_url();?>seguridad/resetPwd/validarEmail" method="post" accept-charset="utf-8">
         <h1>Recuperar Contraseña</h1>
         <p>&nbsp;</p>
         <h2>Ingrese un email valido</h2>

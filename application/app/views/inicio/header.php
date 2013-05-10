@@ -51,7 +51,7 @@
                 </fieldset>
                 <input type="submit" id="login" value="Sign in" />
               </fieldset>
-              <span ><a href="<?php echo base_url(); ?>seguridad/c_recuperarContrasenia/recuperarContrasenia" >Olvidaste tu password?</a></span>
+              <span ><a href="<?php echo base_url(); ?>seguridad/resetPwd/recuperarContrasenia" >Olvidaste tu password?</a></span>
             </form>
           </div>
         </div>
