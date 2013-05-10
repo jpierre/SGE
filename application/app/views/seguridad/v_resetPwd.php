@@ -2,16 +2,13 @@
 <html>
 
 <head>
-  <title>EventSystem</title>
-  <meta name="description" content="website description" />
-  <meta name="keywords" content="website keywords, website keywords" />
-  <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
-  <link rel="stylesheet" href="<?php echo base_url(); ?>css/style.css" type="text/css" media="screen" charset="utf-8" />
- 
- <link rel="stylesheet" href="<?php echo base_url(); ?>css/login.css" type="text/css" media="screen" charset="utf-8" />
- 
-<script type="text/javascript" src="<?php echo base_url(); ?>js/login.js"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js?ver=1.4.2"></script>
+<title>EventSystem</title>
+<meta name="description" content="website description" />
+<meta name="keywords" content="website keywords, website keywords" />
+<meta http-equiv="content-type" content="text/html; charset=windows-1252" />
+<link rel="stylesheet" href="<?php echo base_url(); ?>css/style.css" type="text/css" media="screen" charset="utf-8" />
+<link rel="stylesheet" href="<?php echo base_url(); ?>css/login.css" type="text/css" media="screen" charset="utf-8" />
+<script type='text/javascript' src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 <script type='text/javascript' src="<?php echo base_url(); ?>js/funciones.js" ></script>
  
 </head>
@@ -34,7 +31,7 @@
           <li><a href="<?php echo base_url(); ?>seccion/nuestraFacultad">Nuestra Facultad</a></li>
           <li><a href="<?php echo base_url(); ?>seccion/eventos">Eventos</a></li>
           <li><a href="<?php echo base_url(); ?>seccion/registro">Registrate</a></li>
-          <li><a href="#">Contactanos</a></li>
+          <li><a href="<?php echo base_url(); ?>seccion/contactanos">Contactanos</a></li>
           
           <li>
 		  <!-- Login-->
@@ -51,7 +48,7 @@
 			              <label for="password">Password</label>
 			              <input type="password" name="password" id="password" />
 		            	</fieldset>
-		            <input type="submit" id="login" value="Sign in" /><a href="<?php echo base_url(); ?>seguridad/resetPwd/recuperarContrasenia" >Olvidaste tu password?</a>
+		            <input type="submit" id="login" value="Sign in" /><a href="<?php echo base_url(); ?>seguridad/resetPwd" >Olvidaste tu password?</a>
 	          		</fieldset>
 	          		
               </br>
@@ -111,8 +108,18 @@
       </div>
       <div id="content">
       
-        <h1>Se cambio la contraseña correctamente, porfavor ingrese al sistema!</h1>
-         
+      
+      <form action="<?php echo base_url();?>seguridad/resetPwd/validarEmail" method="post" accept-charset="utf-8">
+        <h1>Recuperar Contraseña</h1>
+        <p>&nbsp;</p>
+        <h2>Ingrese un email valido</h2>
+        
+        <input type="text" name="vemail" value="" id="vemail"/>
+        <input type="submit" name="envio" value="Recuperar" />
+        <span id="msgEmail"></span>
+      </form>
+      <?php echo form_error('vemail'); ?> 
+        
       </div>
     </div>
     <div id="content_footer"></div>
