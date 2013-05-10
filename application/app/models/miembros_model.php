@@ -48,6 +48,33 @@ class Miembros_model extends CI_Model{
         }
         
     }
+    
+    //UPDATE PASSWORD
+    public function updatePassword($data=NULL){
+    	//$this->db->where('keyJ',$key['keyJ']);
+        //$this->db->where('keyP',$key['keyP']);
+        
+        $query = $this->db->get_where('t_seguridad',array('keyJ' => $key['keyJ'],'keyP' => $key['keyP']));
+        $email = $query->emadil;
+        
+        /*$data = array(
+               'email' => $email,
+              	);*/
+        //$query2 = $this->db->get_where('usuario',array('email' => $email));
+
+        $data = array(
+               'pas_user' => md5($this->input->post('password')),
+              );
+        
+        $this->db->where('email_user',$email);
+        $update = $this->db->update('usuario', $data); 
+        return $update;
+        
+        
+        
+        
+    }
+    
 	
 	// Cambiando el crear nuevo miembro con la nueva BD---------LISTO
 	function create_member($data=NULL){

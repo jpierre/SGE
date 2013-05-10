@@ -111,22 +111,8 @@
       </div>
       <div id="content">
       
-        <h1>Ingrese su nueva contraseña!</h1>
-        
-        <form action="<?php echo base_url();?>seguridad/c_recuperarContrasenia/update_pwd" method="post" accept-charset="utf-8" class="box" >
-        <a style="text-decoration: none; font-size: 8pt; color:red"><?php echo form_error('username'); ?></a>
-        <label>Password*</label>
-        <input type="password" required="required" name="password"/>
-        <br>
-        <br>
-        <a style="text-decoration: none; font-size: 8pt; color:red"><?php echo form_error('password'); ?></a>
-        <label>Confirmar Password*</label>
-        <input type="password" required="required" name="password2"><br><br>
-        <input type="hidden" required="required" name="keyJ" value="<?php echo $keyJ ?>">
-        <input type="hidden" required="required" name="keyP" value="<?php echo $keyP ?>">
-        <input type="submit" name="submit" value="Guardar Contrasenia" >
-        
-		</form>         
+        <h1>Se cambio la contraseña correctamente, porfavor ingrese al sistema!</h1>
+         
       </div>
     </div>
     <div id="content_footer"></div>

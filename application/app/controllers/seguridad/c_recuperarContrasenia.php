@@ -14,6 +14,28 @@ class c_recuperarContrasenia extends CI_Controller{
 	}
     
 	public function update_pwd(){
+		$this->load->library('form_validation');
+		
+		$this->form_validation->set_rules('password','Password', 'trim|required|min_length[4]|max_length[32]');
+		$this->form_validation->set_rules('password2','Confirmar password', 'trim|required|matches[password]');
+		
+		$this->form_validation->set_message('min_length', 'El campo %s debe contener como mínimo %s caracteres.');
+		$this->form_validation->set_message('max_length', 'El campo %s debe contener como máximo %s caracteres.');
+ 		$this->form_validation->set_message('required', 'El campo %s es obligatorio.');
+ 		
+		if($this->form_validation->run()==FALSE){
+			$this->load->view('seguridad/v_recuperarContraseniaOK', $data);
+		}else{
+			$this->load->model('miembros_model');
+			$result=$this->miembros_model->updatePassword($data);
+			
+			if($result){
+				echo "sin errores";
+			}else{
+				echo "error";
+			}	
+			
+		}
 		
 	}
 	
@@ -27,7 +49,7 @@ class c_recuperarContrasenia extends CI_Controller{
 		$query = $this->miembros_model->verificarKey($key);
 		
 		if($query){
-			$this->load->view('seguridad/v_recuperarContraseniaOK');
+			$this->load->view('seguridad/v_recuperarContraseniaOK', $key);
 		}else{
 			$this->load->view('seguridad/v_recuperarContrasenia');
 		}

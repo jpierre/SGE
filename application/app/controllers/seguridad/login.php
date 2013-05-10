@@ -13,7 +13,7 @@ class Login extends CI_Controller{
      function index(){
 		$this->load->view('inicio/index');
 	}
-	
+
 	function validate_credentials(){
 
 	$this->load->library('form_validation');
