@@ -31,6 +31,24 @@ class Miembros_model extends CI_Model{
 		}
 	}
 	
+	//INSERTA EL KEY DE REESTABLECIMIENTO
+	function insertKey($data){
+		$insert= $this->db->insert('t_seguridad',$data);
+	}
+	
+	//OBTIENE KEY DE LA BD
+	public function verificarKey($key) {
+        $this->db->where('keyJ',$key['keyJ']);
+        $this->db->where('keyP',$key['keyP']);
+        $consulta = $this->db->get('t_seguridad');
+        if($consulta->num_rows() == 1){
+           return $consulta->row();
+        }else{
+        	return null;
+        }
+        
+    }
+	
 	// Cambiando el crear nuevo miembro con la nueva BD---------LISTO
 	function create_member($data=NULL){
 		// tip_usu=3 externo independiente

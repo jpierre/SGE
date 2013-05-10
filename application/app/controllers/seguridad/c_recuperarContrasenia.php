@@ -13,6 +13,27 @@ class c_recuperarContrasenia extends CI_Controller{
 		$this->load->view('inicio/v_recuperarContrasenia');
 	}
     
+	public function update_pwd(){
+		
+	}
+	
+	//METODO QUE VERIFICA EL LINK
+	public function validKey($keyJ="",$keyP=""){
+		$key=array(
+			'keyJ' => $keyJ,
+			'keyP' => $keyP
+				);
+		
+		$query = $this->miembros_model->verificarKey($key);
+		
+		if($query){
+			$this->load->view('seguridad/v_recuperarContraseniaOK');
+		}else{
+			$this->load->view('seguridad/v_recuperarContrasenia');
+		}
+	}
+	
+	//METODO QUE VALIDA LOS DATOS INGRESADOS Y ENVIA EL LINK DE REESTABLECIMIENTO AL USUARIO
 	public function validarEmail(){
     	
     	$this->load->library('form_validation');
@@ -30,19 +51,35 @@ class c_recuperarContrasenia extends CI_Controller{
 	    	$email = $this->input->post('vemail');
 	    	$query = $this->miembros_model->verifica_email($email);
 	    	
-	    	$data=array(
-					'email' => $query->email_user,
-					'password' => $query->pas_user,
+	     	$data=array(
+	    			'keyJ' => $this->randomText(),
+	    			'keyP' => $this->randomText(),
+					'email' => $query->email_user
 					);
-	    						
+	
+			$mensaje = 'Hola Usuario!
+			Esta recibiendo esta notificacion porque usted solicito una
+			nueva contrasenia para su cuenta en "FIA - Eventos".
+			
+			IMPORTANTE:
+			Si usted no lo solicito por favor ignore esta notificacion.
+			Si persiste la solicitud contacte con La Administracion del Sitio.
+			
+			------------------------------------------------------
+			*Porfavor copie y pegue este enlace en su navegador para reestablecer su contrasenia:
+			
+			http://localhost/sge/seguridad/c_recuperarContrasenia/validKey/'.$data['keyJ'].'/'.$data['keyP'];
+					
 	    	$this->load->library('email');
-			$this->email->from('adm.eventosfia@gmail.com','Team Event System');  
+			$this->email->from('adm.eventosfia@gmail.com','Equipo de FIA Eventos');  
 			$this->email->to($data['email']);    
 			$this->email->subject('Eventos Fia - USMP - Recuperacion de Contrasenia');  
-			$this->email->message("Gracias por utilizar el servicio de recuperacion de contrasenia!
-								   Su contrasenia actual es: ".$data['password']);  
+			/*$this->email->message("Gracias por utilizar el servicio de recuperacion de contrasenia!
+								   Su contrasenia actual es: ".$data['password']);*/    
+			$this->email->message($mensaje);
 			$this->email->send();   
 			//echo $this->email->print_debugger();
+			$this->miembros_model->insertKey($data);
 	    	$this->load->view('inicio/v_recuperarContraseniaOK');
 	    }
 
@@ -61,5 +98,15 @@ class c_recuperarContrasenia extends CI_Controller{
             return FALSE;
         }
     }
+    
+    
+    //FUNCION PARA CREAR UNA CLAVE ALEATORIA
+	function randomText() {
+    $pattern = "123456789PIUYTREWQASDFGHJKLMNBVCXZ123456789PLMK1IJNBHUYGVC123456789FTRDXZSEWAQWSDERFTGYHUJ123569876543ERDFREDESWQASWQASDGHGTY";
+    for($i=0;$i<9;$i++) {
+      $key .= $pattern{rand(0,35)};
+    }
+    return $key;
+}
    
 }
