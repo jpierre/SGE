@@ -8,13 +8,14 @@ class resetPwd extends CI_Controller{
 	public function __construct(){
         parent::__construct();
         $this->load->model('miembros_model');
+        $this->randJ = random_string('alnum', 8);
+        $this->randP = random_string('alnum', 8);
      }
      
-	//RECUPERAR CONTRASEÑA
-    function recuperarContrasenia(){
-		$this->load->view('inicio/v_recuperarContrasenia');
-	}
-    
+     public function index(){
+     	$this->load->view('seguridad/v_resetPwd');	
+     }
+     
 	public function update_pwd(){
 		$this->load->library('form_validation');
 		
@@ -27,7 +28,7 @@ class resetPwd extends CI_Controller{
  		$this->form_validation->set_message('matches', 'El campo %s debe coincidir con el campo %s');
  		
 		if($this->form_validation->run()==FALSE){
-			$this->load->view('seguridad/v_recuperarContraseniaOK', $data);
+			$this->load->view('seguridad/v_resetPwdForm', $data);
 		}else{
 			
 			$keyJ = $this->input->post('keyJ');
@@ -39,9 +40,9 @@ class resetPwd extends CI_Controller{
 			$check = $this->miembros_model->updatePassword($keyJ,$keyP,$newPwd);
 			
 			if($check){
-				$this->load->view('seguridad/v_recuperarPwdSucces', $data);
+				$this->load->view('seguridad/v_resetPwdSucces', $data);
 			}else{
-				$this->load->view('seguridad/v_recuperarContrasenia', $data);
+				$this->load->view('seguridad/v_resetPwdExpired', $data);
 			}
 			
 		}
@@ -58,13 +59,13 @@ class resetPwd extends CI_Controller{
 		$query = $this->miembros_model->verificarKey($key);
 		
 		if($query){
-			$this->load->view('seguridad/v_recuperarContraseniaOK', $key);
+			$this->load->view('seguridad/v_resetPwdForm', $key);
 		}else{
-			$this->load->view('seguridad/v_recuperarContrasenia');
+			$this->load->view('seguridad/v_resetPwdExpired');
 		}
 	}
 	
-	//METODO QUE VALIDA LOS DATOS INGRESADOS Y ENVIA EL LINK DE REESTABLECIMIENTO AL USUARIO
+	//METODO QUE VALIDA LOS DATOS INGRESADOS Y ENVIA EL EMAIL CON EL LINK DE REESTABLECIMIENTO AL USUARIO
 	public function validarEmail(){
     	
     	$this->load->library('form_validation');
@@ -77,14 +78,14 @@ class resetPwd extends CI_Controller{
 	    $this->form_validation->set_message('valid_email', '%s: debe escribir un email válido');
 	 
 	    if ($this->form_validation->run() == FALSE) {
-	    	$this->load->view('inicio/v_recuperarContrasenia', $data);
+	    	$this->load->view('seguridad/v_resetPwd', $data);
 	    } else {
 	    	$email = $this->input->post('vemail');
 	    	$query = $this->miembros_model->verifica_email($email);
 	    	
 	     	$data=array(
-	    			'keyJ' => $this->randomText(),
-	    			'keyP' => $this->randomText(),
+	    			'keyJ' => $this->randJ,
+	    			'keyP' => $this->randP,
 					'email' => $query->email_user
 					);
 	
@@ -99,19 +100,16 @@ class resetPwd extends CI_Controller{
 			------------------------------------------------------
 			*Porfavor copie y pegue este enlace en su navegador para reestablecer su contrasenia:
 			
-			http://localhost/sge/seguridad/resetPwd/validKey/'.$data['keyJ'].'/'.$data['keyP'];
+			'.base_url().'seguridad/resetPwd/validKey/'.$data['keyJ'].'/'.$data['keyP'];
 					
 	    	$this->load->library('email');
 			$this->email->from('adm.eventosfia@gmail.com','Equipo de FIA Eventos');  
 			$this->email->to($data['email']);    
 			$this->email->subject('Eventos Fia - USMP - Recuperacion de Contrasenia');  
-			/*$this->email->message("Gracias por utilizar el servicio de recuperacion de contrasenia!
-								   Su contrasenia actual es: ".$data['password']);*/    
 			$this->email->message($mensaje);
 			$this->email->send();   
-			//echo $this->email->print_debugger();
 			$this->miembros_model->insertKey($data);
-	    	$this->load->view('inicio/v_recuperarContraseniaOK');
+	    	$this->load->view('seguridad/v_resetPwdSend');
 	    }
 
     	
@@ -130,14 +128,5 @@ class resetPwd extends CI_Controller{
         }
     }
     
-    
-    //FUNCION PARA CREAR UNA CLAVE ALEATORIA
-	function randomText() {
-    $pattern = "123456789PIUYTREWQASDFGHJKLMNBVCXZ123456789PLMK1IJNBHUYGVC123456789FTRDXZSEWAQWSDERFTGYHUJ123569876543ERDFREDESWQASWQASDGHGTY";
-    for($i=0;$i<9;$i++) {
-      $key .= $pattern{rand(0,35)};
-    }
-    return $key;
-}
-   
+      
 }
