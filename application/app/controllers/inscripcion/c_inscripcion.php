@@ -78,7 +78,7 @@ class C_inscripcion extends CI_Controller{
 	} 
 	
 	//funcion para que el representante pueda inscribir varios participantes externos
-	function inscrip_n_part_externos(){
+	public function inscrip_n_part_externos(){
 		for($i=1;$i<3;$i++){
 			//datos del participante
 				
@@ -118,7 +118,7 @@ class C_inscripcion extends CI_Controller{
 		
 	}
 	
-		function generacion_qr(){
+	public function generarQR(){
 				
 		$this->load->model('inscripcion/m_inscripcion', 'registro');
  		$result=$this->registro->get_inscripcion($this->session->userdata('idDNI'));

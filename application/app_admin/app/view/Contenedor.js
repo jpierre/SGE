@@ -178,7 +178,7 @@ Ext.define('vision.view.Contenedor', {
                         {
                             xtype: 'button',
                             handler: function(button, event) {
-                                window.location.href='http://localhost/sge/seguridad/login/logout';
+                                window.location.href='http://sysmov.net/sge/seguridad/login/logout';
                             },
                             iconCls: 'icon-logout',
                             scale: 'medium',

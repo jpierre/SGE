@@ -15,9 +15,9 @@ $(document).ready(function(){
                 },
                 success: function( respuesta ){
                     if(respuesta == '<div style="display:none">1</div>')
-                        $('#msgEmail').html("<span style='color:#0f0'>Se encontro el email en la BD</span>");
+                        $('#msgEmail').html("<span style='color:#00BB3F'>Se encontro el email en la BD</span>");
                     else
-                        $('#msgEmail').html("<span style='color:#f00'>El Email no se encuentra en la BD</span>");
+                        $('#msgEmail').html("<span style='color:#FF0700'>El Email no se encuentra en la BD</span>");
                 }
             });
             return false;

@@ -25,7 +25,7 @@
                                 <li><a href="#">&raquo; Etc, Etc.</a></li>
                                 </ul>
                            </li>
-                           <li><a href="<?php echo base_url();?>inscripcion/c_inscripcion/generacion_qr">Generar Codigo QR</a></a>
+                           <li><a href="<?php echo base_url();?>inscripcion/c_inscripcion/generarQR" class="categoria">Generar Codigo QR</a></a>
                                
                            </li>
                            <li><a href="" class="categoria">Acerca De</a></li>
