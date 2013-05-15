@@ -44,6 +44,25 @@ class Seccion extends CI_Controller{
 		redirect('site/generar_QR');
 	}
 	
+	function inicio2(){
+		$this->load->view('inicio2/index');
+	}
+	
+	function nuestraFacultad2(){
+		$this->load->view('inicio2/nuestraFacultad');
+	}
+	function eventos2(){
+		$this->load->view('inicio2/eventos');
+	}
+	function contacto(){
+		$this->load->view('inicio2/contacto');
+	}
+	function login(){
+		$this->load->view('inicio2/login');
+	}
+	function registro2(){
+		$this->load->view('inicio2/registrate');
+	}
 	
 		
 }
