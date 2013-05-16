@@ -50,9 +50,9 @@
       </legend>
       <p>&nbsp;</p>
       <p>&nbsp;</p>
-      <button class="css3button2" id="png">Generar QR PNG</button>
+      <button class="css3button2" id="png">Generar QR </button>
       
-      <button class="css3button2" id="jpeg">Generar QR JPEG</button>
+      
       <?php if($this->session->userdata('estado')=='1' || $this->session->userdata('estado')=='2'){?>
       <a class="css3button" href="javascript:generarPDF()">GENERAR PDF</a>
      
