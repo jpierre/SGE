@@ -75,7 +75,7 @@ function generarPDF2(){
 	
 			doc.rect(10, 10, 190, 200); 
 			doc.addImage(logo,'JPEG',10,5,60,20)
-			doc.text(50,50, 'FACULTA DE INGENIERIA Y ARQUITECTURA');
+			doc.text(50,50, 'UNIVERSIDAD DE SAN MARTIN DE PORRES FACULTAD DE INGENIERIA Y ARQUITECTURA');
 			doc.rect(18, 65, 100, 40); 
 			doc.text(20, 70, 'Nombre (S) :' + "  "+ nombre);
 			doc.text(20, 80, 'Apellido (S) : ' + "  " + apepat + "  " +apemat);
