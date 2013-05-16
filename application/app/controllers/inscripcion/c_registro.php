@@ -17,8 +17,8 @@ class C_registro extends CI_Controller{
      public function index(){
      	$data['captcha'] = $this->captcha();
 		$this->session->set_userdata('captcha', $this->rand);
-		$data['main_content'] = 'registro/signup_form';
-		$this->load->view('inicio/inicio', $data);
+		//$data['main_content'] = 'registro/signup_form';
+		$this->load->view('inicio/registro', $data);
      }
      
 
@@ -56,8 +56,8 @@ class C_registro extends CI_Controller{
 		if($this->form_validation->run()==FALSE){
 			$data['captcha'] = $this->captcha();
 			$this->session->set_userdata('captcha', $this->rand);
-			$data['main_content'] = 'registro/signup_form';
-			$this->load->view('inicio/inicio', $data);
+			//$data['main_content'] = 'registro/signup_form';
+			$this->load->view('inicio/registro', $data);
 		}else{
 			$this->load->model('miembros_model');
 			
@@ -96,15 +96,15 @@ class C_registro extends CI_Controller{
 	            |entonces dejamos continuar porque todo es correcto
 	            */
 	            if($check == 1){
-	                $data['main_content']='registro/signup_succesful';
-					$this->load->view('inicio/inicio', $data);
+	                //$data['main_content']='registro/signup_succesful';
+					$this->load->view('inicio/registroCompleto');
 				}
 					
 			}else{
 				$data['captcha'] = $this->captcha();
 				$this->session->set_userdata('captcha', $this->rand);
-				$data['main_content'] = 'registro/signup_form';
-				$this->load->view('inicio/inicio', $data);
+				//$data['main_content'] = 'registro/signup_form';
+				$this->load->view('inicio/registro', $data);
 			}
 			
 		}

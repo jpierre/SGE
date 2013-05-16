@@ -18,6 +18,7 @@
 		<!--  <script src="<?php echo base_url(); ?>js/inicio2/less-grid-4.js"></script> -->
 		<script src="<?php echo base_url(); ?>js/inicio2/custom.js"></script>
 		<script src="<?php echo base_url(); ?>js/inicio2/tabs.js"></script>
+		<script src="<?php echo base_url(); ?>js/inicio2/moveform.js"></script>
 		
 		<!-- Masonry -->
 		<script src="<?php echo base_url(); ?>js/inicio2/masonry.min.js" ></script>
@@ -83,7 +84,7 @@
 			<div class="wrapper">
 				<ul id="mobile-nav">
 					<li><a href="index.php">home</a></li>
-					<li class="current-menu-item"><a href="blog.php">blog</a></li>
+					<li><a href="blog.php">blog</a></li>
 					<li><a href="page.php">about</a>
 						<ul>
 							<li><a href="page-full.php">Fullwidth Page</a></li>
@@ -93,7 +94,7 @@
 						</ul>
 					</li>
 					<li><a href="portfolio.php">portfolio</a></li>
-					<li><a href="contact.php">contact</a></li>
+					<li class="current-menu-item"><a href="contact.php">contact</a></li>
 					<li><a href="http://luiszuno.com/blog/downloads/modus-html-template">Grab it!</a></li>
 				</ul>
 				<div id="nav-open"><a href="#">Menu</a></div>
@@ -106,13 +107,13 @@
 				
 			<div class="wrapper">
 					
-				<a href="<?php echo base_url(); ?>seccion/inicio2" id="logo"><img  src="<?php echo base_url(); ?>images/img/logo.png" alt="Tandem"></a>
+				<a href="<?php echo base_url(); ?>seccion/inicio" id="logo"><img  src="<?php echo base_url(); ?>images/img/logo.png" alt="Tandem"></a>
 				
 				<nav>
 					<ul id="nav" class="sf-menu">
-						<li><a href="<?php echo base_url(); ?>seccion/inicio2">Inicio<span class="subheader">Inicio</span></a></li>
-						<li class="current-menu-item"><a href="<?php echo base_url(); ?>seccion/nuestraFacultad2">Nuestra Facultad<span class="subheader">FIA</span></a></li>
-						<li><a href="<?php echo base_url(); ?>seccion/eventos2">Eventos<span class="subheader">Eventos</span></a>
+						<li><a href="<?php echo base_url(); ?>seccion/inicio">Inicio<span class="subheader">Inicio</span></a></li>
+						<li><a href="<?php echo base_url(); ?>seccion/nuestraFacultad">Nuestra Facultad<span class="subheader">FIA</span></a></li>
+						<li><a href="<?php echo base_url(); ?>seccion/eventos">Eventos<span class="subheader">Eventos</span></a>
 							<ul>
 								<li><a href="page-full.php">SOCOTEC 2013</a></li>
 								<li><a href="page-features.php">1ros Juegos Florales</a></li>
@@ -120,8 +121,8 @@
 								<li><a href="page-icons.php">Icons</a></li> -->
 							</ul>
 						</li>
-						<li><a href="<?php echo base_url(); ?>seccion/registro2">Registrate<span class="subheader">Registrate</span></a></li>
-						<li><a href="<?php echo base_url(); ?>seccion/contacto">Contacto<span class="subheader">Contacto</span></a></li>
+						<li><a href="<?php echo base_url(); ?>seccion/registro">Registrate<span class="subheader">Registrate</span></a></li>
+						<li class="current-menu-item"><a href="<?php echo base_url(); ?>seccion/contacto">Contacto<span class="subheader">Contacto</span></a></li>
 						<li><a href="<?php echo base_url(); ?>seccion/login">Login<span class="subheader">Acerca de</span></a></li>
 					</ul>
 				</nav>
@@ -154,83 +155,92 @@
 			
 				<!-- masthead -->
 		        <div id="masthead">
-					<span class="head">USMP - Facultad de Ingenieria y Arquitectura</span><span class="subhead">Bienvenido</span>
+					<span class="head">Contacto</span><span class="subhead">this is a sub heading</span>
 					<ul class="breadcrumbs">
 						<li><a href="index.php">Inicio</a></li>
-						<li>/ Nuestra Facultad</li>
+						<li>/ Contacto</li>
 					</ul>
 				</div>
 	        	<!-- ENDS masthead -->
 	        	
 	        	
 	        	
-	        	<!-- posts list -->
-	        	<div id="posts-list">
+	        	<!-- page content -->
+	        	<div id="page-content">
 	        	
-					<article class="format-standard">
 						
-						<div class="feature-image">
-							<a href="<?php echo base_url(); ?>images/img/slides/01.jpg" data-rel="prettyPhoto"><img src="<?php echo base_url(); ?>images/img/slides/01.jpg" alt="Alt text" /></a>
-						</div>
+					<!-- Map -->
+				<div>
+				<iframe width="520" height="320" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com.pe/maps?f=d&amp;source=s_d&amp;saddr=-12.072266,-76.941977&amp;daddr=&amp;hl=es&amp;geocode=&amp;sll=-12.07,-76.952748&amp;sspn=0.022788,0.042272&amp;mra=mift&amp;mrsp=0&amp;sz=15&amp;ie=UTF8&amp;ll=-12.07,-76.952748&amp;spn=0.022788,0.042272&amp;t=m&amp;output=embed"></iframe>
+				</div>
+				
+				<!-- ENDS Map -->
 						
-						<h1><a href="single.php" class="post-heading">Facultad de Ingenieria y Arquitectura</a></h1>
-						<div class="meta">
-							<!-- <span class="entry-day">23</span>
-							<span class="entry-year">sep 2011</span>
-							<span class="entry-date">23 Sep, 2011</span>
-							in <span class="categories"><a href="#">Category 1</a>, <a href="#">Category 2</a></span> -->
-						</div>
+	        		
+					<p>
+						Ubicanos gracias a los servicios de Google Maps! 
+					</p>
+					
+					<!-- form -->
+					<script type="text/javascript" src="<?php echo base_url(); ?>js/inicio2/form-validation.js"></script>
+					<form id="contactForm" action="#" method="post">
+						<h3 class="heading">Envianos tus comentarios</h3>
+						<p> Completa nuestro formulario y envianos tus comentarios, sugerencias, dudas, estaremos prestos a responderte</p>
+						<fieldset>
+							<div>
+								<input name="name"  id="name" type="text" class="form-poshytip" title="Ingresa tu nombre completo" />
+								<label>Nombre</label>
+							</div>
+							<div>
+								<input name="email"  id="email" type="text" class="form-poshytip" title="Ingresa tu direccion de email" />
+								<label>Email</label>
+							</div>
+							<div>
+								
+								<input name="web"  id="web" type="text" class="form-poshytip" title="Ingresa tu sitio web" />
+								<label>Sitio Web (Opcional)</label>
+							</div>
+							<div>
+								<textarea  name="comments"  id="comments" rows="5" cols="20" class="form-poshytip" title="Dejanos tus comentarios"></textarea>
+							</div>
+							
+							<!-- send mail configuration -->
+							<input type="hidden" value="email@yourserver.com" name="to" id="to" />
+							<input type="hidden" value="Enter the subject here" name="subject" id="subject" />
+							<input type="hidden" value="send-mail.php" name="sendMailUrl" id="sendMailUrl" />
+							<!-- ENDS send mail configuration -->
+							
+							<p><input type="button" value="Enviar" name="submit" id="submit" /> <span id="error" class="warning">Message</span></p>
+						</fieldset>
 						
+					</form>
+					<p id="sent-form-msg" class="success">Form data sent. Thanks for your comments.</p>
+					<!-- ENDS form -->
 						
-						<div class="excerpt">La filosofia que inspiro la fundacion de la USMP se orienta a la busqueda de la verdad (VERITAS LIBERABIT VOS) y a la preparacion de profesionales altamente capacitados, con cultura humanistica y criterios de permanente actualizacion y superacion. Formar a los estudiantes dentro de normas eticas y principios democraticos constituye uno de sus objetivos prioritarios.
-						</div>
-						
-						<!-- <a href="single.php" class="read-more">read more</a>-->
-						
-					</article>
-			
+	        		
 	        	</div>
-	        	<!-- ENDS posts list -->
+	        	<!-- ENDS page content -->
 	        	
 	        	
 	        	<!-- sidebar -->
 	        	<aside id="sidebar">
-	        		
 	        		<div class="block">
-		        		<h4>Carreras Profesionales</h4>
-						<ul>
-							<li class="cat-item"><a href="#" title="View all posts">Ing. Computacion y Sistemas</a></li>
-							<li class="cat-item"><a href="#" title="View all posts">Ing. Industrial</a></li>
-							<li class="cat-item"><a href="#" title="View all posts">Ing. Civil</a></li>
-							<li class="cat-item"><a href="#" title="View all posts">Ing. Electronica</a></li>
-							<li class="cat-item"><a href="#" title="View all posts">Ing. en Industrias Alimentarias</a></li>
-							<li class="cat-item"><a href="#" title="View all posts">Arquitectura</a></li>
-						</ul>
-	        		</div>
-	        		
-	        		<div class="block">
-		        		<h4>archives</h4>
-						<ul>
-							<li class="cat-item"><a href="#" title="View all posts">January</a></li>
-							<li class="cat-item"><a href="#" title="View all posts">February</a></li>
-							<li class="cat-item"><a href="#" title="View all posts">March</a></li>
-						</ul>
-	        		</div>
-	        	
+		        		<h4>Direccion</h4>
+		        		<p>Ubicanos gracias a los servicios de Google Maps.</p>
+		        		
+		        		<ul class="address-block">
+		        			<li class="address">Av. La Fontana 1250 Urb. Sta. Patricia</li>
+		        			<li class="phone">(511) 208-6000</li>
+		        			<li class="email"><a href="mailto:fia@usmp.edu.pe">Consultas e informacion</a></li>
+		        			<li class="email"><a href="mailto:visitasfia@usmp.edu.pe">Visitas guiadas</a></li>
+		        		</ul>
+		        		
+	        		</div>	        	
 	        	</aside>
 	        	<div class="clearfix"></div>
 				<!-- ENDS sidebar -->
 				
 				
-				<!-- pager -->
-        		<!--  <ul class="pager">
-					<li class="paged">Page 1 of 2</li>
-					<li class="active"><a href="#">1</a></li>
-					<li><a href="#">2</a></li>
-					<li><a href="#">3</a></li>
-				</ul>
-				<div class="clearfix"></div> -->
-	        	<!-- ENDS pager -->
 			
 			</div>
 			<!-- ENDS content -->
@@ -300,6 +310,12 @@
 			<div id="to-top"></div>
 		</footer>
 		
+		
+		<!-- Start google map -->
+		<script>initialize();</script>
+		
 	</body>
+	
+	
 	
 </html>

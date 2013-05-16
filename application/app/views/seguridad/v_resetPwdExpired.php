@@ -1,126 +1,258 @@
-<!DOCTYPE HTML>
-<html>
+<!doctype html>
+<html class="no-js">
 
-<head>
-  <title>EventSystem</title>
-  <meta name="description" content="website description" />
-  <meta name="keywords" content="website keywords, website keywords" />
-  <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
-  <link rel="stylesheet" href="<?php echo base_url(); ?>css/style.css" type="text/css" media="screen" charset="utf-8" />
- 
- <link rel="stylesheet" href="<?php echo base_url(); ?>css/login.css" type="text/css" media="screen" charset="utf-8" />
- 
-<script type="text/javascript" src="<?php echo base_url(); ?>js/login.js"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js?ver=1.4.2"></script>
-<script type='text/javascript' src="<?php echo base_url(); ?>js/funciones.js" ></script>
- 
-</head>
+	<head>
+		<meta charset="utf-8"/>
+		<title>MODUS</title>
+		<!--[if lt IE 9]>
+			<script src="<?php echo base_url(); ?>js/inicio2/css3-mediaqueries.js"></script>
+		<![endif]-->
+		<link rel="stylesheet" media="all" href="<?php echo base_url(); ?>css/inicio2/style.css"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<!-- Adding "maximum-scale=1" fixes the Mobile Safari auto-zoom bug: http://filamentgroup.com/examples/iosScaleBug/ -->
+		
+		
+		<!-- JS -->
+		<script src="<?php echo base_url(); ?>js/inicio2/jquery-1.6.4.min.js"></script>
+		
+		<!--  <script src="<?php echo base_url(); ?>js/inicio2/less-grid-4.js"></script> -->
+		<script src="<?php echo base_url(); ?>js/inicio2/custom.js"></script>
+		<script src="<?php echo base_url(); ?>js/inicio2/tabs.js"></script>
+		
+		<!-- Masonry -->
+		<script src="<?php echo base_url(); ?>js/inicio2/masonry.min.js" ></script>
+		<script src="<?php echo base_url(); ?>js/inicio2/imagesloaded.js" ></script>
+		<!-- ENDS Masonry -->
+		
+		<!-- Tweet -->
+		<link rel="stylesheet" href="<?php echo base_url(); ?>css/inicio2/jquery.tweet.css" media="all"  /> 
+		<script src="<?php echo base_url(); ?>js/inicio2/tweet/jquery.tweet.js" ></script> 
+		<!-- ENDS Tweet -->
+		
+		<!-- superfish -->
+		<link rel="stylesheet" media="screen" href="<?php echo base_url(); ?>css/inicio2/superfish.css" /> 
+		<script  src="<?php echo base_url(); ?>js/inicio2/superfish-1.4.8/js/hoverIntent.js"></script>
+		<script  src="<?php echo base_url(); ?>js/inicio2/superfish-1.4.8/js/superfish.js"></script>
+		<script  src="<?php echo base_url(); ?>js/inicio2/superfish-1.4.8/js/supersubs.js"></script>
+		<!-- ENDS superfish -->
+		
+		<!-- prettyPhoto -->
+		<script  src="<?php echo base_url(); ?>js/inicio2/prettyPhoto/js/jquery.prettyPhoto.js"></script>
+		<link rel="stylesheet" href="<?php echo base_url(); ?>js/inicio2/prettyPhoto/css/prettyPhoto.css"  media="screen" />
+		<!-- ENDS prettyPhoto -->
+		
+		<!-- poshytip -->
+		<link rel="stylesheet" href="<?php echo base_url(); ?>js/inicio2/poshytip-1.1/src/tip-twitter/tip-twitter.css"  />
+		<link rel="stylesheet" href="<?php echo base_url(); ?>js/inicio2/poshytip-1.1/src/tip-yellowsimple/tip-yellowsimple.css"  />
+		<script  src="<?php echo base_url(); ?>js/inicio2/poshytip-1.1/src/jquery.poshytip.min.js"></script>
+		<!-- ENDS poshytip -->
+		
+		
+		<!-- GOOGLE FONTS -->
+		<link href='http://fonts.googleapis.com/css?family=Allan:700' rel='stylesheet' type='text/css'>
+		
+		<!-- Flex Slider -->
+		<link rel="stylesheet" href="<?php echo base_url(); ?>css/inicio2/flexslider.css" >
+		<script src="<?php echo base_url(); ?>js/inicio2/jquery.flexslider-min.js"></script>
+		<!-- ENDS Flex Slider -->
+		
+		
+		<!--[if IE 6]>
+		<link rel="stylesheet" href="<?php echo base_url(); ?>css/inicio2/ie6-hacks.css" media="screen" />
+		<script type="text/javascript" src="<?php echo base_url(); ?>js/inicio2/DD_belatedPNG.js"></script>
+			<script>
+          		/* EXAMPLE */
+          		DD_belatedPNG.fix('*');
+        	</script>
+		<![endif]-->
+		
+		<!-- Lessgrid -->
+		<link rel="stylesheet" media="all" href="<?php echo base_url(); ?>css/inicio2/lessgrid.css"/>
+		
+		<!-- modernizr -->
+		<script src="<?php echo base_url(); ?>js/inicio2/modernizr.js"></script>
+		
 
-<body>
-  <div id="main">
-    <div id="header">
-      <div id="logo">
-        <div id="logo_text">
-          <!-- class="logo_colour", allows you to change the colour of the text -->
-          <h1><a href="#">Event<span class="logo_colour">system</span></a></h1>
-          <h2>Sistema de gestion de eventos FIA.</h2>
-          <img width="207" height="196" style="position: absolute; left: 277px; top: -5px; width: 109px; height: 97px;" id="buo" />
-        </div>
-      </div>
-      <div id="menubar">
-        <ul id="menu">
-          <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
-          <li class="selected"><a href="<?php echo base_url(); ?>seccion/inicio">Inicio</a></li>
-          <li><a href="<?php echo base_url(); ?>seccion/nuestraFacultad">Nuestra Facultad</a></li>
-          <li><a href="<?php echo base_url(); ?>seccion/eventos">Eventos</a></li>
-          <li><a href="<?php echo base_url(); ?>seccion/registro">Registrate</a></li>
-          <li><a href="#">Contactanos</a></li>
-          
-          <li>
-		  <!-- Login-->
-        <div id="loginContainer"> <a href="#" id="loginButton"><span>Login</span></a>
-      		<div style="clear:both"></div>
-      		<div id="loginBox">
-        		<form id="loginForm" action="<?php echo base_url();?>seguridad/login/validate_credentials" method="post" accept-charset="utf-8">
-		          	<fieldset id="body">
-			            <fieldset>
-				            <label for="email">Usuario</label>
-				            <input type="text" name="username" id="email" />
-			            </fieldset>
-		            	<fieldset>
-			              <label for="password">Password</label>
-			              <input type="password" name="password" id="password" />
-		            	</fieldset>
-		            <input type="submit" id="login" value="Sign in" /><a href="<?php echo base_url(); ?>seguridad/resetPwd" >Olvidaste tu password?</a>
-	          		</fieldset>
-	          		
-              </br>
-                 <h3 style="font-size: 8pt; color:blue"><?php echo validation_errors(); ?></h3>
-        		</form>
-         
-      </div>
-    </div>
-        
-                 
-          
-          </li>
-         
-        </ul>
-      </div>
-    </div>
-    <div id="content_header"></div>
-    <div id="site_content">
-      <div id="sidebar_container">
-        <div class="sidebar">
-          <div class="sidebar_top"></div>
-          <div class="sidebar_item">
-            <!-- insert your sidebar items here -->
-            <h3>Noticias</h3>
-            <h4>Vision 2013</h4>
-            <h5>Octubre 2013</h5>
-            <p>Eventos vision.&nbsp;<a href="#">leer mas</a></p>
-          </div>
-          <div class="sidebar_base"></div>
-        </div>
-        <div class="sidebar">
-          <div class="sidebar_top"></div>
-          <div class="sidebar_item">
-            <h3>Eventos</h3>
-            <ul>
-              <li><a href="#">Vision 2013</a></li>
-              <li><a href="#">Cloud Google</a></li>
-              <li><a href="#">Android Developers</a></li>
-              <li><a href="#">Desarrolo de juegos</a></li>
-            </ul>
-          </div>
-          <div class="sidebar_base"></div>
-        </div>
-        <div class="sidebar">
-          <div class="sidebar_top"></div>
-          <div class="sidebar_item">
-            <h3>Buscar</h3>
-            <form method="post" action="#" id="search_form">
-              <p>
-                <input class="search" type="text" name="search_field" value="Enter keywords....." />
-                <input name="search" type="image" style="border: 0; margin: 0 0 -9px 5px;" src="../../../css/search.png" alt="Search" title="Search" />
-              </p>
-            </form>
-          </div>
-          <div class="sidebar_base"></div>
-        </div>
-      </div>
-      <div id="content">
-      
-        <h1>El link expiro o no existe!</h1>
-         
-      </div>
-    </div>
-    <div id="content_footer"></div>
-    <div id="footer">
-      <p><a href="index.html">Inicio</a> | <a href="examples.html">Quienes somos?</a> | <a href="page.html">Eventos</a> | <a href="another_page.html">Registrate</a> | <a href="contact.html">Login</a></p>
-      <p>Copyright &copy;:) | <a href="http://validator.w3.org/check?uri=referer">HTML5</a> | <a href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a> |</p>
-    </div>
-    <p>&nbsp;</p>
-  </div>
-</body>
+	</head>
+	
+	<body lang="en">
+	
+
+		<!-- mobile-nav -->
+		<div id="mobile-nav-holder">
+			<div class="wrapper">
+				<ul id="mobile-nav">
+					<li><a href="index.php">home</a></li>
+					<li class="current-menu-item"><a href="blog.php">blog</a></li>
+					<li><a href="page.php">about</a>
+						<ul>
+							<li><a href="page-full.php">Fullwidth Page</a></li>
+							<li><a href="page-features.php">Features</a></li>
+							<li><a href="page-typography.php">Typography</a></li>
+							<li><a href="page-icons.php">Icons</a></li>
+						</ul>
+					</li>
+					<li><a href="portfolio.php">portfolio</a></li>
+					<li><a href="contact.php">contact</a></li>
+					<li><a href="http://luiszuno.com/blog/downloads/modus-html-template">Grab it!</a></li>
+				</ul>
+				<div id="nav-open"><a href="#">Menu</a></div>
+			</div>
+		</div>
+		<!-- ENDS mobile-nav -->
+			
+		<header>
+			
+				
+			<div class="wrapper">
+					
+				<a href="<?php echo base_url(); ?>seccion/inicio" id="logo"><img  src="<?php echo base_url(); ?>images/img/logo.png" alt="Tandem"></a>
+				
+				<nav>
+					<ul id="nav" class="sf-menu">
+						<li><a href="<?php echo base_url(); ?>seccion/inicio">Inicio<span class="subheader">Inicio</span></a></li>
+						<li><a href="<?php echo base_url(); ?>seccion/nuestraFacultad">Nuestra Facultad<span class="subheader">FIA</span></a></li>
+						<li><a href="<?php echo base_url(); ?>seccion/eventos">Eventos<span class="subheader">Eventos</span></a>
+							<ul>
+								<li><a href="page-full.php">SOCOTEC 2013</a></li>
+								<li><a href="page-features.php">1ros Juegos Florales</a></li>
+								<!--  <li><a href="page-typography.php">Typography</a></li>
+								<li><a href="page-icons.php">Icons</a></li> -->
+							</ul>
+						</li>
+						<li><a href="<?php echo base_url(); ?>seccion/registro">Registrate<span class="subheader">Registrate</span></a></li>
+						<li><a href="<?php echo base_url(); ?>seccion/contacto">Contacto<span class="subheader">Contacto</span></a></li>
+						<li class="current-menu-item"><a href="<?php echo base_url(); ?>seccion/login">Login<span class="subheader">Acerca de</span></a></li>
+					</ul>
+				</nav>
+				
+				<div class="clearfix"></div>
+				
+			</div>
+		</header>
+	
+	
+	
+	
+		<!-- MAIN -->
+		<div id="main">
+				
+			<!-- social -->
+			<div id="social-bar">
+				<ul>
+					<li><a href="https://www.facebook.com/fia.usmp" target="new_blank"  title="Hazte fan!"><img src="<?php echo base_url(); ?>images/img/social/facebook_32.png"  alt="Facebook" /></a></li>
+					<li><a href="http://www.youtube.com/channel/UCQhn6EURMRlJ1znEP6qzoEA?feature=g-user-u"  target="new_blank" title="Suscribete!"><img src="<?php echo base_url(); ?>images/img/social/youtube_32.png" alt="Youtube" /></a></li>
+					<li><a href="http://www.twitter.com" title="Sigue nuestros tweets!"><img src="<?php echo base_url(); ?>images/img/social/twitter_32.png"  alt="Twitter" /></a></li>
+				</ul>
+			</div>
+			<!-- ENDS social -->
+			
+			
+			
+			<!-- Content -->
+			<div id="content">
+			
+				<!-- masthead -->
+		        <div id="masthead">
+					<span class="head">Login</span>
+					<ul class="breadcrumbs">
+						<li><a href="index.php">Inicio</a></li>
+						<li>/ Login</li>
+					</ul>
+				</div>
+	        	<!-- ENDS masthead -->
+	        	
+	        	
+	        	
+	        	<!-- page content -->
+	        	<div id="page-content">
+	        		<h2 class="heading">El link expiro o no existe!</h2>
+	        	</div>
+	        	<!-- ENDS page content -->
+	        	
+	        	<!-- sidebar -->
+	        	<aside id="sidebar">
+	        		<div class="block">
+		        		<h4>&iquest;Olvidaste tu contrase&ntilde;a?</h4>
+		        		<p>No te preocupes! Puedes utilizar uno de nuestros servicios para recuperarla.</p>
+		        		<ul class="address-block">
+		        			<li class="email"><a href="<?php echo base_url(); ?>seguridad/resetPwd">Recuperar Contrase&ntilde;a</a></li>
+		        		</ul>
+		        		
+	        		</div>	        	
+	        	</aside>
+	        	<div class="clearfix"></div>
+				<!-- ENDS sidebar -->
+	        	
+			
+			</div>
+			<!-- ENDS content -->
+			
+			<div class="clearfix"></div>
+			<div class="shadow-main"></div>
+			
+			
+		</div>
+		<!-- ENDS MAIN -->
+		
+		<footer>
+			<div class="wrapper">
+			
+				<ul id="footer-cols">
+					
+					<li class="first-col">
+						
+						<div class="widget-block">
+							<h4>Recent posts</h4>
+							<div class="recent-post">
+								<a href="#" class="thumb"><img src="<?php echo base_url(); ?>images/img/dummies/54x54.gif" alt="Post" /></a>
+								<div class="post-head">
+									<a href="#">Pellentesque habitant morbi senectus</a><span>March 12, 2011</span>
+								</div>
+							</div>
+							<div class="recent-post">
+								<a href="#" class="thumb"><img src="<?php echo base_url(); ?>images/img/dummies/54x54.gif" alt="Post" /></a>
+								<div class="post-head">
+									<a href="#">Pellentesque habitant morbi senectus</a><span>March 12, 2011</span>
+								</div>
+							</div>
+							<div class="recent-post">
+								<a href="#" class="thumb"><img src="<?php echo base_url(); ?>images/img/dummies/54x54.gif" alt="Post" /></a>
+								<div class="post-head">
+									<a href="#">Pellentesque habitant morbi senectus</a><span>March 12, 2011</span>
+								</div>
+							</div>
+						</div>
+					</li>
+					
+					<li class="second-col">
+						
+						<div class="widget-block">
+							<h4>Dummy text</h4>
+							<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies ege. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+							<p>Pellentesque habitant morbi tristique senectus et netus et malesuada.</p>
+						</div>
+						
+					</li>
+					
+					<li class="third-col">
+						
+						<div class="widget-block">
+							<div id="tweets" class="footer-col tweet">
+		         				<h4>Twitter widget</h4>
+		         			</div>
+		         		</div>
+		         		
+					</li>	
+				</ul>				
+				<div class="clearfix"></div>
+				
+				
+			</div>
+			
+			<div id="to-top"></div>
+		</footer>
+		
+	</body>
+	
 </html>

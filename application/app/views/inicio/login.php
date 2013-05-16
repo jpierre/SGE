@@ -106,13 +106,13 @@
 				
 			<div class="wrapper">
 					
-				<a href="<?php echo base_url(); ?>seccion/inicio2" id="logo"><img  src="<?php echo base_url(); ?>images/img/logo.png" alt="Tandem"></a>
+				<a href="<?php echo base_url(); ?>seccion/inicio" id="logo"><img  src="<?php echo base_url(); ?>images/img/logo.png" alt="Tandem"></a>
 				
 				<nav>
 					<ul id="nav" class="sf-menu">
-						<li><a href="<?php echo base_url(); ?>seccion/inicio2">Inicio<span class="subheader">Inicio</span></a></li>
-						<li><a href="<?php echo base_url(); ?>seccion/nuestraFacultad2">Nuestra Facultad<span class="subheader">FIA</span></a></li>
-						<li><a href="<?php echo base_url(); ?>seccion/eventos2">Eventos<span class="subheader">Eventos</span></a>
+						<li><a href="<?php echo base_url(); ?>seccion/inicio">Inicio<span class="subheader">Inicio</span></a></li>
+						<li><a href="<?php echo base_url(); ?>seccion/nuestraFacultad">Nuestra Facultad<span class="subheader">FIA</span></a></li>
+						<li><a href="<?php echo base_url(); ?>seccion/eventos">Eventos<span class="subheader">Eventos</span></a>
 							<ul>
 								<li><a href="page-full.php">SOCOTEC 2013</a></li>
 								<li><a href="page-features.php">1ros Juegos Florales</a></li>
@@ -120,7 +120,7 @@
 								<li><a href="page-icons.php">Icons</a></li> -->
 							</ul>
 						</li>
-						<li><a href="<?php echo base_url(); ?>seccion/registro2">Registrate<span class="subheader">Registrate</span></a></li>
+						<li><a href="<?php echo base_url(); ?>seccion/registro">Registrate<span class="subheader">Registrate</span></a></li>
 						<li><a href="<?php echo base_url(); ?>seccion/contacto">Contacto<span class="subheader">Contacto</span></a></li>
 						<li class="current-menu-item"><a href="<?php echo base_url(); ?>seccion/login">Login<span class="subheader">Acerca de</span></a></li>
 					</ul>
@@ -175,12 +175,15 @@
 						<tr>
 								<td><label>Usuario</label></td>
 								<td><input name="username"  type="text" class="form-poshytip" title="Ingresa tu usuario" /></td>
+								<td><a style="text-decoration: none; font-size: 8pt; color:red"><?=form_error('username'); ?></a></td>
 						</tr>
 						<tr>					
 								<td><label>Password</label></td>
 								<td><input name="password" type="password" class="form-poshytip" title="Ingresa tu password" /></td>
+								<td><a style="text-decoration: none; font-size: 8pt; color:red"><?=form_error('password'); ?></a></td>
 						<tr>
 						</table>
+							<p style="color:#FF0000;"><?php echo $mensaje; ?></p>
 							<p><input type="submit" name="submit" value="Entrar"/></p>
 						
 					</form>
@@ -188,6 +191,21 @@
 						
 				</div>
 	        	<!-- ENDS page content -->
+	        	
+	        	<!-- sidebar -->
+	        	<aside id="sidebar">
+	        		<div class="block">
+		        		<h4>&iquest;Olvidaste tu contrase&ntilde;a?</h4>
+		        		<p>No te preocupes! Puedes utilizar uno de nuestros servicios para recuperarla.</p>
+		        		<ul class="address-block">
+		        			<li class="email"><a href="<?php echo base_url(); ?>seguridad/resetPwd">Recuperar Contrase&ntilde;a</a></li>
+		        		</ul>
+		        		
+	        		</div>	        	
+	        	</aside>
+	        	<div class="clearfix"></div>
+				<!-- ENDS sidebar -->
+	        	
 			
 			</div>
 			<!-- ENDS content -->

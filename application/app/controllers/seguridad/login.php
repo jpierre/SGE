@@ -16,16 +16,17 @@ class Login extends CI_Controller{
 
 	function validate_credentials(){
 
-	$this->load->library('form_validation');
+		$data['mensaje']='s';
+		$this->load->library('form_validation');
 		$this->form_validation->set_rules('username','Usuario', 'trim|required');
 		$this->form_validation->set_rules('password','Clave', 'trim|required');
 
 		$this->form_validation->set_message('required', 'El campo %s es obligatorio.');
 		
 		if($this->form_validation->run()==FALSE){
-			$data['main_content'] = 'login_form';
+			//$data['main_content'] = 'inicio2/login';
 			//$this->load->view('inicio/index', $data);
-			$this->load->view('inicio/inicio2', $data);
+			$this->load->view('inicio/login', $data);
 		}else{
 
 			$this->load->model('miembros_model');
@@ -70,8 +71,8 @@ class Login extends CI_Controller{
 					}
 				}else{
 				$data['mensaje']='Usuario o password incorrectos';
-				$data['main_content'] = 'login_form';
-				$this->load->view('inicio/inicio2', $data);
+				//$data['main_content'] = 'login_form';
+				$this->load->view('inicio/login', $data);
 				//$this->index();
 				}
 			}else{

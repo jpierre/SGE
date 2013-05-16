@@ -8,12 +8,16 @@
 			<script src="<?php echo base_url(); ?>js/inicio2/css3-mediaqueries.js"></script>
 		<![endif]-->
 		<link rel="stylesheet" media="all" href="<?php echo base_url(); ?>css/inicio2/style.css"/>
+		<link rel="stylesheet" href="<?php echo base_url(); ?>css/style2.css" type="text/css" media="screen" charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1"/>
 		<!-- Adding "maximum-scale=1" fixes the Mobile Safari auto-zoom bug: http://filamentgroup.com/examples/iosScaleBug/ -->
 		
 		
 		<!-- JS -->
 		<script src="<?php echo base_url(); ?>js/inicio2/jquery-1.6.4.min.js"></script>
+		<script type="text/javascript" src="<?php echo base_url(); ?>js/login.js"></script>
+		<script type='text/javascript' src="<?php echo base_url(); ?>js/funciones.js" ></script>
+		
 		
 		<!--  <script src="<?php echo base_url(); ?>js/inicio2/less-grid-4.js"></script> -->
 		<script src="<?php echo base_url(); ?>js/inicio2/custom.js"></script>
@@ -120,9 +124,9 @@
 								<li><a href="page-icons.php">Icons</a></li> -->
 							</ul>
 						</li>
-						<li><a href="<?php echo base_url(); ?>seccion/registro">Registrate<span class="subheader">Registrate</span></a></li>
+						<li class="current-menu-item"><a href="<?php echo base_url(); ?>seccion/registro">Registrate<span class="subheader">Registrate</span></a></li>
 						<li><a href="<?php echo base_url(); ?>seccion/contacto">Contacto<span class="subheader">Contacto</span></a></li>
-						<li class="current-menu-item"><a href="<?php echo base_url(); ?>seccion/login">Login<span class="subheader">Acerca de</span></a></li>
+						<li><a href="<?php echo base_url(); ?>seccion/login">Login<span class="subheader">Acerca de</span></a></li>
 					</ul>
 				</nav>
 				
@@ -154,10 +158,10 @@
 			
 				<!-- masthead -->
 		        <div id="masthead">
-					<span class="head">Login</span>
+					<span class="head">Registrate</span>
 					<ul class="breadcrumbs">
 						<li><a href="index.php">Inicio</a></li>
-						<li>/ Login</li>
+						<li>/ Registro</li>
 					</ul>
 				</div>
 	        	<!-- ENDS masthead -->
@@ -167,40 +171,166 @@
 	        	<!-- page content -->
 	        	<div id="page-content">
 	        							
-					<h2>Ingrese su nueva contraseña!</h2>
+				<!-- form -->
+					<form action="<?php echo base_url();?>inscripcion/c_registro/create_member" method="post" accept-charset="utf-8" class="box" >
+    <div id="personal">
+      <fieldset>
+        <legend> Informacion Personal</legend>
+        <br>
+        <br>
+        <label>Tipo de documento</label>
+        <select name="tipo_doc" id="tipodoc">
+          <option value="1">DNI</option>
+          <option value="2">VISA</option>
+          <option value="3">Carnet de extranjeria</option>
+        </select>
+        <br>
+        <br>
+        <label>Numero de documento*</label>
+        <input  name="dni" id="numerodoc" onblur="return validar();" type="text"  required="required" value="<?php echo set_value('dni'); ?>"/>
+        <br>
+        <br>
+        <span style="text-decoration: none; font-size: 8pt; color:red"><?php echo form_error('dni'); ?></span>
+        <label>Nombres*</label>
+        <input type="text" name="nombres"  required="required"  value="<?php echo set_value('nombres'); ?>"/>
+        <br>
+        <br>
+        <a style="text-decoration: none; font-size: 8pt; color:red"><?php echo form_error('nombres'); ?></a>
+        <label>Apellido Paterno*</label>
+        <input type="text" name="ape_pat" required="required" value="<?php echo set_value('ape_pat'); ?>"/>
+        <br>
+        <br>
+        <a style="text-decoration: none; font-size: 8pt; color:red"><?php echo form_error('ape_pat'); ?></a>
+        <label>Apellido Materno*</label>
+        <input type="text" name="ape_mat" required="required" value="<?php echo set_value('ape_mat'); ?>"/>
+        <br>
+        <br>
+        <a style="text-decoration: none; font-size: 8pt; color:red"><?php echo form_error('ape_mat'); ?></a>
+        <label>Telefono Fijo</label>
+        <input type="text" name="fijo" value="<?php echo set_value('fijo'); ?>"/>
+        <br>
+        <br>
+        <a style="text-decoration: none; font-size: 8pt; color:red"><?php echo form_error('fijo'); ?></a>
+        <label>Celular*</label>
+        <input type="text" name="celular" required="required" value="<?php echo set_value('celular'); ?>"/>
+        <br>
+        <br>
+        <a style="text-decoration: none; font-size: 8pt; color:red"><?php echo form_error('celular'); ?></a>
+        <label>Correo*</label>
+        <input type="text" name="email_adress" required="required" value="<?php echo set_value('email_adress'); ?>"/>
+        <br>
+        <br>
+        <a style="text-decoration: none; font-size: 8pt; color:red"><?php echo form_error('email_adress'); ?></a>
+        <label>Direccion</label>
+        <input type="text" name="direccion" required="required" value="<?php echo set_value('direccion'); ?>"/>
+        <br>
+        <br>
+        <a style="text-decoration: none; font-size: 8pt; color:red"><?php echo form_error('direccion'); ?></a>
+        <label>Usuario*</label>
+        <input type="text" name="username" required="required" value="<?php echo set_value('username'); ?>"/>
+        <br>
+        <br>
+        <a style="text-decoration: none; font-size: 8pt; color:red"><?php echo form_error('username'); ?></a>
+        <label>Password*</label>
+        <input type="password" required="required" name="password"/>
+        <br>
+        <br>
+        <a style="text-decoration: none; font-size: 8pt; color:red"><?php echo form_error('password'); ?></a>
+        <label>Confirmar Password*</label>
+        <input type="password" required="required" name="password2">
+        <br>
+        <br>
+        <a style="text-decoration: none; font-size: 8pt; color:red"><?php echo form_error('password2'); ?></a>
+        </p>
+      </fieldset>
+    </div>
+    <div id="empresa">
+      <fieldset>
+        <legend>Informacion sobre su empresa</legend>
+        <br>
+        <label>Empresa</label>
+        <input type="text" name="empresa" value="<?php echo set_value('empresa'); ?>"/>
+        <br>
+        <br>
+        <label>RUC</label>
+        <input type="text" name="ruc" value="<?php echo set_value('ruc'); ?>"/>
+        <br>
+        <br>
+        <label>Cargo</label>
+        <input type="text" name="cargo" value="<?php echo set_value('cargo'); ?>"/>
+        <br>
+        <br>
+        <label>Departamento</label>
+        <select name="dpto">
+          <option value="1" >Administracion</option>
+          <option value="2" >Area Tecnica</option>
+          <option value="3" >Asesoria</option>
+          <option value="4" >Comercio Electronico</option>
+          <option value="5" >Compras</option>
+          <option value="6" >Controlling</option>
+          <option value="7" >Derecho</option>
+          <option value="8" >Finanzas y Contabilidad</option>
+          <option value="9" >Capacitacion</option>
+          <option value="10" >Gerencia</option>
+          <option value="11" >Gestion de Riesgos</option>
+          <option value="12" >Ingenieria</option>
+          <option value="13" >DiseÃ±o</option>
+        </select>
+        <br>
+        <br>
+        <label>Sector</label>
+        <select name="sector_ind">
+          <option value="1" >Banca y Seguros</option>
+          <option value="2" >Construccion e Inmobiliaria</option>
+          <option value="3" >Energia</option>
+          <option value="4" >Industria</option>
+          <option value="5" >Mineria</option>
+          <option value="6" >Tecnologia de Informacion</option>
+          <option value="7" >Telecomunicaciones</option>
+        </select>
+        <br>
+        <br>
+        <!-- Todavia no se define nada acerca de "tipo_usuario" solo esta en la vista-->
+        <label>Representante de su empresa?</label>
+        <br />
+        <input type="checkbox" name="tipo_usuario" value="4">
+        <br>
+        <br>
+        <label>Como se entero del evento?</label>
+        <select name="como">
+          <option value="1" >Facebook</option>
+          <option value="2" >Pagina USMP</option>
+          <option value="3" >Medios de Prensa</option>
+        </select>
+        <br>
+        <br>
         
-			        <form action="<?php echo base_url();?>seguridad/resetPwd/update_pwd" method="post" accept-charset="utf-8" class="box" >
-			        <a style="text-decoration: none; font-size: 8pt; color:red"><?php echo form_error('password'); ?></a>
-			        <label>Password*</label>
-			        <input type="password" required="required" name="password"/>
-			        <br>
-			        <br>
-			        <a style="text-decoration: none; font-size: 8pt; color:red"><?php echo form_error('password2'); ?></a>
-			        <label>Confirmar Password*</label>
-			        <input type="password" required="required" name="password2"><br><br>
-			        <input type="hidden" required="required" name="keyJ" value="<?php echo $keyJ ?>">
-			        <input type="hidden" required="required" name="keyP" value="<?php echo $keyP ?>">
-			        <input type="submit" name="submit" value="Guardar Contrasenia" >
-			        
-					</form>   	
+        
+        
+    <?php echo $captcha['image'] ?>
+    <input type="text" name="captcha" />
+    <input type="hidden" value="<?php echo $captcha['word']?>" name="string_captcha" />
+    <a style="text-decoration: none; font-size: 8pt; color:red"><?php echo form_error('captcha'); ?></a>
+ 
+        
+        
+        <!-- ><img style="margin-left:150px;" src="<?php echo base_url();?>seguridad/login/captcha" alt="captcha" /><br>
+        <br />
+        <label>Ingrese caracteres </label>
+        <input type="text" name="captcha" class="input1"/>
+        <a style="text-decoration: none; font-size: 8pt; color:red"><?php echo form_error('captcha'); ?></a> <br>
+        <!-- <h3 style="font-size: 8pt; color:red"><?php echo validation_errors(); ?></h3> --> 
+        <br>
+        <br>
+        <input  class="button orange" type="submit" name="submit" value="Registrarse" >
+        </input>
+      </fieldset>
+    </div>
+  </form>
+					<!-- ENDS form -->				
 						
 				</div>
 	        	<!-- ENDS page content -->
-	        	
-	        	<!-- sidebar -->
-	        	<aside id="sidebar">
-	        		<div class="block">
-		        		<h4>&iquest;Olvidaste tu contrase&ntilde;a?</h4>
-		        		<p>No te preocupes! Puedes utilizar uno de nuestros servicios para recuperarla.</p>
-		        		<ul class="address-block">
-		        			<li class="email"><a href="<?php echo base_url(); ?>seguridad/resetPwd">Recuperar Contrase&ntilde;a</a></li>
-		        		</ul>
-		        		
-	        		</div>	        	
-	        	</aside>
-	        	<div class="clearfix"></div>
-				<!-- ENDS sidebar -->
-	        	
 			
 			</div>
 			<!-- ENDS content -->

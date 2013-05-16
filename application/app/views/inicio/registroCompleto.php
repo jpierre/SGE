@@ -18,6 +18,7 @@
 		<!--  <script src="<?php echo base_url(); ?>js/inicio2/less-grid-4.js"></script> -->
 		<script src="<?php echo base_url(); ?>js/inicio2/custom.js"></script>
 		<script src="<?php echo base_url(); ?>js/inicio2/tabs.js"></script>
+		<script src="<?php echo base_url(); ?>js/inicio2/moveform.js"></script>
 		
 		<!-- Masonry -->
 		<script src="<?php echo base_url(); ?>js/inicio2/masonry.min.js" ></script>
@@ -83,7 +84,7 @@
 			<div class="wrapper">
 				<ul id="mobile-nav">
 					<li><a href="index.php">home</a></li>
-					<li class="current-menu-item"><a href="blog.php">blog</a></li>
+					<li><a href="blog.php">blog</a></li>
 					<li><a href="page.php">about</a>
 						<ul>
 							<li><a href="page-full.php">Fullwidth Page</a></li>
@@ -93,7 +94,7 @@
 						</ul>
 					</li>
 					<li><a href="portfolio.php">portfolio</a></li>
-					<li><a href="contact.php">contact</a></li>
+					<li class="current-menu-item"><a href="contact.php">contact</a></li>
 					<li><a href="http://luiszuno.com/blog/downloads/modus-html-template">Grab it!</a></li>
 				</ul>
 				<div id="nav-open"><a href="#">Menu</a></div>
@@ -106,13 +107,13 @@
 				
 			<div class="wrapper">
 					
-				<a href="<?php echo base_url(); ?>seccion/inicio2" id="logo"><img  src="<?php echo base_url(); ?>images/img/logo.png" alt="Tandem"></a>
+				<a href="<?php echo base_url(); ?>seccion/inicio" id="logo"><img  src="<?php echo base_url(); ?>images/img/logo.png" alt="Tandem"></a>
 				
 				<nav>
 					<ul id="nav" class="sf-menu">
-						<li><a href="<?php echo base_url(); ?>seccion/inicio2">Inicio<span class="subheader">Inicio</span></a></li>
-						<li><a href="<?php echo base_url(); ?>seccion/nuestraFacultad2">Nuestra Facultad<span class="subheader">FIA</span></a></li>
-						<li><a href="<?php echo base_url(); ?>seccion/eventos2">Eventos<span class="subheader">Eventos</span></a>
+						<li><a href="<?php echo base_url(); ?>seccion/inicio">Inicio<span class="subheader">Inicio</span></a></li>
+						<li><a href="<?php echo base_url(); ?>seccion/nuestraFacultad">Nuestra Facultad<span class="subheader">FIA</span></a></li>
+						<li><a href="<?php echo base_url(); ?>seccion/eventos">Eventos<span class="subheader">Eventos</span></a>
 							<ul>
 								<li><a href="page-full.php">SOCOTEC 2013</a></li>
 								<li><a href="page-features.php">1ros Juegos Florales</a></li>
@@ -120,8 +121,8 @@
 								<li><a href="page-icons.php">Icons</a></li> -->
 							</ul>
 						</li>
-						<li class="current-menu-item"><a href="<?php echo base_url(); ?>seccion/registro2">Registrate<span class="subheader">Registrate</span></a></li>
-						<li><a href="<?php echo base_url(); ?>seccion/contacto">Contacto<span class="subheader">Contacto</span></a></li>
+						<li><a href="<?php echo base_url(); ?>seccion/registro">Registrate<span class="subheader">Registrate</span></a></li>
+						<li class="current-menu-item"><a href="<?php echo base_url(); ?>seccion/contacto">Contacto<span class="subheader">Contacto</span></a></li>
 						<li><a href="<?php echo base_url(); ?>seccion/login">Login<span class="subheader">Acerca de</span></a></li>
 					</ul>
 				</nav>
@@ -154,7 +155,7 @@
 			
 				<!-- masthead -->
 		        <div id="masthead">
-					<span class="head">Registrate</span>
+					<span class="head">Registro</span><span class="subhead">Bienvenido</span>
 					<ul class="breadcrumbs">
 						<li><a href="index.php">Inicio</a></li>
 						<li>/ Registro</li>
@@ -166,138 +167,13 @@
 	        	
 	        	<!-- page content -->
 	        	<div id="page-content">
-	        							
-				<!-- form -->
-					<script type="text/javascript" src="<?php echo base_url(); ?>js/inicio2/form-validation.js"></script>
-					<form id="contactForm" action="#" method="post">
-						<h2 class="heading">Forma parte de nuestra comunidad !</h2>
-						<h4 class="heading">----- Informacion Personal -----</h4>
-						<fieldset>
-							<div>
-								<label>Tipo de Documento: </label>
-								<select name="tipo_doc" id="tipodoc">
-						          <option value="1">DNI</option>
-						          <option value="2">VISA</option>
-						          <option value="3">Carnet de extranjeria</option>
-						        </select>
-							</div>
-							<br>
-							<div>
-								<label>Numero de DOC</label>
-								<input name="name"  id="name" type="text" class="form-poshytip" title="Puede ser 8,10 o 12 digitos" />
-								</div>
-							<div>
-								<label>Nombres</label>
-								<input name="email"  id="email" type="text" class="form-poshytip" title="Ingrese sus nombres" />
-							</div>
-							<div>
-								<label>Apellido Paterno</label>
-								<input name="email"  id="email" type="text" class="form-poshytip" title="Ingrese su apellido materno" />
-							</div>
-							<div>
-								<label>Apellido Materno</label>
-								<input name="email"  id="email" type="text" class="form-poshytip" title="Ingrese su apellido paterno" />
-							</div>
-							<div>
-								<label>Telefono Fijo</label>
-								<input name="email"  id="email" type="text" class="form-poshytip" title="Enter your email address" />
-							</div>
-							<div>
-								<label>Celular</label>
-								<input name="email"  id="email" type="text" class="form-poshytip" title="Enter your email address" />
-							</div>
-							<div>
-								<label>Correo</label>
-								<input name="email"  id="email" type="text" class="form-poshytip" title="Enter your email address" />
-							</div>
-							<div>
-								<label>Direccion</label>
-								<input name="email"  id="email" type="text" class="form-poshytip" title="Enter your email address" />
-							</div>
-							<div>
-								<label>Usuario</label>
-								<input name="email"  id="email" type="text" class="form-poshytip" title="Enter your email address" />
-							</div>
-							<div>
-								<label>Password</label>
-								<input name="email"  id="email" type="text" class="form-poshytip" title="Enter your email address" />
-							</div>
-							<div>
-								<label>Confirmar Password</label>
-								<input name="email"  id="email" type="text" class="form-poshytip" title="Enter your email address" />
-							</div>
-							<h4 class="heading">----- Informacion sobre su Empresa -----</h4>
-							<div>
-								<label>Razon Social</label>
-								<input name="email"  id="email" type="text" class="form-poshytip" title="Enter your email address" />
-							</div>
-							<div>
-								<label>RUC</label>
-								<input name="email"  id="email" type="text" class="form-poshytip" title="Enter your email address" />
-							</div>
-							<div>
-								<label>Cargo</label>
-								<input name="email"  id="email" type="text" class="form-poshytip" title="Enter your email address" />
-							</div>
-							<div>
-								<label>Departamento: </label>
-								<select name="dpto">
-						          <option value="1" >Administracion</option>
-						          <option value="2" >Area Tecnica</option>
-						          <option value="3" >Asesoria</option>
-						          <option value="4" >Comercio Electronico</option>
-						          <option value="5" >Compras</option>
-						          <option value="6" >Controlling</option>
-						          <option value="7" >Derecho</option>
-						          <option value="8" >Finanzas y Contabilidad</option>
-						          <option value="9" >Capacitacion</option>
-						          <option value="10" >Gerencia</option>
-						          <option value="11" >Gestion de Riesgos</option>
-						          <option value="12" >Ingenieria</option>
-						          <option value="13" >Diseño</option>
-						        </select>
-							</div><br>
-							<div>
-								<label>Sector: </label>
-								<select name="sector_ind">
-						          <option value="1" >Banca y Seguros</option>
-						          <option value="2" >Construccion e Inmobiliaria</option>
-						          <option value="3" >Energia</option>
-						          <option value="4" >Industria</option>
-						          <option value="5" >Mineria</option>
-						          <option value="6" >Tecnologia de Informacion</option>
-						          <option value="7" >Telecomunicaciones</option>
-						        </select>
-							</div><br>
-							<div>
-								<label>Como se entero de nuestra web? </label>
-								<select name="como">
-						          <option value="1" >Facebook</option>
-						          <option value="2" >Pagina USMP</option>
-						          <option value="3" >Medios de Prensa</option>
-						        </select>
-							</div><br>
-							<div>
-								<label>Representa Ud. a su Organizacion?</label>
-								<input type="checkbox" name="tipo_usuario" value="4">
-							</div>
-							
-							
-							<!-- send mail configuration -->
-							<input type="hidden" value="email@yourserver.com" name="to" id="to" />
-							<input type="hidden" value="Enter the subject here" name="subject" id="subject" />
-							<input type="hidden" value="send-mail.php" name="sendMailUrl" id="sendMailUrl" />
-							<!-- ENDS send mail configuration -->
-							
-							<p><input type="button" value="Registrarme" name="submit" id="submit" /></p>
-						</fieldset>
-						
-					</form>
-					<!-- ENDS form -->				
-						
-				</div>
+	        	
+						<h3 class="heading">Gracias por registrarte! <br><br>Ahora puedes disfrutar de todos nuestros servicios! </h3>
+					
+	        		
+	        	</div>
 	        	<!-- ENDS page content -->
-			
+	       
 			</div>
 			<!-- ENDS content -->
 			
@@ -366,6 +242,12 @@
 			<div id="to-top"></div>
 		</footer>
 		
+		
+		<!-- Start google map -->
+		<script>initialize();</script>
+		
 	</body>
+	
+	
 	
 </html>

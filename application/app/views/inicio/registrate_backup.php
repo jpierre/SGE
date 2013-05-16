@@ -18,7 +18,6 @@
 		<!--  <script src="<?php echo base_url(); ?>js/inicio2/less-grid-4.js"></script> -->
 		<script src="<?php echo base_url(); ?>js/inicio2/custom.js"></script>
 		<script src="<?php echo base_url(); ?>js/inicio2/tabs.js"></script>
-		<script src="<?php echo base_url(); ?>js/inicio2/moveform.js"></script>
 		
 		<!-- Masonry -->
 		<script src="<?php echo base_url(); ?>js/inicio2/masonry.min.js" ></script>
@@ -84,7 +83,7 @@
 			<div class="wrapper">
 				<ul id="mobile-nav">
 					<li><a href="index.php">home</a></li>
-					<li><a href="blog.php">blog</a></li>
+					<li class="current-menu-item"><a href="blog.php">blog</a></li>
 					<li><a href="page.php">about</a>
 						<ul>
 							<li><a href="page-full.php">Fullwidth Page</a></li>
@@ -94,7 +93,7 @@
 						</ul>
 					</li>
 					<li><a href="portfolio.php">portfolio</a></li>
-					<li class="current-menu-item"><a href="contact.php">contact</a></li>
+					<li><a href="contact.php">contact</a></li>
 					<li><a href="http://luiszuno.com/blog/downloads/modus-html-template">Grab it!</a></li>
 				</ul>
 				<div id="nav-open"><a href="#">Menu</a></div>
@@ -121,8 +120,8 @@
 								<li><a href="page-icons.php">Icons</a></li> -->
 							</ul>
 						</li>
-						<li><a href="<?php echo base_url(); ?>seccion/registro2">Registrate<span class="subheader">Registrate</span></a></li>
-						<li class="current-menu-item"><a href="<?php echo base_url(); ?>seccion/contacto">Contacto<span class="subheader">Contacto</span></a></li>
+						<li class="current-menu-item"><a href="<?php echo base_url(); ?>seccion/registro2">Registrate<span class="subheader">Registrate</span></a></li>
+						<li><a href="<?php echo base_url(); ?>seccion/contacto">Contacto<span class="subheader">Contacto</span></a></li>
 						<li><a href="<?php echo base_url(); ?>seccion/login">Login<span class="subheader">Acerca de</span></a></li>
 					</ul>
 				</nav>
@@ -155,10 +154,10 @@
 			
 				<!-- masthead -->
 		        <div id="masthead">
-					<span class="head">Contacto</span><span class="subhead">this is a sub heading</span>
+					<span class="head">Registrate</span>
 					<ul class="breadcrumbs">
 						<li><a href="index.php">Inicio</a></li>
-						<li>/ Contacto</li>
+						<li>/ Registro</li>
 					</ul>
 				</div>
 	        	<!-- ENDS masthead -->
@@ -167,80 +166,136 @@
 	        	
 	        	<!-- page content -->
 	        	<div id="page-content">
-	        	
-						
-					<!-- Map -->
-				<div>
-				<iframe width="520" height="320" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com.pe/maps?f=d&amp;source=s_d&amp;saddr=-12.072266,-76.941977&amp;daddr=&amp;hl=es&amp;geocode=&amp;sll=-12.07,-76.952748&amp;sspn=0.022788,0.042272&amp;mra=mift&amp;mrsp=0&amp;sz=15&amp;ie=UTF8&amp;ll=-12.07,-76.952748&amp;spn=0.022788,0.042272&amp;t=m&amp;output=embed"></iframe>
-				</div>
-				
-				<!-- ENDS Map -->
-						
-	        		
-					<p>
-						Ubicanos gracias a los servicios de Google Maps! 
-					</p>
-					
-					<!-- form -->
-					<script type="text/javascript" src="<?php echo base_url(); ?>js/inicio2/form-validation.js"></script>
+	        							
+				<!-- form -->
 					<form id="contactForm" action="#" method="post">
-						<h3 class="heading">Envianos tus comentarios</h3>
-						<p> Completa nuestro formulario y envianos tus comentarios, sugerencias, dudas, estaremos prestos a responderte</p>
-						<fieldset>
-							<div>
-								<input name="name"  id="name" type="text" class="form-poshytip" title="Ingresa tu nombre completo" />
-								<label>Nombre</label>
-							</div>
-							<div>
-								<input name="email"  id="email" type="text" class="form-poshytip" title="Ingresa tu direccion de email" />
-								<label>Email</label>
-							</div>
-							<div>
-								
-								<input name="web"  id="web" type="text" class="form-poshytip" title="Ingresa tu sitio web" />
-								<label>Sitio Web (Opcional)</label>
-							</div>
-							<div>
-								<textarea  name="comments"  id="comments" rows="5" cols="20" class="form-poshytip" title="Dejanos tus comentarios"></textarea>
-							</div>
+						<h2>Forma parte de nuestra comunidad !</h2>
+						<h4>----- Informacion Personal -----</h4>
+						<table>
+							<tr>
+								<td><label>Tipo de Documento: <label></td>
+								<td><select name="tipo_doc" id="tipodoc">
+						          <option value="1">DNI</option>
+						          <option value="2">VISA</option>
+						          <option value="3">Carnet de extranjeria</option>
+						        </select></td>
+							</tr>
+							<tr>
+								<td><label>Numero de DOC<label></td>
+								<td><input name="name"  id="name" type="text" class="form-poshytip" title="Puede ser 8,10 o 12 digitos" /></td>
+							</tr>
+							<tr>
+								<td><label>Nombres<label></td>
+								<td><input name="email"  id="email" type="text" class="form-poshytip" title="Ingrese sus nombres" /></td>
+							</tr>
+							<tr>
+								<td><label>Apellido Paterno<label></td>
+								<td><input name="email"  id="email" type="text" class="form-poshytip" title="Ingrese su apellido materno" /></td>
+							</tr>
+							<tr>
+								<td><label>Apellido Materno<label></td>
+								<td><input name="email"  id="email" type="text" class="form-poshytip" title="Ingrese su apellido paterno" /></td>
+							</tr>
+							<tr>
+								<td><label>Telefono Fijo<label></td>
+								<td><input name="email"  id="email" type="text" class="form-poshytip" title="Enter your email address" /></td>
+							</tr>
+							<tr>
+								<td><label>Celular<label></td>
+								<td><input name="email"  id="email" type="text" class="form-poshytip" title="Enter your email address" /></td>
+							</tr>
+							<tr>
+								<td><label>Correo<label></td>
+								<td><input name="email"  id="email" type="text" class="form-poshytip" title="Enter your email address" /></td>
+							</tr>
+							<tr>
+								<td><label>Direccion<label></td>
+								<td><input name="email"  id="email" type="text" class="form-poshytip" title="Enter your email address" /></td>
+							</tr>
+							<tr>
+								<td><label>Usuario<label></td>
+								<td><input name="email"  id="email" type="text" class="form-poshytip" title="Enter your email address" /></td>
+							</tr>
+							<tr>
+								<td><label>Password<label></td>
+								<td><input name="email"  id="email" type="text" class="form-poshytip" title="Enter your email address" /></td>
+							</tr>
+							<tr>
+								<td><label>Confirmar Password<label></td>
+								<td><input name="email"  id="email" type="text" class="form-poshytip" title="Enter your email address" /></td>
+							</tr>
+						</table>
+							<h4 class="heading">----- Informacion sobre su Empresa -----</h4>
+						<table>
+							<tr>
+								<td><label>Razon Social<label></td>
+								<td><input name="email"  id="email" type="text" class="form-poshytip" title="Enter your email address" /></td>
+							</tr>
+							<tr>
+								<td><label>RUC<label></td>
+								<td><input name="email"  id="email" type="text" class="form-poshytip" title="Enter your email address" /></td>
+							</tr>
+							<tr>
+								<td><label>Cargo<label></td>
+								<td><input name="email"  id="email" type="text" class="form-poshytip" title="Enter your email address" /></td>
+							</tr>
+							<tr>
+								<td><label>Departamento: <br><label></td>
+								<td><select name="dpto">
+						          <option value="1" >Administracion</option>
+						          <option value="2" >Area Tecnica</option>
+						          <option value="3" >Asesoria</option>
+						          <option value="4" >Comercio Electronico</option>
+						          <option value="5" >Compras</option>
+						          <option value="6" >Controlling</option>
+						          <option value="7" >Derecho</option>
+						          <option value="8" >Finanzas y Contabilidad</option>
+						          <option value="9" >Capacitacion</option>
+						          <option value="10" >Gerencia</option>
+						          <option value="11" >Gestion de Riesgos</option>
+						          <option value="12" >Ingenieria</option>
+						          <option value="13" >Diseño</option>
+						        </select></td>
+							</tr>
+							<tr>
+								<td><label>Sector: <br><label></td>
+								<td><select name="sector_ind">
+						          <option value="1" >Banca y Seguros</option>
+						          <option value="2" >Construccion e Inmobiliaria</option>
+						          <option value="3" >Energia</option>
+						          <option value="4" >Industria</option>
+						          <option value="5" >Mineria</option>
+						          <option value="6" >Tecnologia de Informacion</option>
+						          <option value="7" >Telecomunicaciones</option>
+						        </select></td>
+							</tr>
+							<tr>
+								<td><label>Como se entero de nuestra web? <br><label></td>
+								<td><select name="como">
+						          <option value="1" >Facebook</option>
+						          <option value="2" >Pagina USMP</option>
+						          <option value="3" >Medios de Prensa</option>
+						        </select></td>
+							</tr>
+							<tr>
+								<td><label>Representa Ud. a su Organizacion?<label></td>
+								<td><input type="checkbox" name="tipo_usuario" value="4"></td>
+							</tr>
+							
 							
 							<!-- send mail configuration -->
-							<input type="hidden" value="email@yourserver.com" name="to" id="to" />
-							<input type="hidden" value="Enter the subject here" name="subject" id="subject" />
-							<input type="hidden" value="send-mail.php" name="sendMailUrl" id="sendMailUrl" />
+							<td><input type="hidden" value="email@yourserver.com" name="to" id="to" /></td>
+							<td><input type="hidden" value="Enter the subject here" name="subject" id="subject" /></td>
+							<td><input type="hidden" value="send-mail.php" name="sendMailUrl" id="sendMailUrl" /></td>
 							<!-- ENDS send mail configuration -->
-							
-							<p><input type="button" value="Enviar" name="submit" id="submit" /> <span id="error" class="warning">Message</span></p>
-						</fieldset>
-						
+												
+						</table>
+						<p><input type="button" value="Registrarme" name="submit" id="submit" /></p>
 					</form>
-					<p id="sent-form-msg" class="success">Form data sent. Thanks for your comments.</p>
-					<!-- ENDS form -->
+					<!-- ENDS form -->				
 						
-	        		
-	        	</div>
+				</div>
 	        	<!-- ENDS page content -->
-	        	
-	        	
-	        	<!-- sidebar -->
-	        	<aside id="sidebar">
-	        		<div class="block">
-		        		<h4>Direccion</h4>
-		        		<p>Ubicanos gracias a los servicios de Google Maps.</p>
-		        		
-		        		<ul class="address-block">
-		        			<li class="address">Av. La Fontana 1250 Urb. Sta. Patricia</li>
-		        			<li class="phone">(511) 208-6000</li>
-		        			<li class="email"><a href="mailto:fia@usmp.edu.pe">Consultas e informacion</a></li>
-		        			<li class="email"><a href="mailto:visitasfia@usmp.edu.pe">Visitas guiadas</a></li>
-		        		</ul>
-		        		
-	        		</div>	        	
-	        	</aside>
-	        	<div class="clearfix"></div>
-				<!-- ENDS sidebar -->
-				
-				
 			
 			</div>
 			<!-- ENDS content -->
@@ -310,12 +365,6 @@
 			<div id="to-top"></div>
 		</footer>
 		
-		
-		<!-- Start google map -->
-		<script>initialize();</script>
-		
 	</body>
-	
-	
 	
 </html>
