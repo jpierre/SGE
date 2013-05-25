@@ -8,7 +8,7 @@
 			<script src="<?php echo base_url(); ?>js/inicio2/css3-mediaqueries.js"></script>
 		<![endif]-->
 		<link rel="stylesheet" media="all" href="<?php echo base_url(); ?>css/inicio2/style.css"/>
-		<link rel="stylesheet" href="<?php echo base_url(); ?>css/style2.css" type="text/css" media="screen" charset="utf-8" />
+		<link rel="stylesheet" href="<?php echo base_url(); ?>css/style_registro.css" type="text/css" media="screen" charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1"/>
 		<!-- Adding "maximum-scale=1" fixes the Mobile Safari auto-zoom bug: http://filamentgroup.com/examples/iosScaleBug/ -->
 		
