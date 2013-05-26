@@ -82,19 +82,17 @@
 		<div id="mobile-nav-holder">
 			<div class="wrapper">
 				<ul id="mobile-nav">
-					<li><a href="index.php">home</a></li>
-					<li class="current-menu-item"><a href="blog.php">blog</a></li>
-					<li><a href="page.php">about</a>
+					<li><a href="<?php echo base_url(); ?>seccion/inicio">Inicio</a></li>
+					<li><a href="<?php echo base_url(); ?>seccion/nuestraFacultad">Nuestra Facultad</a></li>
+					<li><a href="<?php echo base_url(); ?>seccion/eventos">Eventos</a>
 						<ul>
-							<li><a href="page-full.php">Fullwidth Page</a></li>
-							<li><a href="page-features.php">Features</a></li>
-							<li><a href="page-typography.php">Typography</a></li>
-							<li><a href="page-icons.php">Icons</a></li>
+							<li><a href="page-full.php">SOCOTEC 2013</a></li>
+							<li><a href="page-features.php">1ros Juegos Florales</a></li>
 						</ul>
 					</li>
-					<li><a href="portfolio.php">portfolio</a></li>
-					<li><a href="contact.php">contact</a></li>
-					<li><a href="http://luiszuno.com/blog/downloads/modus-html-template">Grab it!</a></li>
+					<li  class="current-menu-item"><a href="<?php echo base_url(); ?>seccion/registro">Registrate</a></li>
+					<li><a href="<?php echo base_url(); ?>seccion/contacto">Contacto</a></li>
+					<li><a href="<?php echo base_url(); ?>seccion/login">Login</a></li>
 				</ul>
 				<div id="nav-open"><a href="#">Menu</a></div>
 			</div>
