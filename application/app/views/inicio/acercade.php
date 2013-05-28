@@ -3,7 +3,7 @@
 
 	<head>
 		<meta charset="utf-8"/>
-		<title>MODUS</title>
+		<title>Eventos FIA - USMP</title>
 		<!--[if lt IE 9]>
 			<script src="js/css3-mediaqueries.js"></script>
 		<![endif]-->

@@ -3,7 +3,7 @@
 
 	<head>
 		<meta charset="utf-8"/>
-		<title>MODUS</title>
+		<title>Eventos FIA - USMP</title>
 		
 		
 		
