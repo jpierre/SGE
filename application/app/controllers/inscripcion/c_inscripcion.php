@@ -118,15 +118,19 @@ class C_inscripcion extends CI_Controller{
 		
 	}
 	
-	public function generarQR(){
+	public function generarQR($data=""){
 				
 		$this->load->model('inscripcion/m_inscripcion', 'registro');
  		$result=$this->registro->get_inscripcion($this->session->userdata('idDNI'));
 		
+ 		$this->load->model('mantener/m_evento','m_evento');
+		$eventos = $this->m_evento->getData();
+		$data['eventos'] = $eventos;
+		
 		if($result != false){
-			$this->load->view('home/generar_QR');
+			$this->load->view('home/generar_QR', $data);
 		}else{
-			$this->load->view('home/no_inscrito');
+			$this->load->view('home/no_inscrito', $data);
 		}
 		
 		

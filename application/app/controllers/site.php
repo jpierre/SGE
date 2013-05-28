@@ -9,16 +9,25 @@
 	}
 	
 	function members_area(){
+		
+		$this->load->model('mantener/m_evento','m_evento');
+		$eventos = $this->m_evento->getData();
+		$data['eventos'] = $eventos;
 		$data['main_content'] = 'home/content';
+			
 		$this->load->view('home/home', $data);
+		
 	}
 		
 	function ver_perfil(){
-		$this->load->view('home/ver_perfil');	
+		$this->load->model('mantener/m_evento','m_evento');
+		$eventos = $this->m_evento->getData();
+		$data['eventos'] = $eventos;
+		$this->load->view('home/ver_perfil', $data);	
 	}
 	
 	function generar_QR(){
-		$this->load->view('home/generar_QR');	
+		redirect('inscripcion/c_inscripcion/generarQR');	
 	}
 
 	function is_logged_in(){

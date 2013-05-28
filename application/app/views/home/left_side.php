@@ -11,13 +11,10 @@
                                 <ul>
                                 <li><span><?php echo anchor('inscripcion/c_inscripcion/index/1', '&raquo; VISION 2013'); ?></span></li>
                                 <li><span><?php echo anchor('inscripcion/c_inscripcion/index/2', '&raquo; Cloud Google'); ?></span></li>
-                                <li><span><?php echo anchor('', '&raquo; Android Lima Day'); ?></span>
-                                        <ul>
-                                        <li><a href="#">Ponencia 1</a></li>
-                                        <li><a href="#">Ponencia 2</a></li>
-                                        <li><a href="#">Ponencia 3</a></li>
-                                        </ul>
-                                </li>
+                                <li><span><?php echo anchor('', '&raquo; Android Lima Day'); ?></span></li>
+                                <?php for($i=0; $i<count($eventos); $i++){?>
+                                <li><span><?php echo anchor('inscripcion/c_inscripcion/index/'.$eventos[$i]->id_eve, '&raquo; '.$eventos[$i]->nom_eve); ?></span></li>
+                                <?php }?>
                                 </ul>
                            </li>
                            <li><a href="#" class="categoria">Horarios</a>
@@ -25,7 +22,7 @@
                                 <li><a href="#">&raquo; Etc, Etc.</a></li>
                                 </ul>
                            </li>
-                           <li><a href="<?php echo base_url();?>inscripcion/c_inscripcion/generarQR" class="categoria">Generar Codigo QR</a></a>
+                           <li><a href="<?php echo base_url();?>seccion/generar_QR" class="categoria">Generar Codigo QR</a></a>
                                
                            </li>
                            <li><a href="" class="categoria">Acerca De</a></li>
