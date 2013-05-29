@@ -16,8 +16,20 @@ class M_inscripcion extends CI_Model{
 		$this->db->set('nro_cuotas', $data['nro_cuotas']);
 		$this->db->set('monto', $data['monto']);
  		$this->db->insert('recibo');
-				
-		return true;
+ 		
+ 		
+ 		$query="SELECT id_pon FROM ponencia WHERE cod_eve_pon='".$data['id_evento']."'";
+		$resultado = $this->db->query($query);
+		$resultado = $resultado->result();
+ 		
+ 		for($i=0; $i<count($resultado); $i++){
+ 			$this->db->set('ponencia_id_pon', $resultado[$i]->id_pon);
+			$this->db->set('usuario_cod_user', $a->ID);
+			$this->db->set('asistencia', 0);
+ 			$this->db->insert('asistencia');
+ 		}
+ 		
+ 		return true;
 	
 	}
 
