@@ -5,7 +5,7 @@ class M_inscripcion extends CI_Model{
 	function registrar_inscripcion_participante($data=NULL){
 		
 		
-		$sql="select cod_user as ID from usuario where num_doc_user='".$this->session->userdata('idDNI')."'";
+		$sql="select cod_user as ID, num_doc_user as DNI from usuario where num_doc_user='".$this->session->userdata('idDNI')."'";
 		$a=$this->db->query($sql)->row();
 		
 		$this->db->set('cod_user_rec', $a->ID);
@@ -24,7 +24,7 @@ class M_inscripcion extends CI_Model{
  		
  		for($i=0; $i<count($resultado); $i++){
  			$this->db->set('ponencia_id_pon', $resultado[$i]->id_pon);
-			$this->db->set('usuario_cod_user', $a->ID);
+			$this->db->set('num_doc_user', $a->DNI);
 			$this->db->set('asistencia', 0);
  			$this->db->insert('asistencia');
  		}
