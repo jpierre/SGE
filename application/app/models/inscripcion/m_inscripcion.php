@@ -28,6 +28,7 @@ class M_inscripcion extends CI_Model{
 			$this->db->set('asistencia', 0);
  			$this->db->insert('asistencia');
  		}
+		
  		
  		return true;
 	
