@@ -94,9 +94,9 @@ $active_group = 'default';
 $active_record = TRUE;
 
 $db['default']['hostname'] = 'localhost';
-$db['default']['username'] = 'jesugar_sysmov';
-$db['default']['password'] = 'uI5ts(ztTF~}';
-$db['default']['database'] = 'jesugar_sysmov';
+$db['default']['username'] = 'root';
+$db['default']['password'] = '';
+$db['default']['database'] = 'eventosfia';
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = TRUE;

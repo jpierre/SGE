@@ -140,7 +140,7 @@ class C_inscripcion extends CI_Controller{
 	public function generarConograma(){
 	
 		echo "este es el cronograma";		
-
+	}
 }
 
 

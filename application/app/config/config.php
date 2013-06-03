@@ -30,7 +30,7 @@
 
 */
 
-$config['base_url']	= 'http://sysmov.net/sge/';
+$config['base_url']	= 'http://localhost/sge/';
 
 
 
