@@ -6,15 +6,24 @@
 	color: #393939;
 	font-size: 15px;
 }
-
+/*
 fieldset {
-	border-top:1px solid #ccc;
+border-top:1px solid #333;
   border-left:0;
   border-bottom:0;
   border-right:0;
   padding:6px;
   margin:0px 30px 0px 0px;
 
+}*/
+ fieldset{
+  border-top:1px solid #ccc;
+  border-left:0;
+  border-bottom:0;
+  border-right:0;
+  padding:6px;
+  margin:0px 30px 0px 0px;
+  
 }
 
 
@@ -23,7 +32,7 @@ legend{
 
 	text-align:center;
   color:#ccc;
-  font-size:15px;
+  font-size:17px;
   padding:0px 4px 0px 4px;
   margin-left:20px;
 }
