@@ -11,19 +11,18 @@
                                 <ul>
                                 <li><a href="#">&raquo; VISION 2013</a>
                                         <ul>
-                                        <li><span><?php echo anchor('administracion/c_administracion/mostrarlo2', 'Mantener Ponencia'); ?></span></li>
+  
                                         <li><span><?php echo anchor('administracion/c_administracion/mostrarlo/1', 'Asignar Expositor a Ponencia'); ?></span></li>
                                         </ul>
                                 </li>
                                 <li><a href="#">&raquo; Cloud Google</a>
                                         <ul>
-                                        <li><span><?php echo anchor('administracion/c_administracion/mostrarlo2', 'Mantener Ponencia'); ?></span></li>
-                                        <li><span><?php echo anchor('administracion/c_administracion/mostrarlo/2', 'Asignar Expositor a Ponencia'); ?></span></li>
+                                <li><span><?php echo anchor('administracion/c_administracion/mostrarlo/2', 'Asignar Expositor a Ponencia'); ?></span></li>
                                         </ul>
                                 </li>
                                 <li><a href="#">&raquo; Android Lima Day</a>
                                         <ul>
-                                        <li><span><?php echo anchor('administracion/c_administracion/mostrarlo2', 'Mantener Ponencia'); ?></span></li>
+     
                                         <li><span><?php echo anchor('administracion/c_administracion/mostrarlo', 'Asignar Expositor a Ponencia'); ?></span></li>
                                         </ul>
                                 </li>
@@ -34,11 +33,7 @@
                                 <li><a href="#">&raquo; Etc, Etc.</a></li>
                                 </ul>
                            </li>
-                           <li><a href="#" class="categoria">Generar Codigo QR</a>
-                                <ul>
-                                <li><a href="#">&raquo; Etc, Etc. </a></li>
-                                </ul>
-                           </li>
+                
                            <li><a href="" class="categoria">Acerca De </a></li>
                            </li>
                            <li><a href="<?php echo base_url();?>seguridad/login/logout" class="categoria" >Cerrar Sesion</a></li>

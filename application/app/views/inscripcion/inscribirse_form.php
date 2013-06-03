@@ -86,7 +86,7 @@ if(document.form6.cant_cuotas.options[selec].value=="Seleccione"){
         </fieldset>
         <br />
         <fieldset>
-          <legend><b>Modalidad de Pago</b></legend>
+          <legend>Modalidad de Pago</legend>
           <p>&nbsp;</p>
           <p>
             <label>
@@ -107,13 +107,16 @@ if(document.form6.cant_cuotas.options[selec].value=="Seleccione"){
               <option value="3" >3</option>
             </select>
           </p>
-          <?php endif ?>
-          <input name="id_evento" type="hidden" value="<?php echo $id_evento; ?>"/>
-          <label>Monto</label>
-          <input name="monto" type="text" value="250" readonly="readonly" />
-          </p>
           <p>
-            <input type="submit" name="submit" value="Inscribirse" onclick="return validarTotal();" />
+            <?php endif ?>
+            <input name="id_evento" type="hidden" value="<?php echo $id_evento; ?>"/>
+            <label>Monto</label>
+            <input name="monto" type="text" value="250" readonly="readonly" />
+            </p>
+          </p>
+          <p>&nbsp; </p>
+          <p>
+            <input class="css3button" type="submit" name="submit" value="Inscribirse" onclick="return validarTotal();" />
           </p>
         </fieldset>
     </form>

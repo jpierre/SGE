@@ -22,35 +22,36 @@ function comprobar(obj)
 </header>
 
 <ul>
-	<li id="foli112" class="notranslate first section      ">
+	<li style="list-style:none" id="foli112" class="notranslate first section      ">
 	<section>
 	
 					<div align="center">
 					
 					  <h1>Asignar Expositor a ponencia</h1>
+                      <br />
 										
 					<fieldset><legend>Datos del expositor</legend>
 					<h4 style="color:#FF0000"><?php echo $this->session->userdata('mensaje'); ?></h4>
 					<form action="<?php echo base_url();?>administracion/c_administracion/obteneterDatosExpositor/" method="post" accept-charset="utf-8">
-					<table >
+					<table width="438" height="129" cellspacing="0" >
 					  <tr>
-					    <td>Codigo: </td>
+					    <td>Codigo : </td>
 					    <td><input type="text" name="codigo" value="<?php echo $this->session->userdata('codi');?>"/></td>
 					    <td><input type="submit" value="Busca Expositor"/></td>
 					  </tr>
 					  <tr>
-					    <td>Expositor: </td>
+					    <td>Expositor : </td>
 					    <td><label><?php echo $this->session->userdata('nom').", ".$this->session->userdata('ape_Pat')." ".$this->session->userdata('ape_Mat');?></label></td>
 					    <td></td>
 						
 					  </tr>
 					  <tr>
-					    <td>Pais: </td>
+					    <td>Pais : </td>
 					    <td><label><?php echo $this->session->userdata('pais');?></label></td>
 					    <td></td>
 					  </tr>
 					  <tr>
-					    <td>Especialidad: </td>
+					    <td>Especialidad : </td>
 					    <td><label><?php echo $this->session->userdata('especialidad');?></label></td>
 					    <td></td>
 					  </tr>
@@ -63,34 +64,34 @@ function comprobar(obj)
 					<legend>Datos de Ponencia</legend>
 					<h4 style="color:#FF0000"><?php echo  $this->session->userdata('mensaje2'); ?></h4>
 					<form action="<?php echo base_url();?>administracion/c_administracion/obtenerDatosPonencia/" method="post" accept-charset="utf-8">
-					<table width="200" border="0">
+					<table width="422" height="199" border="0">
 					  <tr>
-					    <td>Codigo: </td>
+					    <td>Codigo : </td>
 					    <td><input type="text" name="codigo2" value="<?php echo $this->session->userdata('codi2');?>"/></td>
 					    <td><input type="submit" value="Buscar Ponencia"/></td>
 					  </tr>
 					  <tr>
-					    <td>Titulo: </td>
+					    <td>Titulo : </td>
 					    <td><label><?php echo $this->session->userdata('titulo');?></label></td>
 					    <td></td>
 					  </tr>
 					  <tr>
-					    <td>Aula: </td>
+					    <td>Aula : </td>
 					    <td><label><?php echo$this->session->userdata('aula');?></label></td>
 					    <td></td>
 					  </tr>
 					  <tr>
-					    <td>Ambiente: </td>
+					    <td>Ambiente : </td>
 					    <td><label><?php echo $this->session->userdata('ambiente');?></label></td>
 					    <td></td>
 					  </tr>
 					  <tr>
-					    <td>Tipo de Ponencia: </td>
+					    <td>Tipo de Ponencia : </td>
 					    <td><label><?php echo $this->session->userdata('tipo1');?></label></td>
 					    <td></td>
 					  </tr>
 					  <tr>
-					    <td>Duracion: </td>
+					    <td>Duracion : </td>
 					    <td><label><?php echo $this->session->userdata('duracion');?></label></td>
 					    <td></td>
 					  </tr>
@@ -108,7 +109,7 @@ function comprobar(obj)
 					<fieldset>
 					<legend>Requerimientos de Ponencias</legend>
 					
-					<table width="274" border="0">
+					<table width="328" height="233" border="0">
 					  <tr>
 					    <td><input name="req1" value="1" type="checkbox" <?php if($this->session->userdata('mensaje')!="No se encontraron Resultados" && $this->session->userdata('mensaje') != NULL){ $a=1;?> onChange="comprobar(this);" <?php } ?>/>
 					    Pizarra Acrilica</td>
@@ -127,7 +128,7 @@ function comprobar(obj)
 					  <tr>
 					    <td colspan="3">
 					    Requerimientos de SW
-					    <textarea name="reqAdic" <?php if($a==1){?> onkeyup = "asignar.disabled = this.value==''"<?php } ?>></textarea>
+					    <textarea style="width:350px; height:150px;" name="reqAdic" <?php if($a==1){?> onkeyup = "asignar.disabled = this.value==''"<?php } ?>></textarea>
 					    </td>
 						<td>
 						
@@ -136,7 +137,7 @@ function comprobar(obj)
 					</table>
 					
 					
-					<input id="asignar" type="submit" value="Asignar" name="asignar"  disabled/>
+					<input  id="asignar" type="submit" value="Asignar" name="asignar"  disabled/>
 					</fieldset>
 					</form>
 
