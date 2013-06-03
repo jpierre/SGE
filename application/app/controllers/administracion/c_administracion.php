@@ -52,7 +52,7 @@ class C_administracion extends CI_Controller{
 		}else{
 			$data= array(
 				'codi' =>$this->input->post('codigo'),
-				'mensaje' =>" ",
+				'mensaje' =>"",
 				'nom' =>$query->nom_exp,
 				'ape_Pat' =>$query->ape_pat_exp,
 				'ape_Mat' =>$query->ape_mat_exp,
@@ -92,7 +92,7 @@ class C_administracion extends CI_Controller{
 		}else{
 			$dato= array(
 				'codi2' =>$this->input->post('codigo2'),
-				'mensaje2' =>" ",
+				'mensaje2' =>"",
 				'titulo' =>$query->nom_pon,
 				'aula' =>$query->cod_fia_amb,
 				'ambiente' =>$query->tip_amb,

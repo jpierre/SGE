@@ -73,7 +73,7 @@
                 "designer|userClassName": "MyColumn8",
                 "width": 220,
                 "defaultWidth": 200,
-                "dataIndex": "tip_doc",
+                "dataIndex": "tip_doc_desc",
                 "text": "Tipo Documento"
             },
             "designerId": "5b079db7-ab82-4449-8047-fe3af6c90369"

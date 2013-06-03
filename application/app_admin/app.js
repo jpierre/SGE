@@ -57,6 +57,7 @@ Ext.application({
         sessionStorage.setItem('id_eve',-1);
         sessionStorage.setItem('cod_exp',-1);
         Ext.getCmp('userlabel').setText(sessionStorage.nomUser);
+
     }
 
 });

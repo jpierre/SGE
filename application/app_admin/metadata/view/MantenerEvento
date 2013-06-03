@@ -178,11 +178,11 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "onFormPonActioncomplete",
-                        "fn": "onFormPonActioncomplete",
+                        "designer|userClassName": "onFormEventoActioncomplete",
+                        "fn": "onFormEventoActioncomplete",
                         "implHandler": [
-                            "\r",
-                            "Ext.getCmp('winEvento').hide(); \r",
+                            "Ext.Msg.alert('Error', action);\r",
+                            "Ext.getCmp('winEvento').close(); \r",
                             "Ext.getCmp('gridEvento').getStore().load();\r",
                             "Ext.getCmp('gridEvento').getView().refresh();"
                         ],
@@ -190,6 +190,24 @@
                         "scope": "me"
                     },
                     "designerId": "913e3d3d-158b-4e89-8002-4a6400c3a6f7"
+                },
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "onFormEventoBeforeAction",
+                        "fn": "onFormEventoBeforeAction",
+                        "implHandler": [
+                            "Ext.Msg.alert('Error', action.result.sms);"
+                        ],
+                        "name": "beforeaction",
+                        "scope": "me"
+                    },
+                    "designerId": "97716da6-2f33-479b-ad46-9505436d0d2d"
                 }
             ]
         }

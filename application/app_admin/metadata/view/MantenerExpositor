@@ -208,27 +208,6 @@
                     ]
                 },
                 {
-                    "type": "basiceventbinding",
-                    "reference": {
-                        "name": "listeners",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "designer|userClassName": "onFormPonActioncomplete",
-                        "fn": "onFormPonActioncomplete",
-                        "implHandler": [
-                            "\r",
-                            "Ext.getCmp('winExpositor').hide(); \r",
-                            "Ext.getCmp('gridExpositor').getStore().load();\r",
-                            "Ext.getCmp('gridExpositor').getView().refresh();"
-                        ],
-                        "name": "actioncomplete",
-                        "scope": "me"
-                    },
-                    "designerId": "b518f465-9be7-44ae-97f3-cebf9023ffd9"
-                },
-                {
                     "type": "container",
                     "reference": {
                         "name": "items",
@@ -272,12 +251,52 @@
                                 "layout|y": 250,
                                 "designer|userClassName": "MyFileUpload",
                                 "margin": "0 0 0 10",
+                                "name": "imagen",
                                 "fieldLabel": "Label",
                                 "hideLabel": true
                             },
                             "designerId": "267697d3-fe24-4d27-9923-497928f5a334"
                         }
                     ]
+                },
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "onFormExpositorActioncomplete",
+                        "fn": "onFormExpositorActioncomplete",
+                        "implHandler": [
+                            "\r",
+                            "Ext.getCmp('winExpositor').close(); \r",
+                            "Ext.getCmp('gridExpositor').getStore().load();\r",
+                            "Ext.getCmp('gridExpositor').getView().refresh();"
+                        ],
+                        "name": "actioncomplete",
+                        "scope": "me"
+                    },
+                    "designerId": "0c12c465-733b-44bc-a0c7-c21c4de542f1"
+                },
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "onFormExpositorActionfailed",
+                        "fn": "onFormExpositorActionfailed",
+                        "implHandler": [
+                            "Ext.Msg.alert('Error', action.result.sms);"
+                        ],
+                        "name": "actionfailed",
+                        "scope": "me"
+                    },
+                    "designerId": "a2f60183-096f-4924-a1b3-fb3152a96c5b"
                 }
             ]
         }

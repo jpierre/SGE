@@ -124,6 +124,7 @@
                             "codeClass": null,
                             "userConfig": {
                                 "layout|anchor": "100%",
+                                "vty": null,
                                 "designer|userClassName": "MyDateField",
                                 "id": "fech_ini_pon",
                                 "name": "fech_ini_pon",
@@ -132,7 +133,14 @@
                                 "blankText": "Debe Ingresar una fecha de Inicio",
                                 "format": "d-m-Y H:i:s"
                             },
-                            "designerId": "a277bb53-3304-4c6d-9d52-b94d22be691a"
+                            "designerId": "a277bb53-3304-4c6d-9d52-b94d22be691a",
+                            "customConfigs": [
+                                {
+                                    "group": "(Custom Properties)",
+                                    "name": "vty",
+                                    "type": "string"
+                                }
+                            ]
                         },
                         {
                             "type": "datefield",
@@ -334,6 +342,7 @@
                                         "designer|userClassName": "MyNumberField",
                                         "margin": "0 0 0 20",
                                         "width": 160,
+                                        "inputType": "number",
                                         "name": "capac_amb",
                                         "fieldLabel": "Capacidad",
                                         "labelWidth": 70

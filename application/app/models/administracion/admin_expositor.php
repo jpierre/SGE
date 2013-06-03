@@ -31,6 +31,36 @@ class admin_expositor extends CI_Model{
 		return $datos;
 		
 		}
+		
+		
+	function registrar_expositor($dato=NULL){
+	
+		$result=NULL;
+			$result= $this->db->insert('expositor',$dato);
+
+		return $result;
+	}
+	
+	function modificar_expositor($dato=NULL,$cod_exp){
+	
+		$result=NULL;
+			$this->db->where('cod_exp', $cod_exp);
+			$result= $this->db->update('expositor',$dato);
+
+		return $result;
+	
+	}
+	
+	
+	function borrar_expositor($cod_exp=NULL){
+	
+		$result=NULL;
+			$result= $this->db->delete('expositor', array('cod_exp' => $cod_exp)); 
+
+		return $result;
+	
+	}
+	
 }
 
 ?>

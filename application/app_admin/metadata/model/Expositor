@@ -127,6 +127,19 @@
                 "name": "fot_exp"
             },
             "designerId": "519c88b0-55e1-42f1-801b-e54dd962191a"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field51",
+                "name": "tip_doc_desc"
+            },
+            "designerId": "0d2a6221-e337-4add-b580-fe35a371434c"
         }
     ]
 }

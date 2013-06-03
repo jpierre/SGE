@@ -43,6 +43,9 @@ Ext.define('vision.model.Expositor', {
         },
         {
             name: 'fot_exp'
+        },
+        {
+            name: 'tip_doc_desc'
         }
     ]
 });

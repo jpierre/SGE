@@ -11,16 +11,11 @@
  * This file will be auto-generated each and everytime you save your project.
  *
  * Do NOT hand edit this file.
- */
-
-Ext.define('vision.view.MantenerPonencia', {
-    extend: 'Ext.window.Window',
-
-    requires: [
+ */Ext.define('vision.view.MantenerPonencia', {
+    extend: 'Ext.window.Window',    
+	requires: [
         'vision.view.override.MantenerPonencia'
-    ],
-
-    height: 530,
+    ],    height: 530,
     id: 'winPonencia',
     width: 455,
     layout: {
@@ -28,12 +23,11 @@ Ext.define('vision.view.MantenerPonencia', {
     },
     title: 'Mantener Ponencia',
     animateTarget: 'btnManPone',
-    modal: true,
-
-    initComponent: function() {
-        var me = this;
-
-        Ext.applyIf(me, {
+    modal: true,    
+	initComponent: function() {
+        var me = this;        
+		
+		Ext.applyIf(me, {
             items: [
                 {
                     xtype: 'form',
@@ -83,26 +77,241 @@ Ext.define('vision.view.MantenerPonencia', {
                                     valueField: 'id_eve',
                                     valueNotFoundText: 'no se cargo la data'
                                 },
-                                {
-                                    xtype: 'datefield',
-                                    anchor: '100%',
-                                    id: 'fech_ini_pon',
-                                    name: 'fech_ini_pon',
-                                    fieldLabel: 'Fecha Inicio',
-                                    allowBlank: false,
-                                    blankText: 'Debe Ingresar una fecha de Inicio',
-                                    format: 'd-m-Y H:i:s'
+
+								{
+
+                                    xtype: 'container',
+
+                                    layout: {
+
+                                        align: 'stretch',
+
+                                        type: 'hbox'
+
+                                    },
+
+                                    items: [
+
+                                        {
+
+                                            xtype: 'datefield',
+
+											id: 'fech_ini_pon',
+
+											name: 'fech_ini_pon',
+
+											vtype: 'daterange',
+
+											endDateField: 'fech_fin_pon',
+
+											fieldLabel: 'Fecha Inicio',
+
+											blankText: 'Debe Ingresar una fecha de Inicio',
+
+											allowBlank: false,
+
+											width:220,
+
+											format: 'd-m-Y'
+
+                                        },
+
+                                        {
+
+                                            xtype: 'numberfield',
+
+                                            flex: 1,
+
+                                            maxWidth: 98,
+
+                                            name: 'horaIni',
+
+                                            fieldLabel: 'Hora',
+
+											id:'horaIni',
+
+                                            labelStyle: 'padding-left:5px',
+
+                                            labelWidth: 35,
+
+                                            decimalPrecision: 1,
+
+											allowBlank: false,
+
+                                            maxValue: 23,
+
+                                            minValue: 0
+
+                                        },
+
+                                        {
+
+                                            xtype: 'numberfield',
+
+                                            flex: 1,
+
+                                            maxWidth: 90,
+
+                                            name: 'minIni',
+
+                                            id: 'minIni',
+
+                                            fieldLabel: 'Min',
+
+                                            labelStyle: 'padding-left:5px',
+
+                                            labelWidth: 25,
+
+                                            decimalPrecision: 1,
+
+											allowBlank: false,
+
+                                            maxValue: 59,
+
+                                            minValue: 0
+
+                                        }
+
+                                    ]
+
                                 },
+
                                 {
-                                    xtype: 'datefield',
-                                    anchor: '100%',
-                                    id: 'fech_fin_pon',
-                                    name: 'fech_fin_pon',
-                                    fieldLabel: 'Fecha Final',
-                                    allowBlank: false,
-                                    blankText: 'Debe Ingresar una fecha de final',
-                                    format: 'd-m-Y H:i:s'
+
+                                    xtype: 'container',
+
+                                    margin: '5 0 5 0',
+
+                                    layout: {
+
+                                        align: 'stretch',
+
+                                        type: 'hbox'
+
+                                    },
+
+                                    items: [
+
+                                        {
+
+                                            xtype: 'datefield',
+
+											id: 'fech_fin_pon',
+
+											name: 'fech_fin_pon',
+
+											vtype: 'daterange',
+
+											starDateField: 'fech_ini_pon',
+
+											fieldLabel: 'Fecha Final',
+
+											blankText: 'Debe Ingresar una fecha de final',
+
+											allowBlank: false,
+
+											width:220,
+
+											format: 'd-m-Y'
+
+                                        },
+
+                                        {
+
+                                            xtype: 'numberfield',
+
+                                            flex: 1,
+
+                                            maxWidth: 98,
+
+                                            name: 'horaFin',
+
+											id:'horaFin',
+
+                                            fieldLabel: 'Hora',
+
+                                            labelStyle: 'padding-left:5px',
+
+                                            labelWidth: 35,
+
+                                            decimalPrecision: 1,
+
+											allowBlank: false,
+
+                                            maxValue: 23,
+
+                                            minValue: 0,
+
+											listeners: {
+
+												change: function(field, value) {
+
+													var horaIni=Ext.getCmp('horaIni').getValue();
+
+													if(horaIni>value)
+
+													field.setValue(horaIni);
+
+												}}
+
+                                        },
+
+                                        {
+
+                                            xtype: 'numberfield',
+
+                                            flex: 1,
+
+                                            maxWidth: 90,
+
+                                            name: 'minFin',
+
+											id:'minFin',
+
+                                            fieldLabel: 'Min',
+
+                                            labelStyle: 'padding-left:5px',
+
+                                            labelWidth: 25,
+
+                                            decimalPrecision: 1,
+
+											allowBlank: false,
+
+                                            maxValue: 59,
+
+                                            minValue: 0,
+
+											listeners: {
+
+												change: function(field, value) {
+
+													var horaIni=Ext.getCmp('horaIni').getValue();
+
+													var horaFin=Ext.getCmp('horaFin').getValue();
+
+													var fech_ini=Ext.getCmp('fech_ini_pon').getRawValue();
+
+													var fech_fin=Ext.getCmp('fech_fin_pon').getRawValue();
+
+													var minIni=Ext.getCmp('minIni').getValue();
+
+													if(fech_ini==fech_fin)
+
+													if(horaIni==horaFin){
+
+														if((minIni+15)>value)
+
+														field.setValue((minIni+15));}
+
+												}}
+
+                                        }
+
+                                    ]
+
                                 },
+
                                 {
                                     xtype: 'textfield',
                                     anchor: '100%',
@@ -198,21 +407,91 @@ Ext.define('vision.view.MantenerPonencia', {
                                             selectOnTab: false,
                                             store: 'ambiente',
                                             typeAhead: true,
-                                            valueField: 'id_amb'
+
+                                            valueField: 'id_amb',
+
+											listeners: {
+
+											   change: function (field,newvalue,oldvalue,options) {
+
+												  var store=Ext.getCmp('cod_fia_amb').getStore();
+
+												  store.clearFilter(true);
+
+												  
+
+												  store.filterBy(function(rec) {
+
+													if(newvalue==1){//1 Aula
+
+														if(rec.get('cod_fia_amb') < 28) 
+
+															return true;
+
+														else
+
+															return false;
+
+														
+
+													}else if(newvalue==2){//2 Laboratorio
+
+														if(rec.get('cod_fia_amb') > 27 && rec.get('cod_fia_amb') < 37) 
+
+															return true;
+
+														else
+
+															return false;
+													}else if(newvalue==3){//3 Coliseo
+
+														if(rec.get('cod_fia_amb') > 36) 
+
+															return true;
+
+														else
+
+															return false;
+
+													}
+
+													});
+
+												  
+
+												  
+
+																	  }
+
+													   }
                                         },
                                         {
                                             xtype: 'numberfield',
+
+                                            flex: 1,
+
                                             margin: '0 0 0 20',
+
                                             width: 160,
+
+											maxValue: 150,
+
+                                            minValue: 1,
+
                                             name: 'capac_amb',
+											id: 'capac_amb',
                                             fieldLabel: 'Capacidad',
+
+											allowBlank: false,
+
                                             labelWidth: 70
                                         },
                                         {
                                             xtype: 'combobox',
                                             width: 220,
                                             name: 'cod_fia_amb',
-                                            fieldLabel: 'Aula',
+											id: 'cod_fia_amb',
+                                            fieldLabel: 'Cod. Ambiente',
                                             labelWidth: 70,
                                             allowBlank: false,
                                             autoSelect: false,
@@ -240,20 +519,12 @@ Ext.define('vision.view.MantenerPonencia', {
                     }
                 }
             ]
-        });
-
-        me.callParent(arguments);
-    },
-
-    onFormPonActioncomplete: function(basicForm, action, options) {
-
-        Ext.getCmp('winPonencia').close(); 
+        });        me.callParent(arguments);
+    },    onFormPonActioncomplete: function(basicForm, action, options) {        Ext.getCmp('winPonencia').close(); 
         Ext.getCmp('gridponencia').getStore().load();
         Ext.getCmp('gridponencia').getView().refresh();
+
     },
-
     onFormPonActionfailed: function(basicForm, action, options) {
-
     }
-
 });
