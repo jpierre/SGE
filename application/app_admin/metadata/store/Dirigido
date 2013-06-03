@@ -1,0 +1,70 @@
+{
+    "type": "arraystore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Dirigido",
+        "storeId": "MyArrayStore3",
+        "model": null,
+        "data": "[{\"id_dir\":\"1\",\"value\":\"Arquitectura\"},{\"id_dir\":\"2\",\"value\":\"Ing. Sistemas\"},{\"id_dir\":\"3\",\"value\":\"Ing. Industrial\"}\r\n,{\"id_dir\":\"3\",\"value\":\"Ing. Electrionica\"}\r\n,{\"id_dir\":\"3\",\"value\":\"Ing. Civil\"}\r\n,{\"id_dir\":\"3\",\"value\":\"Industrias Alimentarias\"}]\r\n\r\n\r\n\r\n\r\n\r\n"
+    },
+    "id": "ExtBox1-ext-gen88833",
+    "designerId": "6cc4c69b-17c2-49de-9b9c-f43cf4ecbf1d",
+    "cn": [
+        {
+            "type": "ajaxproxy",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyAjaxProxy1"
+            },
+            "designerId": "59a6be7f-7ea0-4b89-8f46-2c108b501806",
+            "cn": [
+                {
+                    "type": "arrayreader",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyArrayReader"
+                    },
+                    "designerId": "ab2a6d1a-0e51-470e-a2ed-c140cba098e0"
+                }
+            ]
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field17",
+                "name": "id_dir"
+            },
+            "designerId": "c46eb9de-b11b-438f-a09d-5a70dfb3c11d"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field18",
+                "name": "value"
+            },
+            "designerId": "96d84404-dbc6-4aab-af43-e47683d0c881"
+        }
+    ]
+}

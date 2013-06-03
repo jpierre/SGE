@@ -1,0 +1,45 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Ponencia",
+        "autoLoad": true,
+        "storeId": "MyJsonStore",
+        "model": "Ponencia"
+    },
+    "id": "ExtBox1-ext-gen16239",
+    "designerId": "1856b5d3-7fa0-4dc5-9841-d34cc99d4c3d",
+    "cn": [
+        {
+            "type": "ajaxproxy",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyAjaxProxy",
+                "url": "../../administracion/c_administracion/cargarponencias"
+            },
+            "designerId": "7c0c0732-e44c-4748-86ec-9db0dc159ba8",
+            "cn": [
+                {
+                    "type": "jsonreader",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyJsonReader"
+                    },
+                    "designerId": "5370aa12-acee-4307-819e-0236c9563808"
+                }
+            ]
+        }
+    ]
+}

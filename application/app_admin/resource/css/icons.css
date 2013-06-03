@@ -1,0 +1,31 @@
+.text-morado{color:#37157f;}
+
+.icon-pago{background-image:url(img/pago.png) !important;}
+
+.icon-add{background-image:url(img/add.png) !important;}
+
+.icon-add-event{background-image:url(img/event.gif) !important;}
+
+.icon-edit{background-image:url(img/edit.png) !important;}
+
+.icon-logo{background-image:url(img/logo.png) !important;
+
+background-repeat:no-repeat; background-position:center;}
+
+.icon-logout{background-image:url(img/logout.gif) !important;}
+
+.icon-admin{background-image: url(img/profile.png) !important;}
+
+.icon-history{background-image: url(img/history.png) !important;}
+
+.icon-regPago{background-image: url(img/pagoOnline.png) !important; position:5px;}
+
+.x-btn-default-large-icon-text-left .x-btn-icon{width:70px; margin-left:8px;}
+
+.btntext .x-btn-inner{ margin-left:50px;}
+
+.x-mask{ visibility:hidden;}
+.sinfoto{ background-image: url(img/sinfoto.jpg) !important; }
+
+
+

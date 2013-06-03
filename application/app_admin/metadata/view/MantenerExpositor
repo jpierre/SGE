@@ -1,0 +1,304 @@
+{
+    "type": "window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "MantenerExpositor",
+        "height": 367,
+        "id": "winExpositor",
+        "itemId": null,
+        "width": 561,
+        "layout": "border",
+        "title": "Mantener Expositor",
+        "animateTarget": "btnRegExpo",
+        "modal": true
+    },
+    "id": "ExtBox1-ext-gen21058",
+    "designerId": "ffda3ea2-ecc2-4939-aea5-4857f7695418",
+    "cn": [
+        {
+            "type": "form",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|region": "center",
+                "container|align": "stretch",
+                "designer|userClassName": "MyForm",
+                "border": 0,
+                "id": "formExpositor",
+                "layout": "hbox",
+                "bodyPadding": 10,
+                "title": null,
+                "url": "../../administracion/expositor/registar_expositor",
+                "waitTitle": "Guardando..."
+            },
+            "designerId": "e2745c03-8542-4a02-98d1-2315d7afc72a",
+            "cn": [
+                {
+                    "type": "fieldset",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyFieldSet1",
+                        "height": null,
+                        "width": 327,
+                        "title": "Datos de Expositor"
+                    },
+                    "designerId": "fffab070-55dc-42e5-85cc-61643568682d",
+                    "cn": [
+                        {
+                            "type": "textfield",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|anchor": "100%",
+                                "designer|userClassName": "MyTextField",
+                                "designer|displayName": "cod_exp",
+                                "cls": "x-item-disabled",
+                                "disabled": null,
+                                "hidden": false,
+                                "hideMode": null,
+                                "id": "cod_exp",
+                                "overCls": null,
+                                "style": null,
+                                "styleHtmlContent": null,
+                                "fieldCls": "x-item-disabled",
+                                "fieldStyle": "color:#808080;",
+                                "name": "cod_exp",
+                                "readOnly": true,
+                                "readOnlyCls": "x-item-disabled",
+                                "fieldBodyCls": null,
+                                "fieldLabel": "Codigo Expositor",
+                                "formItemCls": null,
+                                "hideLabel": false,
+                                "labelCls": null,
+                                "labelClsExtra": null,
+                                "labelStyle": "color:#808080;",
+                                "labelWidth": 125
+                            },
+                            "designerId": "5e0b5081-0ec8-4e7c-a777-d6b7c9f0a427"
+                        },
+                        {
+                            "type": "combobox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|anchor": "100%",
+                                "designer|userClassName": "MyComboBox",
+                                "id": "tip_doc",
+                                "name": "tip_doc",
+                                "fieldLabel": "Tipo de Documento",
+                                "labelWidth": 125,
+                                "allowBlank": false,
+                                "blankText": "Debe asignar un estado.",
+                                "editable": false,
+                                "autoSelect": false,
+                                "displayField": "value",
+                                "forceSelection": true,
+                                "queryMode": "local",
+                                "selectOnTab": false,
+                                "store": "tipo_documento",
+                                "typeAhead": true,
+                                "valueField": "tip_doc"
+                            },
+                            "designerId": "c1d437ae-d06b-46a6-9674-397fa356e105"
+                        },
+                        {
+                            "type": "textfield",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|anchor": "100%",
+                                "designer|userClassName": "MyTextField8",
+                                "id": "num_doc",
+                                "name": "num_doc",
+                                "fieldLabel": "Num. Documento",
+                                "labelWidth": 125
+                            },
+                            "designerId": "3c97b20b-298b-41e6-9830-a9bc4e1d99d5"
+                        },
+                        {
+                            "type": "textfield",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|anchor": "100%",
+                                "designer|userClassName": "MyTextField3",
+                                "id": "nom_exp",
+                                "name": "nom_exp",
+                                "fieldLabel": "Nombre Expositor",
+                                "labelWidth": 125,
+                                "allowBlank": false,
+                                "blankText": "Debe ingresar un nombre para la Ponencia"
+                            },
+                            "designerId": "6173a167-0072-44c7-9b58-b430df76134b"
+                        },
+                        {
+                            "type": "textfield",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|anchor": "100%",
+                                "designer|userClassName": "MyTextField7",
+                                "id": "ape_pat_exp",
+                                "name": "ape_pat_exp",
+                                "fieldLabel": "Apellido Paterno",
+                                "labelWidth": 125
+                            },
+                            "designerId": "a60bb2e7-7e4c-4ebc-98e9-9571c7c359bb"
+                        },
+                        {
+                            "type": "textfield",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|anchor": "100%",
+                                "designer|userClassName": "MyTextField9",
+                                "id": "ape_mat_exp",
+                                "name": "ape_mat_exp",
+                                "fieldLabel": "Apellido Materno",
+                                "labelWidth": 125
+                            },
+                            "designerId": "2a07aeda-f355-41dc-9795-593b6a2b8426"
+                        },
+                        {
+                            "type": "textfield",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|anchor": "100%",
+                                "designer|userClassName": "MyTextField6",
+                                "id": "pais_exp",
+                                "name": "pais_exp",
+                                "fieldLabel": "Pais",
+                                "labelWidth": 125
+                            },
+                            "designerId": "8224d589-f5b8-432c-b49e-1b521fbe904e"
+                        }
+                    ]
+                },
+                {
+                    "type": "container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": 1,
+                        "designer|snapToGrid": 10,
+                        "designer|userClassName": "MyContainer4",
+                        "layout": "absolute"
+                    },
+                    "designerId": "34661889-ceaf-4d16-88f1-6e0b8acbac7d",
+                    "cn": [
+                        {
+                            "type": "container",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|x": 30,
+                                "layout|y": 10,
+                                "designer|userClassName": "MyContainer5",
+                                "border": null,
+                                "height": 200,
+                                "width": 160
+                            },
+                            "designerId": "dab84e70-26c7-4f41-843d-34f76ba033e8"
+                        },
+                        {
+                            "type": "filefield",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|x": 0,
+                                "layout|y": 250,
+                                "designer|userClassName": "MyFileUpload",
+                                "margin": "0 0 0 10",
+                                "name": "imagen",
+                                "fieldLabel": "Label",
+                                "hideLabel": true
+                            },
+                            "designerId": "267697d3-fe24-4d27-9923-497928f5a334"
+                        }
+                    ]
+                },
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "onFormExpositorActioncomplete",
+                        "fn": "onFormExpositorActioncomplete",
+                        "implHandler": [
+                            "\r",
+                            "Ext.getCmp('winExpositor').close(); \r",
+                            "Ext.getCmp('gridExpositor').getStore().load();\r",
+                            "Ext.getCmp('gridExpositor').getView().refresh();"
+                        ],
+                        "name": "actioncomplete",
+                        "scope": "me"
+                    },
+                    "designerId": "0c12c465-733b-44bc-a0c7-c21c4de542f1"
+                },
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "onFormExpositorActionfailed",
+                        "fn": "onFormExpositorActionfailed",
+                        "implHandler": [
+                            "Ext.Msg.alert('Error', action.result.sms);"
+                        ],
+                        "name": "actionfailed",
+                        "scope": "me"
+                    },
+                    "designerId": "a2f60183-096f-4924-a1b3-fb3152a96c5b"
+                }
+            ]
+        }
+    ]
+}

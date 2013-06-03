@@ -1,0 +1,385 @@
+{
+    "type": "gridpanel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "GridEvento",
+        "height": 300,
+        "id": "gridEvento",
+        "itemId": "gridEvento",
+        "width": null,
+        "title": "Mantener Evento",
+        "columnLines": false,
+        "store": "Evento"
+    },
+    "id": "ExtBox1-ext-gen8033",
+    "designerId": "09b9de84-a97e-4ab8-8c1a-370f0abca717",
+    "cn": [
+        {
+            "type": "rownumberer",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "RowNumberer",
+                "sealed": null
+            },
+            "designerId": "dbeb8fd0-18c6-4263-8dba-36672c158c0e"
+        },
+        {
+            "type": "gridview",
+            "reference": {
+                "name": "viewConfig",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyGridView"
+            },
+            "designerId": "6be736d2-87cd-4b4d-a67b-886c6d1dc2a7"
+        },
+        {
+            "type": "numbercolumn",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyNumberColumn",
+                "hidden": false,
+                "width": 120,
+                "defaultWidth": 120,
+                "sealed": null,
+                "align": "center",
+                "dataIndex": "id_eve",
+                "text": "Código de Evento",
+                "format": "00"
+            },
+            "designerId": "4bb90b4a-32f9-4494-9bdb-5320bba2fa07"
+        },
+        {
+            "type": "gridcolumn",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyColumn8",
+                "width": 220,
+                "defaultWidth": 200,
+                "dataIndex": "nom_eve",
+                "text": "Nombre del Evento"
+            },
+            "designerId": "71dcc293-8503-49f9-a682-e757da7c1b9b"
+        },
+        {
+            "type": "datecolumn",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyDateColumn",
+                "defaultWidth": 150,
+                "dataIndex": "fech_ini_eve",
+                "text": "Fecha Inicio",
+                "format": "d/m/Y"
+            },
+            "designerId": "251b3d79-5ac1-4119-b299-2d796981ef62"
+        },
+        {
+            "type": "datecolumn",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyDateColumn1",
+                "defaultWidth": 150,
+                "dataIndex": "fech_fin_eve",
+                "text": "Fecha Fin",
+                "format": "d/m/Y "
+            },
+            "designerId": "5f0b12fe-63ed-4bc1-9505-07fd84bcf482"
+        },
+        {
+            "type": "gridcolumn",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyColumn10",
+                "id": null,
+                "defaultWidth": 220,
+                "dataIndex": "est_eve_desc",
+                "text": "Estado"
+            },
+            "designerId": "bb3b6e30-f345-4267-9402-cb49e063a3b2"
+        },
+        {
+            "type": "pagingtoolbar",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dock": "bottom",
+                "designer|userClassName": "MyPagingToolbar",
+                "id": "paginador_evento",
+                "width": 360,
+                "afterPageText": "de {0}",
+                "beforePageText": "Pagina",
+                "displayInfo": true,
+                "displayMsg": "Eventos {0} - {1} de {2}",
+                "emptyMsg": "No Existen Ponencias",
+                "firstText": "Primera Pagina",
+                "lastText": "Ultima Pagina",
+                "prevText": "Pagina Anterior",
+                "refreshText": "Actualizar",
+                "store": "Evento"
+            },
+            "designerId": "48b6c0a6-6219-442b-bafc-59b6956ba143"
+        },
+        {
+            "type": "toolbar",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dock": "top",
+                "designer|userClassName": "MyToolbar2"
+            },
+            "designerId": "8edee2b8-ab83-4a95-9c53-ef0aa7aa4350",
+            "cn": [
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "designer|userClassName": "MyButton5",
+                        "id": "btn_CEvento",
+                        "iconCls": "icon-add",
+                        "text": "Crear Evento"
+                    },
+                    "designerId": "dd13aa66-dfd4-4742-af55-6f5ef915f5c8",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "handler",
+                                "fn": "handler",
+                                "designer|params": [
+                                    "button",
+                                    "event"
+                                ],
+                                "implHandler": [
+                                    "var winp=Ext.getCmp('winEvnto');\r",
+                                    "\r",
+                                    "if(!winp){\r",
+                                    "    Ext.create('vision.view.MantenerEvento');\r",
+                                    "winp=Ext.getCmp('winEvento');}\r",
+                                    "\r",
+                                    "//Ext.getCmp('cod_exp_pon').setDisabled(false);\r",
+                                    "Ext.getCmp('formEvento').getForm().reset(); \r",
+                                    "winp.show();"
+                                ]
+                            },
+                            "designerId": "3b7afb4b-6904-4492-b81d-a5ddc4e0b394"
+                        }
+                    ]
+                },
+                {
+                    "type": "tbseparator",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "designer|userClassName": "MySeparator3"
+                    },
+                    "designerId": "03a4b260-59c9-4341-b390-4242c1187393"
+                },
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "designer|userClassName": "MyButton4",
+                        "id": "btnManEvento",
+                        "iconCls": "icon-edit",
+                        "text": "Modificar Evento"
+                    },
+                    "designerId": "0be9303d-01de-4d34-8ad3-c58a071910c5",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "handler",
+                                "fn": "handler",
+                                "designer|params": [
+                                    "button",
+                                    "event"
+                                ],
+                                "implHandler": [
+                                    "\r",
+                                    "\r",
+                                    "var winp=Ext.getCmp('winEvento');\r",
+                                    "\r",
+                                    "if(!winp){\r",
+                                    "    Ext.create('vision.view.MantenerEvento');\r",
+                                    "winp=Ext.getCmp('winEvento');}\r",
+                                    "var id_eve=sessionStorage.getItem('id_eve');\r",
+                                    "if(id_eve!='-1'){\r",
+                                    "    //Ext.getCmp('cod_exp_pon').setDisabled(true);\r",
+                                    "    var record=Ext.getCmp('gridEvento').getStore().findRecord('id_eve',id_eve);\r",
+                                    "    Ext.getCmp('id_eve').setValue(record.get('id_eve'));\r",
+                                    "    Ext.getCmp('nom_eve').setValue(record.get('nom_eve'));\r",
+                                    "    Ext.getCmp('fech_ini_eve').setValue(Ext.Date.format(new Date(record.get('fech_ini_eve')), 'd-m-Y H:i:s'));\r",
+                                    "    Ext.getCmp('fech_fin_eve').setValue(Ext.Date.format(new Date(record.get('fech_ini_eve')), 'd-m-Y H:i:s'));\r",
+                                    "    Ext.getCmp('est_eve').setValue(record.get('est_eve'));\r",
+                                    "\r",
+                                    "    winp.show();\r",
+                                    "\r",
+                                    "\r",
+                                    "\r",
+                                    "}else Ext.Msg.alert('Precaución','Debe seleccionar un Evento.');\r",
+                                    "\r",
+                                    "\r",
+                                    ""
+                                ]
+                            },
+                            "designerId": "87bf3159-6677-401f-9276-c44354f8e6f4"
+                        }
+                    ]
+                },
+                {
+                    "type": "tbseparator",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "designer|userClassName": "MySeparator4"
+                    },
+                    "designerId": "2f5ad9ed-710c-48a7-ba2a-afb76cae9175"
+                },
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "designer|userClassName": "MyButton6",
+                        "id": "btn_BEvento",
+                        "text": "Eliminar evento"
+                    },
+                    "designerId": "6b4aae91-4a36-4e8d-ad08-ec49c8e01109",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "handler",
+                                "fn": "handler",
+                                "designer|params": [
+                                    "button",
+                                    "event"
+                                ],
+                                "implHandler": [
+                                    "\r",
+                                    "var id_eve=sessionStorage.getItem('id_eve');\r",
+                                    "if(id_eve!=-1){\r",
+                                    "    var sevento=Ext.getCmp('gridEvento').getStore();\r",
+                                    "    var record=Ext.getCmp('gridEvento').getStore().findRecord('id_eve',id_eve);\r",
+                                    "    var opt=Ext.MessageBox.confirm('Comfirmar', 'Esta se guro que desea eliminar el:<br>Evento: <b>'+record.get('nom_eve')+'</b><br>Codigo: <b>'+id_eve+'<b>',\r",
+                                    "    function(button) {\r",
+                                    "        if (button === 'yes') {\r",
+                                    "            sevento.load({\r",
+                                    "                url:'../../administracion/evento/borrar_evento',\r",
+                                    "                method: 'POST',\r",
+                                    "                params:{'tipoSql':'delete','id_eve':id_eve},\r",
+                                    "                scope: this,\r",
+                                    "                callback: function(records, operation, success,response) {\r",
+                                    "                    // the operation object\r",
+                                    "                    // contains all of the details of the load operation\r",
+                                    "                    //this.load();\r",
+                                    "\r",
+                                    "                }\r",
+                                    "\r",
+                                    "            });\r",
+                                    "        }//END if\r",
+                                    "\r",
+                                    "    });\r",
+                                    "}else Ext.Msg.alert('Precaución','Debe seleccionar una Evento.');\r",
+                                    ""
+                                ]
+                            },
+                            "designerId": "9fd01a24-a1f7-48de-abaa-9dfbd1523061"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onGridponenciaSelect",
+                "fn": "onGridponenciaSelect",
+                "implHandler": [
+                    "sessionStorage.setItem('id_eve',record.get('id_eve'));"
+                ],
+                "name": "select",
+                "scope": "me"
+            },
+            "designerId": "347ef517-e331-4097-88d4-55dc49af205f"
+        }
+    ]
+}

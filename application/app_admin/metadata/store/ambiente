@@ -1,0 +1,44 @@
+{
+    "type": "arraystore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "ambiente",
+        "storeId": "MyArrayStore1",
+        "model": "Ambiente",
+        "data": "[{\"id_amb\":\"1\",\"value\":\"Aula\"},{\"id_amb\":\"2\",\"value\":\"Laboratorio\"},{\"id_amb\":\"3\",\"value\":\"Coliseo\"}]"
+    },
+    "id": "ExtBox1-ext-gen86111",
+    "designerId": "44633b37-1031-4b3c-bc1c-43a4d50bed47",
+    "cn": [
+        {
+            "type": "ajaxproxy",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyAjaxProxy1"
+            },
+            "designerId": "3f266f0e-ecba-4b5a-be8a-f897fd28eb22",
+            "cn": [
+                {
+                    "type": "arrayreader",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyArrayReader"
+                    },
+                    "designerId": "a7deabf5-cd34-49d2-b7ae-f69070559c11"
+                }
+            ]
+        }
+    ]
+}

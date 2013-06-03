@@ -1,0 +1,106 @@
+{
+    "type": "application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "models": [
+            "Ponencia",
+            "tipo_pon",
+            "Expositor",
+            "Ambiente",
+            "Aula",
+            "Evento"
+        ],
+        "stores": [
+            "Ponencia",
+            "estado_pon",
+            "ambiente",
+            "Evento",
+            "Dirigido",
+            "tipo_pon",
+            "Expositor",
+            "Aula",
+            "estado_eve",
+            "eventoCombo",
+            "tipo_documento"
+        ],
+        "views": [
+            "Main",
+            "Contenedor",
+            "PanelPrincipal",
+            "MantenerPonencia",
+            "GridEvento",
+            "MantenerEvento",
+            "GridExpositor",
+            "MantenerExpositor"
+        ],
+        "autoCreateViewport": true,
+        "name": "vision"
+    },
+    "id": "ExtBox1-ext-gen1805",
+    "designerId": "application",
+    "cn": [
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "launch",
+                "fn": "launch",
+                "implHandler": [
+                    "sessionStorage.setItem('id_pon',-1);\r",
+                    "sessionStorage.setItem('id_eve',-1);\r",
+                    "sessionStorage.setItem('cod_exp',-1);\r",
+                    "Ext.getCmp('userlabel').setText(sessionStorage.nomUser);\r",
+                    "\r",
+                    "// Add the additional 'advanced' VTypes\r",
+                    "    Ext.apply(Ext.form.field.VTypes, {\r",
+                    "        daterange: function(val, field) {\r",
+                    "            var date = field.parseDate(val);\r",
+                    "\r",
+                    "            if (!date) {\r",
+                    "                return false;\r",
+                    "            }\r",
+                    "            if (field.startDateField && (!this.dateRangeMax || (date.getTime() != this.dateRangeMax.getTime()))) {\r",
+                    "                var start = field.up('form').down('#' + field.startDateField);\r",
+                    "                start.setMaxValue(date);\r",
+                    "                start.validate();\r",
+                    "                this.dateRangeMax = date;\r",
+                    "            }\r",
+                    "            else if (field.endDateField && (!this.dateRangeMin || (date.getTime() != this.dateRangeMin.getTime()))) {\r",
+                    "                var end = field.up('form').down('#' + field.endDateField);\r",
+                    "                end.setMinValue(date);\r",
+                    "                end.validate();\r",
+                    "                this.dateRangeMin = date;\r",
+                    "            }\r",
+                    "            /*\r",
+                    "             * Always return true since we're only using this vtype to set the\r",
+                    "             * min/max allowed values (these are tested for after the vtype test)\r",
+                    "             */\r",
+                    "            return true;\r",
+                    "        },\r",
+                    "\r",
+                    "        daterangeText: 'Start date must be less than end date',\r",
+                    "\r",
+                    "        password: function(val, field) {\r",
+                    "            if (field.initialPassField) {\r",
+                    "                var pwd = field.up('form').down('#' + field.initialPassField);\r",
+                    "                return (val == pwd.getValue());\r",
+                    "            }\r",
+                    "            return true;\r",
+                    "        },\r",
+                    "\r",
+                    "        passwordText: 'Passwords do not match'\r",
+                    "    });"
+                ]
+            },
+            "designerId": "bc9a101b-cc54-46de-821c-f9c5c10b7be4"
+        }
+    ]
+}

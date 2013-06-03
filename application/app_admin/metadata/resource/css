@@ -1,0 +1,13 @@
+{
+    "type": "cssresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "url": "/sge/application/app_admin/resource/css/icons.css"
+    },
+    "id": "ExtBox1-ext-gen16705",
+    "designerId": "163f5714-4a24-4dc1-a7d1-e39249d248d5"
+}

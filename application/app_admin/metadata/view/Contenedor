@@ -1,0 +1,535 @@
+{
+    "type": "panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Contenedor",
+        "designer|userAlias": "contenedor",
+        "height": 250,
+        "width": 400,
+        "layout": "border",
+        "title": null
+    },
+    "id": "ExtBox1-ext-gen9585",
+    "designerId": "e1968bf2-caca-4ff6-b90e-d228195d1f39",
+    "cn": [
+        {
+            "type": "toolbar",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dock": "top",
+                "designer|userClassName": "MyToolbar1",
+                "designer|displayName": "cabezera"
+            },
+            "designerId": "8d3bc74f-c2bb-439e-9a4b-c238c3dcd7b7",
+            "cn": [
+                {
+                    "type": "container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "designer|userClassName": "MyContainer",
+                        "designer|displayName": "logo-cont",
+                        "height": 70,
+                        "width": 250
+                    },
+                    "designerId": "8ca58879-90b2-4dbc-96a9-f1f3a247712e",
+                    "cn": [
+                        {
+                            "type": "container",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "MyContainer2",
+                                "designer|displayName": "cont-logo",
+                                "cls": "icon-logo",
+                                "height": 45,
+                                "style": null
+                            },
+                            "designerId": "4389b3f4-9df5-466a-8d40-c40c2a761ca6"
+                        },
+                        {
+                            "type": "label",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "MyLabel2",
+                                "margin": "0 0 0 20",
+                                "style": [
+                                    "color:#4F279B;"
+                                ],
+                                "styleHtmlContent": true,
+                                "text": "Sistema de gestion de eventos FIA."
+                            },
+                            "designerId": "3035b748-1bad-413b-9db4-fac6013ec033"
+                        }
+                    ]
+                },
+                {
+                    "type": "tbseparator",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "designer|userClassName": "MySeparator"
+                    },
+                    "designerId": "0e91b5c8-ee7c-4f7e-aeaf-11a14cc1b08b"
+                },
+                {
+                    "type": "tbfill",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "designer|userClassName": "MyFill"
+                    },
+                    "designerId": "5e97afad-3dbb-46e9-8f09-d9c2e3b733ef"
+                },
+                {
+                    "type": "tbseparator",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "designer|userClassName": "MySeparator1"
+                    },
+                    "designerId": "7d21ac1e-8f82-4755-9247-ed02f005fe10"
+                },
+                {
+                    "type": "container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "container|align": "stretch",
+                        "designer|userClassName": "MyContainer1",
+                        "designer|displayName": "btn-cont",
+                        "margin": "0 5 0 5",
+                        "layout": "vbox"
+                    },
+                    "designerId": "bd542e1a-a281-4fc9-a3e4-115170befc1f",
+                    "cn": [
+                        {
+                            "type": "label",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "MyLabel",
+                                "designer|displayName": "user-label",
+                                "html": "<p align=\"right\" class=\"text-morado\">Bienvenido: Juan Palermo<p>",
+                                "id": "userlabel",
+                                "text": null
+                            },
+                            "designerId": "abb95f67-1198-41b3-955b-f7e0624d8550"
+                        },
+                        {
+                            "type": "label",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "MyLabel1",
+                                "floating": null,
+                                "id": "lbHora",
+                                "text": null
+                            },
+                            "designerId": "971dd389-6d87-4c9a-a34b-5d22b0b9f65d"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|region": "center",
+                "layout|split": null,
+                "designer|userClassName": "MyPanel2",
+                "designer|displayName": "view-panel",
+                "border": 0,
+                "id": "viewPanel",
+                "margin": "5 5 5 5",
+                "layout": "card",
+                "title": null
+            },
+            "designerId": "63f6ac52-8db7-481b-be96-e3d4102b5236",
+            "cn": [
+                {
+                    "type": "linkedinstance",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "designerId": "d9dfc22a-ba44-4dac-b006-38a3e351ede7",
+                    "masterInstanceId": "ExtBox1-ext-gen8710"
+                }
+            ]
+        },
+        {
+            "type": "toolbar",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dock": "top",
+                "designer|userClassName": "MyToolbar2",
+                "designer|displayName": "tbar-opciones"
+            },
+            "designerId": "03fd0eab-2241-4722-a39e-ed8a3a457dba",
+            "cn": [
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "designer|userClassName": "MyButton1",
+                        "itemId": "btnPrincipal",
+                        "iconCls": "icon-history",
+                        "scale": "medium",
+                        "text": "Inicio"
+                    },
+                    "designerId": "ea16da79-7c2b-46f4-a552-1b9ff653174f",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "handler",
+                                "fn": "handler",
+                                "designer|params": [
+                                    "button",
+                                    "event"
+                                ],
+                                "implHandler": [
+                                    "var panelp=Ext.getCmp('panelprincipal');\r",
+                                    "Ext.getCmp('viewPanel').layout.setActiveItem(panelp);\r",
+                                    ""
+                                ]
+                            },
+                            "designerId": "3fd24e67-1197-4f54-8974-149bbbc56939"
+                        }
+                    ]
+                },
+                {
+                    "type": "tbseparator",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "designer|userClassName": "MySeparator2"
+                    },
+                    "designerId": "95c60cff-7b68-4048-95d9-bca84e9a38cb"
+                },
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "designer|userClassName": "MyButton",
+                        "itemId": "btnMponencia",
+                        "iconCls": "icon-pago",
+                        "scale": "medium",
+                        "text": "Mantener Ponencia"
+                    },
+                    "designerId": "9b52a2b5-9dba-4464-b94c-208627faf8b1",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "handler",
+                                "fn": "handler",
+                                "designer|params": [
+                                    "button",
+                                    "event"
+                                ],
+                                "implHandler": [
+                                    "var grid=Ext.getCmp('gridponencia');\r",
+                                    "\r",
+                                    "if(!grid){\r",
+                                    "    Ext.create('vision.view.GridPonencia');\r",
+                                    "grid=Ext.getCmp('gridponencia');}\r",
+                                    "\r",
+                                    "Ext.getCmp('viewPanel').layout.setActiveItem(grid);\r",
+                                    "\r",
+                                    ""
+                                ]
+                            },
+                            "designerId": "148d7613-0933-4f42-a5fa-1f1fc0efed90"
+                        }
+                    ]
+                },
+                {
+                    "type": "tbseparator",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "designer|userClassName": "MySeparator5"
+                    },
+                    "designerId": "6055a0d5-6e8e-4b1c-aec3-52bfcf34511b"
+                },
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "designer|userClassName": "MyButton7",
+                        "iconCls": "icon-add-event",
+                        "scale": "medium",
+                        "text": "Mantener Evento"
+                    },
+                    "designerId": "06d25b45-a906-4ef7-ba10-f42c37c03cf2",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "handler",
+                                "fn": "handler",
+                                "designer|params": [
+                                    "button",
+                                    "event"
+                                ],
+                                "implHandler": [
+                                    "var grid=Ext.getCmp('gridEvento');\r",
+                                    "\r",
+                                    "if(!grid){\r",
+                                    "    Ext.create('vision.view.GridEvento');\r",
+                                    "grid=Ext.getCmp('gridEvento');}\r",
+                                    "\r",
+                                    "Ext.getCmp('viewPanel').layout.setActiveItem(grid);\r",
+                                    ""
+                                ]
+                            },
+                            "designerId": "706069af-2188-488f-a3a9-9781838a06b5"
+                        }
+                    ]
+                },
+                {
+                    "type": "tbseparator",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "designer|userClassName": "MySeparator5"
+                    },
+                    "designerId": "4fa87d95-8add-41bb-9db5-c928263df526"
+                },
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "designer|userClassName": "MyButton14",
+                        "scale": "large",
+                        "text": "Mantener Expositor"
+                    },
+                    "designerId": "1a6e3e9f-a51f-4aec-a385-33f168a5b124",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "handler",
+                                "fn": "handler",
+                                "designer|params": [
+                                    "button",
+                                    "event"
+                                ],
+                                "implHandler": [
+                                    "var grid=Ext.getCmp('gridExpositor');\r",
+                                    "\r",
+                                    "if(!grid){\r",
+                                    "    Ext.create('vision.view.GridExpositor');\r",
+                                    "grid=Ext.getCmp('gridExpositor');}\r",
+                                    "\r",
+                                    "Ext.getCmp('viewPanel').layout.setActiveItem(grid);"
+                                ]
+                            },
+                            "designerId": "de39df7f-2c20-4596-8149-94888d3c301b"
+                        }
+                    ]
+                },
+                {
+                    "type": "tbfill",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "designer|userClassName": "MyFill1"
+                    },
+                    "designerId": "a1e51bc1-a7b3-449e-b334-676c4598e26f"
+                },
+                {
+                    "type": "tbspacer",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "designer|userClassName": "MySpacer"
+                    },
+                    "designerId": "d98e8db2-40b5-4528-9d5b-968716eb7402"
+                },
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "designer|userClassName": "MyButton2",
+                        "id": "btnUser",
+                        "itemId": "usuario",
+                        "iconCls": "icon-admin",
+                        "scale": "medium",
+                        "text": "Usuario"
+                    },
+                    "designerId": "4c9eba24-f3cb-4212-8c73-ab0d99e51405"
+                },
+                {
+                    "type": "tbspacer",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "designer|userClassName": "MySpacer1"
+                    },
+                    "designerId": "7d9d7dc9-dc4a-41b6-88d3-58697cc8b4c8"
+                },
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "designer|userClassName": "MyButton3",
+                        "iconCls": "icon-logout",
+                        "scale": "medium",
+                        "text": "Salir"
+                    },
+                    "designerId": "21eeb938-223a-4f7f-bfdc-fee9f25a373b",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "handler",
+                                "fn": "handler",
+                                "designer|params": [
+                                    "button",
+                                    "event"
+                                ],
+                                "implHandler": [
+                                    "window.location.href='http://localhost/sge/seguridad/login/logout';"
+                                ]
+                            },
+                            "designerId": "b6307a71-096f-4674-8dd9-eeb0f13d6c4d"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

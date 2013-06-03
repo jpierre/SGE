@@ -1,0 +1,1 @@
+[30-May-2013 16:25:08] PHP Fatal error:  Class 'CI_Model' not found in /home/jesugar/public_html/sysmov.net/sge/application/app/models/administracion/m_administracion.php on line 5

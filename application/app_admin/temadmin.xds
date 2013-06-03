@@ -1,0 +1,282 @@
+{
+    "name": "temadmin",
+    "settings": {
+        "urlPrefix": "http://localhost/sge/application/app_admin",
+        "spacesToIndent": 4,
+        "exportPath": "c:/xampp/htdocs/sge/application/app_admin",
+        "sdkPath": "",
+        "lineEnding": "CRLF",
+        "genTimestamps": false,
+        "cacheBust": false
+    },
+    "xdsVersion": "2.1.0",
+    "xdsBuild": 676,
+    "schemaVersion": 1,
+    "upgradeVersion": 210000000498,
+    "framework": "ext41",
+    "topInstanceFileMap": {
+        "a48f5ccf-4562-4fd8-919f-aba17f060edd": {
+            "paths": [
+                "metadata/resource/Library"
+            ],
+            "className": "Library"
+        },
+        "c9396fbc-595b-4121-9ff4-97a5fee34a26": {
+            "paths": [
+                "metadata/view/Main",
+                "app/view/override/Main.js",
+                "app/view/Main.js",
+                "app/view/Viewport.js"
+            ],
+            "className": "Main"
+        },
+        "daf4bf01-0ba6-4332-9ad0-3aa532067d17": {
+            "paths": [
+                "metadata/view/GridPonencia",
+                "app/view/override/GridPonencia.js",
+                "app/view/GridPonencia.js"
+            ],
+            "className": "GridPonencia"
+        },
+        "e1968bf2-caca-4ff6-b90e-d228195d1f39": {
+            "paths": [
+                "metadata/view/Contenedor",
+                "app/view/override/Contenedor.js",
+                "app/view/Contenedor.js"
+            ],
+            "className": "Contenedor"
+        },
+        "163f5714-4a24-4dc1-a7d1-e39249d248d5": {
+            "paths": [
+                "metadata/resource/css"
+            ],
+            "className": "css"
+        },
+        "36dba5c6-500a-4d7f-bda2-57170fe323f0": {
+            "paths": [
+                "metadata/view/PanelPrincipal",
+                "app/view/override/PanelPrincipal.js",
+                "app/view/PanelPrincipal.js"
+            ],
+            "className": "PanelPrincipal"
+        },
+        "1856b5d3-7fa0-4dc5-9841-d34cc99d4c3d": {
+            "paths": [
+                "metadata/store/Ponencia",
+                "app/store/override/Ponencia.js",
+                "app/store/Ponencia.js"
+            ],
+            "className": "Ponencia"
+        },
+        "012f3b85-8d8f-427d-8b69-71226ceaab6d": {
+            "paths": [
+                "metadata/model/Ponencia",
+                "app/model/override/Ponencia.js",
+                "app/model/Ponencia.js"
+            ],
+            "className": "Ponencia"
+        },
+        "9d4572e7-6787-4c2d-8ff4-073763ea0633": {
+            "paths": [
+                "metadata/view/MantenerPonencia",
+                "app/view/override/MantenerPonencia.js",
+                "app/view/MantenerPonencia.js"
+            ],
+            "className": "MantenerPonencia"
+        },
+        "e1a11ec5-5980-49cc-a327-aef42cf8d75d": {
+            "paths": [
+                "metadata/store/estado_pon",
+                "app/store/override/estado_pon.js",
+                "app/store/estado_pon.js"
+            ],
+            "className": "estado_pon"
+        },
+        "dd5eda9d-eac3-41fd-a57d-bcbd692d2422": {
+            "paths": [
+                "metadata/model/tipo_pon",
+                "app/model/override/tipo_pon.js",
+                "app/model/tipo_pon.js"
+            ],
+            "className": "tipo_pon"
+        },
+        "44633b37-1031-4b3c-bc1c-43a4d50bed47": {
+            "paths": [
+                "metadata/store/ambiente",
+                "app/store/override/ambiente.js",
+                "app/store/ambiente.js"
+            ],
+            "className": "ambiente"
+        },
+        "bdafdf1c-cab0-4842-9f29-7b9ea8009ebf": {
+            "paths": [
+                "metadata/store/Evento",
+                "app/store/override/Evento.js",
+                "app/store/Evento.js"
+            ],
+            "className": "Evento"
+        },
+        "6cc4c69b-17c2-49de-9b9c-f43cf4ecbf1d": {
+            "paths": [
+                "metadata/store/Dirigido",
+                "app/store/override/Dirigido.js",
+                "app/store/Dirigido.js"
+            ],
+            "className": "Dirigido"
+        },
+        "ed1fbe7a-53f2-4c02-865c-9c56bc52a6a4": {
+            "paths": [
+                "metadata/store/tipo_pon",
+                "app/store/override/tipo_pon.js",
+                "app/store/tipo_pon.js"
+            ],
+            "className": "tipo_pon"
+        },
+        "cce24902-9556-4609-a3e1-fe73a03a775c": {
+            "paths": [
+                "metadata/store/Expositor",
+                "app/store/override/Expositor.js",
+                "app/store/Expositor.js"
+            ],
+            "className": "Expositor"
+        },
+        "f854fd39-3739-4eef-8416-bc4da50ce7b6": {
+            "paths": [
+                "metadata/model/Expositor",
+                "app/model/override/Expositor.js",
+                "app/model/Expositor.js"
+            ],
+            "className": "Expositor"
+        },
+        "42fb0317-5d6f-4573-a6c7-9c2a10afe571": {
+            "paths": [
+                "metadata/store/Aula",
+                "app/store/override/Aula.js",
+                "app/store/Aula.js"
+            ],
+            "className": "Aula"
+        },
+        "04d3d7be-6e6e-4089-ac7d-317f731a58f3": {
+            "paths": [
+                "metadata/model/Ambiente",
+                "app/model/override/Ambiente.js",
+                "app/model/Ambiente.js"
+            ],
+            "className": "Ambiente"
+        },
+        "8abfef18-b4ff-45aa-be16-63d37aaf1c60": {
+            "paths": [
+                "metadata/model/Aula",
+                "app/model/override/Aula.js",
+                "app/model/Aula.js"
+            ],
+            "className": "Aula"
+        },
+        "ec212e19-42b6-4747-b32f-a99644298590": {
+            "paths": [
+                "metadata/model/Evento",
+                "app/model/override/Evento.js",
+                "app/model/Evento.js"
+            ],
+            "className": "Evento"
+        },
+        "09b9de84-a97e-4ab8-8c1a-370f0abca717": {
+            "paths": [
+                "metadata/view/GridEvento",
+                "app/view/override/GridEvento.js",
+                "app/view/GridEvento.js"
+            ],
+            "className": "GridEvento"
+        },
+        "6a274356-8698-41d8-a489-4888e8d85956": {
+            "paths": [
+                "metadata/view/MantenerEvento",
+                "app/view/override/MantenerEvento.js",
+                "app/view/MantenerEvento.js"
+            ],
+            "className": "MantenerEvento"
+        },
+        "42998522-0ba8-4c06-9d99-4f71269cbe51": {
+            "paths": [
+                "metadata/store/estado_eve",
+                "app/store/override/estado_eve.js",
+                "app/store/estado_eve.js"
+            ],
+            "className": "estado_eve"
+        },
+        "715c5a57-de94-443f-97b9-19cc908c1f7a": {
+            "paths": [
+                "metadata/store/eventoCombo",
+                "app/store/override/eventoCombo.js",
+                "app/store/eventoCombo.js"
+            ],
+            "className": "eventoCombo"
+        },
+        "4056eb9d-1510-4068-bbe9-034134539443": {
+            "paths": [
+                "metadata/view/GridExpositor",
+                "app/view/override/GridExpositor.js",
+                "app/view/GridExpositor.js"
+            ],
+            "className": "GridExpositor"
+        },
+        "ffda3ea2-ecc2-4939-aea5-4857f7695418": {
+            "paths": [
+                "metadata/view/MantenerExpositor",
+                "app/view/override/MantenerExpositor.js",
+                "app/view/MantenerExpositor.js"
+            ],
+            "className": "MantenerExpositor"
+        },
+        "713f7bbd-5fed-41e7-a994-0bacd4c79bf2": {
+            "paths": [
+                "metadata/store/tipo_documento",
+                "app/store/override/tipo_documento.js",
+                "app/store/tipo_documento.js"
+            ],
+            "className": "tipo_documento"
+        }
+    },
+    "viewOrderMap": {
+        "view": [
+            "c9396fbc-595b-4121-9ff4-97a5fee34a26",
+            "e1968bf2-caca-4ff6-b90e-d228195d1f39",
+            "daf4bf01-0ba6-4332-9ad0-3aa532067d17",
+            "4056eb9d-1510-4068-bbe9-034134539443",
+            "09b9de84-a97e-4ab8-8c1a-370f0abca717",
+            "36dba5c6-500a-4d7f-bda2-57170fe323f0",
+            "9d4572e7-6787-4c2d-8ff4-073763ea0633",
+            "6a274356-8698-41d8-a489-4888e8d85956",
+            "ffda3ea2-ecc2-4939-aea5-4857f7695418"
+        ],
+        "store": [
+            "1856b5d3-7fa0-4dc5-9841-d34cc99d4c3d",
+            "e1a11ec5-5980-49cc-a327-aef42cf8d75d",
+            "713f7bbd-5fed-41e7-a994-0bacd4c79bf2",
+            "42998522-0ba8-4c06-9d99-4f71269cbe51",
+            "44633b37-1031-4b3c-bc1c-43a4d50bed47",
+            "bdafdf1c-cab0-4842-9f29-7b9ea8009ebf",
+            "715c5a57-de94-443f-97b9-19cc908c1f7a",
+            "6cc4c69b-17c2-49de-9b9c-f43cf4ecbf1d",
+            "ed1fbe7a-53f2-4c02-865c-9c56bc52a6a4",
+            "cce24902-9556-4609-a3e1-fe73a03a775c",
+            "42fb0317-5d6f-4573-a6c7-9c2a10afe571"
+        ],
+        "controller": [],
+        "model": [
+            "012f3b85-8d8f-427d-8b69-71226ceaab6d",
+            "dd5eda9d-eac3-41fd-a57d-bcbd692d2422",
+            "f854fd39-3739-4eef-8416-bc4da50ce7b6",
+            "04d3d7be-6e6e-4089-ac7d-317f731a58f3",
+            "8abfef18-b4ff-45aa-be16-63d37aaf1c60",
+            "ec212e19-42b6-4747-b32f-a99644298590"
+        ],
+        "resource": [
+            "163f5714-4a24-4dc1-a7d1-e39249d248d5",
+            "a48f5ccf-4562-4fd8-919f-aba17f060edd"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

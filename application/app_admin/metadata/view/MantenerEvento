@@ -1,0 +1,215 @@
+{
+    "type": "window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "MantenerEvento",
+        "height": 290,
+        "id": "winEvento",
+        "itemId": null,
+        "width": 455,
+        "layout": "border",
+        "title": "Mantener Evento",
+        "animateTarget": "btn_CEvento",
+        "modal": true
+    },
+    "id": "ExtBox1-ext-gen12541",
+    "designerId": "6a274356-8698-41d8-a489-4888e8d85956",
+    "cn": [
+        {
+            "type": "form",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|region": "center",
+                "designer|userClassName": "MyForm",
+                "border": 0,
+                "id": "formEvento",
+                "bodyPadding": 10,
+                "title": null,
+                "url": "../../administracion/evento/registar_evento",
+                "waitTitle": "Guardando..."
+            },
+            "designerId": "5627d27f-1b0b-4882-9737-cb0b1e1287f8",
+            "cn": [
+                {
+                    "type": "fieldset",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyFieldSet1",
+                        "title": "Datos de Evento"
+                    },
+                    "designerId": "c1f90784-903e-491f-b515-b3196cdc4084",
+                    "cn": [
+                        {
+                            "type": "textfield",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|anchor": "100%",
+                                "designer|userClassName": "MyTextField",
+                                "designer|displayName": "id_eve",
+                                "cls": "x-item-disabled",
+                                "disabled": null,
+                                "hidden": false,
+                                "hideMode": null,
+                                "id": "id_eve",
+                                "overCls": null,
+                                "style": null,
+                                "styleHtmlContent": null,
+                                "fieldCls": "x-item-disabled",
+                                "fieldStyle": "color:#808080;",
+                                "name": "id_eve",
+                                "readOnly": true,
+                                "readOnlyCls": "x-item-disabled",
+                                "fieldBodyCls": null,
+                                "fieldLabel": "Codigo",
+                                "formItemCls": null,
+                                "hideLabel": false,
+                                "labelCls": null,
+                                "labelClsExtra": null,
+                                "labelStyle": "color:#808080;"
+                            },
+                            "designerId": "986066c2-b356-4dc2-940a-036b591bda96"
+                        },
+                        {
+                            "type": "textfield",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|anchor": "100%",
+                                "designer|userClassName": "MyTextField3",
+                                "id": "nom_eve",
+                                "name": "nom_eve",
+                                "fieldLabel": "Nombre Ponencia",
+                                "allowBlank": false,
+                                "blankText": "Debe ingresar un nombre para la Ponencia"
+                            },
+                            "designerId": "5ef3868e-cef6-4b84-a522-07ba6ae720ac"
+                        },
+                        {
+                            "type": "datefield",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|anchor": "100%",
+                                "designer|userClassName": "MyDateField",
+                                "id": "fech_ini_eve",
+                                "name": "fech_ini_eve",
+                                "fieldLabel": "Fecha Inicio",
+                                "allowBlank": false,
+                                "blankText": "Debe Ingresar una fecha de Inicio",
+                                "format": "d-m-Y H:i:s"
+                            },
+                            "designerId": "4f642ca2-55b5-4e72-b68c-7b9ee7e6dca0"
+                        },
+                        {
+                            "type": "datefield",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|anchor": "100%",
+                                "designer|userClassName": "MyDateField",
+                                "id": "fech_fin_eve",
+                                "name": "fech_fin_eve",
+                                "fieldLabel": "Fecha Final",
+                                "allowBlank": false,
+                                "blankText": "Debe Ingresar una fecha de final",
+                                "format": "d-m-Y H:i:s"
+                            },
+                            "designerId": "3688cf00-1484-4f2d-95fe-5181cd948cba"
+                        },
+                        {
+                            "type": "combobox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|anchor": "100%",
+                                "designer|userClassName": "MyComboBox",
+                                "id": "est_eve",
+                                "name": "est_eve",
+                                "fieldLabel": "Estado",
+                                "allowBlank": false,
+                                "blankText": "Debe asignar un estado.",
+                                "editable": false,
+                                "autoSelect": false,
+                                "displayField": "value",
+                                "forceSelection": true,
+                                "queryMode": "local",
+                                "selectOnTab": false,
+                                "store": "estado_eve",
+                                "typeAhead": true,
+                                "valueField": "est_eve"
+                            },
+                            "designerId": "922fb991-2bb8-4b9d-8206-cd349fad3034"
+                        }
+                    ]
+                },
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "onFormEventoActioncomplete",
+                        "fn": "onFormEventoActioncomplete",
+                        "implHandler": [
+                            "Ext.Msg.alert('Error', action);\r",
+                            "Ext.getCmp('winEvento').close(); \r",
+                            "Ext.getCmp('gridEvento').getStore().load();\r",
+                            "Ext.getCmp('gridEvento').getView().refresh();"
+                        ],
+                        "name": "actioncomplete",
+                        "scope": "me"
+                    },
+                    "designerId": "913e3d3d-158b-4e89-8002-4a6400c3a6f7"
+                },
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "onFormEventoBeforeAction",
+                        "fn": "onFormEventoBeforeAction",
+                        "implHandler": [
+                            "Ext.Msg.alert('Error', action.result.sms);"
+                        ],
+                        "name": "beforeaction",
+                        "scope": "me"
+                    },
+                    "designerId": "97716da6-2f33-479b-ad46-9505436d0d2d"
+                }
+            ]
+        }
+    ]
+}
