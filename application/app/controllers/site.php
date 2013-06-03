@@ -29,6 +29,10 @@
 	function generar_QR(){
 		redirect('inscripcion/c_inscripcion/generarQR');	
 	}
+	
+	function generar_cronograma(){
+		redirect('inscripcion/c_inscripcion/generar_cronograma');
+	}
 
 	function is_logged_in(){
 		$is_logged_in=$this->session->userdata('is_logged_in');

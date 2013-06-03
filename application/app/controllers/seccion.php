@@ -38,6 +38,11 @@ class Seccion extends CI_Controller{
 		//$this->load->view('home/home', $data);
 		redirect('site/generar_QR');
 	}
+	    function generar_horario(){
+		//$data['main_content'] = 'inscripcion/generar_QR';
+		//$this->load->view('home/home', $data);
+		redirect('site/generar_cronograma');
+	}
 		
 }
 	
