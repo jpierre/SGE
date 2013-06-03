@@ -65,11 +65,11 @@ document.onmousedown=clickIE4;
 
 document.oncontextmenu=new Function("alert(message);return false")*/
 
-
+/*
 $(document).ready(function() {
 					   $("#accordion").msAccordion({defaultid:1, vertical:true, event:'mouseover'});
 						   }
-						   )
+						   )*/
 
 
 
