@@ -1,9 +1,7 @@
 <!-- ESTE PHP VA DENTRO DE HOME/HOME ES EL MAIN_CONTENT  -->
-
 <link href="<?php echo base_url(); ?>css/wufo/structure.css" rel="stylesheet">
 <link href="<?php echo base_url(); ?>css/wufo/form.css" rel="stylesheet">
 <link href="<?php echo base_url(); ?>css/wufo/theme.css" rel="stylesheet">
-
 <script>
 
 function validar(){
@@ -61,24 +59,35 @@ if(document.form6.cant_cuotas.options[selec].value=="Seleccione"){
       <li id="foli112" class="notranslate first section      ">
         <section>
         <div align="center">
-        <h1>Inscripcion a <?php if ($id_evento=='1'){ echo "Vision 2013";}else{echo "Cloud Google";} ?></h1>
-        
+        <h1>Inscripcion a
+          <?php if ($id_evento=='1'){ echo "Vision 2013";}else{echo "Cloud Google";} ?>
+        </h1>
+        <br/>
         <fieldset>
           <legend>Datos del Participante</legend>
-          <p><?php if($this->session->userdata('estado')=='1' || $this->session->userdata('estado')=='2'){echo '<b>Codigo: </b>'.$this->session->userdata('codigo');}else{ echo '<b>Numero Doc: </b>'.$this->session->userdata('idDNI');}
+          <br />
+          <p>
+            <?php if($this->session->userdata('estado')=='1' || $this->session->userdata('estado')=='2'){echo '<b>Codigo: </b>'.$this->session->userdata('codigo');}else{ echo '<b>Numero Doc: </b>'.$this->session->userdata('idDNI');}
 		  
 		  
-		   ?> &nbsp; &nbsp; &nbsp; <b>Participante:</b> <?php echo $this->session->userdata('apePat')." ".$this->session->userdata('apeMat').", ".$this->session->userdata('nombres'); ?></p>
-          <p><b>Estado:</b> <?php if($this->session->userdata('estado')=='1'){
+		   ?>
+            &nbsp; &nbsp; &nbsp; <b>Participante:</b> <?php echo $this->session->userdata('apePat')." ".$this->session->userdata('apeMat').", ".$this->session->userdata('nombres'); ?></p>
+          <p>&nbsp;</p>
+          <p><b>Estado:</b>
+            <?php if($this->session->userdata('estado')=='1'){
 		  							echo "Estudiante";
 								  }else if($this->session->userdata('estado')=='2'){
 								  	echo "Egresado";
-								  }else{echo "Externo";}?>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; 
-		   <?php if($this->session->userdata('estado')=='1' || $this->session->userdata('estado')=='2'){
-		   		 echo '<b>Escuela:</b>'.$this->session->userdata('escuela');}?></p>
+								  }else{echo "Externo";}?>
+            &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;
+            <?php if($this->session->userdata('estado')=='1' || $this->session->userdata('estado')=='2'){
+		   		 echo '<b>Escuela:</b>'.$this->session->userdata('escuela');}?>
+          </p>
         </fieldset>
+        <br />
         <fieldset>
-          <legend>Modalidad de Pago</legend>
+          <legend><b>Modalidad de Pago</b></legend>
+          <p>&nbsp;</p>
           <p>
             <label>
               <input name="tipo_pago" value="1" type="radio" checked onclick="extranjero(this)"/>
@@ -91,7 +100,8 @@ if(document.form6.cant_cuotas.options[selec].value=="Seleccione"){
               <input name="tipo_pago" value="2" type="radio" onclick="extranjero(this)"/>
               Cuotas</label>
             &nbsp; &nbsp;
-            Nro de cuotas<select name="cant_cuotas" id="cant_cuotas">
+            Nro de cuotas :
+            <select name="cant_cuotas" id="cant_cuotas">
               <option selected="selected" value"" >Seleccione</option>
               <option value="2">2</option>
               <option value="3" >3</option>
