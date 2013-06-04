@@ -59,9 +59,7 @@ if(document.form6.cant_cuotas.options[selec].value=="Seleccione"){
       <li id="foli112" class="notranslate first section      ">
         <section>
         <div align="center">
-        <h1>Inscripcion a
-          <?php if ($id_evento=='1'){ echo "Vision 2013";}else{echo "Cloud Google";} ?>
-        </h1>
+        <h1>Inscripcion a <?=$evento->nom_eve ?> </h1>
         <br/>
         <fieldset>
           <legend>Datos del Participante</legend>
@@ -109,7 +107,7 @@ if(document.form6.cant_cuotas.options[selec].value=="Seleccione"){
           </p>
           <p>
             <?php endif ?>
-            <input name="id_evento" type="hidden" value="<?php echo $id_evento; ?>"/>
+            <input name="id_evento" type="hidden" value="<?=$evento->id_eve ?>"/>
             <label>Monto</label>
             <input name="monto" type="text" value="250" readonly="readonly" />
             </p>

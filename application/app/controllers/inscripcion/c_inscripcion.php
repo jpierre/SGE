@@ -10,10 +10,14 @@ class C_inscripcion extends CI_Controller{
 		
 		$resultConsulta=$this->registro->get_consulta_registro($this->session->userdata('idDNI'),$idEvento);
 		
+		
 		if(!$resultConsulta){
 		
 			$result=$this->registro->get_estado_user($this->session->userdata('idDNI'));			
 			if(strcasecmp($result->tip_usu, '1')==0 || strcasecmp($result->tip_usu, '2')==0 || strcasecmp($result->tip_usu, '3')==0){
+				
+				$this->load->model('administracion/evento_model','evento');
+				$data['evento']=$this->evento->getEvento($idEvento);
 				$data['main_content'] = 'inscripcion/inscribirse_form';
 				$this->load->view('home/home', $data);
 			}else{
@@ -34,11 +38,7 @@ class C_inscripcion extends CI_Controller{
 	}
 	
 	function registar_inscrip(){
-		//recogemos los datos obtenidos por POST
 		
-		//$data['nombre'] = $this->session->userdata('nombres');
-		//$data['apePat'] = $this->session->userdata('apePat');
-		//$data['apeMat'] = $this->session->userdata('apeMat');
 		$data['id_evento'] = $this->input->post('id_evento');
 		$data['nro_inscrip'] = rand(1000000,99999999);
 		$data['estado_recibo'] = 'pendiente';
@@ -57,6 +57,10 @@ class C_inscripcion extends CI_Controller{
  		$result=$this->registro->registrar_inscripcion_participante($data);
 		
 		if($result==true){
+			$this->load->model('administracion/evento_model','evento');
+			$evento=$this->evento->getEvento($data['id_evento']);
+			$nom_eve=$evento->nom_eve;
+			$this->enviarEmaiInscripcion($nom_eve);
 			$data['main_content']='inscripcion/inscripcion_succesful';
 			$this->load->view('home/home', $data);
 		}
@@ -141,8 +145,33 @@ class C_inscripcion extends CI_Controller{
 	
 		echo "este es el cronograma";		
 	}
+	
+	//ENVIA MENSAJE AL REGISTRARSE A UN EVENTO
+	public function enviarEmaiInscripcion($nom_eve){
+		
+		$nombre = $this->session->userdata('nombres');
+	    $apepat = $this->session->userdata('apePat');
+	    $apemat = $this->session->userdata('apePat');
+	    
+	    $mensaje = 'Ud. se han inscrito al Evento: '.$nom_eve.'!
+		No olvide generar su Codigo QR para poder registrar su asistencia
+		a cada una de las ponencias.
+					
+		Gracias por inscribirse!
+		------------------------------------------------------
+		*Visite nuestra web para conocer los horarios de todas las ponencias
+		del evento 
+					
+		'.base_url().'seccion/login';
+	            	
+	    $this->load->library('email');
+		$this->email->from('adm.eventosfia@gmail.com','Equipo de FIA Eventos');  
+		$this->email->to($this->session->userdata('correo'));    
+		$this->email->subject('Inscripcion a Evento - FIA - USMP');  
+		$this->email->message($mensaje);
+		$this->email->send();
+	}
+
 }
-
-
 
 ?>

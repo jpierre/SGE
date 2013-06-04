@@ -18,7 +18,7 @@
 			<li id="foli112" class="notranslate first section      ">
 			<section>
 			<h3 id="title112">
-			<span class="desc">Felicitaciones! Su registro ha sido satisfactorio.</span><br />
+			<span class="desc"><b>Felicitaciones! Su registro ha sido satisfactorio.</b></span><br />
 			</h3>
 			</section>
 			</li>

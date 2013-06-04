@@ -9,9 +9,6 @@
                           </li>
                           <li><a href="#" class="categoria">Eventos</a>
                                 <ul>
-                                <li><span><?php echo anchor('inscripcion/c_inscripcion/index/1', '&raquo; VISION 2013'); ?></span></li>
-                                <li><span><?php echo anchor('inscripcion/c_inscripcion/index/2', '&raquo; Cloud Google'); ?></span></li>
-                                <li><span><?php echo anchor('', '&raquo; Android Lima Day'); ?></span></li>
                                 <?php for($i=0; $i<count($eventos); $i++){?>
                                 <li><span><?php echo anchor('inscripcion/c_inscripcion/index/'.$eventos[$i]->id_eve, '&raquo; '.$eventos[$i]->nom_eve); ?></span></li>
                                 <?php }?>

@@ -89,30 +89,49 @@ class C_registro extends CI_Controller{
 	            //comprobamos si es correcta la imagen introducida
 	            $check = $this->m_captcha->check($ip,$expiration,$captcha);
 	 
-	            /*
-	            |si el número de filas devuelto por la consulta es igual a 1
-	            |es decir, si el captcha ingresado en el campo de texto es igual
-	            |al que hay en la base de datos, junto con la ip del usuario
-	            |entonces dejamos continuar porque todo es correcto
-	            */
 	            if($check == 1){
-	                //$data['main_content']='registro/signup_succesful';
+	            	
+	            	$this->enviarEmailBienvenida();
+	            	//$data['main_content']='registro/signup_succesful';
 					$this->load->view('inicio/registroCompleto');
 				}
 					
 			}else{
 				$data['captcha'] = $this->captcha();
 				$this->session->set_userdata('captcha', $this->rand);
-				//$data['main_content'] = 'registro/signup_form';
 				$this->load->view('inicio/registro', $data);
 			}
 			
 		}
 	}
 	
+	//ENVIA MENSAJE DE BIENVENIDA AL REGISTRARSE
+	public function enviarEmailBienvenida(){
+		$nombre = $this->input->post('nombres');
+	    $apepat = $this->input->post('ape_pat');
+	    $apemat = $this->input->post('ape_mat');
+	            	
+	            	
+	    $mensaje = 'Bienvenido '.$nombre.' '.$apepat.' '.$apemat.'!
+		Ahora usted forma parte de nuestra comunidad, podra participar en
+		cualquier evento que se realice en nuestra querida FIA
+					
+		Gracias por registrarse!
+		------------------------------------------------------
+		*Ingrese a su cuenta y disfrute de todos nuestros servicios a traves del siguiente link:
+					
+		'.base_url().'seccion/login';
+	            	
+	    $this->load->library('email');
+		$this->email->from('adm.eventosfia@gmail.com','Equipo de FIA Eventos');  
+		$this->email->to($this->input->post('email_adress'));    
+		$this->email->subject('Bienvenido a Eventos Fia - USMP');  
+		$this->email->message($mensaje);
+		$this->email->send();
+	}
 	
 		
-	//CAPTCHAAAAAAAAAAAAAAAAAAAAA
+	//CAPTCHA
 	public function captcha()
     {
         //configuramos el captcha

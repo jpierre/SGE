@@ -1,52 +1,25 @@
 <?php
 
-
-
 class Evento_model extends CI_Model{
-
-	
-
-	
 
 	function registrar_evento($dato=NULL){
 
-	
-
 		$result=NULL;
-
-			$result= $this->db->insert('evento',$dato);
-
-
-
+		$result= $this->db->insert('evento',$dato);
 		return $result;
 
 	}
 
 	
-
 	function modificar_evento($dato=NULL,$id_eve){
 
-	
-
 		$result=NULL;
-
-			$this->db->where('id_eve', $id_eve);
-
-			$result= $this->db->update('evento',$dato);
-
-
-
+		$this->db->where('id_eve', $id_eve);
+		$result= $this->db->update('evento',$dato);
 		return $result;
-
-	
-
 	}
 
-	
-
 	function borrar_evento($id_eve=NULL){
-
-	
 
 		$result=NULL;
 		$data = array('est_eve' => 3);
@@ -63,11 +36,7 @@ class Evento_model extends CI_Model{
 
 	}
 
-	
-
 	function get_eventos($criterio){
-
-	
 
 		$sql="select * from evento".$criterio;
 
@@ -123,6 +92,13 @@ class Evento_model extends CI_Model{
 
 	}
 
+	function getEvento($codigo=NULL){
+		
+		$sql="SELECT * FROM evento WHERE id_eve='".$codigo."'";
+		return $this->db->query($sql)->row();
+	}
+	
+	
 }
 
 
