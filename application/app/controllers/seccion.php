@@ -22,11 +22,14 @@ class Seccion extends CI_Controller{
 		redirect('inscripcion/c_registro');
 	}
 	function contacto(){
-		$this->load->view('inicio/contacto');
+		
 	}
 	function login(){
 		$data['mensaje']="";
 		$this->load->view('inicio/login',$data);
+	}
+	function prueba(){
+		$this->load->view('a_home/home');
 	}
 	
 	//REDIRECCIONES DENTRO DEL SISTEMA
