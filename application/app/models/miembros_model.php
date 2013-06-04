@@ -33,14 +33,14 @@ class Miembros_model extends CI_Model{
 	
 	//INSERTA EL KEY DE REESTABLECIMIENTO
 	function insertKey($data){
-		$insert= $this->db->insert('t_seguridad',$data);
+		$insert= $this->db->insert('resetpwd',$data);
 	}
 	
 	//OBTIENE KEY DE LA BD
 	public function verificarKey($key) {
         $this->db->where('keyJ',$key['keyJ']);
         $this->db->where('keyP',$key['keyP']);
-        $consulta = $this->db->get('t_seguridad');
+        $consulta = $this->db->get('resetpwd');
         if($consulta->num_rows() == 1){
            return $consulta->row();
         }else{
@@ -55,7 +55,7 @@ class Miembros_model extends CI_Model{
        	$this->db->where('keyJ',$keyJ);
         $this->db->where('keyP',$keyP);
             	
-        $result = $this->db->get('t_seguridad');
+        $result = $this->db->get('resetpwd');
         $fila = $result->row(); 
         $email = $fila->email;
 
@@ -160,6 +160,13 @@ class Miembros_model extends CI_Model{
         }
     }
 	
+    public function getMiembroXCodUser($cod_user_rec=null){
+    	
+    	$this->db->where('cod_user',$cod_user_rec);
+    	$result = $this->db->get('usuario');
+        $fila = $result->row(); 
+        return $fila;
+    }
 	
 }
 

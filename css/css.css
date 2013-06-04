@@ -1,7 +1,7 @@
 @CHARSET "ISO-8859-1";
 
 body {
-	
+	background: #ececec url(main-pattern.png);
 }
 
 /* ~~ Element/tag selectors ~~ */
@@ -34,13 +34,13 @@ a:hover, a:active, a:focus { /* this group of selectors will give a keyboard nav
 /* ~~ this container surrounds all other divs giving them their percentage-based width ~~ */
 .container {
 	width: 1024px;
-	background: #FFF;
+	background: #ececec url(main-pattern.png);
 	margin: 0 auto; /* the auto value on the sides, coupled with the width, centers the layout. It is not needed if you set the .container's width to 100%. */
 }
 
 /* ~~ the header is not given a width. It will extend the full width of your layout. It contains an image placeholder that should be replaced with your own linked logo ~~ */
 .header {
-	background: #6F7D94;
+	background: #ececec url(main-pattern.png);
 }
 
 /* ~~ These are the columns for the layout. ~~ 

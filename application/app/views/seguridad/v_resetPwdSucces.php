@@ -166,7 +166,7 @@
 	        	
 	        	<!-- page content -->
 	        	<div id="page-content">
-	        		<h3 class="heading">La Contrasenia se cambio correctamente!</h3>
+	        		<h3 class="heading">La Contrase&ntilde;a se cambio correctamente!</h3>
 	        	</div>
 	        	<!-- ENDS page content -->
 	        	

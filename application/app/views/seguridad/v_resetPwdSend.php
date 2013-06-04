@@ -166,7 +166,7 @@
 	        	
 	        	<!-- page content -->
 	        	<div id="page-content">
-	        		<h3 class="heading">Revise su correo para reestablecer su contraseña!</h3>
+	        		<h3 class="heading">Revise su correo para reestablecer su contrase&ntilde;a!</h3>
 				</div>
 	        	<!-- ENDS page content -->
 	        	

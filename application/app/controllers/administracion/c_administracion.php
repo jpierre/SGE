@@ -15,18 +15,6 @@ class C_administracion extends CI_Controller{
 
 	}
 
-	function mostrarlo2(){
-
-	$data['main_content'] = 'home_admin/mantenerPonencia';
-		$this->load->view('home_admin/home', $data);
-
-	}
-	
-	function mostrarlo3(){
-	$data['main_content'] = 'home_admin/datos_admin';
-		$this->load->view('home_admin/home', $data);
-	}
-
 	function obteneterDatosExpositor(){
 		
 		$this->load->model('administracion/m_administracion', 'admin');
@@ -128,15 +116,37 @@ class C_administracion extends CI_Controller{
 				
 	}
 
-
 	function emitirCertificado(){
+		$this->load->model('mantener/m_evento','m_evento');
+		$eventos = $this->m_evento->getData();
+		$data['eventos'] = $eventos;
 		$data['main_content']="home_admin/v_emitirCertificado";
 		$this->load->view('home_admin/home', $data);
 	}
-	
-	
-	
-	
+
+	function emitirCertificadoXEvento(){
+		
+		$this->load->model('m_recibo','recibo');
+		$this->load->model('miembros_model','miembro');
+		
+		$recibosXEvento=$this->recibo->get_reciboXEvento($this->input->post('id_eve'));
+		
+		//RECORRER PARA BUSCAR Y GUARDAR CADA FILA DE PARTICIPANTE POR RECIBO
+		for($i=0; $i<count($recibosXEvento); $i++){
+			$participantes[$i] = $this->miembro->getMiembroXCodUser($recibosXEvento[$i]->cod_user_rec);
+		}
+		
+		$data['recibosXEvento'] = $recibosXEvento;
+		$data['participantes'] = $participantes;
+		$data['main_content']="home_admin/v_emitirCertificado";
+		$this->load->view('home_admin/home', $data);
+		
+		
+		 	
+		 
+		
+				
+	}
 	
 
 	/***funciones ivan***/
