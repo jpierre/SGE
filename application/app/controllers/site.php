@@ -30,6 +30,10 @@
 		redirect('inscripcion/c_inscripcion/generarQR');	
 	}
 	
+	function emitirCertificado(){
+		redirect('administracion/c_administracion/emitirCertificado');	
+	}
+	
 	function generar_cronograma(){
 		redirect('inscripcion/c_inscripcion/generar_cronograma');
 	}

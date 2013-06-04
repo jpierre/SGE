@@ -27,9 +27,6 @@ class C_administracion extends CI_Controller{
 		$this->load->view('home_admin/home', $data);
 	}
 
-
-
-
 	function obteneterDatosExpositor(){
 		
 		$this->load->model('administracion/m_administracion', 'admin');
@@ -132,6 +129,15 @@ class C_administracion extends CI_Controller{
 	}
 
 
+	function emitirCertificado(){
+		$data['main_content']="home_admin/v_emitirCertificado";
+		$this->load->view('home_admin/home', $data);
+	}
+	
+	
+	
+	
+	
 
 	/***funciones ivan***/
 	function index()

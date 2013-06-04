@@ -37,7 +37,7 @@
           <li><a href="#">&raquo; Etc, Etc.</a></li>
         </ul>
       </li>
-       <li><a href="#" class="categoria">Generar Certificado</a>
+       <li><a href="<?php echo base_url();?>seccion/emitirCertificado" class="categoria">Emitir Certificado</a>
         
       </li>
       <li><a href="#s" class="categoria">Acerca De </a></li>
