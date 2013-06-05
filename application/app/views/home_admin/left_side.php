@@ -28,7 +28,7 @@
       </li>
       <li><a href="#" class="categoria">Asistencia</a>
         <ul>
-          <li><a href="cam/demo5.html">Registrar Asistencia</a></li>
+          <li><a href="#">Registrar Asistencia</a></li>
            <li><a href="#">Consultar Asistencia</a></li>
         </ul>
       </li>

@@ -4,20 +4,25 @@ class Asistencia extends CI_Controller{
 
 
 	
-	
 	function registar_asistencia(){
 
 		//recogemos los datos obtenidos por POST
-
+		//$data='asistencia'=> 1
+			//$dni= $this->asistencia_model->obtenerDNI($dni);
 		$data = array(
 		'num_doc_user' => $this->input->post('num_doc_user'),
 		'ponencia_id_pon' => $this->input->post('id_ponencia'),
-		'asistencia' => 0
+		'asistencia' => 1
 
 		);
+		
+	
 
  		$this->load->model('administracion/asistencia_model','asistencia');
  		$result=$this->asistencia->registrar_asistencia($data);
+		
+		
+		
 		if($result){
 			echo 'Ok';
 
@@ -25,6 +30,11 @@ class Asistencia extends CI_Controller{
 
 			echo '{"failure":"true", "sms":"'.$this->db->_error_message().'"}';
 
+			
+			
+			
+			
+			
 	}
 }
 

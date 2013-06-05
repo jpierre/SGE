@@ -14,6 +14,8 @@ class Asistencia_model extends CI_Model{
 
 		$result=NULL;
 
+			//$result= $this->db->insert('asistencia',$dato);
+			
 			$result= $this->db->insert('asistencia',$dato);
 			//$this->db->insert_id();
 
@@ -21,6 +23,14 @@ class Asistencia_model extends CI_Model{
 
 		return $result;
 
+	}
+	
+	function obtenerDNI($dni){
+	
+		$this->db->where('num_doc_user',$dni);
+		$query = $this->db->get('asistencia');
+		$fila = $query->row();
+        return $fila;
 	}
 
 	/*
