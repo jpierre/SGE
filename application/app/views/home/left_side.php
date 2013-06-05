@@ -14,7 +14,7 @@
                                 <?php }?>
                                 </ul>
                            </li>
-                           <li><a href="#" class="categoria">Horarios</a>
+                           <li><a href="<?php echo base_url();?>seccion/generar_horario" class="categoria">Horarios</a>
                                 
                            </li>
                            <li><a href="<?php echo base_url();?>seccion/generar_QR" class="categoria">Generar Codigo QR</a></a>

@@ -141,9 +141,13 @@ class C_inscripcion extends CI_Controller{
 	}
 	
 	
-	public function generarConograma(){
-	
-		echo "este es el cronograma";		
+	public function generarCronograma(){
+		$this->load->model('mantener/m_evento', 'evento');
+ 		$result=$this->evento->getData();
+		$data['eventos'] = $result;
+		
+		$this->load->view('home/generacionCronograma', $data);
+				
 	}
 	
 	//ENVIA MENSAJE AL REGISTRARSE A UN EVENTO

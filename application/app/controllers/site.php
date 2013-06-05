@@ -35,7 +35,7 @@
 	}
 	
 	function generar_cronograma(){
-		redirect('inscripcion/c_inscripcion/generar_cronograma');
+		redirect('inscripcion/c_inscripcion/generarCronograma');
 	}
 
 	function is_logged_in(){
