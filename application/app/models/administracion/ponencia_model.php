@@ -73,10 +73,18 @@ class Ponencia_model extends CI_Model{
 	
 	function getPonencia_Evento($cod_eve_pon = NULL) {
 	
-		$sql="select nom_pon, tip_amb, cod_fia_amb, tipo_pon,  TRUNCATE(TIMESTAMPDIFF(SECOND , fech_ini_pon,	fech_fin_pon)/60, 0) AS 	resultado from ponencia p";
+		$sql="select nom_eve, nom_pon, tip_amb, cod_fia_amb, cod_exp_pon, nom_exp, ape_pat_exp, ape_mat_exp, TRUNCATE(TIMESTAMPDIFF(SECOND , fech_ini_pon,	fech_fin_pon)/60, 0) AS resultado from ponencia, ambiente, expositor, evento where cod_eve_pon='$cod_eve_pon' and cod_exp=cod_exp_pon and id_amb=id_amb_pon and cod_eve_pon=id_eve";
 		
+		$resultado = $this->db->query($sql);
+		
+		if($resultado->num_rows > 0){
+			//print_r()
+			return $resultado->result();
+		}else{
+			return false;	
+		}
  		
- 		 return $this->db->query($sql)result();
+ 		 
 		
 
 

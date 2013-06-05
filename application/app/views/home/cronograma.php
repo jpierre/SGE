@@ -1,3 +1,13 @@
+<script type="text/javascript">
+	function onSelect(e) {
+                    i++;
+                    var spn = document.createElement('a');
+                    spn.innerHTML = $(e.item).children(".k-link").text();
+                    spn.href = "#";
+                    spn.className = 'opciones' + i;
+                    document.getElementById('content').appendChild(spn);
+                }
+</script>
 <?php $this->load->view('home/header');?>
 <?php $this->load->view('home/left_side');?>
 <link href="<?php echo base_url(); ?>css/wufo/structure.css" rel="stylesheet">
@@ -8,32 +18,9 @@
   <div id="container" class="ltr">
   <br />
   <br />
-    <h1>Horarios</h1>
+    <h1>Horarios Evento : <?php if($ponencias != NULL){ echo $ponencias[0]->nom_eve;}else{ echo "No hay ponencias";} ?></h1>
 	<form name="generar" action="<?php echo base_url();?>inscripcion/c_inscripcion/mostrarCronograma/" method="post">
-    <p>Eliga evento: <select id="evento" name="evento">
-		<option>-------Seleccione-------</option>
-		<?php for($i=0; $i<count($eventos); $i++): ?>
-		<option value="<?php echo $i+1; ?>"><?php echo $eventos[$i]->nom_eve; ?></option>
-		<?php endfor?>
-	</select></p>
-	
-		<?php /* $max=0;
-		 for($i=0; $i<count($eventos); $i++){
-					if($eventos[$i]>$eventos[$i+1]){
-						$max=$eventos[$i];
-					}else{
-						$max=$eventos[$+1];
-					}
-		}
-		 */?>
-		
-		
-		<?php /* for($i=0; $i<$max; $i++): ?>
-		<option value="<?php echo $i+1; ?>"><?php echo $i+1; */?></option>
-		<?php /* endfor? */?>
-		
-		
-		<input type="submit" value="Generar Cronograma" />
+    
 	</form>
     <br />
     <br />

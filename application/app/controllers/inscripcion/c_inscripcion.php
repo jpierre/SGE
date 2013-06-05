@@ -150,6 +150,16 @@ class C_inscripcion extends CI_Controller{
 				
 	}
 	
+	public function mostrarCronograma(){
+	$this->load->model('administracion/ponencia_model', 'ponencia');
+ 	$result=$this->ponencia->getPonencia_Evento($this->input->post('evento'));
+	
+		if($result != false){
+			$data['ponencias'] = $result;
+			$this->load->view('home/cronograma', $data);
+		}
+	}
+	
 	//ENVIA MENSAJE AL REGISTRARSE A UN EVENTO
 	public function enviarEmaiInscripcion($nom_eve){
 		
