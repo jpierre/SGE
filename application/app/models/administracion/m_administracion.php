@@ -10,7 +10,7 @@ class M_administracion extends CI_Model{
 
 		//return $query = $this->db->get('miembros')->row();
 
-		$sql="select nom_exp, ape_pat_exp, ape_mat_exp, pais_exp from expositor where cod_exp='".$codigo."'";
+		$sql="select nom_exp, ape_pat_exp, ape_mat_exp, pais_exp, especialidad from expositor where cod_exp='".$codigo."'";
 
 		return $this->db->query($sql)->row();
 
