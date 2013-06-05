@@ -19,9 +19,20 @@
   <br />
   <br />
     <h1>Horarios Evento : <?php if($ponencias != NULL){ echo $ponencias[0]->nom_eve;}else{ echo "No hay ponencias";} ?></h1>
-	<form name="generar" action="<?php echo base_url();?>inscripcion/c_inscripcion/mostrarCronograma/" method="post">
-    
-	</form>
+	<table>
+		
+		<?php for($i=0; $i<count($ponencias); $i++){ ?>
+		<tr>
+			<td><?php echo $ponencias[$i]->nom_pon ?></td>
+			<td><?php if($ponencias[$i]->tip_amb == '1'){echo "conferencia";}else{echo "taller";} ?></td>
+			<td><?php echo $ponencias[$i]->cod_fia_amb; ?></td>
+			<td><?php echo $ponencias[$i]->ape_pat_exp." ".$ponencias[$i]->ape_mat_exp.", ".$ponencias[$i]->nom_exp ?></td>
+			<td><?php echo $ponencias[$i]->fech_ini_pon ?></td>
+		</tr>
+		<?php } ?>
+		
+	
+	</table>
     <br />
     <br />
     
