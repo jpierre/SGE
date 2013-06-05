@@ -159,8 +159,7 @@ class C_inscripcion extends CI_Controller{
 	
 	public function generarCronograma(){
 		$this->load->model('mantener/m_evento', 'evento');
- 		$result=$this->evento->getData();
-		$data['eventos'] = $result;
+ 		$data['eventos']=$this->evento->getData();
 		
 		$this->load->view('home/generacionCronograma', $data);
 				
@@ -171,6 +170,8 @@ class C_inscripcion extends CI_Controller{
  	$result=$this->ponencia->getPonencia_Evento($this->input->post('evento'));
 	
 		if($result != false){
+			$this->load->model('mantener/m_evento', 'evento');
+ 			$data['eventos']=$this->evento->getData();
 			$data['ponencias'] = $result;
 			$this->load->view('home/cronograma', $data);
 		}

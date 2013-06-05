@@ -15,13 +15,11 @@
                                 <?php }?>
                                 </ul>
                            </li>
-                           <li><a href="<?php echo base_url();?>seccion/generar_horario" class="categoria">Horarios</a>
-                                
+                           <li>
+                           		<a href="<?php echo base_url();?>seccion/generar_horario" class="categoria">Horarios</a>
                            </li>
-                           <li><a href="<?php echo base_url();?>seccion/generar_QR" class="categoria">Generar Codigo QR</a></a>
-                               
-                           </li>
-                           <li><a href="" class="categoria">Acerca De</a></li>
+                           <li>
+                           		<a href="<?php echo base_url();?>seccion/generar_QR" class="categoria">Generar Codigo QR</a></a>
                            </li>
                            <li><a href="<?php echo base_url();?>seguridad/login/logout" class="categoria" >Cerrar Sesion</a></li>
                            

@@ -19,8 +19,18 @@
   <br />
   <br />
     <h1>Horarios Evento : <?php if($ponencias != NULL){ echo $ponencias[0]->nom_eve;}else{ echo "No hay ponencias";} ?></h1>
+    <div id="foli284" class="likert notranslatec col5">
 	<table>
-		
+		<thead>
+			<tr>
+				<td><strong>Nombre de Ponencia</strong></td>
+				<td><strong>Tipo Ambiente</strong></td>
+				<td><strong>Ambiente</strong></td>
+				<td><strong>Expositor</strong></td>
+				<td><strong>Fecha de ponencia</strong></td>
+			</tr>
+		</thead>
+		<tbody>
 		<?php for($i=0; $i<count($ponencias); $i++){ ?>
 		<tr>
 			<td><?php echo $ponencias[$i]->nom_pon ?></td>
@@ -30,9 +40,10 @@
 			<td><?php echo $ponencias[$i]->fech_ini_pon ?></td>
 		</tr>
 		<?php } ?>
-		
+		</tbody>
 	
 	</table>
+	</div>
     <br />
     <br />
     
