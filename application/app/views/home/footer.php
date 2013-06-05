@@ -21,7 +21,7 @@ jQuery(function(){
 	var apemat=$("#apemat").val();
 	var dni=$("#dni").val();
 	var cod=$("#cod").val();
-	jQuery('#output').qrcode(nombre+" "+apepat+" "+apemat+" "+dni+" "+cod);
+	jQuery('#output').qrcode(nombre+" "+apepat+" "+apemat+"%&"+dni+"%&"+cod);
 })
 </script> 
 <script>
