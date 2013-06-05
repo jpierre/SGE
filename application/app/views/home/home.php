@@ -7,3 +7,4 @@
 <?php $this->load->view('home/right_side');?>
 
 <?php $this->load->view('home/footer');?>
+

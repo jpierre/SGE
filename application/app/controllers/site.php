@@ -11,10 +11,8 @@
 	function members_area(){
 		
 		$this->load->model('mantener/m_evento','m_evento');
-		$eventos = $this->m_evento->getData();
-		$data['eventos'] = $eventos;
+		$data['eventos'] = $this->m_evento->getData();
 		$data['main_content'] = 'home/content';
-			
 		$this->load->view('home/home', $data);
 		
 	}

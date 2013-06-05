@@ -19,12 +19,18 @@ class C_inscripcion extends CI_Controller{
 				$this->load->model('administracion/evento_model','evento');
 				$data['evento']=$this->evento->getEvento($idEvento);
 				$data['main_content'] = 'inscripcion/inscribirse_form';
+				$this->load->model('mantener/m_evento','m_evento');
+				$data['eventos'] = $this->m_evento->getData();
 				$this->load->view('home/home', $data);
 			}else{
+				$this->load->model('mantener/m_evento','m_evento');
+				$data['eventos'] = $this->m_evento->getData();
 				$data['main_content'] = 'inscripcion/elegir';
 				$this->load->view('home/home', $data);
 			}
 		}else{
+				$this->load->model('mantener/m_evento','m_evento');
+				$data['eventos'] = $this->m_evento->getData();
 				$data['main_content'] = 'inscripcion/ya_registrado';
 				$this->load->view('home/home', $data);
 		}
@@ -61,6 +67,8 @@ class C_inscripcion extends CI_Controller{
 			$evento=$this->evento->getEvento($data['id_evento']);
 			$nom_eve=$evento->nom_eve;
 			$this->enviarEmaiInscripcion($nom_eve);
+			$this->load->model('mantener/m_evento','m_evento');
+			$data['eventos'] = $this->m_evento->getData();
 			$data['main_content']='inscripcion/inscripcion_succesful';
 			$this->load->view('home/home', $data);
 		}
@@ -69,11 +77,15 @@ class C_inscripcion extends CI_Controller{
 	function registro_externo($id_evento=0, $eleccion=0){
 
 		if($eleccion==1){
+			$this->load->model('mantener/m_evento','m_evento');
+			$data['eventos'] = $this->m_evento->getData();
 			$data['id_evento'] = $id_evento;
 			$data['main_content']='inscripcion/inscribirse_form';
 			$this->load->view('home/home', $data);
 		
 		}else{
+			$this->load->model('mantener/m_evento','m_evento');
+			$data['eventos'] = $this->m_evento->getData();
 			$data['id_evento'] = $id_evento;
 			$data['main_content']='inscripcion/inscribirParticipantes_form';
 			$this->load->view('home/home', $data);
@@ -113,9 +125,13 @@ class C_inscripcion extends CI_Controller{
 		
 		
 		if($result!=false){
+			$this->load->model('mantener/m_evento','m_evento');
+			$data['eventos'] = $this->m_evento->getData();
 			$data['main_content']='inscripcion/inscripcion_succesful_varios';
 			$this->load->view('home/home', $data);
 		}else{
+			$this->load->model('mantener/m_evento','m_evento');
+			$data['eventos'] = $this->m_evento->getData();
 			$data['main_content']='inscripcion/inscripcion_succesful_varios_error';
 			$this->load->view('home/home', $data);
 		}
