@@ -18,6 +18,12 @@ class m_Evento extends CI_Model{
 		 $this->db->set('Direccion', $data['direccion']);
 		 $this->db->insert('contacto');
 	 }
+	 
+	 function getEvento_Horario(){
+	 	$sql="select nom_eve max(TRUNCATE(TIMESTAMPDIFF(SECOND, fech_ini_eve, fech_fin_eve)/1440, 0)) AS resultado from evento";
+
+		return $this->db->query($sql)->row();
+	 }
 	
 }
 
