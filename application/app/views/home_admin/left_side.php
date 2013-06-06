@@ -28,7 +28,7 @@
       </li>
       <li><a href="#" class="categoria">Asistencia</a>
         <ul>
-          <li><a href="#">Registrar Asistencia</a></li>
+          <li><a href="<?php echo base_url();?>seccion/registrarAsistencia">Registrar Asistencia</a></li>
            <li><a href="#">Consultar Asistencia</a></li>
         </ul>
       </li>
@@ -40,7 +40,7 @@
        <li><a href="<?php echo base_url();?>seccion/emitirCertificado" class="categoria">Emitir Certificado</a>
         
       </li>
-      <li><a href="<?php echo base_url();?>seccion/registrarAsistencia" class="categoria">Registrar Asistencia </a></li>
+      
       </li>
       <li><a href="<?php echo base_url();?>seguridad/login/logout" class="categoria" >Cerrar Sesion</a></li>
     </ul>

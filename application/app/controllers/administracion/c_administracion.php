@@ -183,6 +183,14 @@ class C_administracion extends CI_Controller{
 		$this->load->view('home_admin/registrar_Asistencia',$data);
 		
 	}
+	
+	function cargarCamara(){
+		
+		
+		
+		$this->load->view('cam/demo5');
+		
+	}
 
 
 

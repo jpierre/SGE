@@ -28,7 +28,7 @@
 				</select>
 			</div>
     
-    <a href="<?php echo base_url(); ?>administracion/c_administracion/registro_Asistencia/">Click</a>
+    <a href="<?php echo base_url(); ?>administracion/c_administracion/cargarCamara/">Click</a>
     <fieldset>
       
     </fieldset>
