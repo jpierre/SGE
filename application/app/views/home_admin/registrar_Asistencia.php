@@ -8,8 +8,8 @@
                     document.getElementById('content').appendChild(spn);
                 }
 </script>
-<?php $this->load->view('home/header');?>
-<?php $this->load->view('home/left_side');?>
+<?php $this->load->view('home_admin/header');?>
+<?php $this->load->view('home_admin/left_side');?>
 <link href="<?php echo base_url(); ?>css/wufo/structure.css" rel="stylesheet">
 <link href="<?php echo base_url(); ?>css/wufo/form.css" rel="stylesheet">
 <link href="<?php echo base_url(); ?>css/wufo/theme.css" rel="stylesheet">
@@ -37,5 +37,5 @@
   <img src="" id="laimagen"/> </div>
   <!--container--> 
   <!-- end .content --></div>
-<?php $this->load->view('home/right_side');?>
-<?php $this->load->view('home/footer');?>
+<?php $this->load->view('home_admin/right_side');?>
+<?php $this->load->view('home_admin/footer');?>

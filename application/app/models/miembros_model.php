@@ -161,12 +161,20 @@ class Miembros_model extends CI_Model{
     }
 	
     public function getMiembroXCodUser($cod_user_rec=null){
-    	
     	$this->db->where('cod_user',$cod_user_rec);
-    	$result = $this->db->get('usuario');
-        $fila = $result->row(); 
-        return $fila;
+	    $result = $this->db->get('usuario');
+	    $fila = $result->row();	
+     	return $fila;
     }
+ 	
+    public function getMiembroXCodUserYApePat($cod_user_rec=null,$apepat=null){
+    	$this->db->where('cod_user',$cod_user_rec);
+    	$this->db->where('ape_pat_user',$apepat);
+    	$result = $this->db->get('usuario');
+	    $fila = $result->row();
+    	return $fila;
+    }
+    
 	
 }
 

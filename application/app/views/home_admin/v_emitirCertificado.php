@@ -32,53 +32,13 @@
 		</li>
 		<li id="foli23" class="notranslate">
 			<label class="desc" id="apepat"> Apellido Paterno </label>
-			<div><input id="apepat" name="apepat" type="text" class="field text medium"/></div>
+			<div><input name="apepat" type="text" value="" class="field text medium"/></div>
 		</li>
-		<li id="foli26" class="notranslate">
-			<label class="desc"	id="dni">DNI</label>
-			<div><input id="dni" name="dni" type="text" class="field text small"/></div>
-		</li>
-
 		<li class="buttons ">
 			<div><input type="submit" value="Mostrar Resultados" /></div>
 		</li>
 	</ul>
 	</form>
-
-
-
-	<div id="foli284" class="likert notranslatec col5">
-	<table>
-		<br />
-		<h1 style="text-align: left;">TABLA PRUEBA - RECIBOS POR EVENTO</h1>
-		<br>
-		<thead>
-			<tr>
-				<td><strong>id_eve_rec</strong></td>
-				<td><strong>cod_user_rec</strong></td>
-				<td><strong>voucher</strong></td>
-				<td><strong>Nro inscripcion</strong></td>
-				<td><strong>mod pago</strong></td>
-				<td><strong>nro coutas</strong></td>
-				<td><strong>monto</strong></td>
-			</tr>
-		</thead>
-		<tbody>
-			<?php for($i=0; $i<count($recibosXEvento); $i++){?>
-			<tr class="statement284">
-				<td><?=$recibosXEvento[$i]->id_eve_rec?></td>
-				<td><?=$recibosXEvento[$i]->cod_user_rec?></td>
-				<td><?=$recibosXEvento[$i]->voucher?></td>
-				<td><?=$recibosXEvento[$i]->nro_inscripcion?></td>
-				<td><?=$recibosXEvento[$i]->mod_pago?></td>
-				<td><?=$recibosXEvento[$i]->nro_coutas?></td>
-				<td><?=$recibosXEvento[$i]->monto?></td>
-			</tr>
-			<?php }?>
-		</tbody>
-	</table>
-	</div>
-	
 	
 	<div id="foli284" class="likert notranslatec col5">
 	<table>
@@ -103,9 +63,9 @@
 				<td><?=$participantes[$i]->ape_pat_user?></td>
 				<td><?=$participantes[$i]->ape_mat_user?></td>
 				<td><?=$participantes[$i]->nom_user?></td>
-				<td>VISION 2013</td>
+				<td><?=$evento->nom_eve?></td>
 				<td>HABILITADO</td>
-				<td><a href="#"><img alt="Generar Certificado"
+				<td><a href="<?php base_url()?>/administrador/c_mantenerPonencia/mantenerPonencia/Modificar/<?=$participantes[$i]->num_doc_user?>"><img alt="Generar Certificado"
 					src="<?php echo base_url(); ?>images/certificado.png"></a> <a
 					href="#"><img alt="Ver Asistencia"
 					src="<?php echo base_url(); ?>images/asistencia.png"></a></a></td>

@@ -132,20 +132,28 @@ class C_administracion extends CI_Controller{
 		$recibosXEvento=$this->recibo->get_reciboXEvento($this->input->post('id_eve'));
 		
 		//RECORRER PARA BUSCAR Y GUARDAR CADA FILA DE PARTICIPANTE POR RECIBO
+		$apepat = $this->input->post('apepat');
 		for($i=0; $i<count($recibosXEvento); $i++){
-			$participantes[$i] = $this->miembro->getMiembroXCodUser($recibosXEvento[$i]->cod_user_rec);
+			if($apepat==""){
+				$participantes[$i] = $this->miembro->getMiembroXCodUser($recibosXEvento[$i]->cod_user_rec);
+			}else{
+				$participante = $this->miembro->getMiembroXCodUserYApePat($recibosXEvento[$i]->cod_user_rec,$apepat);
+				if($participante){
+					$participantes[$i] = $participante; 	
+				}
+			}
 		}
-		
+		$this->load->model('mantener/m_evento','m_evento');
+		$data['eventos'] = $this->m_evento->getData();
+		$data['evento'] = $this->m_evento->getEventoXId($this->input->post('id_eve'));
 		$data['recibosXEvento'] = $recibosXEvento;
 		$data['participantes'] = $participantes;
 		$data['main_content']="home_admin/v_emitirCertificado";
 		$this->load->view('home_admin/home', $data);
+	}
+	
+	function generarCertificado(){
 		
-		
-		 	
-		 
-		
-				
 	}
 	
 
@@ -172,7 +180,6 @@ class C_administracion extends CI_Controller{
 	function registrarAsistencia(){
 		$this->load->model('mantener/m_ponencia','m_ponencia');
 		$data['ponencias'] = $this->m_ponencia->getData();
-		
 		$this->load->view('home_admin/registrar_Asistencia',$data);
 		
 	}

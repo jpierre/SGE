@@ -24,6 +24,12 @@ class m_Evento extends CI_Model{
 
 		return $this->db->query($sql)->row();
 	 }
+	 
+	 function getEventoXId($id_eve=null){
+	 	$this->db->where('id_eve',$id_eve);
+        $evento = $this->db->get('evento');
+		return $evento->row();
+	 }
 	
 }
 

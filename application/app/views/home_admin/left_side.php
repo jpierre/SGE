@@ -14,12 +14,12 @@
               <li><span><?php echo anchor('administracion/c_administracion/mostrarlo/1', 'Asignar Expositor a Ponencia'); ?></span></li>
             </ul>
           </li>
-          <li><a href="#">&raquo; Cloud Google</a>
+          <li><a href="#">&raquo; SOCOTE 2013</a>
             <ul>
               <li><span><?php echo anchor('administracion/c_administracion/mostrarlo/2', 'Asignar Expositor a Ponencia'); ?></span></li>
             </ul>
           </li>
-          <li><a href="#">&raquo; Android Lima Day</a>
+          <li><a href="#">&raquo; III Congreso de Educacion Virtual</a>
             <ul>
               <li><span><?php echo anchor('administracion/c_administracion/mostrarlo', 'Asignar Expositor a Ponencia'); ?></span></li>
             </ul>
