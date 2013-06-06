@@ -152,7 +152,34 @@ class C_administracion extends CI_Controller{
 		$this->load->view('home_admin/home', $data);
 	}
 	
-	function generarCertificado(){
+	function generarCertificado($cod_user = null, $id_eve = null){
+		$this->load->model('miembros_model','miembros');
+		$participante = $this->miembros->getMiembroXCodUser($cod_user);
+		
+		$this->load->model('mantener/m_evento','eventos');
+		$evento = $this->eventos->getEventoXId($id_eve);
+		
+		$nombre = $participante->ape_pat_user.' '.$participante->ape_mat_user.' '.$participante->nom_user;
+		$nom_eve = $evento->nom_eve;
+		
+		$this->load->library('fpdf');//llamo a la libreria en el constructor
+		define('FPDF_FONTPATH',BASEPATH.'/libraries/font/');//es importante declarar en donde esta la carpeta font! sino sale el error que no encuentra el archivo!
+		ob_end_clean();
+		//inicializa pagina pdf
+		$this->fpdf->Open();
+		$this->fpdf->AddPage();
+		$this->fpdf->SetFont('Arial','B',16);
+		//dibuja rectangulo
+		//$this->fpdf->Rect(20,10,180,137,'D');
+		$this->fpdf->Cell(0,16,'UNIVERSIDAD DE SAN MARTIN DE PORRES',1,1,'C');
+		$this->fpdf->Cell(0,16,'Facultad de Ingenieria y Arquitectura',0,1,'C');
+		$this->fpdf->Cell(0,10,'Certificado de Evento '.$nom_eve,0,1,'C');
+		$this->fpdf->Cell(0,10,'Nombre del participante   : '.$nombre,0,1,'L');
+		$this->fpdf->Cell(0,10,'Numero de documento     : '.$participante->num_doc_user,0,1,'L');
+		$this->fpdf->Output($nom_eve.'_'.$nombre.'.pdf','D');
+		
+		$data['main_content']="home_admin/v_emitirCertificado";
+		$this->load->view('home_admin/home', $data);
 		
 	}
 	

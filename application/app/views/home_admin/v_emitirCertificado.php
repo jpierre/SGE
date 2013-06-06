@@ -66,7 +66,7 @@
 				<td><?=$participantes[$i]->nom_user?></td>
 				<td><?=$evento->nom_eve?></td>
 				<td>HABILITADO</td>
-				<td><a href="<?php base_url()?>/administrador/c_mantenerPonencia/mantenerPonencia/Modificar/<?=$participantes[$i]->num_doc_user?>"><img alt="Generar Certificado"
+				<td><a href="<?php base_url()?>/sge/index.php/administracion/c_administracion/generarCertificado/<?=$participantes[$i]->cod_user?>/<?=$evento->id_eve?>"><img alt="Generar Certificado"
 					src="<?php echo base_url(); ?>images/certificado.png"></a> <a
 					href="#"><img alt="Ver Asistencia"
 					src="<?php echo base_url(); ?>images/asistencia.png"></a></a></td>
