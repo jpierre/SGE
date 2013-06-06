@@ -169,7 +169,13 @@ class C_administracion extends CI_Controller{
 
 	}
 
-
+	function registrarAsistencia(){
+		$this->load->model('mantener/m_ponencia','m_ponencia');
+		$data['ponencias'] = $this->m_ponencia->getData();
+		
+		$this->load->view('home_admin/registrar_Asistencia',$data);
+		
+	}
 
 
 

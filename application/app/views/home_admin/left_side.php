@@ -40,7 +40,7 @@
        <li><a href="<?php echo base_url();?>seccion/emitirCertificado" class="categoria">Emitir Certificado</a>
         
       </li>
-      <li><a href="#s" class="categoria">Acerca De </a></li>
+      <li><a href="<?php echo base_url();?>seccion/registrarAsistencia" class="categoria">Registrar Asistencia </a></li>
       </li>
       <li><a href="<?php echo base_url();?>seguridad/login/logout" class="categoria" >Cerrar Sesion</a></li>
     </ul>

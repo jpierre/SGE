@@ -15,8 +15,8 @@ class Asistencia_model extends CI_Model{
 		$result=NULL;
 
 			//$result= $this->db->insert('asistencia',$dato);
-			
-			$result= $this->db->insert('asistencia',$dato);
+			$this->db->where('num_doc_user', $dato['num_doc_user']);
+			$result= $this->db->update('asistencia',$dato);
 			//$this->db->insert_id();
 
 

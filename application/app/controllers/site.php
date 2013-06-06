@@ -31,6 +31,9 @@
 	function emitirCertificado(){
 		redirect('administracion/c_administracion/emitirCertificado');	
 	}
+	function registrarAsistencia(){
+		redirect('administracion/c_administracion/registrarAsistencia');	
+	}
 	
 	function generar_cronograma(){
 		redirect('inscripcion/c_inscripcion/generarCronograma');

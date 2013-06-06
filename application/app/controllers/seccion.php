@@ -29,7 +29,7 @@ class Seccion extends CI_Controller{
 		$this->load->view('inicio/login',$data);
 	}
 	function prueba(){
-		$this->load->view('a_home/home');
+		$this->load->view('home/registrar_Asistencia');
 	}
 	
 	//REDIRECCIONES DENTRO DEL SISTEMA
@@ -51,7 +51,11 @@ class Seccion extends CI_Controller{
 		//$this->load->view('home/home', $data);
 		redirect('site/emitirCertificado');
 	}
-		
+	function registrarAsistencia(){
+		//$data['main_content'] = 'inscripcion/generar_QR';
+		//$this->load->view('home/home', $data);
+		redirect('site/registrarAsistencia');
+	}	
 }
 	
 ?>
