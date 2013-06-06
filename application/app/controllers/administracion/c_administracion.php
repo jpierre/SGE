@@ -137,10 +137,10 @@ class C_administracion extends CI_Controller{
 			if($apepat==""){
 				$participantes[$i] = $this->miembro->getMiembroXCodUser($recibosXEvento[$i]->cod_user_rec);
 			}else{
-				$participante = $this->miembro->getMiembroXCodUserYApePat($recibosXEvento[$i]->cod_user_rec,$apepat);
-				if($participante){
+				$participantes[$i] = $this->miembro->getMiembroXCodUserYApePat($recibosXEvento[$i]->cod_user_rec,$apepat);
+				/*if($participante){
 					$participantes[$i] = $participante; 	
-				}
+				}*/
 			}
 		}
 		$this->load->model('mantener/m_evento','m_evento');

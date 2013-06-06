@@ -57,7 +57,8 @@
 			</tr>
 		</thead>
 		<tbody>
-			<?php for($i=0; $i<count($participantes); $i++){?>
+			<?php for($i=0; $i<count($participantes); $i++){
+				if($participantes[$i]->num_doc_user!=null){											?>
 			<tr class="statement284">
 				<td><?=$participantes[$i]->num_doc_user?></td>
 				<td><?=$participantes[$i]->ape_pat_user?></td>
@@ -70,7 +71,7 @@
 					href="#"><img alt="Ver Asistencia"
 					src="<?php echo base_url(); ?>images/asistencia.png"></a></a></td>
 			</tr>
-			<?php }?>
+			<?php }}?>
 			<!-- href="<?php base_url()?>/administrador/c_mantenerPonencia/mantenerPonencia/Modificar/<?=$ponencias[$i]->id_pon?>" -->
 
 		</tbody>
