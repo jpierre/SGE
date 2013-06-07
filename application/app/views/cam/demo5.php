@@ -53,7 +53,7 @@
 		<body>
 <div style="width:330px;float:left;">
           <div id="webcam"> </div>
-          <div style="margin:5px;"> <img src="webcamlogo.png" style="vertical-align:text-top"/>
+          <div style="margin:5px;"> 
             <select id="cameraNames" size="1" onChange="changeCamera()" style="width:245px;font-size:10px;height:25px;">
             </select>
   </div>
