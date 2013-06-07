@@ -123,6 +123,11 @@ class C_administracion extends CI_Controller{
 		$data['main_content']="home_admin/v_emitirCertificado";
 		$this->load->view('home_admin/home', $data);
 	}
+	
+	function consultarAsistencia(){
+		$data['main_content']="home_admin/v_consultarAsistencia";
+		$this->load->view('home_admin/home', $data);
+	}
 
 	function emitirCertificadoXEvento(){
 		
@@ -138,9 +143,6 @@ class C_administracion extends CI_Controller{
 				$participantes[$i] = $this->miembro->getMiembroXCodUser($recibosXEvento[$i]->cod_user_rec);
 			}else{
 				$participantes[$i] = $this->miembro->getMiembroXCodUserYApePat($recibosXEvento[$i]->cod_user_rec,$apepat);
-				/*if($participante){
-					$participantes[$i] = $participante; 	
-				}*/
 			}
 		}
 		$this->load->model('mantener/m_evento','m_evento');
@@ -184,6 +186,39 @@ class C_administracion extends CI_Controller{
 	}
 	
 
+	function consultarAsistenciaXApePat(){
+		
+		$this->load->model('miembros_model','miembro');
+		
+		$participantes=$this->miembro->getMiembroXApePat($this->input->post('apepat'));
+		
+		for($i=0; $i<count($participantes); $i++){
+			$recibos[$i] = $this->miembro->getReciboXCodUser($participantes[$i]->cod_user_rec);
+		}
+		
+		for($i=0; $i<count($recibos); $i++){
+			$partic_recibo[$i]= array(
+							'cod_user' =>$participantes[$i]->cod_user,
+							'nom_user' =>$participantes[$i]->nom_user,
+							'ape_pat_user' =>$participantes[$i]->ape_pat_user,
+							'ape_mat_user' =>$participantes[$i]->ape_mat_user,
+							'ponencia_id_pon' =>$recibos[$i]->ponencia_id_pon,
+							'id_eve' =>$recibos[$i]->id_eve
+			);
+		}
+		
+		/*$this->load->model('mantener/m_evento','m_evento');
+		$data['eventos'] = $this->m_evento->getData();
+		$data['evento'] = $this->m_evento->getEventoXId($this->input->post('id_eve'));
+		$data['recibosXEvento'] = $recibosXEvento;*/
+		$data['recibos']= $recibos;
+		$data['participantes'] = $participantes;
+		$data['parti_recibo'] = $partic_recibo;
+		$data['main_content']="home_admin/v_consultarAsistencia";
+		$this->load->view('home_admin/home', $data);
+	}
+	
+	
 	/***funciones ivan***/
 	function index()
 	{

@@ -29,7 +29,7 @@
       <li><a href="#" class="categoria">Asistencia</a>
         <ul>
           <li><a href="<?php echo base_url();?>seccion/registrarAsistencia">Registrar Asistencia</a></li>
-           <li><a href="#">Consultar Asistencia</a></li>
+           <li><a href="<?php echo base_url();?>seccion/consultarAsistencia">Consultar Asistencia</a></li>
         </ul>
       </li>
       <li><a href="#" class="categoria">Generar Cronograma</a>

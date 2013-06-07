@@ -47,15 +47,14 @@ class Seccion extends CI_Controller{
 		redirect('site/generar_cronograma');
 	}
 	function emitirCertificado(){
-		//$data['main_content'] = 'inscripcion/generar_QR';
-		//$this->load->view('home/home', $data);
 		redirect('site/emitirCertificado');
 	}
 	function registrarAsistencia(){
-		//$data['main_content'] = 'inscripcion/generar_QR';
-		//$this->load->view('home/home', $data);
 		redirect('site/registrarAsistencia');
-	}	
+	}
+	function consultarAsistencia(){
+		redirect('site/consultarAsistencia');
+	}
 }
 	
 ?>

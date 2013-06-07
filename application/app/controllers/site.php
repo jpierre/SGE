@@ -34,6 +34,9 @@
 	function registrarAsistencia(){
 		redirect('administracion/c_administracion/registrarAsistencia');	
 	}
+	function consultarAsistencia(){
+		redirect('administracion/c_administracion/consultarAsistencia');	
+	}
 	
 	function generar_cronograma(){
 		redirect('inscripcion/c_inscripcion/generarCronograma');
