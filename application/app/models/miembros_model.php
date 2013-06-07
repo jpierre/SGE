@@ -160,11 +160,20 @@ class Miembros_model extends CI_Model{
         }
     }
 	
+    //LO USA EMITIR CERTIFICADO
     public function getMiembroXCodUser($cod_user_rec=null){
     	$this->db->where('cod_user',$cod_user_rec);
 	    $result = $this->db->get('usuario');
 	    $fila = $result->row();	
      	return $fila;
+    }
+    //LO USA EMITIR CERTIFICADO
+	public function getMiembroXCodUserYApePat($cod_user_rec=null,$apepat=null){
+    	$this->db->where('cod_user',$cod_user_rec);
+    	$this->db->where('ape_pat_user',$apepat);
+    	$result = $this->db->get('usuario');
+	    $fila = $result->row();
+    	return $fila;
     }
     
 	public function getReciboXCodUser($cod_user_rec=null){
@@ -173,21 +182,18 @@ class Miembros_model extends CI_Model{
 	    $fila = $result->row();	
      	return $fila;
     }
-    
- 	 	
-    public function getMiembroXCodUserYApePat($cod_user_rec=null,$apepat=null){
-    	$this->db->where('cod_user',$cod_user_rec);
-    	$this->db->where('ape_pat_user',$apepat);
-    	$result = $this->db->get('usuario');
-	    $fila = $result->row();
-    	return $fila;
-    }
-    
+    //LO USA CONSULTAR ASISTENCIA   
 	public function getMiembroXApePat($apepat=null){
     	$this->db->where('ape_pat_user',$apepat);
     	$usuarios = $this->db->get('usuario');
  		return $usuarios->result();
     	
+    }
+	//LO USA CONSULTAR ASISTENCIA
+    public function getAsistenciaXDni($num_doc_user=null){
+    	$this->db->where('num_doc_user',$num_doc_user);
+	    $result = $this->db->get('asistencia');
+	    return $result->result();	
     }
     
 	

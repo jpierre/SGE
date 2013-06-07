@@ -41,18 +41,17 @@
 			</tr>
 		</thead>
 		<tbody>
-			<?php for($i=0; $i<count($partic_recibo); $i++){
-				if($partic_recibo[$i]->ape_pat_user!=null){	?>
+			<?php for($i=0; $i<count($partic_ponencia); $i++){?>
 			<tr class="statement284">
-				<td><?=$partic_recibo[$i]->cod_user?></td>
-				<td><?=$partic_recibo[$i]->ape_pat_user?></td>
-				<td><?=$partic_recibo[$i]->ape_mat_user?></td>
-				<td><?=$partic_recibo[$i]->nom_user?></td>
-				<td><?=$partic_recibo[$i]->ponencia_id_pon?></td>
-				<td><?=$partic_recibo[$i]->id_eve?></td>
-				<td>Asistio</td>
+				<td><?=$partic_ponencia[$i]['cod_user']?></td>
+				<td><?=$partic_ponencia[$i]['ape_pat_user']?></td>
+				<td><?=$partic_ponencia[$i]['ape_mat_user']?></td>
+				<td><?=$partic_ponencia[$i]['nom_user']?></td>
+				<td><?=$partic_ponencia[$i]['ponencia_id_pon']?></td>
+				<td><?=$partic_ponencia[$i]['id_eve']?></td>
+				<td><?=$partic_ponencia[$i]['asistio']?></td>
 			</tr>
-			<?php }}?>
+			<?php }?>
 			<!-- href="<?php base_url()?>/administrador/c_mantenerPonencia/mantenerPonencia/Modificar/<?=$ponencias[$i]->id_pon?>" -->
 
 		</tbody>

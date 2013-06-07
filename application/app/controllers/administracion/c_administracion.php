@@ -189,23 +189,36 @@ class C_administracion extends CI_Controller{
 	function consultarAsistenciaXApePat(){
 		
 		$this->load->model('miembros_model','miembro');
+		$this->load->model('mantener/m_evento','m_evento');
+		$this->load->model('mantener/m_ponencia','m_ponencia');
 		
 		$participantes=$this->miembro->getMiembroXApePat($this->input->post('apepat'));
 		
 		for($i=0; $i<count($participantes); $i++){
-			$recibos[$i] = $this->miembro->getReciboXCodUser($participantes[$i]->cod_user_rec);
-		}
-		
-		for($i=0; $i<count($recibos); $i++){
-			$partic_recibo[$i]= array(
+			$ponencias_registradas[$i] = $this->miembro->getAsistenciaXDni($participantes[$i]->num_doc_user);
+			
+			for($j=0; $j<count($ponencias_registradas[$i]); $j++){
+				$pon=$this->m_ponencia->getPonenciaXId($ponencias_registradas[$i][$j]->ponencia_id_pon);
+				$eve=$this->m_evento->getEventoXId($ponencias_registradas[$i][$j]->id_eve);
+				if($ponencias_registradas[$i][$j]->asistencia==1){
+					$asistio="Asisti&oacute;";
+				}else
+					$asistio="No Asisti&oacute;";
+				$partic_ponencia[$j]= array(
 							'cod_user' =>$participantes[$i]->cod_user,
 							'nom_user' =>$participantes[$i]->nom_user,
 							'ape_pat_user' =>$participantes[$i]->ape_pat_user,
 							'ape_mat_user' =>$participantes[$i]->ape_mat_user,
-							'ponencia_id_pon' =>$recibos[$i]->ponencia_id_pon,
-							'id_eve' =>$recibos[$i]->id_eve
-			);
+							'ponencia_id_pon' =>$pon->nom_pon,
+							'id_eve' =>$eve->nom_eve,
+							'asistio' =>$asistio
+				);
+			}
+			
 		}
+		
+		
+		
 		
 		/*$this->load->model('mantener/m_evento','m_evento');
 		$data['eventos'] = $this->m_evento->getData();
@@ -213,7 +226,7 @@ class C_administracion extends CI_Controller{
 		$data['recibosXEvento'] = $recibosXEvento;*/
 		$data['recibos']= $recibos;
 		$data['participantes'] = $participantes;
-		$data['parti_recibo'] = $partic_recibo;
+		$data['partic_ponencia'] = $partic_ponencia;
 		$data['main_content']="home_admin/v_consultarAsistencia";
 		$this->load->view('home_admin/home', $data);
 	}

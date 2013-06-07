@@ -20,6 +20,13 @@ class m_Ponencia extends CI_Model{
 		 $this->db->set('Direccion', $data['direccion']);
 		 $this->db->insert('contacto');
 	 }
+	 
+	 function getPonenciaXId($id_pon=null){
+	 	$this->db->where('id_pon',$id_pon);
+	 	$result = $this->db->get('ponencia');
+	    $fila = $result->row();	
+     	return $fila;
+	 }
 	
 }
 
