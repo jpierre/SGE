@@ -25,6 +25,7 @@ class M_inscripcion extends CI_Model{
  		for($i=0; $i<count($resultado); $i++){
  			$this->db->set('ponencia_id_pon', $resultado[$i]->id_pon);
 			$this->db->set('num_doc_user', $a->DNI);
+			$this->db->set('id_eve',$data['id_evento']);
 			$this->db->set('asistencia', 0);
  			$this->db->insert('asistencia');
  		}
