@@ -7,6 +7,21 @@
                     spn.className = 'opciones' + i;
                     document.getElementById('content').appendChild(spn);
                 }
+				
+		function capturar(){
+			
+var a=document.getElementById("seleccion").options.selectedIndex;
+	
+	b=document.getElementById("seleccion").options[a].value;
+
+
+
+
+localStorage.setItem('ponencia',b)
+
+		//console.log(b);
+			
+		}
 </script>
 <?php $this->load->view('home_admin/header');?>
 <?php $this->load->view('home_admin/left_side');?>
@@ -21,9 +36,9 @@
     
     <label class="desc" id="title20" for="Field20"> Seleccionar una opcion <span id="req_20" class="req">*</span></label>
 			<div>
-				<select name="id_eve" class="field select medium">
+				<select onchange="capturar()" name="id_eve" class="field select medium" id="seleccion">
 					<?php for($i=0; $i<count($ponencias); $i++){?>
-						<option value="<?=$ponencias[$i]->id_eve?>"><?=$ponencias[$i]->nom_pon?></option>
+						<option value="<?=$ponencias[$i]->id_pon?>"><?=$ponencias[$i]->nom_pon?></option>
 					<?php }?>
 				</select>
 			</div>

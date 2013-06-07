@@ -35,7 +35,7 @@
 					var data=cadena.split('%&',2);
 						if(data[1]!=''){
 							$.post("http://localhost/sge/administracion/asistencia/registar_asistencia",
-									{num_doc_user:data[1] ,id_ponencia:205}, 
+									{num_doc_user:data[1] ,id_ponencia:localStorage.getItem('ponencia')}, 
 									function(dataRetorno){
 										alert(dataRetorno);
 									});
