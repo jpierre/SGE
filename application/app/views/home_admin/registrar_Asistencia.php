@@ -43,7 +43,7 @@ localStorage.setItem('ponencia',b)
 				</select>
 			</div>
     
-    <a href="<?php echo base_url(); ?>administracion/c_administracion/cargarCamara/">Click</a>
+    <a href="<?php echo base_url(); ?>administracion/c_administracion/cargarCamara/">Registrar Asistencia</a>
     <fieldset>
       
     </fieldset>

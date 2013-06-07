@@ -60,7 +60,7 @@
         </div>
 <div style="width:135px;float:left;">
           <p>
-    <button class="btn btn-small" id="btn1" onclick="enviarAsistencia()">Decode image</button>
+    <button class="btn btn-small" id="btn1" onclick="enviarAsistencia()">Registrar</button>
   </p>
         </div>
 <div style="width:200px;float:left;">
