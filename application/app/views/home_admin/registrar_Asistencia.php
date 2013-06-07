@@ -36,14 +36,36 @@ localStorage.setItem('ponencia',b)
     
     <label class="desc" id="title20" for="Field20"> Seleccionar una opcion <span id="req_20" class="req">*</span></label>
 			<div>
-				<select onchange="capturar()" name="id_eve" class="field select medium" id="seleccion">
-					<?php for($i=0; $i<count($ponencias); $i++){?>
-						<option value="<?=$ponencias[$i]->id_pon?>"><?=$ponencias[$i]->nom_pon?></option>
-					<?php }?>
-				</select>
+				<p>
+				  <select onchange="capturar()" name="id_eve" class="field select medium" id="seleccion">
+				    <?php for($i=0; $i<count($ponencias); $i++){?>
+				    <option value="<?=$ponencias[$i]->id_pon?>">
+			        <?=$ponencias[$i]->nom_pon?>
+			        -<?=$ponencias[$i]->cod_eve_pon?>
+			        </option>
+				    <?php }?>
+			      </select>
+			  </p>
+				<p>&nbsp;</p>
 			</div>
+            
+            
+            <br />
+          
+           
+            <br />
+            <div style="margin-left:300px;">
+            <li style="list-style:none;">
+            <ul >Vision 2013=1</ul>
+             <ul>SOCOTE=2</ul>
+              <ul>III Congreso de Educacion Virtual=3</ul>
+            </li>
+            
+            </div>
+            
+            
     
-    <a href="<?php echo base_url(); ?>administracion/c_administracion/cargarCamara/">Registrar Asistencia</a>
+    <a class="css3button2" href="<?php echo base_url(); ?>administracion/c_administracion/cargarCamara/">Registrar Asistencia</a>
     <fieldset>
       
     </fieldset>
