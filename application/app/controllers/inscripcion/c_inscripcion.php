@@ -66,7 +66,7 @@ class C_inscripcion extends CI_Controller{
 			$this->load->model('administracion/evento_model','evento');
 			$evento=$this->evento->getEvento($data['id_evento']);
 			$nom_eve=$evento->nom_eve;
-			$this->enviarEmaiInscripcion($nom_eve);
+			//$this->enviarEmaiInscripcion($nom_eve);
 			$this->load->model('mantener/m_evento','m_evento');
 			$data['eventos'] = $this->m_evento->getData();
 			$data['main_content']='inscripcion/inscripcion_succesful';
