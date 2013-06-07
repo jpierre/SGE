@@ -3,7 +3,7 @@
 class C_inscripcion extends CI_Controller{
 	//var $contador=0;
 	
-	function index($idEvento=""){
+	function index($idEvento=""){
 		
 		$data['id_evento'] = $idEvento;
 		$this->load->model('inscripcion/m_inscripcion', 'registro');

@@ -14,7 +14,7 @@ class Ponencia_model extends CI_Model{
 
 		$result=NULL;
 
-			$result= $this->db->insert('ponencia',$dato);
+			//$result= $this->db->insert('ponencia',$dato);
 			//$this->db->insert_id();
 			$result= $this->db->insert('ponencia',$dato);
 
