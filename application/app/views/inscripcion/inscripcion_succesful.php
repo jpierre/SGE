@@ -18,7 +18,8 @@
 			<li id="foli112" class="notranslate first section      ">
 			<section>
 			<h3 id="title112">
-			<span class="desc"><b>Felicitaciones! Su registro ha sido satisfactorio.</b></span><br />
+			<span class="desc"><b>Felicitaciones! Su registro ha sido satisfactorio.</b></span><br /><br />
+			<span class="req">Atencion! Debe generar su codigo QR para registrar su asistencia.</span>
 			</h3>
 			</section>
 			</li>

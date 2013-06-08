@@ -133,24 +133,51 @@ class C_administracion extends CI_Controller{
 		
 		$this->load->model('m_recibo','recibo');
 		$this->load->model('miembros_model','miembro');
+		$this->load->model('mantener/m_evento','m_evento');
 		
 		$recibosXEvento=$this->recibo->get_reciboXEvento($this->input->post('id_eve'));
-		
+		$data['evento'] = $this->m_evento->getEventoXId($this->input->post('id_eve'));
+		$min_pon = $data['evento']->min_pon; 
 		//RECORRER PARA BUSCAR Y GUARDAR CADA FILA DE PARTICIPANTE POR RECIBO
 		$apepat = $this->input->post('apepat');
 		for($i=0; $i<count($recibosXEvento); $i++){
 			if($apepat==""){
 				$participantes[$i] = $this->miembro->getMiembroXCodUser($recibosXEvento[$i]->cod_user_rec);
+				$ponencias_registradas[$i] = $this->miembro->getAsistenciaXDni($participantes[$i]->num_doc_user);
+				$c=0;
+				for($j=0; $j<count($ponencias_registradas); $j++){
+					if(($ponencias_registradas[$i][$j]->asistencia)==1){
+						$c++;
+					}
+				}
+				if($c > $min_pon){
+					$asistencia[$i] = "Habilitado";
+				}else{
+					$asistencia[$i] = "No Habilitado";
+				}
+				
 			}else{
 				$participantes[$i] = $this->miembro->getMiembroXCodUserYApePat($recibosXEvento[$i]->cod_user_rec,$apepat);
+				$ponencias_registradas[$i] = $this->miembro->getAsistenciaXDni($participantes[$i]->num_doc_user);
+				$c=0;
+				for($j=0; $j<count($ponencias_registradas); $j++){
+					if(($ponencias_registradas[$i][$j]->asistencia)==1){
+						$c++;
+					}
+				}
+				if($c > $min_pon){
+					$asistencia[$i] = "Habilitado";
+				}else{
+					$asistencia[$i] = "No Habilitado";
+				}
 			}
 		}
-		$this->load->model('mantener/m_evento','m_evento');
+		
 		$data['eventos'] = $this->m_evento->getData();
-		$data['evento'] = $this->m_evento->getEventoXId($this->input->post('id_eve'));
 		$data['recibosXEvento'] = $recibosXEvento;
 		$data['participantes'] = $participantes;
 		$data['main_content']="home_admin/v_emitirCertificado";
+		$data['asistencia'] = $asistencia;
 		$this->load->view('home_admin/home', $data);
 	}
 	
@@ -186,13 +213,17 @@ class C_administracion extends CI_Controller{
 	}
 	
 
-	function consultarAsistenciaXApePat(){
+	function consultarAsistenciaXApePat($apepat=null){
 		
 		$this->load->model('miembros_model','miembro');
 		$this->load->model('mantener/m_evento','m_evento');
 		$this->load->model('mantener/m_ponencia','m_ponencia');
 		
+		if($this->input->post('apepat')){
 		$participantes=$this->miembro->getMiembroXApePat($this->input->post('apepat'));
+		}else{
+			$participantes=$this->miembro->getMiembroXApePat($apepat);
+		}
 		
 		for($i=0; $i<count($participantes); $i++){
 			$ponencias_registradas[$i] = $this->miembro->getAsistenciaXDni($participantes[$i]->num_doc_user);
@@ -216,10 +247,6 @@ class C_administracion extends CI_Controller{
 			}
 			
 		}
-		
-		
-		
-		
 		/*$this->load->model('mantener/m_evento','m_evento');
 		$data['eventos'] = $this->m_evento->getData();
 		$data['evento'] = $this->m_evento->getEventoXId($this->input->post('id_eve'));
